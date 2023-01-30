@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.9" tiledversion="1.9.2" name="Buses_3" tilewidth="16" tileheight="16" tilecount="10650" columns="142">
- <image source="../Modern_Exteriors_16x16/Animated_16x16/Vehicles_16x16/Buses_16x16/Buses_3.png" width="2272" height="1200"/>
+ <image source="../Art/Vehicles/Buses_16x16/Buses_3.png" width="2272" height="1200"/>
  <tile id="1427">
   <animation>
    <frame tileid="285" duration="100"/>

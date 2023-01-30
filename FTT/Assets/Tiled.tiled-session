@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/Villa_House.tmx",
+    "activeFile": "Tileset/Kitchen.tsx",
     "expandedProjectPaths": [
-        ".",
+        "Tileset",
         "Map",
-        "Tileset"
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -158,16 +158,16 @@
             "scale": 4,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 88.125,
-                "y": 64
+                "x": 133.875,
+                "y": 78.75
             }
         },
         "Map/Inside hospital.tmx": {
             "scale": 3.09133064516129,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 113.05810995891218,
-                "y": 123.8948672797235
+                "x": 183.57790386747538,
+                "y": 142.98049957607776
             }
         },
         "Map/Kitchen.tsx": {
@@ -180,19 +180,19 @@
             "scale": 2.661979166666667,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 407.40363920954803,
-                "y": 216.3803560946977
+                "x": 258.64214439444333,
+                "y": 120.9626296223831
             }
         },
         "Map/LivingRoom.tsx": {
             "scaleInDock": 1
         },
         "Map/Main_map.tmx": {
-            "scale": 0.5,
+            "scale": 3,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 1197,
-                "y": 1421
+                "x": 464.16666666666663,
+                "y": 677.6666666666666
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -205,8 +205,8 @@
             "scale": 5.989453125,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 190.75197286897543,
-                "y": 73.2955064240527
+                "x": 64.11269810213267,
+                "y": 64.02921802647883
             }
         },
         "Map/School.tsx": {
@@ -216,8 +216,8 @@
             "scale": 3.1488541666666663,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 240.2461212742731,
-                "y": 75.10668563300143
+                "x": 239.76975751761557,
+                "y": 68.91395679645375
             }
         },
         "Map/Terrains and Fences.tsx": {
@@ -230,19 +230,19 @@
             "scaleInDock": 1
         },
         "Map/Villa_House.tmx": {
-            "scale": 2.661979166666667,
-            "selectedLayer": 0,
+            "scale": 4,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 160.21913519859126,
-                "y": 195.3433770299354
+                "x": 237.125,
+                "y": 102.25
             }
         },
         "Map/Villa_House_Second_Floor.tmx": {
             "scale": 2.661979166666667,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 160.21913519859126,
-                "y": 144.25357072979844
+                "x": 160.03130502837016,
+                "y": 144.06574055957736
             }
         },
         "Map/Villas.tsx": {
@@ -357,7 +357,7 @@
         },
         "Tileset/Kitchen.tsx": {
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "Tileset/Linh.tsx": {
             "scaleInDock": 1,
@@ -397,7 +397,7 @@
         },
         "Tileset/Villas.tsx": {
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 1.5
         },
         "Tileset/Worksite.tsx": {
             "scaleInDock": 1,
@@ -467,7 +467,7 @@
     },
     "frame.defaultDuration": 100,
     "last.externalTilesetPath": "C:/Users/BonBonDev/Downloads/Remake/Tileset",
-    "last.imagePath": "C:/Users/BonBonDev/Downloads/Remake/Art/Exteriors",
+    "last.imagePath": "D:/Code project/Unity/FTT/FTT/Assets/Art/Character/Linh",
     "map.height": 18,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
@@ -517,10 +517,10 @@
         "Map/Street.tmx",
         "Tileset/Camping.tsx",
         "Map/Main_map.tmx",
-        "Tileset/Worksite.tsx",
-        "Tileset/Villas.tsx",
-        "Tileset/Viet Nam Flag.tsx",
-        "Tileset/Vehicles.tsx"
+        "Map/Villa_House.tmx",
+        "Map/Villa_House_Second_Floor.tmx",
+        "Tileset/Generic.tsx",
+        "Tileset/Bathroom.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.margin": 0,
