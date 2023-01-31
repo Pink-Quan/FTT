@@ -3,10 +3,10 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Tileset/Kitchen.tsx",
+    "activeFile": "Tileset/Worksite.tsx",
     "expandedProjectPaths": [
-        "Tileset",
         "Map",
+        "Tileset",
         "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -158,15 +158,15 @@
             "scale": 4,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 133.875,
-                "y": 78.75
+                "x": 88,
+                "y": 63.875
             }
         },
         "Map/Inside hospital.tmx": {
             "scale": 3.09133064516129,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 183.57790386747538,
+                "x": 183.5779038674754,
                 "y": 142.98049957607776
             }
         },
@@ -180,19 +180,19 @@
             "scale": 2.661979166666667,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 258.64214439444333,
-                "y": 120.9626296223831
+                "x": 122.08961064370963,
+                "y": 143.69008021913518
             }
         },
         "Map/LivingRoom.tsx": {
             "scaleInDock": 1
         },
         "Map/Main_map.tmx": {
-            "scale": 3,
-            "selectedLayer": 3,
+            "scale": 1.5,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 464.16666666666663,
-                "y": 677.6666666666666
+                "x": 1596.333333333333,
+                "y": 1013.3333333333333
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -205,8 +205,8 @@
             "scale": 5.989453125,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 64.11269810213267,
-                "y": 64.02921802647883
+                "x": 63.94573795082502,
+                "y": 63.86225787517121
             }
         },
         "Map/School.tsx": {
@@ -217,7 +217,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 239.76975751761557,
-                "y": 68.91395679645375
+                "y": 118.2969995699494
             }
         },
         "Map/Terrains and Fences.tsx": {
@@ -233,16 +233,16 @@
             "scale": 4,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 237.125,
-                "y": 102.25
+                "x": 160,
+                "y": 143.875
             }
         },
         "Map/Villa_House_Second_Floor.tmx": {
             "scale": 2.661979166666667,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 160.03130502837016,
-                "y": 144.06574055957736
+                "x": 159.65564468792797,
+                "y": 143.69008021913518
             }
         },
         "Map/Villas.tsx": {
@@ -401,7 +401,7 @@
         },
         "Tileset/Worksite.tsx": {
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "Tileset/cave.tsx": {
             "scaleInDock": 1,
