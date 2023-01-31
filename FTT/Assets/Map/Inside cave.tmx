@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="6">
+ <tileset firstgid="1" source="../Tileset/Hill.tsx"/>
+ <tileset firstgid="21" source="../Tileset/Terrains and Fences.tsx"/>
+ <layer id="2" name="floor" width="10" height="10">
+  <data encoding="csv">
+146,147,147,147,147,148,148,147,148,147,
+147,148,147,146,147,147,146,148,148,146,
+147,148,147,148,148,146,146,148,147,147,
+147,148,146,148,146,148,147,146,148,147,
+146,147,147,147,146,147,146,148,146,146,
+146,148,147,147,147,147,148,147,146,148,
+148,148,148,148,148,146,146,146,148,146,
+147,146,148,146,146,148,148,147,148,148,
+148,146,147,147,147,148,147,146,146,146,
+147,148,147,147,146,148,147,147,148,147
+</data>
+ </layer>
+ <layer id="1" name="Border" width="10" height="10">
+  <data encoding="csv">
+16,18,19,18,19,18,19,18,19,2147483664,
+16,0,0,0,0,0,0,0,0,13,
+16,0,0,0,0,0,0,0,0,13,
+16,0,0,0,0,0,0,0,0,13,
+16,0,0,0,0,0,0,0,0,13,
+16,0,0,0,0,0,0,0,0,13,
+16,0,0,0,0,0,0,0,0,13,
+16,0,0,0,0,0,0,0,0,13,
+16,0,0,0,0,0,0,0,0,13,
+2147483664,1073741842,1073741843,1073741843,2,3,1073741843,1073741843,1073741842,16
+</data>
+ </layer>
+ <objectgroup id="3" name="Collision">
+  <object id="1" x="0" y="-1" width="160" height="17"/>
+  <object id="2" x="146" y="16" width="15" height="145"/>
+  <object id="3" x="0" y="16" width="15" height="144"/>
+  <object id="4" x="16" y="145" width="47" height="16"/>
+  <object id="5" x="96" y="145" width="49" height="15"/>
+ </objectgroup>
+</map>

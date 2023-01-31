@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Tileset/Worksite.tsx",
+    "activeFile": "Map/Main_map.tmx",
     "expandedProjectPaths": [
         "Map",
-        "Tileset",
-        "."
+        ".",
+        "Tileset"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -139,6 +139,22 @@
         "Map/Classroom_and_library.tsx": {
             "scaleInDock": 1
         },
+        "Map/Cliff.tmx": {
+            "scale": 4,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 171.625,
+                "y": 148.75
+            }
+        },
+        "Map/Comback_street.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 316.3333333333333,
+                "y": 173.99999999999997
+            }
+        },
         "Map/Floors.tsx": {
             "scaleInDock": 1
         },
@@ -159,15 +175,26 @@
             "selectedLayer": 3,
             "viewCenter": {
                 "x": 88,
-                "y": 63.875
+                "y": 64
+            }
+        },
+        "Map/Inside cave.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 3,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 136.83333333333331,
+                "y": 58.333333333333314
             }
         },
         "Map/Inside hospital.tmx": {
             "scale": 3.09133064516129,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 183.5779038674754,
-                "y": 142.98049957607776
+                "x": 97.85430118046045,
+                "y": 124.21835257288203
             }
         },
         "Map/Kitchen.tsx": {
@@ -180,19 +207,22 @@
             "scale": 2.661979166666667,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 122.08961064370963,
-                "y": 143.69008021913518
+                "x": 102.74310311093718,
+                "y": 144.25357072979847
             }
         },
         "Map/LivingRoom.tsx": {
             "scaleInDock": 1
         },
         "Map/Main_map.tmx": {
-            "scale": 1.5,
-            "selectedLayer": 5,
+            "expandedObjectLayers": [
+                19
+            ],
+            "scale": 1,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 1596.333333333333,
-                "y": 1013.3333333333333
+                "x": 1855.5,
+                "y": 1471
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -205,8 +235,8 @@
             "scale": 5.989453125,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 63.94573795082502,
-                "y": 63.86225787517121
+                "x": 63.86225787517121,
+                "y": 64.11269810213267
             }
         },
         "Map/School.tsx": {
@@ -216,8 +246,8 @@
             "scale": 3.1488541666666663,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 239.76975751761557,
-                "y": 118.2969995699494
+                "x": 239.9285454365014,
+                "y": 118.77336332660693
             }
         },
         "Map/Terrains and Fences.tsx": {
@@ -233,16 +263,16 @@
             "scale": 4,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 160,
-                "y": 143.875
+                "x": 159.875,
+                "y": 144
             }
         },
         "Map/Villa_House_Second_Floor.tmx": {
             "scale": 2.661979166666667,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 159.65564468792797,
-                "y": 143.69008021913518
+                "x": 159.84347485814908,
+                "y": 144.25357072979847
             }
         },
         "Map/Villas.tsx": {
@@ -380,7 +410,7 @@
             "scaleInEditor": 1
         },
         "Tileset/Terrains and Fences.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 1.5,
             "scaleInEditor": 1
         },
         "Tileset/Vehicles.tsx": {
@@ -468,11 +498,11 @@
     "frame.defaultDuration": 100,
     "last.externalTilesetPath": "C:/Users/BonBonDev/Downloads/Remake/Tileset",
     "last.imagePath": "D:/Code project/Unity/FTT/FTT/Assets/Art/Character/Linh",
-    "map.height": 18,
+    "map.height": 20,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
-    "map.width": 21,
+    "map.width": 20,
     "openFiles": [
         "Map/Inside camping trailer.tmx",
         "Tileset/Bedroom.tsx",
@@ -505,7 +535,10 @@
         "Tileset/Vehicles.tsx",
         "Tileset/Viet Nam Flag.tsx",
         "Tileset/Villas.tsx",
-        "Tileset/Worksite.tsx"
+        "Tileset/Worksite.tsx",
+        "Map/Comback_street.tmx",
+        "Map/Cliff.tmx",
+        "Map/Inside cave.tmx"
     ],
     "project": "Tiled.tiled-project",
     "recentFiles": [
@@ -516,11 +549,11 @@
         "Map/Rule1.tmx",
         "Map/Street.tmx",
         "Tileset/Camping.tsx",
-        "Map/Main_map.tmx",
-        "Map/Villa_House.tmx",
-        "Map/Villa_House_Second_Floor.tmx",
-        "Tileset/Generic.tsx",
-        "Tileset/Bathroom.tsx"
+        "Map/Inside cave.tmx",
+        "Map/Cliff.tmx",
+        "Map/Comback_street.tmx",
+        "Tileset/Worksite.tsx",
+        "Tileset/Villas.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.margin": 0,
