@@ -3,11 +3,13 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/Main_map.tmx",
+    "activeFile": "Map/Street.tmx",
     "expandedProjectPaths": [
         "Tileset",
+        "Tileset/Singles",
         ".",
-        "Map"
+        "Map",
+        "Tileset/Singles/Villas"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -243,11 +245,11 @@
             "scaleInDock": 1
         },
         "Map/Street.tmx": {
-            "scale": 3.1488541666666663,
+            "scale": 3,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 239.76975751761557,
-                "y": 118.2969995699494
+                "x": 240.16666666666666,
+                "y": 116.33333333333331
             }
         },
         "Map/Terrains and Fences.tsx": {
@@ -409,6 +411,10 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "Tileset/Singles/Villas/Big Villa house red.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "Tileset/Terrains and Fences.tsx": {
             "scaleInDock": 1.5,
             "scaleInEditor": 1
@@ -538,7 +544,8 @@
         "Tileset/Worksite.tsx",
         "Map/Comback_street.tmx",
         "Map/Cliff.tmx",
-        "Map/Inside cave.tmx"
+        "Map/Inside cave.tmx",
+        "Tileset/Singles/Villas/Big Villa house red.tsx"
     ],
     "project": "Tiled.tiled-project",
     "recentFiles": [
@@ -547,13 +554,13 @@
         "Map/Inside hospital.tmx",
         "Map/Linh_House.tmx",
         "Map/Rule1.tmx",
-        "Map/Street.tmx",
-        "Tileset/Camping.tsx",
+        "Tileset/Singles/Villas/Big Villa house red.tsx",
         "Map/Inside cave.tmx",
         "Map/Cliff.tmx",
         "Map/Comback_street.tmx",
         "Tileset/Worksite.tsx",
-        "Tileset/Villas.tsx"
+        "Tileset/Villas.tsx",
+        "Tileset/Viet Nam Flag.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.margin": 0,
