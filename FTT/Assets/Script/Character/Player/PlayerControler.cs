@@ -9,18 +9,12 @@ public class PlayerControler : MonoBehaviour
     private KeyCode leftButton = KeyCode.A, rightButton = KeyCode.D, upButton = KeyCode.W, downButton = KeyCode.S;
     private Vector3 moveDirection = Vector3.zero;
     private Rigidbody2D thisRigidbody2D;
-    private Animator animator;
+    private CharacterController characterController;
 
     private void Awake()
     {
         thisRigidbody2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-    }
-
-    private void Update()
-    {
-
-
+        characterController = GetComponent<CharacterController>();
     }
 
     private void FixedUpdate()
@@ -32,15 +26,14 @@ public class PlayerControler : MonoBehaviour
         if (Input.GetKey(upButton))    { moveDirection.y = 1; isMoving = true;  }
         if (Input.GetKey(downButton))  { moveDirection.y = -1; isMoving = true; }
 
-        animator.SetBool("IsMoving", isMoving);
+        characterController.anim.SetMove(isMoving);
         if (isMoving)
         {
-            animator.SetFloat("HorizontalMoverment", moveDirection.x);
-            animator.SetFloat("VerticalMoverment", moveDirection.y);
+            characterController.anim.SetDirection(moveDirection);
         }
         else return;
 
         
-        thisRigidbody2D.position += (Vector2)moveDirection * playerSpeed * Time.fixedDeltaTime;
+        thisRigidbody2D.position += (Vector2)moveDirection.normalized * playerSpeed * Time.fixedDeltaTime;
     }
 }

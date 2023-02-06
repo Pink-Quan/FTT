@@ -235,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.58, y: -55.09, z: -10}
+  m_LocalPosition: {x: 90.85, y: -102.37, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -493,9 +493,11 @@ GameObject:
   - component: {fileID: 845325255}
   - component: {fileID: 845325254}
   - component: {fileID: 845325253}
-  - component: {fileID: 845325252}
   - component: {fileID: 845325256}
   - component: {fileID: 845325257}
+  - component: {fileID: 845325259}
+  - component: {fileID: 845325252}
+  - component: {fileID: 845325258}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -515,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af5287cc7766b4e42aaefb6596cad880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 6
 --- !u!61 &845325253
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -529,10 +531,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15568161}
+  m_Offset: {x: 0, y: -0.017093658}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.25}
+    pivot: {x: 0.5, y: 0.15}
     oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -540,7 +542,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.69634247}
+  m_Size: {x: 1, y: 0.5598221}
   m_EdgeRadius: 0
 --- !u!212 &845325254
 SpriteRenderer:
@@ -602,7 +604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845325251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.58, y: -55.09, z: 0}
+  m_LocalPosition: {x: 90.85, y: -102.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -651,6 +653,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &845325258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845325251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d4a2cd0ec1e8645ab789c3dd204838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 845325259}
+--- !u!114 &845325259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845325251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29375d6d5af22fd4c870b1fc2b51c3d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDirection: {x: 0, y: 0}
+  isMoving: 0
 --- !u!1 &911668978
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911668978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.58, y: -55.09, z: -10}
+  m_LocalPosition: {x: 90.85, y: -102.37, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -731,7 +760,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8977975223444311291, guid: 53bea09f882c3c7429c0e0d3a403d112, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8275855351759113084, guid: 53bea09f882c3c7429c0e0d3a403d112, type: 3}
       propertyPath: m_SortingOrder
@@ -748,6 +777,14 @@ PrefabInstance:
     - target: {fileID: 873383917582595557, guid: 53bea09f882c3c7429c0e0d3a403d112, type: 3}
       propertyPath: m_SortingOrder
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677432849755548006, guid: 53bea09f882c3c7429c0e0d3a403d112, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737736023051070974, guid: 53bea09f882c3c7429c0e0d3a403d112, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2741311487097938054, guid: 53bea09f882c3c7429c0e0d3a403d112, type: 3}
       propertyPath: m_SortingOrder
