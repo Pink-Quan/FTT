@@ -11,6 +11,8 @@ public class PlayerControler : MonoBehaviour
     private Rigidbody2D thisRigidbody2D;
     private CharacterController characterController;
 
+    public bool canMove = true;
+
     private void Awake()
     {
         thisRigidbody2D = GetComponent<Rigidbody2D>();
@@ -19,6 +21,8 @@ public class PlayerControler : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!canMove) return;
+
         moveDirection = Vector3.zero;
         bool isMoving = false;
         if (Input.GetKey(leftButton))  { moveDirection.x = -1; isMoving = true; }

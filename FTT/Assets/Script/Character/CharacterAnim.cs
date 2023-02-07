@@ -5,14 +5,17 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class CharacterAnim : MonoBehaviour
 {
-    [HideInInspector] public Vector2 moveDirection=Vector2.zero;
+    [Tooltip("Change in inspecter to set OnEnable direction")] public Vector2 moveDirection=new Vector2(0,-1);
     [HideInInspector] public bool isMoving =false;
     private Animator animator; 
     
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        SetDirection(new Vector2(0, -1));  
+    }
+    private void OnEnable()
+    {
+        SetDirection(moveDirection);
     }
 
     public void SetDirection(Vector2 moveDirection)

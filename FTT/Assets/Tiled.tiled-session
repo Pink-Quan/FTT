@@ -3,13 +3,13 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/Street.tmx",
+    "activeFile": "Map/Inside hospital.tmx",
     "expandedProjectPaths": [
-        "Map",
         "Tileset",
         "Tileset/Singles",
+        "Tileset/Singles/Villas",
         ".",
-        "Tileset/Singles/Villas"
+        "Map"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -153,8 +153,8 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 320,
-                "y": 159.66666666666663
+                "x": 320.33333333333337,
+                "y": -64
             }
         },
         "Map/Floors.tsx": {
@@ -176,7 +176,7 @@
             "scale": 4,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 87.875,
+                "x": 88,
                 "y": 63.875
             }
         },
@@ -192,11 +192,11 @@
             }
         },
         "Map/Inside hospital.tmx": {
-            "scale": 3.09133064516129,
+            "scale": 5.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 112.73462466575361,
-                "y": 123.7331246331442
+                "x": 138.8181818181818,
+                "y": 129.63636363636365
             }
         },
         "Map/Kitchen.tsx": {
@@ -220,11 +220,11 @@
             "expandedObjectLayers": [
                 19
             ],
-            "scale": 0.75,
+            "scale": 3,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 1196,
-                "y": 1195.3333333333333
+                "x": 1195.3333333333333,
+                "y": 1196.1666666666665
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -237,8 +237,8 @@
             "scale": 5.989453125,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 63.86225787517121,
-                "y": 63.778777799517385
+                "x": 63.94573795082502,
+                "y": 63.86225787517121
             }
         },
         "Map/School.tsx": {
@@ -248,8 +248,8 @@
             "scale": 3,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 239.83333333333334,
-                "y": 118.33333333333331
+                "x": 240,
+                "y": 118.5
             }
         },
         "Map/Terrains and Fences.tsx": {
@@ -551,16 +551,16 @@
     "recentFiles": [
         "Map/Inside camping trailer.tmx",
         "Tileset/Bedroom.tsx",
-        "Map/Inside hospital.tmx",
-        "Map/Linh_House.tmx",
-        "Map/Rule1.tmx",
         "Tileset/Singles/Villas/Big Villa house red.tsx",
         "Map/Inside cave.tmx",
         "Map/Cliff.tmx",
         "Map/Comback_street.tmx",
         "Tileset/Worksite.tsx",
         "Tileset/Villas.tsx",
-        "Tileset/Viet Nam Flag.tsx"
+        "Tileset/Viet Nam Flag.tsx",
+        "Tileset/Vehicles.tsx",
+        "Tileset/Terrains and Fences.tsx",
+        "Tileset/Hill.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.margin": 0,
