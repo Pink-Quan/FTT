@@ -2156,7 +2156,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d29d12b77de2ce7468dc14b4796a7c4c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f4c51f4e2d3594046943feaa14150714, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3059,6 +3059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -6679,14 +6680,12 @@ MonoBehaviour:
   - {fileID: 1568846892}
   - {fileID: 1921717879}
   - {fileID: 248777943}
-  inventoryPrefab: {fileID: 5000518693965673357, guid: c2320ece7a0edcf4eb65ae1f9f405ae1,
-    type: 3}
+  inventoryPrefab: {fileID: 5000518693965673357, guid: c2320ece7a0edcf4eb65ae1f9f405ae1, type: 3}
   InventoryData:
     Data: []
   InventoryItemsArray: []
   itemConfig: {fileID: 11400000, guid: cea97b79aa11cfe4c970d7c7c8d14291, type: 2}
-  draggedItem: {fileID: 5000518693965673357, guid: c2320ece7a0edcf4eb65ae1f9f405ae1,
-    type: 3}
+  draggedItem: {fileID: 5000518693965673357, guid: c2320ece7a0edcf4eb65ae1f9f405ae1, type: 3}
   draggedItemData:
     itemType: 0
     itemData: 

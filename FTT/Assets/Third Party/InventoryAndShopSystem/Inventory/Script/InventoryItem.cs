@@ -10,6 +10,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
     public RectTransform rectTransform;
     public Text amoutText;
     public Image image;
+    public ItemButton button;
     private CanvasGroup canvasGroup;
     [HideInInspector] public Canvas canvas;
     [HideInInspector] public int locateSlotId;

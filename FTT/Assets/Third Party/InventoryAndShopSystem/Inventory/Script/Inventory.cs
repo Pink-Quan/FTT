@@ -37,36 +37,6 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < 4; i++)
-        {
-            Item book = new Item(ItemType.Book, "book");
-            book =itemConfig.GetBookItemConfig("book");
-            book.amount = 5;
-            AddItemToInventory(book);
-
-            Item gun = new Item(ItemType.Gun, "gun");
-            gun = itemConfig.GetItemConfig(gun);
-            AddItemToInventory(gun);
-
-            Item food = new Item(ItemType.Food, "food");
-            itemConfig.GetItemConfig(ref food);
-            food.amount = 3;
-            AddItemToInventory(food);
-
-            Item sword = new Item(ItemType.Sword, "sword");
-            itemConfig.GetItemConfig(ref sword);
-            AddItemToInventory(sword);
-
-            Item mana = new Item(ItemType.ManaFlask, "mana");
-            itemConfig.GetItemConfig(ref mana);
-            mana.amount = 3;
-            AddItemToInventory(mana);
-
-            Item hp = new Item(ItemType.LifeFlask, "hp");
-            hp=itemConfig.GetItemConfig(hp);
-            hp.amount = 3;
-            AddItemToInventory(hp);
-        }
 
     }
     /// <summary>
