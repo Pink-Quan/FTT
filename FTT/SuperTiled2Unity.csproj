@@ -56,39 +56,39 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperMap.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\Extensions\StringExtensions.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\GridOrientation.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperTileLayer.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\StaggerAxis.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\MapRenderOrder.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\MapOrientation.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\ObjectAlignment.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperTilesAsObjectsTilemap.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\Extensions\GameObjectExtensions.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperTile.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\ReadOnlyAttribute.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperImageLayer.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\Extensions\EnumerableExtensions.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperWorld.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\TileObjectAnimator.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\Math\MatrixUtils.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperColliderComponent.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\Extensions\CustomPropertyExtensions.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\CustomProperty.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperCustomProperties.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\Extensions\SuperTileExtensions.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\CollisionShapeType.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperLayer.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperGroupLayer.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\StaggerIndex.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperObject.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\SuperObjectLayer.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\CollisionObject.cs" />
-    <Compile Include="Assets\SuperTiled2Unity\Scripts\FlipFlags.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperMap.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\Extensions\StringExtensions.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\GridOrientation.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperTileLayer.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\StaggerAxis.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\MapRenderOrder.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\MapOrientation.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\ObjectAlignment.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperTilesAsObjectsTilemap.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\Extensions\GameObjectExtensions.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperTile.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\ReadOnlyAttribute.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperImageLayer.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperWorld.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\TileObjectAnimator.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\Math\MatrixUtils.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperColliderComponent.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\Extensions\CustomPropertyExtensions.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\CustomProperty.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperCustomProperties.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\Extensions\SuperTileExtensions.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\CollisionShapeType.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperLayer.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperGroupLayer.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\StaggerIndex.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperObject.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\SuperObjectLayer.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\CollisionObject.cs" />
+    <Compile Include="Assets\Third Party\SuperTiled2Unity\Scripts\FlipFlags.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\SuperTiled2Unity\SuperTiled2Unity.asmdef" />
+    <None Include="Assets\Third Party\SuperTiled2Unity\SuperTiled2Unity.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -358,6 +358,9 @@
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.18\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
@@ -379,20 +382,17 @@
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.18\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Cecil.Rocks">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Programs\Unity Version\2021.3.6f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
