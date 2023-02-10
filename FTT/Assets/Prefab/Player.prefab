@@ -2647,8 +2647,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29375d6d5af22fd4c870b1fc2b51c3d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charaterSprites: []
   moveDirection: {x: 0, y: -1}
   isMoving: 0
+  animIndex: 3
 --- !u!114 &7097875168110513528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2676,6 +2678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 7097875168110513527}
   playerMovement: {fileID: 7097875168110513528}
+  rb: {fileID: 7097875168110513524}
 --- !u!1 &7537294709231080880
 GameObject:
   m_ObjectHideFlags: 0

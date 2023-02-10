@@ -15,4 +15,5 @@ public class GameManager : MonoBehaviour
     }
 
     public DialogManager dialogManager;
+    public PlayerController player;
 }

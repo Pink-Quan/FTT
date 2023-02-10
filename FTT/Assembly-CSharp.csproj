@@ -58,28 +58,30 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Character\CharacterAnim.cs" />
     <Compile Include="Assets\Third Party\InventoryAndShopSystem\Shop\Script\Shop.cs" />
+    <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Third Party\InventoryAndShopSystem\Inventory\Script\UIButton.cs" />
     <Compile Include="Assets\Third Party\SimpleDialogue\SimpleDialogue\DialogTests.cs" />
     <Compile Include="Assets\Third Party\ExtendedAnimation\UIAnimation.cs" />
+    <Compile Include="Assets\Script\Conversation\Resources\Hospital\HospitalConversation.cs" />
     <Compile Include="Assets\Third Party\SimpleDialogue\SimpleDialogue\DialogManager.cs" />
     <Compile Include="Assets\Third Party\InventoryAndShopSystem\Inventory\Script\Slot.cs" />
+    <Compile Include="Assets\Script\Character\Player\PlayerAnim.cs" />
     <Compile Include="Assets\Third Party\InventoryAndShopSystem\Inventory\Script\InventoryItem.cs" />
     <Compile Include="Assets\Third Party\InventoryAndShopSystem\Inventory\Script\Inventory.cs" />
+    <Compile Include="Assets\Script\Test\Tes.cs" />
     <Compile Include="Assets\Script\Character\CharacterController.cs" />
     <Compile Include="Assets\Third Party\InventoryAndShopSystem\Item\Script\ItemConfig.cs" />
     <Compile Include="Assets\Third Party\InventoryAndShopSystem\Inventory\Script\ThrowZone.cs" />
     <Compile Include="Assets\Script\Hospital\HospitalManager.cs" />
+    <Compile Include="Assets\Third Party\InventoryAndShopSystem\Item\Script\ItemButton.cs" />
     <Compile Include="Assets\Third Party\ExtendedAnimation\UIAnimationParent.cs" />
     <Compile Include="Assets\Third Party\InventoryAndShopSystem\Item\Script\Item.cs" />
+    <Compile Include="Assets\Script\Character\Player\PlayerController.cs" />
     <Compile Include="Assets\Third Party\ExtendedAnimation\VibarationEffect.cs" />
     <Compile Include="Assets\Third Party\ExtendedAnimation\SwingEffect.cs" />
     <Compile Include="Assets\Third Party\ExtendedAnimation\UIAnimationButton.cs" />
     <Compile Include="Assets\Third Party\ExtendedAnimation\CircleMoveEffect.cs" />
     <Compile Include="Assets\Script\Character\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Third Party\InventoryAndShopSystem\Item\Script\ItemButton.cs" />
-    <Compile Include="Assets\Script\Character\Player\PlayerController.cs" />
-    <Compile Include="Assets\Script\Conversation\Resources\Hospital\HospitalConversation.cs" />
-    <Compile Include="Assets\Script\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

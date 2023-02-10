@@ -10,12 +10,19 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private Rigidbody2D thisRigidbody2D;
     private PlayerController playerController;
+    private CharacterAnim anim;
 
     private void Awake()
     {
-        thisRigidbody2D = GetComponent<Rigidbody2D>();
-        playerController = GetComponent<PlayerController>();
+        GetComponentInit();
     }
+
+    private void GetComponentInit()
+    {
+        playerController = GetComponent<PlayerController>();
+        thisRigidbody2D = playerController.rb;
+        anim = playerController.anim;
+    }    
 
     private void FixedUpdate()
     {
@@ -26,10 +33,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(upButton))    { moveDirection.y = 1; isMoving = true;  }
         if (Input.GetKey(downButton))  { moveDirection.y = -1; isMoving = true; }
 
-        playerController.anim.SetMove(isMoving);
+        anim.SetMove(isMoving);
         if (isMoving)
         {
-            playerController.anim.SetDirection(moveDirection);
+            anim.SetDirection(moveDirection);
         }
         else return;
 
