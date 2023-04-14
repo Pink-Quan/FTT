@@ -1,2 +1,9 @@
 ﻿FTT/Library
 FTT/.vs
+FTT/Temp
+FTT/.vscode
+FTT/ProjectSettings
+FTT/Packages
+FTT/Logs
+FTT/UserSettings
+FTT/Assembly-CSharp.csproj
