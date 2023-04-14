@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperTiled2Unity", "SuperTi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{45098e8a-dcfa-b4ce-ab64-b6db58a96060}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{b0ecc51c-da29-d24c-f082-0ab853973f18}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperTiled2UnityEditor", "SuperTiled2UnityEditor.csproj", "{f3e71a0d-d13d-3560-acf2-b2c748f15408}"
 EndProject
 Global
@@ -16,6 +18,8 @@ Global
 		{9019dbf5-68f0-4d5f-0662-4bfdd170bb2c}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45098e8a-dcfa-b4ce-ab64-b6db58a96060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{45098e8a-dcfa-b4ce-ab64-b6db58a96060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{b0ecc51c-da29-d24c-f082-0ab853973f18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{b0ecc51c-da29-d24c-f082-0ab853973f18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{f3e71a0d-d13d-3560-acf2-b2c748f15408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{f3e71a0d-d13d-3560-acf2-b2c748f15408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection

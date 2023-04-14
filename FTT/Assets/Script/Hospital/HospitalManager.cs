@@ -7,6 +7,8 @@ public class HospitalManager : MonoBehaviour
 {
     [SerializeField] private GameObject blackBackground;
     private HospitalConversation _conversation;
+
+    [SerializeField] private CharactorController nurse;
     private void Start()
     {
         _conversation = Resources.Load<HospitalConversation>($"Hospital/{PlayerPrefs.GetString("Language","Viet")}");
