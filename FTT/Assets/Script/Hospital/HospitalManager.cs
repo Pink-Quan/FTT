@@ -8,7 +8,7 @@ public class HospitalManager : MonoBehaviour
     [SerializeField] private GameObject blackBackground;
     private HospitalConversation _conversation;
 
-    [SerializeField] private CharactorController nurse;
+    [SerializeField] private Nurse nurse;
     private void Start()
     {
         _conversation = Resources.Load<HospitalConversation>($"Hospital/{PlayerPrefs.GetString("Language","Viet")}");
@@ -28,6 +28,16 @@ public class HospitalManager : MonoBehaviour
     
     private void OnDoneWakeUpConversation()
     {
-
+        nurse.ReachPlayer(NuresComunitcateWithPlayer);
     }    
+
+    private void NuresComunitcateWithPlayer()
+    {
+        GameManager.instance.dialogManager.StartSequanceDialogue(_conversation.talkingWithPlayerAffterWalkingUp, DoneTalkingWithPlayer);
+    }
+
+    public void DoneTalkingWithPlayer()
+    {
+        nurse.Disappeare(null);
+    }
 }

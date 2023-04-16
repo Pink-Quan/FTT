@@ -1,27 +1,67 @@
-using System.Security.AccessControl;
-using System.Numerics;
-using System.Net;
+using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Nurse : MonoBehaviour
 {
-    [SerializeField] private float speed=5;
+    private CharacterController controller;
+    [SerializeField] private float appearDuration;
 
-    [SerializeField] private Tranform[] appearPaths;
-    [SerializeField] private Tranform[] disappearPaths;
+    [SerializeField] private VectorPaths appearPaths;
 
-    public void AppearAndTalkToPlayer()
+    private void Start()
     {
-
+        lastPos = transform.position;
+        controller = GetComponent<CharacterController>();
     }
 
-    private void MoveTargetTo(Tranform target,Vector3 to,System.Action OnComplete){
-        Vector3 basePos=target.position;
+    public void ReachPlayer(Action OnReached)
+    {
+        StartCoroutine(UpdateMove());
+        transform.DOPath(appearPaths.paths, appearDuration).OnComplete(()=>
+        {
+            OnReached?.Invoke();
+            controller.anim.SetMove(false);
+            controller.anim.SetDirection(new Vector2(0,-1));
+            StopAllCoroutines();
+        });
     }
 
-    IEmutator StartMove(){
-        
+    public void Disappeare(Action OnDisappear)
+    {
+        StartCoroutine(UpdateMove());
+        Array.Reverse(appearPaths.paths);
+        transform.DOPath(appearPaths.paths, appearDuration).OnComplete(() =>
+        {
+            OnDisappear?.Invoke();
+            controller.anim.SetMove(false);
+            controller.anim.SetDirection(new Vector2(0, -1));
+            StopAllCoroutines();
+        });
+    }
+
+    Vector3 lastPos;
+    private IEnumerator UpdateMove()
+    {
+        while (true)
+        {
+            Vector2 dir = transform.position - lastPos;
+            if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y)){
+                dir.y = 0;
+                if (dir.x != 0) dir.x /= Mathf.Abs(dir.x);
+            }
+            else
+            {
+                dir.x = 0;
+                if (dir.y != 0) dir.y /= Mathf.Abs(dir.y);
+            }
+            Debug.Log(dir);
+            controller.anim.SetDirection(dir);
+            lastPos = transform.position;
+            controller.anim.SetMove(true);
+
+            yield return new WaitForFixedUpdate();
+        }
     }
 }
