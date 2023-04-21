@@ -15,5 +15,6 @@ public class GameManager : MonoBehaviour
     }
 
     public DialogManager dialogManager;
+    public Transitions transitions;
     public PlayerController player;
 }

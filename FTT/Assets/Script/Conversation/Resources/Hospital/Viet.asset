@@ -90,3 +90,18 @@ MonoBehaviour:
     Name: Nurse
     DisplayName: "Y t\xE1"
     emotion: 0
+  afewDaylatter: "V\xE0i ng\xE0y sau"
+  nurseShowPlayerHowToMove:
+    sentances:
+    - "Ch\u1ECB th\u1EA5y em \u0111ang h\u1ED3i ph\u1EE5c r\u1EA5t t\u1ED1t"
+    - "Em th\u1EED \u0111i l\u1EA1i 1 v\xF2ng quanh ph\xF2ng xem c\xF3 v\u1EA5n \u0111\u1EC1
+      g\xEC kh\xF4ng"
+    Name: Nurse
+    DisplayName: "Y t\xE1"
+    emotion: 0
+  nurseShowPlayerToTakeStuff:
+    sentances:
+    - 
+    Name: Nurse
+    DisplayName: "Y t\xE1"
+    emotion: 0

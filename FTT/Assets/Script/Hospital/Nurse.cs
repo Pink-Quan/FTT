@@ -51,12 +51,11 @@ public class Nurse : MonoBehaviour
                 dir.y = 0;
                 if (dir.x != 0) dir.x /= Mathf.Abs(dir.x);
             }
-            else
+            else if(Mathf.Abs(dir.x) < Mathf.Abs(dir.y))
             {
                 dir.x = 0;
                 if (dir.y != 0) dir.y /= Mathf.Abs(dir.y);
             }
-            Debug.Log(dir);
             controller.anim.SetDirection(dir);
             lastPos = transform.position;
             controller.anim.SetMove(true);

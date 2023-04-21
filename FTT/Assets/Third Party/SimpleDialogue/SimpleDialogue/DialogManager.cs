@@ -276,9 +276,13 @@ public struct Dialogue
     [Serializable]
     public enum Emotion
     {
-        NoEmo = 0,
+        Angry=3,
+        Confident=4,
+        Fear = 2,   
         Happy = 1,
-        Fear = 2
+        Normal = 0,
+        Shocked=5,
+        Serious=6
     }
 
     public string GetResourseAddress()

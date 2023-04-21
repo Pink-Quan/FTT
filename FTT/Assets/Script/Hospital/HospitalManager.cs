@@ -9,6 +9,7 @@ public class HospitalManager : MonoBehaviour
     private HospitalConversation _conversation;
 
     [SerializeField] private Nurse nurse;
+    public Transform guidenceNursePos;
     private void Start()
     {
         _conversation = Resources.Load<HospitalConversation>($"Hospital/{PlayerPrefs.GetString("Language","Viet")}");
@@ -38,6 +39,20 @@ public class HospitalManager : MonoBehaviour
 
     public void DoneTalkingWithPlayer()
     {
-        nurse.Disappeare(null);
+        nurse.Disappeare(()=> { GameManager.instance.transitions.TransitionWithText(
+            _conversation.afewDaylatter,
+            ()=> { nurse.transform.position = guidenceNursePos.position;}, 
+            GuideHowToMoveAndTakeStuff); });
+    }
+
+    private void GuideHowToMoveAndTakeStuff()
+    {
+        nurse.transform.position = guidenceNursePos.position;
+        GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerHowToMove, AllowMovePlayer);
+    }
+
+    private void AllowMovePlayer()
+    {
+        Debug.Log("AllowMove");
     }
 }

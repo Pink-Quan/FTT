@@ -11,5 +11,9 @@ public class HospitalConversation : ScriptableObject
     [Header("Nurse talking with player when walking up")]
     public Dialogue[] talkingWithPlayerAffterWalkingUp;
 
-    
+    public string afewDaylatter;
+
+    public Dialogue nurseShowPlayerHowToMove;
+    public Dialogue nurseShowPlayerToTakeStuff;
+
 }
