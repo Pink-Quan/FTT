@@ -60,7 +60,7 @@ public class Nurse : MonoBehaviour
             lastPos = transform.position;
             controller.anim.SetMove(true);
 
-            yield return new WaitForFixedUpdate();
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
     }
 }

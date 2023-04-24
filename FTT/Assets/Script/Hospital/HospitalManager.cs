@@ -10,6 +10,11 @@ public class HospitalManager : MonoBehaviour
 
     [SerializeField] private Nurse nurse;
     public Transform guidenceNursePos;
+    [SerializeField] private PlayerController player;
+
+    [SerializeField] private List<Transform> checkPoints;
+    [SerializeField] private float checkPointRadius;
+
     private void Start()
     {
         _conversation = Resources.Load<HospitalConversation>($"Hospital/{PlayerPrefs.GetString("Language","Viet")}");
@@ -40,19 +45,64 @@ public class HospitalManager : MonoBehaviour
     public void DoneTalkingWithPlayer()
     {
         nurse.Disappeare(()=> { GameManager.instance.transitions.TransitionWithText(
-            _conversation.afewDaylatter,
-            ()=> { nurse.transform.position = guidenceNursePos.position;}, 
+            _conversation.afewDayLatter,
+            ()=> { 
+                nurse.transform.position = guidenceNursePos.position;
+                player.transform.position = guidenceNursePos.position + Vector3.right;
+                player.animator.enabled = true;
+                player.transform.rotation = Quaternion.identity;
+                player.col.enabled = true;
+            }, 
             GuideHowToMoveAndTakeStuff); });
     }
 
     private void GuideHowToMoveAndTakeStuff()
     {
         nurse.transform.position = guidenceNursePos.position;
-        GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerHowToMove, AllowMovePlayer);
+        GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerHowToMove, ()=> 
+        {
+            GameManager.instance.textBoard.ShowText(_conversation.guideHowToMove, AllowMovePlayer);
+        });
     }
 
     private void AllowMovePlayer()
     {
-        Debug.Log("AllowMove");
+        StartCheckPoint();
+        player.playerMovement.enabled = true;
+
+    }
+
+    private void StartCheckPoint()
+    {
+        StartCoroutine(CheckPlayerPassAllCheckPoints());
+    }
+    private IEnumerator CheckPlayerPassAllCheckPoints()
+    {
+        while (true)
+        {
+            foreach(var c in checkPoints.ToArray())
+            {
+                float sqrDis = (player.transform.position - c.position).sqrMagnitude;
+
+                if (sqrDis < checkPointRadius * checkPointRadius)
+                {
+                    Debug.Log("Done check point");
+                    Destroy(c.gameObject);
+                    checkPoints.Remove(c);
+                    if(checkPoints.Count==0)
+                    {
+                        DoneAllCheckPoints();
+                        yield break;
+                    }
+                }
+            }
+
+            yield return null;
+        }
+    }
+
+    private void DoneAllCheckPoints()
+    {
+        Debug.Log("Done ALL");
     }
 }

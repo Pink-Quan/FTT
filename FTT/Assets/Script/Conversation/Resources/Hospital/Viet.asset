@@ -90,7 +90,7 @@ MonoBehaviour:
     Name: Nurse
     DisplayName: "Y t\xE1"
     emotion: 0
-  afewDaylatter: "V\xE0i ng\xE0y sau"
+  afewDayLatter: "V\xE0i ng\xE0y sau"
   nurseShowPlayerHowToMove:
     sentances:
     - "Ch\u1ECB th\u1EA5y em \u0111ang h\u1ED3i ph\u1EE5c r\u1EA5t t\u1ED1t"
@@ -105,3 +105,6 @@ MonoBehaviour:
     Name: Nurse
     DisplayName: "Y t\xE1"
     emotion: 0
+  guideHowToMove: "Nhi\u1EC7m v\u1EE5: \u0110i qua t\u1EA5t c\u1EA3 c\xE1c \u0111i\u1EC3m
+    \u0111\u01B0\u1EE3c ch\u1EC9 \u0111\u1ECBnh tr\u01B0\u1EDBc, s\u1EED d\u1EE5ng
+    WASD \u0111\u1EC3 di chuy\u1EC3n"

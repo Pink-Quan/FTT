@@ -40,8 +40,9 @@ namespace ExtendedAnimation
             //Show();
         }
 
-        protected void Show()
+        public void Show()
         {
+            gameObject.SetActive(true);
             //Move effect
             transform.localPosition = defaultPos + moveOffset;
             transform.DOLocalMove(defaultPos+moveBouchOffset, duration).OnComplete(() =>

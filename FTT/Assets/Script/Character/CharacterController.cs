@@ -5,4 +5,6 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     public CharacterAnim anim;
+    public Animator animator;
+    public Collider2D col;
 }
