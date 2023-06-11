@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Maps
+  m_EditorClassIdentifier: 
+  m_GroupName: Maps
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 682c21423ac3fb54a9de0e1dd1f584cf
+  m_SerializeEntries:
+  - m_GUID: 867f2a7bcffccf9438b03781ec694293
+    m_Address: Cliff
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1d1229647cdcb4a46887ee621ab9d14f
+    m_Address: Comback_street
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 11349f6e1bb5e5c44944d1460e9a12d3
+    m_Address: Inside camping trailer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 773545c7e4183ad4a9d7d44a9f578252
+    m_Address: Inside cave
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 851ccaccf3165f4459b0d185376308af
+    m_Address: Inside hospital
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0cb0760622c97d44ea5a75fa6f2d652c
+    m_Address: Linh_House
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 53bea09f882c3c7429c0e0d3a403d112
+    m_Address: Main_map
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 33a4569eda6fa5047be2cae6000fc3bf
+    m_Address: Rule1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 33c305da2bc043946b8db8e2dd0459fa
+    m_Address: Street
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 147619da6d4305344945ea5897d5ded1
+    m_Address: Villa_House
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 080dd9a6b2f60454089516773956386d
+    m_Address: Villa_House_Second_Floor
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 09c683ba489b595418b6b7310bdb9478, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b76bc2c25d6b6484c87704b01b55b429, type: 2}
+    - {fileID: 11400000, guid: 51d48b10a4388fd41b70c6a17392a920, type: 2}
