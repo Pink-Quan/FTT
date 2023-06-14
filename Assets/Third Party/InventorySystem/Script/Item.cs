@@ -14,7 +14,10 @@ public class Item
     public int amount;
     public int maxAmount;
 
-    public Item() { }
+    public Item() 
+    {
+        itemType = ItemType.NULL;
+    }
 
     public Item(ItemType itemType, string itemData, string itemName, int slotId, int amount,int maxAmount)
     {
@@ -45,43 +48,40 @@ public enum ItemType
     LifeFlask=3,
     ManaFlask=4,
     Bullet=5,
-    Book=6,
+    NormalItem=6,
     Food=7,
+    NULL=8,
 }
 
 [Serializable]
-public class ConsumableItem
+public struct ManaFlask
 {
     public int level;
-    
-}
-
-[Serializable]
-public class ManaFlask:ConsumableItem
-{
     public float manaRecovery;
 }
 
 [Serializable]
-public class HealFlask : ConsumableItem
+public struct HealFlask 
 {
+    public int level;
     public float manaRecovery;
 }
 
 [Serializable]
-public class Food : ConsumableItem
+public struct Food
 {
+    public int level;
     public float hungerFill;
 }
 
 [Serializable]
-public class Coin
+public struct Coin
 {
-
+    string data;
 }
 
 [Serializable]
-public class Weapon
+public struct Sword
 {
     public int durability;
     public int maxDurability;
@@ -90,20 +90,18 @@ public class Weapon
 }
 
 [Serializable]
-public class Sword:Weapon
+public struct Gun 
 {
-   
-}
-
-[Serializable]
-public class Gun : Weapon
-{
+    public int durability;
+    public int maxDurability;
+    public int damage;
+    public int level;
     public int bullet;
     public int maxBullet;
 }
 
 [Serializable]
-public class Book
+public struct NormalItem
 {
     public string data;
 }

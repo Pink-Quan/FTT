@@ -93,7 +93,7 @@ public class Shop : MonoBehaviour
     }
     public void AddBookToInventory(int amount)
     {
-        Item book = new Item(ItemType.Book, "book");
+        Item book = new Item(ItemType.NormalItem, "book");
         book = itemConfig.GetItemConfig(book);
         book.amount = amount;
         inventory.AddItemToInventory(book);

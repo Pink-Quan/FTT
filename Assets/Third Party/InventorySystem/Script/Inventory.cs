@@ -14,7 +14,6 @@ public class Inventory : MonoBehaviour
 
     [HideInInspector] public InventoryItemData InventoryData;
     [HideInInspector] public InventoryItem[] InventoryItemsArray;
-    public ItemConfig itemConfig;
 
     [HideInInspector] public InventoryItem draggedItem;
     [HideInInspector] public Item draggedItemData;
@@ -34,47 +33,47 @@ public class Inventory : MonoBehaviour
             slots[i].slotId = i;
             slots[i].inventory = this;
         }
-        throwZone.inventory=this;
+        throwZone.inventory = this;
 
         InventoryItemsArray = new InventoryItem[slots.Count];
         InventoryData = new InventoryItemData(slots.Count);
 
     }
 
-    void Start()
-    {
-        for (int i = 0; i < 4; i++)
-        {
-            Item book = new Item(ItemType.Book, "book");
-            book = itemConfig.GetBookItemConfig("book");
-            book.amount = 5;
-            AddItemToInventory(book);
+    //void Start()
+    //{
+    //    for (int i = 0; i < 4; i++)
+    //    {
+    //        Item book = new Item(ItemType.NormalItem, "book");
+    //        book = itemConfig.GetBookItemConfig("book");
+    //        book.amount = 5;
+    //        AddItemToInventory(book);
 
-            Item gun = new Item(ItemType.Gun, "gun");
-            gun = itemConfig.GetItemConfig(gun);
-            AddItemToInventory(gun);
+    //        Item gun = new Item(ItemType.Gun, "gun");
+    //        gun = itemConfig.GetItemConfig(gun);
+    //        AddItemToInventory(gun);
 
-            Item food = new Item(ItemType.Food, "food");
-            itemConfig.GetItemConfig(ref food);
-            food.amount = 3;
-            AddItemToInventory(food);
+    //        Item food = new Item(ItemType.Food, "food");
+    //        itemConfig.GetItemConfig(ref food);
+    //        food.amount = 3;
+    //        AddItemToInventory(food);
 
-            Item sword = new Item(ItemType.Sword, "sword");
-            itemConfig.GetItemConfig(ref sword);
-            AddItemToInventory(sword);
+    //        Item sword = new Item(ItemType.Sword, "sword");
+    //        itemConfig.GetItemConfig(ref sword);
+    //        AddItemToInventory(sword);
 
-            Item mana = new Item(ItemType.ManaFlask, "mana");
-            itemConfig.GetItemConfig(ref mana);
-            mana.amount = 3;
-            AddItemToInventory(mana);
+    //        Item mana = new Item(ItemType.ManaFlask, "mana");
+    //        itemConfig.GetItemConfig(ref mana);
+    //        mana.amount = 3;
+    //        AddItemToInventory(mana);
 
-            Item hp = new Item(ItemType.LifeFlask, "hp");
-            hp = itemConfig.GetItemConfig(hp);
-            hp.amount = 3;
-            AddItemToInventory(hp);
-        }
+    //        Item hp = new Item(ItemType.LifeFlask, "hp");
+    //        hp = itemConfig.GetItemConfig(hp);
+    //        hp.amount = 3;
+    //        AddItemToInventory(hp);
+    //    }
 
-    }
+    //}
     /// <summary>
     /// Add a item to a slot, if success, return true, else return false 
     /// </summary>
@@ -142,7 +141,6 @@ public class Inventory : MonoBehaviour
                     }
                     InventoryItem tempInventoryItem = Instantiate(inventoryPrefab);
                     tempInventoryItem.SetData(inventoryCanvas, item, this);
-
 
                     InventoryItemsArray[i] = tempInventoryItem;
                     InventoryData.Data[i] = item;
@@ -299,12 +297,12 @@ public class Inventory : MonoBehaviour
         ItemType type = InventoryData.Data[lastSlotID].itemType;
         string name = InventoryData.Data[lastSlotID].itemName;
         draggedItemData = new Item(type, name);
-        itemConfig.GetItemConfig(ref draggedItemData);
+        InventoryManager.instance.itemConfig.GetItemConfig(ref draggedItemData);
         draggedItemData.amount = draggedAmount;
 
         InventoryData.Data[lastSlotID].amount -= draggedAmount;
         InventoryItem tempInventoryItem = Instantiate(inventoryPrefab);
-        tempInventoryItem.SetData(inventoryCanvas, InventoryData.Data[lastSlotID],this);
+        tempInventoryItem.SetData(inventoryCanvas, InventoryData.Data[lastSlotID], this);
         InventoryItemsArray[lastSlotID] = tempInventoryItem;
 
         slots[lastSlotID].isFull = false;
@@ -335,7 +333,7 @@ public class Inventory : MonoBehaviour
         draggedItemData = itemData;
         lastSlotID = -1;
     }
-    public void DropItem(Slot slot,InventoryItem inventoryItem)
+    public void DropItem(Slot slot, InventoryItem inventoryItem)
     {
         var draggedItemData = inventoryItem.inventory.draggedItemData;
         var draggedItem = inventoryItem.inventory.draggedItem;
@@ -408,7 +406,7 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            if (inventoryItem.inventory.lastSlotID != -1)
+            if (lastSlotID != -1)
             {
                 if (!inventoryItem.inventory.slots[lastSlotID].isFill)
                 {
