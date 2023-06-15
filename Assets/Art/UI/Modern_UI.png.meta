@@ -4005,7 +4005,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_186
+      name: Arrow
       rect:
         serializedVersion: 2
         x: 452
@@ -18043,6 +18043,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Arrow: 1853936267
       Modern_UI_0: 1357951152
       Modern_UI_1: 123959240
       Modern_UI_10: -288134566
@@ -18139,7 +18140,6 @@ TextureImporter:
       Modern_UI_183: -1778690576
       Modern_UI_184: -363745512
       Modern_UI_185: -1209395722
-      Modern_UI_186: 1853936267
       Modern_UI_187: -227145076
       Modern_UI_188: 1827062273
       Modern_UI_189: 372502826

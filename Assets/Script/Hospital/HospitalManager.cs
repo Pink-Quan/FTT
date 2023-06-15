@@ -12,8 +12,8 @@ public class HospitalManager : MonoBehaviour
     public Transform guidenceNursePos;
     [SerializeField] private PlayerController player;
 
-    [SerializeField] private List<Transform> checkPoints;
-    [SerializeField] private float checkPointRadius;
+    [SerializeField] private HospitalCheckPoints checkpoints;
+    [SerializeField] private ParticleSystem getCheckpointEff;
 
     private void Start()
     {
@@ -74,42 +74,20 @@ public class HospitalManager : MonoBehaviour
 
     private void AllowMovePlayer()
     {
-        StartCheckPoint();
         player.playerMovement.enabled = true;
+        checkpoints.gameObject.SetActive(true);
+        player.SetArrowPointer(checkpoints.GetCheckPoints()[0]);
 
+        checkpoints.OnDoneOneCheckPoint += player.SetArrowPointer;
+        checkpoints.OnDoneOneCheckPoint += nextPoint => PlayGetCheckPointEffect();
+        
+        checkpoints.OnDoneAllCheckPoint += player.OffArrowPointer;
+        checkpoints.OnDoneAllCheckPoint += PlayGetCheckPointEffect;
     }
 
-    private void StartCheckPoint()
+    private void PlayGetCheckPointEffect()
     {
-        StartCoroutine(CheckPlayerPassAllCheckPoints());
-    }
-    private IEnumerator CheckPlayerPassAllCheckPoints()
-    {
-        while (true)
-        {
-            foreach(var c in checkPoints.ToArray())
-            {
-                float sqrDis = (player.transform.position - c.position).sqrMagnitude;
-
-                if (sqrDis < checkPointRadius * checkPointRadius)
-                {
-                    Debug.Log("Done check point");
-                    Destroy(c.gameObject);
-                    checkPoints.Remove(c);
-                    if(checkPoints.Count==0)
-                    {
-                        DoneAllCheckPoints();
-                        yield break;
-                    }
-                }
-            }
-
-            yield return null;
-        }
-    }
-
-    private void DoneAllCheckPoints()
-    {
-        Debug.Log("Done ALL");
+        getCheckpointEff.transform.position = player.transform.position;
+        getCheckpointEff.Play();
     }
 }
