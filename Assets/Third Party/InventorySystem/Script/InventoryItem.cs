@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventoryItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class InventoryItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerClickHandler
 {
     [Header("UI")]
     public RectTransform rectTransform;
@@ -91,7 +91,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
 
     public void SetData(Canvas canvas, Item item,Inventory inventory)
     {
-        transform.SetParent(inventory.slots[item.slotId].transform);
+        transform.SetParent(inventory.slots[item.slotId].transform,false);
         rectTransform.anchoredPosition = Vector3.zero;
         rectTransform.localScale = Vector3.one;
         this.canvas = canvas;
@@ -100,5 +100,10 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
 
         if (item.amount > 1) amoutText.text = item.amount.ToString();
         image.sprite = Resources.Load<Sprite>($"ItemIcon/{item.itemName}");
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        inventory.ShowInfo(locateSlotId);
     }
 }

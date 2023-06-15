@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private Canvas inventoryCanvas;
     [SerializeField] private ThrowZone throwZone;
+    [SerializeField] private InventoryItemInfo inforBoard;
     public List<Slot> slots;
     [SerializeField] private InventoryItem inventoryPrefab;
 
@@ -447,6 +448,11 @@ public class Inventory : MonoBehaviour
     {
         OnThrowItem?.Invoke(draggedItemData);
         SetNullDraggedItem();
+    }
+
+    public void ShowInfo(int slotId)
+    {
+        inforBoard.ShowItemInfo(InventoryData.Data[slotId]);
     }
 
     #region Data

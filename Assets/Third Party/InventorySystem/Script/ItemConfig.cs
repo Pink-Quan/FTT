@@ -14,6 +14,8 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        [TextArea]
+        public string info;
     }
     [Serializable]
     public class HealFlaskConfig
@@ -23,6 +25,8 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        [TextArea]
+        public string info;
     }
     [Serializable]
     public class FoodConfig
@@ -32,6 +36,8 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        [TextArea]
+        public string info;
     }
     [Serializable]
     public class GunConfig
@@ -41,15 +47,19 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        [TextArea]
+        public string info;
     }
     [Serializable]
-    public class BooKConfig
+    public class NormalItemConfig
     {
-        public NormalItem book;
+        public NormalItem item;
         public string name;
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        [TextArea]
+        public string info;
     }
     [Serializable]
     public class SwordConfig
@@ -59,6 +69,8 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        [TextArea]
+        public string info;
     }
     #endregion ConfigClass
 
@@ -67,7 +79,7 @@ public class ItemConfig : ScriptableObject
     public List<HealFlaskConfig> healFlaskConfigList;
     public List<FoodConfig> foodConfigList;
     public List<GunConfig> gunConfigList;
-    public List<BooKConfig> bookConfigList;
+    public List<NormalItemConfig> normalItemConfigList;
     public List<SwordConfig> swordConfigList;
     #endregion
 
@@ -96,6 +108,7 @@ public class ItemConfig : ScriptableObject
                 item.itemName = name;
                 item.slotId = -1;
                 item.itemType=ItemType.ManaFlask;
+                item.info = manaRcoveryConfigList[i].info;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -127,6 +140,7 @@ public class ItemConfig : ScriptableObject
                 item.itemName = name;
                 item.slotId = -1;
                 item.itemType=ItemType.LifeFlask;
+                item.info = healFlaskConfigList[i].info;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -159,6 +173,7 @@ public class ItemConfig : ScriptableObject
                 item.itemName = name;
                 item.slotId = -1;
                 item.itemType=ItemType.Food;
+                item.info = foodConfigList[i].info;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -191,6 +206,7 @@ public class ItemConfig : ScriptableObject
                 item.itemName = name;
                 item.slotId = -1;
                 item.itemType=ItemType.Gun;
+                item.info = gunConfigList[i].info;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -203,25 +219,26 @@ public class ItemConfig : ScriptableObject
 
     public NormalItem GetBookConfig(string name)
     {
-        for (int i = 0; i < bookConfigList.Count; i++)
-            if (name == bookConfigList[i].name)
-                return bookConfigList[i].book;
+        for (int i = 0; i < normalItemConfigList.Count; i++)
+            if (name == normalItemConfigList[i].name)
+                return normalItemConfigList[i].item;
         Debug.LogError("Cant find the item: " + name);
         return new NormalItem();
     }
     public Item GetBookItemConfig(string name)
     {
-        for (int i = 0; i < bookConfigList.Count; i++)
-            if (name == bookConfigList[i].name)
+        for (int i = 0; i < normalItemConfigList.Count; i++)
+            if (name == normalItemConfigList[i].name)
             {
                 Item item = new Item();
-                item.amount = bookConfigList[i].amount;
-                item.maxAmount = bookConfigList[i].maxAmount;
-                item.itemValue=bookConfigList[i].itemValue;
-                item.itemData = JsonUtility.ToJson(bookConfigList[i].book);
+                item.amount = normalItemConfigList[i].amount;
+                item.maxAmount = normalItemConfigList[i].maxAmount;
+                item.itemValue=normalItemConfigList[i].itemValue;
+                item.itemData = JsonUtility.ToJson(normalItemConfigList[i].item);
                 item.itemName = name;
                 item.slotId = -1;
                 item.itemType=ItemType.NormalItem;
+                item.info = normalItemConfigList[i].info;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -254,6 +271,7 @@ public class ItemConfig : ScriptableObject
                 item.itemName = name;
                 item.slotId = -1;
                 item.itemType=ItemType.Sword;
+                item.info = swordConfigList[i].info;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);

@@ -8,6 +8,7 @@ public class Item
     public string itemName;
     public string itemInformation;
     public int itemValue;
+    public string info;
 
     //For inventory
     public int slotId;

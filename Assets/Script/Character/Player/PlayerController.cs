@@ -7,4 +7,5 @@ public class PlayerController : CharacterController
     public PlayerMovement playerMovement;
     public Rigidbody2D rb;
     public Inventory inventory;
+    public GameObject openInventoryButton;
 }

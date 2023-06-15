@@ -18,8 +18,14 @@ public class HospitalManager : MonoBehaviour
     private void Start()
     {
         _conversation = Resources.Load<HospitalConversation>($"Hospital/{PlayerPrefs.GetString("Language","Viet")}");
-        InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "book", 2, player.inventory);
         PlayFirstScene();
+        AddItemToPlayerInventory();
+    }
+
+    private void AddItemToPlayerInventory()
+    {
+        InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);
+        InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Citizen Identity Card", 1, player.inventory);
     }
 
     private void PlayFirstScene()
