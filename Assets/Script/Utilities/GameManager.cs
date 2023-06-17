@@ -12,10 +12,12 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+        input=new PlayerInput();
     }
 
     public DialogManager dialogManager;
     public Transitions transitions;
     public PlayerController player;
     public TextBoard textBoard;
+    public PlayerInput input;
 }
