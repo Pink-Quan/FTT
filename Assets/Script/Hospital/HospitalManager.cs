@@ -17,6 +17,7 @@ public class HospitalManager : MonoBehaviour
 
     [SerializeField] private GameObject closet;
     [SerializeField] private GameObject drinkMedacineTable;
+    [SerializeField] private GameObject perscription;
     private void Start()
     {
         _conversation = Resources.Load<HospitalConversation>($"Text/Hospital/{PlayerPrefs.GetString("Language","Viet")}");
@@ -111,6 +112,7 @@ public class HospitalManager : MonoBehaviour
         player.playerMovement.enabled = true;
         closet.SetActive(true);
         drinkMedacineTable.SetActive(true);
+        perscription.SetActive(true);
         player.buttons.SetActive(true);
     }
 
@@ -132,5 +134,9 @@ public class HospitalManager : MonoBehaviour
         player.buttons.SetActive(false);
     }
 
+    public void AddPerscriptionToPlayer()
+    {
+        InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "How to take medicine", 1, player.inventory);
+    }
     
 }

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PlayerController : CharacterController
 {
     public PlayerMovement playerMovement;
+    public Transform directionTrasform;
     public Rigidbody2D rb;
     public Inventory inventory;
     public ArrowPointer arrowPointer;
@@ -16,8 +17,21 @@ public class PlayerController : CharacterController
     public Button inventoryButton;
     public Canvas canvas;
     public Button currentItemButton;
+    public SmartPhone phone;
 
     public Item curItem;
+
+    public void EnableMove()
+    {
+        playerMovement.enabled = true;
+        buttons.SetActive(true);
+    }
+
+    public void DisableMove()
+    {
+        playerMovement.enabled = false;
+        buttons.SetActive(false);
+    }
 
     public void SetArrowPointer(Transform target)
     {
@@ -48,12 +62,48 @@ public class PlayerController : CharacterController
     public void SelectItem(Item item)
     {
         if (currentItemButtonImage == null) currentItemButtonImage = currentItemButton.GetComponent<Image>();
-        if (item.icon == null) 
+        if (item.icon == null)
             currentItemButtonImage.color = new Color(0, 0, 0, 0);
         else
         {
             currentItemButtonImage.sprite = item.icon;
             curItem = item;
         }
+        currentItemButton.onClick.RemoveAllListeners();
+        switch (item.itemType)
+        {
+            case ItemType.NormalItem:
+                if (string.Compare(item.itemName,"Phone")==0)                
+                   InitPhoneButton();                
+
+                break;
+        }
     }
+
+    private void InitPhoneButton()
+    {
+        currentItemButton.onClick.AddListener(() => phone.gameObject.SetActive(true));
+        currentItemButton.onClick.AddListener(DisableMove);
+        phone.outButton.onClick.AddListener(EnableMove);
+    }
+
+    private GameObject flashLight;
+    public void TurnFlashLight(bool isOn)
+    {
+        flashLight = phone.flashLight;
+        if (isOn)
+        {
+            flashLight.SetActive(true);
+            flashLight.transform.SetParent(directionTrasform);
+
+            flashLight.transform.localPosition = Vector3.zero;
+            flashLight.transform.localRotation = Quaternion.Euler(0,0,180);
+            flashLight.transform.localScale = Vector3.one;
+        }
+        else
+        {
+            flashLight.SetActive(false);
+        }
+    }
+    public bool IsFlashLight() => flashLight.activeSelf;
 }

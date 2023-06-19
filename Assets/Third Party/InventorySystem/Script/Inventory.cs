@@ -6,8 +6,6 @@ using System;
 using System.IO;
 using UnityEngine.Events;
 
-public class OnSelectItem : UnityEvent<Item> { }
-
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private Canvas inventoryCanvas;
@@ -29,8 +27,9 @@ public class Inventory : MonoBehaviour
     public GameObject buttons;
 
     public ThrowItemEvent OnThrowItem;
-
-    public OnSelectItem OnSelectItem; 
+    [Serializable]
+    public class SelectItemEvent : UnityEvent<Item> { }
+    public SelectItemEvent OnSelectItem; 
     private void Awake()
     {
         for (int i = 0; i < slots.Count; i++)

@@ -82,6 +82,22 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: cfe48541789c81548bed551abf174b62, type: 3}
     info: "No: 1234885548515\nFull name: Nguy\u1EC5n Th\u1ECB Linh\nDate of bird:
       23/08/1998\nSex: Female \nNationality: Vi\xEA\u0323t Nam\n"
+  - item:
+      data: 
+    name: How to take medicine
+    amount: 1
+    maxAmount: 1
+    itemValue: 0
+    icon: {fileID: 21300000, guid: d23794db7ad31404f9b1aa5eed0fa66f, type: 3}
+    info: '<color="red">Red pill: 3
+
+      <color="green">Green pill: 1
+
+      <color="yellow">Yellow
+      pill: 2
+
+      <color="black">Each day''s prescription may be different, please
+      keep this sheet carefully'
   swordConfigList:
   - sword:
       durability: 0

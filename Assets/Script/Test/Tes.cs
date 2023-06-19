@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Tes : MonoBehaviour
 {
-    [SerializeField] private Sprite[] sprites;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private PlayerController player;
 
-    public int spriteIndex;
-
-    private void Update()
+    void Start()
     {
-        spriteRenderer.sprite = sprites[spriteIndex];
+        InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);    
     }
 
+    public void ShowFastNotification(string text)
+    {
+        GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, text);
+    }
 }

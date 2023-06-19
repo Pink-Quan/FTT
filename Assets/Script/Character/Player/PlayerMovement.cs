@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D thisRigidbody2D;
     private PlayerController playerController;
     private CharacterAnim anim;
+    private Transform directionTransform;
     private InputAction moveInput;
 
     private void Awake()
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         playerController = GetComponent<PlayerController>();
         thisRigidbody2D = playerController.rb;
         anim = playerController.anim;
+        directionTransform = playerController.directionTrasform.parent;
     }    
 
     private void FixedUpdate()
@@ -47,6 +49,11 @@ public class PlayerMovement : MonoBehaviour
 
         moveDirection = moveInput.ReadValue<Vector2>();
         if (moveDirection != Vector2.zero) isMoving = true; 
+
+        var angle=Mathf.Atan2(moveDirection.y, moveDirection.x)*Mathf.Rad2Deg+90;
+        if (isMoving)
+            directionTransform.rotation = Quaternion.Euler(0,0,angle);
+
 
         anim.SetMove(isMoving);
         if (isMoving)

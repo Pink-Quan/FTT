@@ -20,4 +20,5 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
     public TextBoard textBoard;
     public PlayerInput input;
+    public FastNotification fastNotification;
 }
