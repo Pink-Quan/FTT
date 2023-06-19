@@ -19,7 +19,7 @@ public class InventoryItemInfo : MonoBehaviour
 
     public void ShowItemInfo(Item item)
     {
-        icon.sprite = Resources.Load<Sprite>($"ItemIcon/{item.itemName}");
+        icon.sprite = item.icon;
         itemName.text = item.itemName;
         itemDescription.text = item.info;
     }

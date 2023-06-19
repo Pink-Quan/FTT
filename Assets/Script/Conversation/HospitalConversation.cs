@@ -17,5 +17,7 @@ public class HospitalConversation : ScriptableObject
     public Dialogue nurseShowPlayerToTakeStuff;
 
     public string guideHowToMove;
+    public Dialogue afterDoneHowToMove;
 
+    public string getItemNotification;
 }

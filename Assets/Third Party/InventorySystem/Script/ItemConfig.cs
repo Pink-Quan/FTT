@@ -14,6 +14,7 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        public Sprite icon;
         [TextArea]
         public string info;
     }
@@ -25,6 +26,7 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        public Sprite icon;
         [TextArea]
         public string info;
     }
@@ -36,6 +38,7 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        public Sprite icon;
         [TextArea]
         public string info;
     }
@@ -47,6 +50,7 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        public Sprite icon;
         [TextArea]
         public string info;
     }
@@ -58,6 +62,7 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        public Sprite icon;
         [TextArea]
         public string info;
     }
@@ -69,6 +74,7 @@ public class ItemConfig : ScriptableObject
         public int amount = 1;
         public int maxAmount = 10;
         public int itemValue;
+        public Sprite icon;
         [TextArea]
         public string info;
     }
@@ -109,6 +115,7 @@ public class ItemConfig : ScriptableObject
                 item.slotId = -1;
                 item.itemType=ItemType.ManaFlask;
                 item.info = manaRcoveryConfigList[i].info;
+                item.icon = manaRcoveryConfigList[i].icon;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -141,6 +148,7 @@ public class ItemConfig : ScriptableObject
                 item.slotId = -1;
                 item.itemType=ItemType.LifeFlask;
                 item.info = healFlaskConfigList[i].info;
+                item.icon = healFlaskConfigList[i].icon;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -174,6 +182,7 @@ public class ItemConfig : ScriptableObject
                 item.slotId = -1;
                 item.itemType=ItemType.Food;
                 item.info = foodConfigList[i].info;
+                item.icon = foodConfigList[i].icon;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -207,6 +216,7 @@ public class ItemConfig : ScriptableObject
                 item.slotId = -1;
                 item.itemType=ItemType.Gun;
                 item.info = gunConfigList[i].info;
+                item.icon = gunConfigList[i].icon;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -239,6 +249,7 @@ public class ItemConfig : ScriptableObject
                 item.slotId = -1;
                 item.itemType=ItemType.NormalItem;
                 item.info = normalItemConfigList[i].info;
+                item.icon = normalItemConfigList[i].icon;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);
@@ -272,6 +283,7 @@ public class ItemConfig : ScriptableObject
                 item.slotId = -1;
                 item.itemType=ItemType.Sword;
                 item.info = swordConfigList[i].info;
+                item.icon = swordConfigList[i].icon;
                 return item;
             }
         Debug.LogError("Cant find the item: " + name);

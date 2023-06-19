@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.IO;
+using UnityEngine.Events;
+
+public class OnSelectItem : UnityEvent<Item> { }
 
 public class Inventory : MonoBehaviour
 {
@@ -27,6 +30,7 @@ public class Inventory : MonoBehaviour
 
     public ThrowItemEvent OnThrowItem;
 
+    public OnSelectItem OnSelectItem; 
     private void Awake()
     {
         for (int i = 0; i < slots.Count; i++)
@@ -453,6 +457,11 @@ public class Inventory : MonoBehaviour
     public void ShowInfo(int slotId)
     {
         inforBoard.ShowItemInfo(InventoryData.Data[slotId]);
+    }
+
+    public void SelectItem(int slotId)
+    {
+        OnSelectItem?.Invoke(InventoryData.Data[slotId]);
     }
 
     #region Data

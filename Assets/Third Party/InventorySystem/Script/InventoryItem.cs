@@ -99,11 +99,12 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
         this.inventory = inventory;
 
         if (item.amount > 1) amoutText.text = item.amount.ToString();
-        image.sprite = Resources.Load<Sprite>($"ItemIcon/{item.itemName}");
+        image.sprite = item.icon;   
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         inventory.ShowInfo(locateSlotId);
+        inventory.SelectItem(locateSlotId);
     }
 }

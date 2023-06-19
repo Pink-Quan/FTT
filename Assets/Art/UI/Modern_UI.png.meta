@@ -2325,7 +2325,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_106
+      name: Square_Board
       rect:
         serializedVersion: 2
         x: 13
@@ -2334,7 +2334,7 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 1, z: 1, w: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2745,7 +2745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_126
+      name: Rec_Board
       rect:
         serializedVersion: 2
         x: 51
@@ -10872,7 +10872,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_520
+      name: UI_OK_icon00
       rect:
         serializedVersion: 2
         x: 387
@@ -18032,6 +18032,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_Rec_Button00
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 320
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5a489430a254d43a708fb7c546324c
+      internalID: -1913287922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Squ_Buton00
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd83964062b6d2e46b71eb8d9e2259e2
+      internalID: -1860865971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Esc_Button00
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a82964915d7392489368389faeaafd1
+      internalID: -1310216668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -18053,7 +18116,6 @@ TextureImporter:
       Modern_UI_103: 474649695
       Modern_UI_104: -75218864
       Modern_UI_105: 2118894933
-      Modern_UI_106: -401158104
       Modern_UI_108: -625152224
       Modern_UI_109: 823163510
       Modern_UI_11: -613051839
@@ -18074,7 +18136,6 @@ TextureImporter:
       Modern_UI_123: 1237554380
       Modern_UI_124: 1121278750
       Modern_UI_125: -1664851385
-      Modern_UI_126: -1662589879
       Modern_UI_127: 94662729
       Modern_UI_128: -70323730
       Modern_UI_129: -1955153745
@@ -18511,7 +18572,6 @@ TextureImporter:
       Modern_UI_518: -1697047820
       Modern_UI_519: 2085358747
       Modern_UI_52: -88217959
-      Modern_UI_520: -1297389234
       Modern_UI_521: -2131385499
       Modern_UI_522: 2022091686
       Modern_UI_523: -880725765
@@ -18902,6 +18962,12 @@ TextureImporter:
       PauseBut01: -486981587
       PauseBut02: -802670732
       PauseButton: -985155072
+      Rec_Board: -1662589879
+      Square_Board: -401158104
+      UI_Esc_Button00: -1310216668
+      UI_OK_icon00: -1297389234
+      UI_Rec_Button00: -1913287922
+      UI_Squ_Buton00: -1860865971
       White_Bag_Icon: -106142599
   spritePackingTag: 
   pSDRemoveMatte: 0

@@ -15,14 +15,15 @@ public class HospitalManager : MonoBehaviour
     [SerializeField] private HospitalCheckPoints checkpoints;
     [SerializeField] private ParticleSystem getCheckpointEff;
 
+    [SerializeField] private GameObject closet;
+    [SerializeField] private GameObject drinkMedacineTable;
     private void Start()
     {
-        _conversation = Resources.Load<HospitalConversation>($"Hospital/{PlayerPrefs.GetString("Language","Viet")}");
+        _conversation = Resources.Load<HospitalConversation>($"Text/Hospital/{PlayerPrefs.GetString("Language","Viet")}");
         PlayFirstScene();
-        AddItemToPlayerInventory();
     }
 
-    private void AddItemToPlayerInventory()
+    public void AddItemToPlayerInventory()
     {
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Citizen Identity Card", 1, player.inventory);
@@ -83,6 +84,8 @@ public class HospitalManager : MonoBehaviour
         
         checkpoints.OnDoneAllCheckPoint += player.OffArrowPointer;
         checkpoints.OnDoneAllCheckPoint += PlayGetCheckPointEffect;
+        checkpoints.OnDoneAllCheckPoint += TellPlayerDrinkDrug;
+        
     }
 
     private void PlayGetCheckPointEffect()
@@ -90,4 +93,44 @@ public class HospitalManager : MonoBehaviour
         getCheckpointEff.transform.position = player.transform.position;
         getCheckpointEff.Play();
     }
+
+    private void TellPlayerDrinkDrug()
+    {
+        player.playerMovement.enabled=false;
+        player.anim.SetMove(false);
+        GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerToTakeStuff, NurseLeaveRoom);
+    }
+
+    private void NurseLeaveRoom()
+    {
+        nurse.LeaveRoom(AllowPlayerExploreTheRoom);
+    }
+
+    private void AllowPlayerExploreTheRoom()
+    {
+        player.playerMovement.enabled = true;
+        closet.SetActive(true);
+        drinkMedacineTable.SetActive(true);
+        player.buttons.SetActive(true);
+    }
+
+    public void ItemReceivedNotification()
+    {
+        ForbidPlayerMove();
+        GameManager.instance.textBoard.ShowText(_conversation.getItemNotification,AllowPlayerMove);
+    }
+
+    public void AllowPlayerMove()
+    {
+        player.playerMovement.enabled = true;
+        player.buttons.SetActive(true);
+    }
+
+    public void ForbidPlayerMove()
+    {
+        player.playerMovement.enabled = false;
+        player.buttons.SetActive(false);
+    }
+
+    
 }

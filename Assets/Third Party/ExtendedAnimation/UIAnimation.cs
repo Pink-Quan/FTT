@@ -1,6 +1,8 @@
 using DG.Tweening;
+using ExtendedAnimation;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,18 +23,27 @@ namespace ExtendedAnimation
         public Vector3 rotBouchOffset;
 
         [Header("Scale Effect")]
-        [SerializeField] private Vector3 scaleOffset=new Vector3(-0.8f,-0.8f,-0.8f);
-        [SerializeField] private Vector3 scaleBouchOffset=new Vector3(0.2f,0.2f,0.2f);
+        [SerializeField] private Vector3 scaleOffset = new Vector3(-0.8f, -0.8f, -0.8f);
+        [SerializeField] private Vector3 scaleBouchOffset = new Vector3(0.2f, 0.2f, 0.2f);
 
-        private Vector2 defaultPos;
-        private Vector3 defaultRot;
-        private Vector3 defaultSca;
+        protected Vector2 defaultPos;
+        protected Vector3 defaultRot;
+        protected Vector3 defaultScale;
+
+        private RectTransform rectTransform;
 
         protected virtual void Awake()
         {
-            defaultPos = transform.localPosition;
-            defaultRot = transform.localRotation.eulerAngles;
-            defaultSca= transform.localScale;
+            GetItsRectTransform();
+
+            defaultPos = rectTransform.anchoredPosition;
+            defaultRot = rectTransform.localRotation.eulerAngles;
+            defaultScale = rectTransform.localScale;
+        }
+
+        public void GetItsRectTransform()
+        {
+            rectTransform = GetComponent<RectTransform>();
         }
 
         protected virtual void OnEnable()
@@ -44,34 +55,34 @@ namespace ExtendedAnimation
         {
             gameObject.SetActive(true);
             //Move effect
-            transform.localPosition = defaultPos + moveOffset;
-            transform.DOLocalMove(defaultPos+moveBouchOffset, duration).OnComplete(() =>
+            rectTransform.anchoredPosition = defaultPos + moveOffset;
+            rectTransform.DOAnchorPos(defaultPos + moveBouchOffset, duration).OnComplete(() =>
             {
-                transform.DOLocalMove(defaultPos, bouchDuration);
+                rectTransform.DOAnchorPos(defaultPos, bouchDuration);
             });
 
             //Rotate effect
-            transform.localRotation = Quaternion.Euler(defaultRot+rotOffset);
-            transform.DORotateQuaternion(Quaternion.Euler(defaultRot+rotBouchOffset), duration).OnComplete(() =>
+            transform.localRotation = Quaternion.Euler(defaultRot + rotOffset);
+            transform.DORotateQuaternion(Quaternion.Euler(defaultRot + rotBouchOffset), duration).OnComplete(() =>
             {
                 transform.DORotateQuaternion(Quaternion.Euler(defaultRot), bouchDuration);
             });
 
             //Scale effect
-            transform.localScale = defaultSca + scaleOffset;
-            transform.DOScale(defaultSca+scaleBouchOffset, duration).OnComplete(() =>
+            transform.localScale = defaultScale + scaleOffset;
+            transform.DOScale(defaultScale + scaleBouchOffset, duration).OnComplete(() =>
             {
-                transform.DOScale(defaultSca, bouchDuration);
+                transform.DOScale(defaultScale, bouchDuration);
             });
         }
 
         public void Hide()
         {
-            Invoke("DisableUI", duration+bouchDuration);
+            Invoke("DisableUI", duration + bouchDuration);
             //Move effect
-            transform.DOLocalMove(defaultPos + moveBouchOffset, bouchDuration).OnComplete(() =>
+            rectTransform.DOAnchorPos(defaultPos + moveBouchOffset, bouchDuration).OnComplete(() =>
             {
-                transform.DOLocalMove(defaultPos + moveOffset, duration);
+                rectTransform.DOAnchorPos(defaultPos + moveOffset, duration);
             });
 
             //Rotate effect
@@ -81,9 +92,9 @@ namespace ExtendedAnimation
             });
 
             //Scale effect
-            transform.DOScale(defaultSca + scaleBouchOffset, bouchDuration).OnComplete(() =>
+            transform.DOScale(defaultScale + scaleBouchOffset, bouchDuration).OnComplete(() =>
             {
-                transform.DOScale(defaultSca + scaleOffset, duration);
+                transform.DOScale(defaultScale + scaleOffset, duration);
             });
         }
         private void DisableUI()
@@ -92,5 +103,4 @@ namespace ExtendedAnimation
         }
     }
 }
-
 

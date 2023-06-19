@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 [Serializable]
 public class Item
@@ -9,6 +10,7 @@ public class Item
     public string itemInformation;
     public int itemValue;
     public string info;
+    public Sprite icon;
 
     //For inventory
     public int slotId;

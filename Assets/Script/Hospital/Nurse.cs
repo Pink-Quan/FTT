@@ -7,18 +7,19 @@ public class Nurse : MonoBehaviour
 {
     private CharacterController controller;
     [SerializeField] private float appearDuration;
+    [SerializeField] private float leaveDuration=3;
 
     [SerializeField] private VectorPaths appearPaths;
+    [SerializeField] private VectorPaths leaveRoomPaths;
 
     private void Start()
     {
-        lastPos = transform.position;
         controller = GetComponent<CharacterController>();
     }
 
     public void ReachPlayer(Action OnReached)
     {
-        StartCoroutine(UpdateMove());
+        StartCoroutine(controller.UpdateMove());
         transform.DOPath(appearPaths.paths, appearDuration).OnComplete(()=>
         {
             OnReached?.Invoke();
@@ -30,7 +31,7 @@ public class Nurse : MonoBehaviour
 
     public void Disappeare(Action OnDisappear)
     {
-        StartCoroutine(UpdateMove());
+        StartCoroutine(controller.UpdateMove());
         Array.Reverse(appearPaths.paths);
         transform.DOPath(appearPaths.paths, appearDuration).OnComplete(() =>
         {
@@ -41,26 +42,16 @@ public class Nurse : MonoBehaviour
         });
     }
 
-    Vector3 lastPos;
-    private IEnumerator UpdateMove()
+    public void LeaveRoom(Action OnLeaveRoomDone)
     {
-        while (true)
+        StartCoroutine(controller.UpdateMove());
+        transform.DOPath(leaveRoomPaths.paths, leaveDuration).OnComplete(() =>
         {
-            Vector2 dir = transform.position - lastPos;
-            if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y)){
-                dir.y = 0;
-                if (dir.x != 0) dir.x /= Mathf.Abs(dir.x);
-            }
-            else if(Mathf.Abs(dir.x) < Mathf.Abs(dir.y))
-            {
-                dir.x = 0;
-                if (dir.y != 0) dir.y /= Mathf.Abs(dir.y);
-            }
-            controller.anim.SetDirection(dir);
-            lastPos = transform.position;
-            controller.anim.SetMove(true);
-
-            yield return new WaitForSeconds(Time.fixedDeltaTime);
-        }
+            OnLeaveRoomDone?.Invoke();
+            controller.anim.SetMove(false);
+            controller.anim.SetDirection(new Vector2(0, -1));
+            StopAllCoroutines();
+            gameObject.SetActive(false);
+        });
     }
 }

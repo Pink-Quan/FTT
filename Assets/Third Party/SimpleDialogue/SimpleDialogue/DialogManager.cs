@@ -136,7 +136,13 @@ public class DialogManager : MonoBehaviour
     }
     private void DisplayNextSentance()
     {
-        if (senctences.Count > 0)
+        if(isDialogueing)
+        {
+            StopAllCoroutines();
+            Text.text = displayingSectance;
+            isDialogueing = false;
+        }
+        else if (senctences.Count > 0)
         {
             StartCoroutine(DisplaySentance(senctences.Dequeue()));
         }
@@ -158,6 +164,7 @@ public class DialogManager : MonoBehaviour
             Text.text += sentance[i++];
             yield return new WaitForEndOfFrame();
         }
+        Text.text = displayingSectance;
         isDialogueing = false;
     }
 
@@ -227,21 +234,6 @@ public class DialogManager : MonoBehaviour
         SellectNextButton.gameObject.SetActive(false);
     }
 
-    Queue<MultiCharactorDialogue.CharacterPerDialogue> multiDialogueQueue;
-    public void MultiCharactorDialogue(MultiCharactorDialogue dialogue, Action OnDoneDialogue)
-    {
-        SellectNextButton.gameObject.SetActive(true);
-        SellectNextButton.onClick.RemoveAllListeners();
-        SellectNextButton.onClick.AddListener(DisplayNextSentance);
-
-        Sellect1Button.gameObject.SetActive(false);
-        Sellect2Button.gameObject.SetActive(false);
-        Sellect3Button.gameObject.SetActive(false);
-        Sellect4Button.gameObject.SetActive(false);
-
-        multiDialogueQueue = new Queue<MultiCharactorDialogue.CharacterPerDialogue>(dialogue.dialogues);
-    }
-
     Queue<Dialogue> squenceDialogue;
     Action OnDoneAllDialogues;
     public void StartSequanceDialogue(Dialogue[] squenceDialogue, Action OnDoneAllDialogues)
@@ -289,20 +281,5 @@ public struct Dialogue
     {
         return $"{Name}/{Name}_{emotion}";
     }
-}
-
-[Serializable]
-public struct MultiCharactorDialogue
-{
-    [Serializable]
-    public struct CharacterPerDialogue
-    {
-        public string Text;
-        public string Name;
-        public GameObject Avatar;
-    }
-
-    public CharacterPerDialogue[] dialogues;
-
 }
 

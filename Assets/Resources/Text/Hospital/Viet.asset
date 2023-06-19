@@ -101,10 +101,26 @@ MonoBehaviour:
     emotion: 0
   nurseShowPlayerToTakeStuff:
     sentances:
-    - 
+    - "T\u1ED1t qu\xE1, em \u0111\xE3 kh\u1ECFe l\xEAn r\u1EA5t nhi\u1EC1u r\u1ED3i "
+    - "\u0110\u1ED3 c\u1EE7a em c\xF3 trong t\u1EE7, em th\u1EED \u0111\u1ECDc xem
+      c\xF3 nh\u1EDB g\xEC kh\xF4ng nh\xE1"
+    - "Xong em h\xE3y u\u1ED1ng thu\u1ED1c, ch\u1ECB s\u1EBD quay l\u1EA1i sau khi
+      em u\u1ED1ng xong"
     Name: Nurse
     DisplayName: "Y t\xE1"
     emotion: 0
   guideHowToMove: "Nhi\u1EC7m v\u1EE5: \u0110i qua t\u1EA5t c\u1EA3 c\xE1c \u0111i\u1EC3m
     \u0111\u01B0\u1EE3c ch\u1EC9 \u0111\u1ECBnh tr\u01B0\u1EDBc, s\u1EED d\u1EE5ng
     WASD \u0111\u1EC3 di chuy\u1EC3n"
+  afterDoneHowToMove:
+    sentances:
+    - "T\u1ED1t qu\xE1, em \u0111\xE3 kh\u1ECFe l\xEAn r\u1EA5t nhi\u1EC1u r\u1ED3i "
+    - "\u0110\u1ED3 c\u1EE7a em c\xF3 trong t\u1EE7, em th\u1EED \u0111\u1ECDc xem
+      c\xF3 nh\u1EDB g\xEC kh\xF4ng nh\xE1"
+    - "Xong em h\xE3y u\u1ED1ng thu\u1ED1c, ch\u1ECB s\u1EBD quay l\u1EA1i sau khi
+      em u\u1ED1ng xong"
+    Name: Nurse
+    DisplayName: "Y t\xE1"
+    emotion: 0
+  getItemNotification: "Nh\u1EADn \u0111\u01B0\u1EE3c c\u0103n c\u01B0\u1EDBc, \u0111i\u1EC7n
+    tho\u1EA1i"
