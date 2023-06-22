@@ -124,3 +124,13 @@ MonoBehaviour:
     emotion: 0
   getItemNotification: "Nh\u1EADn \u0111\u01B0\u1EE3c c\u0103n c\u01B0\u1EDBc, \u0111i\u1EC7n
     tho\u1EA1i"
+  getPrescriptionNofication: "Nh\u1EADn \u0111\u01B0\u1EE3c \u0111\u01A1n thu\u1ED1c"
+  seftAskWhereIsPrescription:
+    sentances:
+    - "\u01A0, li\u1EC1u thu\u1ED1c l\xE0 nh\u01B0 th\u1EBF n\xE0o \xFD "
+    - "M\xECnh nh\u1EDB l\xE0 ch\u1ECB y t\xE1 v\u1EEBa \u0111\u01B0a m\xECnh "
+    - "Ch\u1EAFc n\xF3 ch\u1EC9 r\u01A1i \u0111\xE2u \u0111\xF3 quanh \u0111\xE2y
+      th\xF4i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0

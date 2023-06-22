@@ -8,6 +8,7 @@ public class LockPasswordUI : MonoBehaviour
     [SerializeField] private string password;   
     [SerializeField] private InputNumberUI[] inputs;
 
+    public UnityEvent OnIncorectPassword;
     public UnityEvent OnUncloked;
     public void CheckPassword()
     {
@@ -17,5 +18,7 @@ public class LockPasswordUI : MonoBehaviour
 
         if (string.Compare(input, password)==0)
             OnUncloked?.Invoke();
+        else
+            OnIncorectPassword?.Invoke();
     }
 }

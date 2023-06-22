@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 [RequireComponent(typeof(Animator))]
 public class CharacterAnim : MonoBehaviour
@@ -9,12 +12,16 @@ public class CharacterAnim : MonoBehaviour
     public Sprite[] charaterSprites;
 
     public int animIndex = 3;
-    public Vector2 moveDirection=new Vector2(0,-1);
+    public Vector2 moveDirection = new Vector2(0, -1);
     public bool isMoving = false;
 
-    private Animator animator; 
+    private Animator animator;
     private SpriteRenderer spriteRenderer;
-    
+
+    [SerializeField] private float morbundTime = 2;
+
+    IEnumerator updateSprite;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -24,35 +31,75 @@ public class CharacterAnim : MonoBehaviour
     {
         SetDirection(moveDirection);
         if (animator != null)
-            StartCoroutine(UpdateSprite());
+        {
+            updateSprite = UpdateSprite();
+            StartCoroutine(updateSprite);
+        }
 
     }
 
     public void SetDirection(Vector2 moveDirection)
     {
+        if(Mathf.Abs(moveDirection.x)==Mathf.Abs(moveDirection.y))
+        {
+            moveDirection.y = 0;
+        }
         this.moveDirection = moveDirection;
         animator.SetFloat("HorizontalMoverment", this.moveDirection.x);
         animator.SetFloat("VerticalMoverment", this.moveDirection.y);
-    }  
-    
+    }
+
     public void SetMove(bool isMoving)
     {
         this.isMoving = isMoving;
         animator.SetBool("IsMoving", this.isMoving);
     }
 
-    
+    public void Die()
+    {
+        StopCoroutine(updateSprite);
+        StartCoroutine(DieAnim());
+    }
+    public float GetMorburnTime => morbundTime;
+    IEnumerator DieAnim()
+    {
+        float clk = 0;
+        while(clk< morbundTime)
+        {
+            spriteRenderer.color = Color.red;
+            clk += 0.5f;
+            yield return new WaitForSeconds(0.25f);
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(0.25f);
+
+        }
+
+        spriteRenderer.color = Color.red;
+        transform.DORotate(new Vector3(0,0,90),0.5f).OnComplete(()=>enabled=false);
+    }
+
+    public void TakeDamge()
+    {
+        StartCoroutine(TakeDamgeAnim());
+    }
+
+    IEnumerator TakeDamgeAnim()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.color = Color.white;
+    }
 
     private IEnumerator UpdateSprite()
     {
         while (true)
         {
             yield return null;
-            spriteRenderer.sprite=charaterSprites[animIndex];
+            spriteRenderer.sprite = charaterSprites[animIndex];
         }
     }
 }
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(CharacterAnim))]
 public class CharaterAnimCustomEditor : Editor
 {
@@ -66,3 +113,4 @@ public class CharaterAnimCustomEditor : Editor
             t.SetMove(t.isMoving);
     }
 }
+#endif

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class HidenPerscription : InteractableEntity
@@ -21,7 +22,7 @@ public class HidenPerscription : InteractableEntity
         if(player.IsFlashLight() && !isLight)
         {
             float zAngle = player.directionTrasform.localRotation.eulerAngles.z;
-            if (zAngle < 90 && zAngle > -90)
+            if (zAngle < 0 && zAngle > -180)
             {
                 base.OnPlayerEnterZone();
                 isLight = true;

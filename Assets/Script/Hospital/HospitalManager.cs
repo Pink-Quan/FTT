@@ -134,9 +134,27 @@ public class HospitalManager : MonoBehaviour
         player.buttons.SetActive(false);
     }
 
-    public void AddPerscriptionToPlayer()
+    public void AddPrescriptionToPlayer()
     {
+        GameManager.instance.fastNotification.Show(GameManager.instance.player.transform.position + Vector3.up * 0.5f, _conversation.getPrescriptionNofication);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "How to take medicine", 1, player.inventory);
+    }
+
+    bool isSelfAsk;
+    public void AskSeftWhereIsPrescription()
+    {
+        if (!isSelfAsk)
+        {
+            ForbidPlayerMove();
+            GameManager.instance.dialogManager.StartDialogue(_conversation.seftAskWhereIsPrescription, AllowPlayerMove);
+            isSelfAsk = true;
+        }
+    }
+
+    public void TakeWrongDrug()
+    {
+        ForbidPlayerMove();
+        GameManager.instance.dialogManager.StartDialogue(_conversation.imFeelingNotGood, player.Die);
     }
     
 }

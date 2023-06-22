@@ -22,12 +22,16 @@ public class DialogManager : MonoBehaviour
         Sellect2Button.onClick.AddListener(() => SellectAnswer(2));
         Sellect3Button.onClick.AddListener(() => SellectAnswer(3));
         Sellect4Button.onClick.AddListener(() => SellectAnswer(4));
+        SellectNoButton.onClick.AddListener(() => onAnswerYesNo?.Invoke(false));
+        SellectYesButton.onClick.AddListener(() => onAnswerYesNo?.Invoke(true));
         SellectNextButton.onClick.AddListener(DisplayNextSentance);
         Sellect1Button.gameObject.SetActive(false);
         Sellect2Button.gameObject.SetActive(false);
         Sellect3Button.gameObject.SetActive(false);
         Sellect4Button.gameObject.SetActive(false);
         SellectNextButton.gameObject.SetActive(false);
+        SellectYesButton.gameObject.SetActive(false);
+        SellectNoButton.gameObject.SetActive(false);
         DialogueBroad.SetActive(false);
     }
 
@@ -36,6 +40,8 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private Button Sellect2Button;
     [SerializeField] private Button Sellect3Button;
     [SerializeField] private Button Sellect4Button;
+    [SerializeField] private Button SellectYesButton;
+    [SerializeField] private Button SellectNoButton;
     [SerializeField] private TextMeshProUGUI Text;
     [SerializeField] private TextMeshProUGUI Name;
     [SerializeField] private Image Avatar;
@@ -54,6 +60,9 @@ public class DialogManager : MonoBehaviour
     private List<int> AnswersList;
 
     private GameObject charactorAvatar;
+
+
+
     public void Start1Quesion(Dialogue dialogue, Action<int> TriggerAnswerQuestion)
     {
         InitDialog(dialogue);
@@ -62,6 +71,8 @@ public class DialogManager : MonoBehaviour
         Sellect3Button.gameObject.SetActive(true);
         Sellect4Button.gameObject.SetActive(true);
         SellectNextButton.gameObject.SetActive(false);
+        SellectYesButton.gameObject.SetActive(false);
+        SellectNoButton.gameObject.SetActive(false);
 
         this.TriggerAnswerQuestion = TriggerAnswerQuestion;
 
@@ -95,6 +106,17 @@ public class DialogManager : MonoBehaviour
         DisplayNextQuesion();
     }
 
+    public void StartQuestion(Dialogue dialogue, Action<bool> onAnswerYesNo, string yesText = "Yes", string noText = "No")
+    {
+        SellectNoButton.gameObject.SetActive(true);
+        SellectYesButton.gameObject.SetActive(true);
+        SellectNextButton.gameObject.SetActive(false);
+        InitDialog(dialogue);
+        onAnswerYesNo += isYes => CloseDialogue();
+        this.onAnswerYesNo = onAnswerYesNo;
+
+    }
+    private Action<bool> onAnswerYesNo;
     private void DisplayNextQuesion()
     {
         if (isDialogueing)
@@ -108,11 +130,8 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            if (TriggerAnswerQuestions != null)
-            {
-                TriggerAnswerQuestions?.Invoke(AnswersList);
-                TriggerAnswerQuestions = null;
-            }
+            TriggerAnswerQuestions?.Invoke(AnswersList);
+            TriggerAnswerQuestions = null;
             CloseDialogue();
         }
     }
@@ -129,6 +148,8 @@ public class DialogManager : MonoBehaviour
         Sellect2Button.gameObject.SetActive(false);
         Sellect3Button.gameObject.SetActive(false);
         Sellect4Button.gameObject.SetActive(false);
+        SellectYesButton.gameObject.SetActive(false);
+        SellectNoButton.gameObject.SetActive(false);
 
         InitDialog(dialogue);
 
@@ -136,7 +157,7 @@ public class DialogManager : MonoBehaviour
     }
     private void DisplayNextSentance()
     {
-        if(isDialogueing)
+        if (isDialogueing)
         {
             StopAllCoroutines();
             Text.text = displayingSectance;
@@ -179,7 +200,7 @@ public class DialogManager : MonoBehaviour
 
         baseAvatar.SetActive(false);
         Destroy(charactorAvatar);
-        var pb=Resources.Load<GameObject>(dialogue.GetResourseAddress());
+        var pb = Resources.Load<GameObject>(dialogue.GetResourseAddress());
         if (pb == null) baseAvatar.SetActive(true);
         else
         {
@@ -188,8 +209,8 @@ public class DialogManager : MonoBehaviour
             charactorAvatar.transform.SetAsFirstSibling();
             charactorAvatar.transform.localScale = Vector3.one;
 
-            var recChar=charactorAvatar.GetComponent<RectTransform>();
-            var recBase=baseAvatar.GetComponent<RectTransform>();
+            var recChar = charactorAvatar.GetComponent<RectTransform>();
+            var recBase = baseAvatar.GetComponent<RectTransform>();
 
             recChar.anchorMin = recBase.anchorMin;
             recChar.anchorMax = recBase.anchorMax;
@@ -232,6 +253,8 @@ public class DialogManager : MonoBehaviour
         Sellect3Button.gameObject.SetActive(false);
         Sellect4Button.gameObject.SetActive(false);
         SellectNextButton.gameObject.SetActive(false);
+        SellectYesButton.gameObject.SetActive(false);
+        SellectNoButton.gameObject.SetActive(false);
     }
 
     Queue<Dialogue> squenceDialogue;
@@ -246,16 +269,15 @@ public class DialogManager : MonoBehaviour
 
     private void SequanceDialogue()
     {
-        if(squenceDialogue.Count==1)
-            StartDialogue(squenceDialogue.Dequeue(), ()=>
+        if (squenceDialogue.Count == 1)
+            StartDialogue(squenceDialogue.Dequeue(), () =>
             {
                 CloseDialogueBoard();
                 OnDoneAllDialogues?.Invoke();
             });
         else
-        StartDialogue(squenceDialogue.Dequeue(), SequanceDialogue);
+            StartDialogue(squenceDialogue.Dequeue(), SequanceDialogue);
     }
-
 }
 [Serializable]
 public struct Dialogue
@@ -268,13 +290,13 @@ public struct Dialogue
     [Serializable]
     public enum Emotion
     {
-        Angry=3,
-        Confident=4,
-        Fear = 2,   
+        Angry = 3,
+        Confident = 4,
+        Fear = 2,
         Happy = 1,
         Normal = 0,
-        Shocked=5,
-        Serious=6
+        Shocked = 5,
+        Serious = 6
     }
 
     public string GetResourseAddress()

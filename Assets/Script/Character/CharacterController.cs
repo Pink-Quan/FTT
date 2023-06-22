@@ -38,4 +38,9 @@ public class CharacterController : MonoBehaviour
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
     }
+
+    public virtual void Die()
+    {
+        anim.Die();
+    }
 }

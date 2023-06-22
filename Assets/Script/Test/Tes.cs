@@ -9,6 +9,7 @@ public class Tes : MonoBehaviour
     void Start()
     {
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);    
+        //player.Die();
     }
 
     public void ShowFastNotification(string text)

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using System;
 
 public class PlayerController : CharacterController
 {
@@ -21,6 +23,11 @@ public class PlayerController : CharacterController
 
     public Item curItem;
 
+    private void Awake()
+    {
+        GameManager.instance.player = this;
+    }
+
     public void EnableMove()
     {
         playerMovement.enabled = true;
@@ -30,7 +37,16 @@ public class PlayerController : CharacterController
     public void DisableMove()
     {
         playerMovement.enabled = false;
+    }
+
+    public void HideButtons()
+    {
         buttons.SetActive(false);
+    }
+
+    public void ShowButtons()
+    {
+        buttons.SetActive(true);
     }
 
     public void SetArrowPointer(Transform target)
@@ -73,8 +89,8 @@ public class PlayerController : CharacterController
         switch (item.itemType)
         {
             case ItemType.NormalItem:
-                if (string.Compare(item.itemName,"Phone")==0)                
-                   InitPhoneButton();                
+                if (string.Compare(item.itemName, "Phone") == 0)
+                    InitPhoneButton();
 
                 break;
         }
@@ -84,6 +100,7 @@ public class PlayerController : CharacterController
     {
         currentItemButton.onClick.AddListener(() => phone.gameObject.SetActive(true));
         currentItemButton.onClick.AddListener(DisableMove);
+        currentItemButton.onClick.AddListener(HideButtons);
         phone.outButton.onClick.AddListener(EnableMove);
     }
 
@@ -97,7 +114,7 @@ public class PlayerController : CharacterController
             flashLight.transform.SetParent(directionTrasform);
 
             flashLight.transform.localPosition = Vector3.zero;
-            flashLight.transform.localRotation = Quaternion.Euler(0,0,180);
+            flashLight.transform.localRotation = Quaternion.Euler(0, 0, 180);
             flashLight.transform.localScale = Vector3.one;
         }
         else
@@ -105,5 +122,26 @@ public class PlayerController : CharacterController
             flashLight.SetActive(false);
         }
     }
-    public bool IsFlashLight() => flashLight.activeSelf;
+    public bool IsFlashLight()
+    {
+        if (flashLight == null) return false;
+        return flashLight.activeSelf;
+    }
+
+    public void OffInteractButton()
+    {
+        interactButton.gameObject.SetActive(false);
+    }
+
+    public void OnInteractButton()
+    {
+        interactButton.gameObject.SetActive(true);
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        DisableMove();
+        HideButtons();
+    }
 }

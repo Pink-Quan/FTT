@@ -20,4 +20,7 @@ public class HospitalConversation : ScriptableObject
     public Dialogue afterDoneHowToMove;
 
     public string getItemNotification;
+    public string getPrescriptionNofication;
+    public Dialogue seftAskWhereIsPrescription;
+    public Dialogue imFeelingNotGood;
 }
