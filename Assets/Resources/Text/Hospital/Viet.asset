@@ -123,7 +123,8 @@ MonoBehaviour:
     DisplayName: "Y t\xE1"
     emotion: 0
   getItemNotification: "Nh\u1EADn \u0111\u01B0\u1EE3c c\u0103n c\u01B0\u1EDBc, \u0111i\u1EC7n
-    tho\u1EA1i"
+    tho\u1EA1i. \u0110\u1EC3 bi\u1EBFt th\xEAm th\xF4ng tin v\u1EC1 v\u1EADt ph\u1EA9m,
+    v\xE0o t\xFAi \u0111\u1ED3 v\xE0 \u1EA5n v\xE0o "
   getPrescriptionNofication: "Nh\u1EADn \u0111\u01B0\u1EE3c \u0111\u01A1n thu\u1ED1c"
   seftAskWhereIsPrescription:
     sentances:
@@ -131,6 +132,12 @@ MonoBehaviour:
     - "M\xECnh nh\u1EDB l\xE0 ch\u1ECB y t\xE1 v\u1EEBa \u0111\u01B0a m\xECnh "
     - "Ch\u1EAFc n\xF3 ch\u1EC9 r\u01A1i \u0111\xE2u \u0111\xF3 quanh \u0111\xE2y
       th\xF4i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  imFeelingNotGood:
+    sentances:
+    - "Th\xF4i toang, m\xECnh c\u1EA3m th\u1EA5y kh\xF4ng \u1ED5n l\u1EAFm"
     Name: Linh
     DisplayName: Linh
     emotion: 0

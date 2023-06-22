@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float playerSpeed = 5f;
-
     private Vector2 moveDirection;
     private Rigidbody2D thisRigidbody2D;
     private PlayerController playerController;
@@ -24,9 +23,13 @@ public class PlayerMovement : MonoBehaviour
         moveInput = GameManager.instance.input.Player.Move;
         moveInput.Enable();
 
+        moveInput.started += OnPlayerStartMove;
+
     }
     private void OnDisable()
     {
+        moveInput.started -= OnPlayerStartMove;
+
         moveInput.Disable();
     }
 
@@ -36,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         thisRigidbody2D = playerController.rb;
         anim = playerController.anim;
         directionTransform = playerController.directionTrasform.parent;
-    }    
+    }
 
     private void FixedUpdate()
     {
@@ -48,11 +51,10 @@ public class PlayerMovement : MonoBehaviour
         //if (Input.GetKey(downButton))  { moveDirection.y = -1; isMoving = true; }
 
         moveDirection = moveInput.ReadValue<Vector2>();
-        if (moveDirection != Vector2.zero) isMoving = true; 
+        if (moveDirection != Vector2.zero) isMoving = true;
 
-        var angle=Mathf.Atan2(moveDirection.y, moveDirection.x)*Mathf.Rad2Deg+90;
-        if (isMoving)
-            directionTransform.rotation = Quaternion.Euler(0,0,angle);
+        var angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg + 90;
+        if (isMoving) directionTransform.rotation = Quaternion.Euler(0, 0, angle);
 
 
         anim.SetMove(isMoving);
@@ -62,7 +64,20 @@ public class PlayerMovement : MonoBehaviour
         }
         else return;
 
-        
+
         thisRigidbody2D.position += moveDirection * playerSpeed * Time.fixedDeltaTime;
+    }
+
+    private void OnPlayerStartMove(InputAction.CallbackContext ctx)
+    {
+        Vector2 firstDir = ctx.ReadValue<Vector2>();
+        if (Mathf.Abs(firstDir.x) > Mathf.Abs(firstDir.y))
+        {
+            anim.isPriorityX = true;
+        }
+        else if (Mathf.Abs(firstDir.x) < Mathf.Abs(firstDir.y))
+        {
+            anim.isPriorityX = false;
+        }
     }
 }

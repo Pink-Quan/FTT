@@ -18,9 +18,10 @@ public class HospitalManager : MonoBehaviour
     [SerializeField] private GameObject closet;
     [SerializeField] private GameObject drinkMedacineTable;
     [SerializeField] private GameObject perscription;
+    [SerializeField] private GameObject helper;
     private void Start()
     {
-        _conversation = Resources.Load<HospitalConversation>($"Text/Hospital/{PlayerPrefs.GetString("Language","Viet")}");
+        _conversation = Resources.Load<HospitalConversation>($"Text/Hospital/{PlayerPrefs.GetString("Language", "Viet")}");
         PlayFirstScene();
     }
 
@@ -32,19 +33,19 @@ public class HospitalManager : MonoBehaviour
 
     private void PlayFirstScene()
     {
-        GameManager.instance.dialogManager.StartDialogue(_conversation.firstConversation,WakeUp);
+        GameManager.instance.dialogManager.StartDialogue(_conversation.firstConversation, WakeUp);
     }
 
     private void WakeUp()
     {
         blackBackground.SetActive(false);
         GameManager.instance.dialogManager.StartDialogue(_conversation.wakeUp, OnDoneWakeUpConversation);
-    }  
-    
+    }
+
     private void OnDoneWakeUpConversation()
     {
         nurse.ReachPlayer(NuresComunitcateWithPlayer);
-    }    
+    }
 
     private void NuresComunitcateWithPlayer()
     {
@@ -53,22 +54,26 @@ public class HospitalManager : MonoBehaviour
 
     public void DoneTalkingWithPlayer()
     {
-        nurse.Disappeare(()=> { GameManager.instance.transitions.TransitionWithText(
+        nurse.Disappeare(() =>
+        {
+            GameManager.instance.transitions.TransitionWithText(
             _conversation.afewDayLatter,
-            ()=> { 
+            () =>
+            {
                 nurse.transform.position = guidenceNursePos.position;
                 player.transform.position = guidenceNursePos.position + Vector3.right;
                 player.animator.enabled = true;
                 player.transform.rotation = Quaternion.identity;
                 player.col.enabled = true;
-            }, 
-            GuideHowToMoveAndTakeStuff); });
+            },
+            GuideHowToMoveAndTakeStuff);
+        });
     }
 
     private void GuideHowToMoveAndTakeStuff()
     {
         nurse.transform.position = guidenceNursePos.position;
-        GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerHowToMove, ()=> 
+        GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerHowToMove, () =>
         {
             GameManager.instance.textBoard.ShowText(_conversation.guideHowToMove, AllowMovePlayer);
         });
@@ -82,11 +87,11 @@ public class HospitalManager : MonoBehaviour
 
         checkpoints.OnDoneOneCheckPoint += player.SetArrowPointer;
         checkpoints.OnDoneOneCheckPoint += nextPoint => PlayGetCheckPointEffect();
-        
+
         checkpoints.OnDoneAllCheckPoint += player.OffArrowPointer;
         checkpoints.OnDoneAllCheckPoint += PlayGetCheckPointEffect;
         checkpoints.OnDoneAllCheckPoint += TellPlayerDrinkDrug;
-        
+
     }
 
     private void PlayGetCheckPointEffect()
@@ -97,7 +102,7 @@ public class HospitalManager : MonoBehaviour
 
     private void TellPlayerDrinkDrug()
     {
-        player.playerMovement.enabled=false;
+        player.playerMovement.enabled = false;
         player.anim.SetMove(false);
         GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerToTakeStuff, NurseLeaveRoom);
     }
@@ -119,7 +124,7 @@ public class HospitalManager : MonoBehaviour
     public void ItemReceivedNotification()
     {
         ForbidPlayerMove();
-        GameManager.instance.textBoard.ShowText(_conversation.getItemNotification,AllowPlayerMove);
+        GameManager.instance.textBoard.ShowText(_conversation.getItemNotification, AllowPlayerMove);
     }
 
     public void AllowPlayerMove()
@@ -156,5 +161,26 @@ public class HospitalManager : MonoBehaviour
         ForbidPlayerMove();
         GameManager.instance.dialogManager.StartDialogue(_conversation.imFeelingNotGood, player.Die);
     }
-    
+
+    public void TakeRightDrug()
+    {
+        ForbidPlayerMove();
+        GameManager.instance.transitions.TransitionWithText(_conversation.afewDayLatter, null, MeetHelperAndGoHome);
+    }
+
+    private void MeetHelperAndGoHome()
+    {
+        helper.gameObject.SetActive(true);
+        nurse.gameObject.SetActive(true);
+        nurse.transform.position = guidenceNursePos.position;
+        player.transform.position = guidenceNursePos.position + Vector3.right;
+        GameManager.instance.dialogManager.StartSequanceDialogue(_conversation.goHome, ChangeToGoHomeScene);
+    }
+
+    private void ChangeToGoHomeScene()
+    {
+        GameManager.instance.transitions.Transition(null);
+        PlayerPrefs.SetString("Progress", "Going Home");
+    }
+
 }

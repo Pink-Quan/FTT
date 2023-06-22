@@ -301,7 +301,7 @@ public struct Dialogue
 
     public string GetResourseAddress()
     {
-        return $"{Name}/{Name}_{emotion}";
+        return $"Charactor Avatar/{Name}/{Name}_{emotion}";
     }
 }
 

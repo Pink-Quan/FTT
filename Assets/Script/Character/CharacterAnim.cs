@@ -14,13 +14,11 @@ public class CharacterAnim : MonoBehaviour
     public int animIndex = 3;
     public Vector2 moveDirection = new Vector2(0, -1);
     public bool isMoving = false;
-
+    public bool isPriorityX;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
     [SerializeField] private float morbundTime = 2;
-
-    IEnumerator updateSprite;
 
     private void Awake()
     {
@@ -30,19 +28,15 @@ public class CharacterAnim : MonoBehaviour
     private void OnEnable()
     {
         SetDirection(moveDirection);
-        if (animator != null)
-        {
-            updateSprite = UpdateSprite();
-            StartCoroutine(updateSprite);
-        }
-
+        StartCoroutine(UpdateSprite());
     }
 
     public void SetDirection(Vector2 moveDirection)
     {
-        if(Mathf.Abs(moveDirection.x)==Mathf.Abs(moveDirection.y))
+        if (Mathf.Abs(moveDirection.x) == Mathf.Abs(moveDirection.y))
         {
-            moveDirection.y = 0;
+            if(isPriorityX) moveDirection.y = 0;
+            else moveDirection.x = 0;
         }
         this.moveDirection = moveDirection;
         animator.SetFloat("HorizontalMoverment", this.moveDirection.x);
@@ -57,14 +51,14 @@ public class CharacterAnim : MonoBehaviour
 
     public void Die()
     {
-        StopCoroutine(updateSprite);
+        StopAllCoroutines();
         StartCoroutine(DieAnim());
     }
     public float GetMorburnTime => morbundTime;
     IEnumerator DieAnim()
     {
         float clk = 0;
-        while(clk< morbundTime)
+        while (clk < morbundTime)
         {
             spriteRenderer.color = Color.red;
             clk += 0.5f;
@@ -75,7 +69,7 @@ public class CharacterAnim : MonoBehaviour
         }
 
         spriteRenderer.color = Color.red;
-        transform.DORotate(new Vector3(0,0,90),0.5f).OnComplete(()=>enabled=false);
+        transform.DORotate(new Vector3(0, 0, 90), 0.5f).OnComplete(() => enabled = false);
     }
 
     public void TakeDamge()

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Nurse : MonoBehaviour
 {
-    private CharacterController controller;
+    public CharacterController controller;
     [SerializeField] private float appearDuration;
     [SerializeField] private float leaveDuration=3;
 
@@ -45,7 +45,7 @@ public class Nurse : MonoBehaviour
     public void LeaveRoom(Action OnLeaveRoomDone)
     {
         StartCoroutine(controller.UpdateMove());
-        transform.DOPath(leaveRoomPaths.paths, leaveDuration).OnComplete(() =>
+        transform.DOPath(leaveRoomPaths.paths, leaveDuration).SetEase(Ease.Linear).OnComplete(() =>
         {
             OnLeaveRoomDone?.Invoke();
             controller.anim.SetMove(false);
