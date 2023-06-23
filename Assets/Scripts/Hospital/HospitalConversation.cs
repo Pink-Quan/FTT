@@ -19,12 +19,12 @@ public class HospitalConversation : ScriptableObject
     public string guideHowToMove;
     public Dialogue afterDoneHowToMove;
 
-    public string getItemNotification;
     [TextArea]
+    public string getItemNotification;
     public string getPrescriptionNofication;
     public Dialogue seftAskWhereIsPrescription;
     public Dialogue imFeelingNotGood;
-
+    [TextArea]
     public string lose;
 
     public Dialogue[] goHome;

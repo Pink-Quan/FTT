@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84940da76883ef4aa70d6d15e1c91d9, type: 3}
+  m_Name: Viet
+  m_EditorClassIdentifier: 
+  conversationBetweenHelperAndLinh:
+  - sentances:
+    - "Em c\u1EA3m th\u1EA5y th\u1EBF n\xE0o khi s\u1EAFp \u0111\u01B0\u1EE3c v\u1EC1
+      nh\xE0"
+    Name: Helper
+    DisplayName: "T\xECnh nguy\u1EC7n vi\xEAn"
+    emotion: 0
+  - sentances:
+    - "Em c\u0169ng kh\xF4ng bi\u1EBFt n\u1EEFa"
+    - "Th\u1EF1c s\u1EF1 em kh\xF4ng nh\u1EDB \u0111\u01B0\u1EE3c nhi\u1EC1u"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "V\u1EADy v\u1EE5 tai n\u1EA1n \u0111\xF3 khi\u1EBFn em kh\xF4ng nh\u1EDB \u0111\u01B0\u1EE3c
+      g\xEC sao"
+    Name: Helper
+    DisplayName: "T\xECnh nguy\u1EC7n vi\xEAn"
+    emotion: 0
+  - sentances:
+    - "C\u0169ng kh\xF4ng h\u1EB3n \u1EA1"
+    - "Em v\u1EABn nh\u1EDB \u0111\u01B0\u1EE3c nh\u1EEFng g\xEC m\xECnh \u0111\xE3
+      h\u1ECDc, nh\u1EEFng qu\xE1 kh\u1EE9 g\u1EA7n t\u1EEB tr\u01B0\u1EDBc v\u1EE5
+      tai n\u1EA1n x\u1EA3y ra"
+    - "Nh\u01B0ng nh\u1EEFng qu\xE1 kh\u1EE9 l\xE2u r\u1ED3i em l\u1EA1i kh\xF4ng
+      nh\u1EDB m\u1EA5y"
+    - "V\xED d\u1EE5 em v\u1EABn c\xF2n nh\u1EDB m\u1ED9t s\u1ED1 ki\u1EBFn th\u1EE9c
+      khi \u1EDF \u0111\u1EA1i h\u1ECDc "
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "\u1ED2 v\u1EADy sao"
+    - "V\u1EADy em c\xF2n nh\u1EDB khai tri\u1EC3n Maclaurin c\u1EE7a h\xE0m f(x)
+      kh\xF4ng"
+    - "Hay em c\xF2n nh\u1EDB m\u1ED1i quan h\u1EC7 gi\u1EEFa c\u01A1 s\u1EDF h\u1EA1
+      t\u1EA7ng v\xE0 ki\u1EBFn tr\xFAc th\u01B0\u1EE3ng t\u1EA7ng v\xE0 c\u01A1
+      s\u1EDF h\u1EA1 t\u1EA7ng kh\xF4ng"
+    Name: Helper
+    DisplayName: "T\xECnh nguy\u1EC7n vi\xEAn"
+    emotion: 0
+  - sentances:
+    - "Khai tri\u1EC3n Maclaurin c\u1EE7a h\xE0m f(x) l\xE0"
+    - 'f(a) + (f''(a)*(x-a))/1! + (f''''(a)*(x-a)^2)/2! + ... + (fn(a)*(x-a)^n)/n! '
+    - "C\xF2n m\u1ED1i quan h\u1EC7 gi\u1EEFa c\u01A1 s\u1EDF h\u1EA1 t\u1EA7ng v\xE0
+      ki\u1EBFn tr\xFAc th\u01B0\u1EE3ng t\u1EA7ng v\xE0 c\u01A1 s\u1EDF h\u1EA1
+      t\u1EA7ng l\xE0"
+    - "L\xE0 m\u1ED1i quan h\u1EC7 bi\u1EC7n ch\u1EE9ng, trong \u0111\xF3 c\u01A1
+      s\u1EDF h\u1EA1 t\u1EA7ng hay quan h\u1EC7 s\u1EA3n xu\u1EA5t gi\u1EEF vai
+      tr\xF2 quy\u1EBFt "
+    - "Hay n\xF3i c\xE1ch kh\xE1c \u0111\xF3 l\xE0 m\u1ED1i quan h\u1EC7 gi\u1EEFa
+      kinh t\u1EBF v\xE0 ch\xEDnh tr\u1ECB, trong \u0111 kinh t\u1EBF l\xE0 then
+      ch\u1ED1t v\xE0 chi ph\u1ED1i ch\xEDnh tr\u1ECB"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "\u01A0..."
+    - "Anh ch\u1EC9 \u0111\u1ECBnh tr\xEAu em t\xFD th\xF4i m\xE0 em nh\u1EDB th\u1EADt"
+    - "\u0110\u1EBFn anh c\xF2n ch\u1EB3ng nh\u1EDB n\u1ED5i"
+    Name: Helper
+    DisplayName: "T\xECnh nguy\u1EC7n vi\xEAn"
+    emotion: 0
+  - sentances:
+    - Haha
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+  - sentances:
+    - "M\u1EB7c d\xF9 v\u1EADy"
+    - "Nh\u01B0ng nh\u1EEFng qu\xE1 kh\u1EE9 l\xE2u r\u1ED3i em l\u1EA1i kh\xF4ng
+      nh\u1EDB m\u1EA5y"
+    - "Em kh\xF4ng nh\u1EDB \u0111\u01B0\u1EE3c qu\xE1 kh\u01B0 v\xE0 c\xE1c m\u1ED1i
+      quan h\u1EC7 tr\u01B0\u1EDBc \u0111\xE2y c\u1EE7a em, th\u1EADm ch\xED b\u1ED1
+      m\u1EB9 em tr\xF4ng nh\u01B0 th\u1EBF n\xE0o"
+    - "Em ch\u1EC9 nh\u1EDB \u0111\u01B0\u1EE3c h\u1ECD \u0111\xE3 ch\u0103m s\xF3c
+      em, nh\u01B0ng th\u1EF1c s\u1EF1 em l\u1EA1i kh\xF4ng \u0111\u1ECDng l\u1EA1i
+      \u0111\u01B0\u1EE3c t\xFD c\u1EA3m x\xFAc n\xE0o"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7

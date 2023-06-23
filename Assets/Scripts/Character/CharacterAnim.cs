@@ -35,8 +35,16 @@ public class CharacterAnim : MonoBehaviour
     {
         if (Mathf.Abs(moveDirection.x) == Mathf.Abs(moveDirection.y))
         {
-            if(isPriorityX) moveDirection.y = 0;
+            if (isPriorityX) moveDirection.y = 0;
             else moveDirection.x = 0;
+        }
+        else if (Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.y))
+        {
+            isPriorityX = true;
+        }
+        else if (Mathf.Abs(moveDirection.x) < Mathf.Abs(moveDirection.y))
+        {
+            isPriorityX = false;
         }
         this.moveDirection = moveDirection;
         animator.SetFloat("HorizontalMoverment", this.moveDirection.x);

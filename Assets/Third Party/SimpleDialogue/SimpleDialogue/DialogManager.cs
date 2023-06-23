@@ -296,7 +296,8 @@ public struct Dialogue
         Happy = 1,
         Normal = 0,
         Shocked = 5,
-        Serious = 6
+        Serious = 6,
+        Sad=7,
     }
 
     public string GetResourseAddress()

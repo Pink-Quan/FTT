@@ -66,7 +66,7 @@ public class InteractableEntity : MonoBehaviour
     protected virtual void OnPlayerEnterZone()
     {
         if (canInteract)
-            player.ShowItertactButton(OnInteract, interactName);
+            player.ShowInteractButton(OnInteract, interactName);
         onPlayerEnterZone?.Invoke();
     }
 
@@ -93,6 +93,11 @@ public class InteractableEntity : MonoBehaviour
         player.playerMovement.enabled = true;
         player.buttons.SetActive(true);
         player.interactButton.gameObject.SetActive(false);
+    }
+
+    public void ShowInteractButton()
+    {
+        player.ShowInteractButton();
     }
 }
 
