@@ -10,9 +10,11 @@ public class InventoryItemInfo : MonoBehaviour
     public TMP_Text itemName;
     public TMP_Text itemDescription;
 
+    public Sprite nullIcon;
+
     private void OnEnable()
     {
-        icon.sprite = null;
+        icon.sprite = nullIcon;
         itemName.text = "";
         itemDescription.text = "";
     }

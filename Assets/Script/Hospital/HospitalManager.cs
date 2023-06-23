@@ -102,7 +102,7 @@ public class HospitalManager : MonoBehaviour
 
     private void TellPlayerDrinkDrug()
     {
-        player.playerMovement.enabled = false;
+        player.DisableMove();
         player.anim.SetMove(false);
         GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerToTakeStuff, NurseLeaveRoom);
     }
@@ -114,7 +114,8 @@ public class HospitalManager : MonoBehaviour
 
     private void AllowPlayerExploreTheRoom()
     {
-        player.playerMovement.enabled = true;
+        player.EnableMove();
+        player.ShowButtons();
         closet.SetActive(true);
         drinkMedacineTable.SetActive(true);
         perscription.SetActive(true);
