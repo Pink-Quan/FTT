@@ -34,4 +34,9 @@ public class LoopStreet : MonoBehaviour
             street1.transform.position = street2.transform.position - new Vector3(street1.m_Width, 0) + offset;
         }
     }
+
+    public void ChangeSpeed(float multi)
+    {
+        speed *= multi; 
+    }
 }

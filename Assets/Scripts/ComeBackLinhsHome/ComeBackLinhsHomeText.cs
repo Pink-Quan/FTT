@@ -6,4 +6,6 @@ using UnityEngine;
 public class ComeBackLinhsHomeText : ScriptableObject
 {
     public Dialogue[] conversationBetweenHelperAndLinh;
+
+    public Dialogue[] aboutToGoHome;
 }

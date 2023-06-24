@@ -3,13 +3,12 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/Street.tmx",
+    "activeFile": "Map/Linh_House.tmx",
     "expandedProjectPaths": [
-        "Tileset",
+        "Map",
         "Tileset/Singles/Villas",
-        "Tileset/Singles",
         ".",
-        "Map"
+        "Tileset/Singles"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -206,11 +205,11 @@
             "scaleInDock": 1
         },
         "Map/Linh_House.tmx": {
-            "scale": 2.661979166666667,
-            "selectedLayer": 0,
+            "scale": 3,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 102.74310311093718,
-                "y": 144.25357072979844
+                "x": 171,
+                "y": 94.16666666666669
             }
         },
         "Map/LivingRoom.tsx": {
@@ -376,7 +375,7 @@
             "scaleInEditor": 1
         },
         "Tileset/Generic.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "Tileset/Hill.tsx": {
@@ -510,16 +509,8 @@
     "map.tileWidth": 16,
     "map.width": 20,
     "openFiles": [
-        "Map/Inside camping trailer.tmx",
         "Tileset/Bedroom.tsx",
-        "Map/Inside hospital.tmx",
-        "Map/Linh_House.tmx",
-        "Map/Rule1.tmx",
-        "Map/Street.tmx",
         "Tileset/Camping.tsx",
-        "Map/Main_map.tmx",
-        "Map/Villa_House.tmx",
-        "Map/Villa_House_Second_Floor.tmx",
         "Tileset/Generic.tsx",
         "Tileset/Bathroom.tsx",
         "Tileset/Buses_3.tsx",
@@ -542,25 +533,23 @@
         "Tileset/Viet Nam Flag.tsx",
         "Tileset/Villas.tsx",
         "Tileset/Worksite.tsx",
-        "Map/Comback_street.tmx",
-        "Map/Cliff.tmx",
-        "Map/Inside cave.tmx",
-        "Tileset/Singles/Villas/Big Villa house red.tsx"
+        "Tileset/Singles/Villas/Big Villa house red.tsx",
+        "Map/Linh_House.tmx"
     ],
     "project": "Tiled.tiled-project",
     "recentFiles": [
-        "Map/Inside camping trailer.tmx",
         "Tileset/Bedroom.tsx",
-        "Map/Inside hospital.tmx",
-        "Map/Linh_House.tmx",
-        "Map/Rule1.tmx",
-        "Tileset/Singles/Villas/Big Villa house red.tsx",
-        "Map/Inside cave.tmx",
-        "Map/Cliff.tmx",
-        "Map/Comback_street.tmx",
-        "Tileset/Worksite.tsx",
-        "Tileset/Villas.tsx",
-        "Tileset/Viet Nam Flag.tsx"
+        "Tileset/Camping.tsx",
+        "Tileset/Generic.tsx",
+        "Tileset/Bathroom.tsx",
+        "Tileset/Buses_3.tsx",
+        "Tileset/City Props.tsx",
+        "Tileset/Classroom_and_library.tsx",
+        "Tileset/Floors.tsx",
+        "Tileset/Hospital.tsx",
+        "Tileset/Kitchen.tsx",
+        "Tileset/Linh.tsx",
+        "Tileset/LivingRoom.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.margin": 0,

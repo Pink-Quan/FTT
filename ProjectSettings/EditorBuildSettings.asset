@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GoingHome.unity
     guid: 42119dca4fabc4841b103626e357f18b
+  - enabled: 1
+    path: Assets/Scenes/LinhHouse.unity
+    guid: 87d04352fce33594592403949e60f558
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: 76058beb56cc5624089acc63f73385fb
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: b5eef7e6875fc174694b9ef1ec06b525, type: 2}

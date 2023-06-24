@@ -32,7 +32,7 @@ public class DialogManager : MonoBehaviour
         SellectNextButton.gameObject.SetActive(false);
         SellectYesButton.gameObject.SetActive(false);
         SellectNoButton.gameObject.SetActive(false);
-        DialogueBroad.SetActive(false);
+        DialogueBroad.gameObject.SetActive(false);
     }
 
     [SerializeField] private Button SellectNextButton;
@@ -45,13 +45,9 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Text;
     [SerializeField] private TextMeshProUGUI Name;
     [SerializeField] private Image Avatar;
-    [SerializeField] private GameObject DialogueBroad;
+    [SerializeField] private RectTransform DialogueBroad;
 
     [SerializeField] private GameObject baseAvatar;
-
-    [Header("Animation")]
-    [SerializeField] private RectTransform AppearPos;
-    [SerializeField] private RectTransform DisappearPos;
 
 
     private Action OnDoneDialogue;
@@ -193,7 +189,7 @@ public class DialogManager : MonoBehaviour
     {
         CancelInvoke();
 
-        DialogueBroad.transform.DOMove(AppearPos.position, 0.5f);
+        DialogueBroad.DOAnchorPosY(DialogueBroad.sizeDelta.y / 2, 1);
 
         DialogueBroad.gameObject.SetActive(true);
         Name.text = dialogue.DisplayName;
@@ -228,7 +224,7 @@ public class DialogManager : MonoBehaviour
 
     private void CloseDialogue()
     {
-        if (canClose) DialogueBroad.transform.DOMove(DisappearPos.position, 0.5f);
+        if (canClose) DialogueBroad.DOAnchorPosY(-DialogueBroad.sizeDelta.y * 5, 1);
         Invoke("OffDialogue", 0.5f);
         OnDoneDialogue?.Invoke();
     }
@@ -242,12 +238,12 @@ public class DialogManager : MonoBehaviour
     public void CloseDialogueBoard()
     {
         canClose = true;
-        DialogueBroad.transform.DOMove(DisappearPos.position, 0.5f);
+        DialogueBroad.DOAnchorPosY(-DialogueBroad.sizeDelta.y * 5, 1);
     }
 
     private void OffDialogue()
     {
-        DialogueBroad.SetActive(false);
+        DialogueBroad.gameObject.SetActive(false);
         Sellect1Button.gameObject.SetActive(false);
         Sellect2Button.gameObject.SetActive(false);
         Sellect3Button.gameObject.SetActive(false);

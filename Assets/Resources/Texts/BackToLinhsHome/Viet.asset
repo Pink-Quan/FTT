@@ -82,14 +82,37 @@ MonoBehaviour:
     emotion: 1
   - sentances:
     - "M\u1EB7c d\xF9 v\u1EADy"
-    - "Nh\u01B0ng nh\u1EEFng qu\xE1 kh\u1EE9 l\xE2u r\u1ED3i em l\u1EA1i kh\xF4ng
-      nh\u1EDB m\u1EA5y"
-    - "Em kh\xF4ng nh\u1EDB \u0111\u01B0\u1EE3c qu\xE1 kh\u01B0 v\xE0 c\xE1c m\u1ED1i
+    - "Nh\u1EEFng qu\xE1 kh\u1EE9 l\xE2u em l\u1EA1i kh\xF4ng nh\u1EDB m\u1EA5y"
+    - "Em kh\xF4ng nh\u1EDB \u0111\u01B0\u1EE3c qu\xE1 kh\u1EE9 v\xE0 c\xE1c m\u1ED1i
       quan h\u1EC7 tr\u01B0\u1EDBc \u0111\xE2y c\u1EE7a em, th\u1EADm ch\xED b\u1ED1
       m\u1EB9 em tr\xF4ng nh\u01B0 th\u1EBF n\xE0o"
     - "Em ch\u1EC9 nh\u1EDB \u0111\u01B0\u1EE3c h\u1ECD \u0111\xE3 ch\u0103m s\xF3c
       em, nh\u01B0ng th\u1EF1c s\u1EF1 em l\u1EA1i kh\xF4ng \u0111\u1ECDng l\u1EA1i
       \u0111\u01B0\u1EE3c t\xFD c\u1EA3m x\xFAc n\xE0o"
+    - "Gi\xE1 nh\u01B0 h\u1ECD v\u1EABn c\xF2n \u0111\u1EC3 c\xF3 th\u1EC3 gi\xFAp
+      \u0111\u1EE1 em"
+    - Hic
     Name: Linh
     DisplayName: Linh
     emotion: 7
+  - sentances:
+    - "Kh\xF4ng sao \u0111\xE2u, ch\u1EAFc ch\u1EAFn s\u1EBD c\xF3 ng\u01B0\u1EDDi
+      gi\xFAp em l\xFAc kh\xF3 kh\u0103n"
+    - "\u0110\u1EB7c bi\u1EC7t l\xE0 nh\u1EEFng ng\u01B0\u1EDDi th\xE2n, anh ngh\u0129
+      h\u1ECD s\u1EBD kh\xF4ng b\u1ECF l\u1EA1i em \u0111\xE2u"
+    Name: Helper
+    DisplayName: "T\xECnh nguy\u1EC7n vi\xEAn"
+    emotion: 0
+  aboutToGoHome:
+  - sentances:
+    - "S\u1EAFp v\u1EC1 \u0111\u1EBFn nh\xE0 c\u1EE7a em r\u1ED3i"
+    - "Anh c\xF3 mua m\u1ED9t \xEDt \u0111\u1ED3 \u0103n, c\xF3 g\xEC v\u1EC1 \u0111\xF3i
+      qu\xE1 th\xEC ch\u1EBF bi\u1EBFn \u0111\u1EC3 \u0103n nh\xE1"
+    Name: Helper
+    DisplayName: "T\xECnh nguy\u1EC7n vi\xEAn"
+    emotion: 0
+  - sentances:
+    - "V\xE2ng \u1EA1, em c\u1EA3m \u01A1n"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0

@@ -18,13 +18,13 @@ public class Transitions : MonoBehaviour
         Transition(1, 1, OnComplete);
     }
 
-    public void Transition(float transTime, float stayTime, Action OnComplete)
+    public void Transition(float transTime, float stayTime, Action OnComplete, Action OnStartStay = null)
     {
         transitionParent.SetActive(true);
-        StartCoroutine(StartTrasition(transTime, stayTime, OnComplete));
+        StartCoroutine(StartTrasition(transTime, stayTime, OnComplete, OnStartStay));
     }
 
-    IEnumerator StartTrasition(float transTime, float stayTime, Action OnComplete)
+    IEnumerator StartTrasition(float transTime, float stayTime, Action OnComplete, Action OnStartStay)
     {
         transitionImage.gameObject.SetActive(true);
         Color imgColor = transitionImage.color;
@@ -46,6 +46,7 @@ public class Transitions : MonoBehaviour
         imgColor = transitionImage.color;
         imgColor.a = 1;
         transitionImage.color = imgColor;
+        OnStartStay?.Invoke();
         yield return new WaitForSeconds(stayTime);
 
         while (clk > 0)
