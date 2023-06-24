@@ -5,9 +5,9 @@
     },
     "activeFile": "Map/Linh_House.tmx",
     "expandedProjectPaths": [
-        "Map",
         "Tileset/Singles/Villas",
         ".",
+        "Map",
         "Tileset/Singles"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -205,11 +205,11 @@
             "scaleInDock": 1
         },
         "Map/Linh_House.tmx": {
-            "scale": 3,
-            "selectedLayer": 6,
+            "scale": 2,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 171,
-                "y": 94.16666666666669
+                "x": 166.5,
+                "y": 223.75
             }
         },
         "Map/LivingRoom.tsx": {
@@ -399,7 +399,7 @@
             "scaleInEditor": 1
         },
         "Tileset/Room_Builder_3d_walls.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 3,
             "scaleInEditor": 1
         },
         "Tileset/Room_Builder_borders.tsx": {

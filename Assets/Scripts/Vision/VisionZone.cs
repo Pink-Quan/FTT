@@ -14,6 +14,7 @@ public class VisionZone : MonoBehaviour
     public void EnableVision()
     {
         if (VisionManager.instance.currentVision == this) return;
+        VisionManager.instance.currentVision.DisableVision();
         foreach (GameObject zone in zones)
         {
             if (zone != null)
@@ -21,7 +22,6 @@ public class VisionZone : MonoBehaviour
                 zone.SetActive(false);
             }
         }
-        VisionManager.instance.currentVision.DisableVision();
         VisionManager.instance.currentVision = this;
     }
 
