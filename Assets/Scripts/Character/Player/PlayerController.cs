@@ -20,6 +20,7 @@ public class PlayerController : CharacterController
     public Canvas canvas;
     public Button currentItemButton;
     public SmartPhone phone;
+    public Stress stress;
 
     public Item curItem;
 

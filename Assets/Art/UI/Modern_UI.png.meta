@@ -2334,7 +2334,7 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -5814,10 +5814,10 @@ TextureImporter:
       name: Modern_UI_272
       rect:
         serializedVersion: 2
-        x: 452
-        y: 355
-        width: 8
-        height: 24
+        x: 453
+        y: 371
+        width: 6
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6570,10 +6570,10 @@ TextureImporter:
       name: Modern_UI_308
       rect:
         serializedVersion: 2
-        x: 455
-        y: 358
-        width: 6
-        height: 6
+        x: 452
+        y: 355
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -13455,16 +13455,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_643
+      name: Bar_Border
       rect:
         serializedVersion: 2
-        x: 262
+        x: 268
         y: 129
-        width: 31
-        height: 26
+        width: 25
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 5, z: 4, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -14148,7 +14148,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_677
+      name: RedBar
       rect:
         serializedVersion: 2
         x: 319
@@ -14631,7 +14631,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_700
+      name: GreenBar
       rect:
         serializedVersion: 2
         x: 271
@@ -14640,7 +14640,7 @@ TextureImporter:
         height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 2, z: 1, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -14652,7 +14652,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_701
+      name: yellowBar
       rect:
         serializedVersion: 2
         x: 319
@@ -18063,7 +18063,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 3, y: 3, z: 3, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -18107,6 +18107,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Arrow: 1853936267
+      Bar_Border: 1947340597
+      GreenBar: 992983911
       Modern_UI_0: 1357951152
       Modern_UI_1: 123959240
       Modern_UI_10: -288134566
@@ -18707,7 +18709,6 @@ TextureImporter:
       Modern_UI_640: -810428877
       Modern_UI_641: -12994817
       Modern_UI_642: 1473998567
-      Modern_UI_643: 1947340597
       Modern_UI_644: 8225689
       Modern_UI_645: 768029161
       Modern_UI_646: 1733507246
@@ -18744,7 +18745,6 @@ TextureImporter:
       Modern_UI_674: 165649977
       Modern_UI_675: 926257542
       Modern_UI_676: 31749521
-      Modern_UI_677: -6280801
       Modern_UI_678: -1491142765
       Modern_UI_679: 61801413
       Modern_UI_68: -1597954282
@@ -18771,8 +18771,6 @@ TextureImporter:
       Modern_UI_699: -1461542955
       Modern_UI_7: 1894718920
       Modern_UI_70: 1843372052
-      Modern_UI_700: 992983911
-      Modern_UI_701: -1811552865
       Modern_UI_702: -706453444
       Modern_UI_703: 499636064
       Modern_UI_704: 1398325327
@@ -18963,12 +18961,14 @@ TextureImporter:
       PauseBut02: -802670732
       PauseButton: -985155072
       Rec_Board: -1662589879
+      RedBar: -6280801
       Square_Board: -401158104
       UI_Esc_Button00: -1310216668
       UI_OK_icon00: -1297389234
       UI_Rec_Button00: -1913287922
       UI_Squ_Buton00: -1860865971
       White_Bag_Icon: -106142599
+      yellowBar: -1811552865
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

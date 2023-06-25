@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-        input=new PlayerInput();
+        
+        input = new PlayerInput();
+        input.Enable();
     }
 
     public DialogManager dialogManager;
@@ -26,4 +28,5 @@ public class GameManager : MonoBehaviour
     {
         instance = null;
     }
+
 }

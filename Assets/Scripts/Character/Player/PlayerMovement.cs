@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float playerSpeed = 5f;
+    private float defaultSpeed;
     private Vector2 moveDirection;
     private Rigidbody2D thisRigidbody2D;
     private PlayerController playerController;
@@ -21,16 +22,16 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         moveInput = GameManager.instance.input.Player.Move;
-        moveInput.Enable();
-
         moveInput.started += OnPlayerStartMove;
-
     }
     private void OnDisable()
     {
         moveInput.started -= OnPlayerStartMove;
+    }
 
-        moveInput.Disable();
+    private void Start()
+    {
+        defaultSpeed = playerSpeed;
     }
 
     private void GetComponentInit()
@@ -45,10 +46,6 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDirection = Vector2.zero;
         bool isMoving = false;
-        //if (Input.GetKey(leftButton))  { moveDirection.x = -1; isMoving = true; }
-        //if (Input.GetKey(rightButton)) { moveDirection.x = 1; isMoving = true;  }
-        //if (Input.GetKey(upButton))    { moveDirection.y = 1; isMoving = true;  }
-        //if (Input.GetKey(downButton))  { moveDirection.y = -1; isMoving = true; }
 
         moveDirection = moveInput.ReadValue<Vector2>();
         if (moveDirection != Vector2.zero) isMoving = true;
@@ -56,14 +53,12 @@ public class PlayerMovement : MonoBehaviour
         var angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg + 90;
         if (isMoving) directionTransform.rotation = Quaternion.Euler(0, 0, angle);
 
-
         anim.SetMove(isMoving);
         if (isMoving)
         {
             anim.SetDirection(moveDirection);
         }
         else return;
-
 
         thisRigidbody2D.position += moveDirection * playerSpeed * Time.fixedDeltaTime;
     }
@@ -79,5 +74,18 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.isPriorityX = false;
         }
+    }
+
+    public void SetSpeed(float speed)
+    {
+        playerSpeed=speed;
+    }
+
+    public float Speed { get { return playerSpeed; } }
+    public float DefaultSpeed { get { return defaultSpeed; } }
+
+    public void ResetPlayerSpeed()
+    {
+        playerSpeed = defaultSpeed;
     }
 }
