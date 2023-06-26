@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3fdb1c8e6eaa8f48bf064b155df5bec, type: 3}
+  m_Name: Viet
+  m_EditorClassIdentifier: 
+  firstSeftDialogue:
+    sentances:
+    - "Nh\xE0 m\xECnh s\u1EA1ch s\u1EBD th\u1EADt"
+    - "Ch\u1EAFc \u0111\u01B0\u1EE3c c\xE1c anh ch\u1ECB t\xECnh nguy\u1EC7n vi\xEAn
+      ho\u1EB7c h\u1ECD h\xE0ng d\u1ECDn gi\xFAp"
+    - "Mong sau khi kh\xE1m ph\xE1 quanh nh\xE0 m\xECnh s\u1EBD nh\u1EDB \u0111\u01B0\u1EE3c
+      g\xEC \u0111\xF3"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0

@@ -743,6 +743,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 231384665}
+    - target: {fileID: 8231316056586273205, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 72.67523
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231316056586273205, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9.429993
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3fe75788609c6942a37583564a40cec, type: 3}
 --- !u!1 &238364125
@@ -1882,6 +1890,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7130537231484898473, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7240982989382623905, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
       propertyPath: m_text
       value: "B\u1EC7nh nh\xE2n 2122 b\u1ECB s\u1ED1c thu\u1ED1c, ch\u01B0a x\xE1c
@@ -1910,6 +1922,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8843856275900448646, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876311571475053907, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

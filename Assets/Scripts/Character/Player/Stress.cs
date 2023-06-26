@@ -47,4 +47,24 @@ public class Stress : MonoBehaviour
             AddStress(succesBreath);
         },10);
     }
+
+    public void HideStressBar()
+    {
+        stressBar.transform.parent.gameObject.SetActive(false);
+    }
+
+    public void ShowStressBar()
+    {
+        stressBar.transform.parent.gameObject.SetActive(true);
+    }
+
+    public void ShowBreathButton()
+    {
+        breath.breathButton.gameObject.SetActive(true);
+    }
+
+    public void HideBreathButton()
+    {
+        breath.breathButton.gameObject.SetActive(false);
+    }
 }

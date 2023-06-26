@@ -3764,6 +3764,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2499191677840538950, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2565733578293184620, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 227
@@ -5406,6 +5410,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6217731555606488633, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308106481300897730, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6432163058533191118, guid: c3fe75788609c6942a37583564a40cec, type: 3}
@@ -7883,6 +7891,14 @@ PrefabInstance:
     - target: {fileID: 8213173516218912384, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231316056586273205, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 72.67523
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231316056586273205, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9.429993
       objectReference: {fileID: 0}
     - target: {fileID: 8348471462795740712, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13350,6 +13366,10 @@ PrefabInstance:
     - target: {fileID: 4295372558909939447, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130537231484898473, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
