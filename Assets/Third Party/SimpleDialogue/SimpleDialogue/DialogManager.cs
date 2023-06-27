@@ -188,7 +188,7 @@ public class DialogManager : MonoBehaviour
     private void InitDialog(Dialogue dialogue)
     {
         CancelInvoke();
-
+        DOTween.Kill(this);
         DialogueBroad.DOAnchorPosY(DialogueBroad.sizeDelta.y / 2, 0.5f);
 
         DialogueBroad.gameObject.SetActive(true);
@@ -224,7 +224,7 @@ public class DialogManager : MonoBehaviour
 
     private void CloseDialogue()
     {
-        if (canClose) DialogueBroad.DOAnchorPosY(-DialogueBroad.sizeDelta.y * 5, 1);
+        if (canClose) DialogueBroad.DOAnchorPosY(-DialogueBroad.sizeDelta.y * 5, 0.5f);
         Invoke("OffDialogue", 0.5f);
         OnDoneDialogue?.Invoke();
     }
@@ -238,7 +238,7 @@ public class DialogManager : MonoBehaviour
     public void CloseDialogueBoard()
     {
         canClose = true;
-        DialogueBroad.DOAnchorPosY(-DialogueBroad.sizeDelta.y * 5, 1);
+        DialogueBroad.DOAnchorPosY(-DialogueBroad.sizeDelta.y * 5, 0.5f);
     }
 
     private void OffDialogue()

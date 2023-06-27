@@ -23,7 +23,6 @@ MonoBehaviour:
     DisplayName: Linh
     emotion: 0
   getCookBookGuide: "Nh\u1EADn \u0111\u01B0\u1EE3c s\xE1ch n\u1EA5u \u0103n"
-  getStick: "Nh\u1EADn \u0111\u01B0\u1EE3c 1 g\u1EADy s\u1EAFt"
   seftDialogueAbountCookBook:
     sentances:
     - "Sao s\xE1ch n\u1EA5u \u0103n l\u1EA1i \u1EDF \u0111\xE2y nh\u1EC9, \u0111\xE1ng
@@ -40,14 +39,26 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
+  getStick: "Nh\u1EADn \u0111\u01B0\u1EE3c 1 g\u1EADy s\u1EAFt"
   monologueAbountStick:
     sentances: []
     Name: 
     DisplayName: 
     emotion: 0
+  getLastPage: "Nh\u1EADn \u0111\u01B0\u1EE3c trang cu\u1ED1i c\u1EE7a s\xE1ch n\u1EA5u
+    \u0103n"
   thereSomthingUnderTheChair:
     sentances:
     - "Hmm, c\xF3 g\xEC \u0111\xF3 s\xE2u trong g\u1EA7m gh\u1EBF th\xEC ph\u1EA3i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  monologueAboutThePage:
+    sentances:
+    - "Hay qu\xE1, trang cu\u1ED1i c\xF3 ghi m\u1EADt kh\u1EA9u t\u1EE7 v\xE0 t\xE0i
+      kho\u1EA3n facebook c\u1EE7a m\xECnh n\xE0y"
+    - "Nh\u01B0ng sao m\u1EADt kh\u1EA9u facebook c\u1EE7a m\xECnh l\u1EA1i b\u1ECB
+      m\u1EA5t ch\u1EEF nh\u1EC9, ch\u1EAFc do ghi b\u1EB1ng b\xFAt ch\xEC"
     Name: Linh
     DisplayName: Linh
     emotion: 0

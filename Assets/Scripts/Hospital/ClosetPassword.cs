@@ -35,7 +35,7 @@ public class ClosetPassword : MonoBehaviour
 
     public void SwitchButton(int i)
     {
-        Debug.Log(i);
+        //Debug.Log(i);
         input[i]=buttons[i].GetComponent<SwitchButton>().isOn;
 
         //string inp="";

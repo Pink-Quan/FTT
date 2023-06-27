@@ -23,10 +23,10 @@ public class LinhHouseManager : MonoBehaviour
 
     private void FirstSeftConversation()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.firstSeftDialogue, PlayerExploreHouse);
+        GameManager.instance.dialogManager.StartDialogue(texts.firstSeftDialogue, EnablePlayerMoveAndUI);
     }
 
-    private void PlayerExploreHouse()
+    private void EnablePlayerMoveAndUI()
     {
         player.ShowButtons();
         player.EnableMove();
@@ -34,15 +34,15 @@ public class LinhHouseManager : MonoBehaviour
 
     public void AddCookBookToPlayer()
     {
-        DisableMoveAndUI();
+        DisablePlayerMoveAndUI();
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Cookery book", 1, player.inventory);
         GameManager.instance.textBoard.ShowText(texts.getCookBookGuide, SeftDiaglogueAboutCookBook);
     }
     private void SeftDiaglogueAboutCookBook()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.seftDialogueAbountCookBook, PlayerExploreHouse);
+        GameManager.instance.dialogManager.StartDialogue(texts.seftDialogueAbountCookBook, EnablePlayerMoveAndUI);
     }
-    public void DisableMoveAndUI()
+    public void DisablePlayerMoveAndUI()
     {
         player.DisableMove();
         player.HideButtons();
@@ -50,14 +50,14 @@ public class LinhHouseManager : MonoBehaviour
 
     public void AddStickToPlayer()
     {
-        DisableMoveAndUI();
+        DisablePlayerMoveAndUI();
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "stick", 1, player.inventory);
         GameManager.instance.textBoard.ShowText(texts.getStick, MonologueAbountStick);
     }
 
     private void MonologueAbountStick()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.monologueAbountStick,PlayerExploreHouse);
+        GameManager.instance.dialogManager.StartDialogue(texts.monologueAbountStick, EnablePlayerMoveAndUI);
     }
 
 
@@ -73,7 +73,20 @@ public class LinhHouseManager : MonoBehaviour
 
     public void GetLastPage()
     {
-        // if grabbing stick, get papaer
-        // else, show dialogue
+        DisablePlayerMoveAndUI();
+        if (player.curItem.itemName == "stick")
+        {
+            GameManager.instance.textBoard.ShowText(texts.getLastPage, MonologueAboutTheLastPage);
+            InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Last page of cookery book", 1, player.inventory);
+        }
+        else
+        {
+            GameManager.instance.dialogManager.StartDialogue(texts.thereSomthingUnderTheChair, EnablePlayerMoveAndUI);
+        }
+    }
+
+    private void MonologueAboutTheLastPage()
+    {
+        GameManager.instance.dialogManager.StartDialogue(texts.monologueAboutThePage, EnablePlayerMoveAndUI);
     }
 }

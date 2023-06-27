@@ -114,6 +114,18 @@ MonoBehaviour:
     itemValue: 0
     icon: {fileID: -588244930, guid: e46de1167a70f4c4a9993675efe04ba0, type: 3}
     info: Cookery book, but lost the last page
+  - item:
+      data: 
+    name: Last page of cookery book
+    amount: 1
+    maxAmount: 1
+    itemValue: 0
+    icon: {fileID: -588244930, guid: e46de1167a70f4c4a9993675efe04ba0, type: 3}
+    info: '1974
+
+      NguyenThiLinh7712
+
+      Linh23'
   swordConfigList:
   - sword:
       durability: 0

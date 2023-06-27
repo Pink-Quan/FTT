@@ -5,29 +5,35 @@ using UnityEngine;
 
 public class FlashLightHidenEntity : InteractableEntity
 {
+    [SerializeField] private Vector2 checkDirection = Vector2.down;
     protected override void OnPlayerEnterZone()
     {
         if (player.IsFlashLight())
         {
-            float zAngle = player.directionTrasform.localRotation.eulerAngles.z;
-            if (zAngle<90&&zAngle>-90)
+            Vector3 playerDir = player.directionTrasform.up * -1f;
+            if (Vector3.Dot(playerDir, checkDirection) >= 0)
                 base.OnPlayerEnterZone();
-
         }
     }
 
-    private bool isLight;
+    bool isLight;
     protected override void OnPlayerInZone()
-    {    
-        if(player.IsFlashLight() && !isLight)
+    {
+        if (player.IsFlashLight() && !isLight)
         {
-            float zAngle = player.directionTrasform.localRotation.eulerAngles.z;
-            if (zAngle < 0 && zAngle > -180)
+            Vector3 playerDir = player.directionTrasform.up * -1f;
+            if (Vector3.Dot(playerDir, checkDirection) >= 0)
             {
                 base.OnPlayerEnterZone();
                 isLight = true;
             }
         }
         base.OnPlayerInZone();
+    }
+
+    protected override void OnPlayerLeaveZone()
+    {
+        isLight = false;
+        base.OnPlayerLeaveZone();
     }
 }
