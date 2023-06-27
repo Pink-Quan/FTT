@@ -973,7 +973,6 @@ GameObject:
   - component: {fileID: 558938453}
   - component: {fileID: 558938456}
   - component: {fileID: 558938457}
-  - component: {fileID: 558938458}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -1030,33 +1029,6 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
---- !u!114 &558938458
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558938452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
-  m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.5
-  m_VerticalDamping: 0.5
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
-  m_DeadZoneWidth: 0.1
-  m_DeadZoneHeight: 0.13
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
 --- !u!1 &568459893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1667,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1843743812}
         m_TargetAssemblyTypeName: InteractableEntity, Assembly-CSharp
-        m_MethodName: OnPlayerStopInteract
+        m_MethodName: EnableMoveAndUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4024,6 +3996,10 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3285992152406982872, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: facebookIcon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3315930795798235338, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.0008138514
@@ -5032,6 +5008,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5088458971978304376, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5433226983663723364, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5206,6 +5186,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042350167683708909, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042350167759709073, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6042350167759709079, guid: c3fe75788609c6942a37583564a40cec, type: 3}
@@ -11697,9 +11681,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1598408101}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: EnableMove
+      - m_Target: {fileID: 2097294921}
+        m_TargetAssemblyTypeName: InteractableEntity, Assembly-CSharp
+        m_MethodName: EnableMoveAndUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15059,7 +15043,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1843743812}
         m_TargetAssemblyTypeName: InteractableEntity, Assembly-CSharp
-        m_MethodName: OnPlayerInteract
+        m_MethodName: DisableMoveAndUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15971,7 +15955,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2097294921}
         m_TargetAssemblyTypeName: InteractableEntity, Assembly-CSharp
-        m_MethodName: OnPlayerInteract
+        m_MethodName: DisableMoveAndUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

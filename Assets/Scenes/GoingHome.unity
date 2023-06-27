@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4295372558909939447, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130537231484898473, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0bf54576db463c48bc5bcaac611cd03, type: 3}
 --- !u!1 &788170557

@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
-using Unity.VisualScripting;
-using Unity.XR.OpenVR;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -41,7 +38,7 @@ public class InteractableEntity : MonoBehaviour
     }
 
     bool isEnter;
-    void Update()
+    protected virtual void Update()
     {
         if (player == null) return;
         if ((transform.position - player.transform.position).sqrMagnitude <= radius * radius)
@@ -65,6 +62,7 @@ public class InteractableEntity : MonoBehaviour
 
     protected virtual void OnPlayerEnterZone()
     {
+        //Debug.Log("Player enter zone");
         if (canInteract)
             player.ShowInteractButton(OnInteract, interactName);
         onPlayerEnterZone?.Invoke();
@@ -82,22 +80,27 @@ public class InteractableEntity : MonoBehaviour
         onPlayerLeaveZone?.Invoke();
     }
 
-    public virtual void OnPlayerInteract()
+    public virtual void DisableMoveAndUI()
     {
-        player.playerMovement.enabled = false;
-        player.buttons.SetActive(false);
+        player.DisableMove();
+        player.HideButtons();
     }
 
-    public virtual void OnPlayerStopInteract()
+    public virtual void EnableMoveAndUI()
     {
-        player.playerMovement.enabled = true;
-        player.buttons.SetActive(true);
+        player.ShowButtons();
+        player.EnableMove();
         player.interactButton.gameObject.SetActive(false);
     }
 
     public void ShowInteractButton()
     {
         player.ShowInteractButton();
+    }
+
+    public void HideInteractButton()
+    {
+        player.HideInteractButton();
     }
 }
 

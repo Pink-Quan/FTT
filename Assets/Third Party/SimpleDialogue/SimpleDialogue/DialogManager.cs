@@ -189,7 +189,7 @@ public class DialogManager : MonoBehaviour
     {
         CancelInvoke();
 
-        DialogueBroad.DOAnchorPosY(DialogueBroad.sizeDelta.y / 2, 1);
+        DialogueBroad.DOAnchorPosY(DialogueBroad.sizeDelta.y / 2, 0.5f);
 
         DialogueBroad.gameObject.SetActive(true);
         Name.text = dialogue.DisplayName;

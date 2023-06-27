@@ -22,3 +22,32 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
+  getCookBookGuide: "Nh\u1EADn \u0111\u01B0\u1EE3c s\xE1ch n\u1EA5u \u0103n"
+  getStick: "Nh\u1EADn \u0111\u01B0\u1EE3c 1 g\u1EADy s\u1EAFt"
+  seftDialogueAbountCookBook:
+    sentances:
+    - "Sao s\xE1ch n\u1EA5u \u0103n l\u1EA1i \u1EDF \u0111\xE2y nh\u1EC9, \u0111\xE1ng
+      ra n\xF3 n\xEAn \u1EDF gi\xE1 s\xE1ch ch\u1EE9"
+    - "\u0110\xE3 th\u1EBF sao n\xF3 l\u1EA1i b\u1ECB x\xE9 m\u1EA5t trang cu\u1ED1i
+      n\xE0y"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  monologueAbountLocker:
+    sentances:
+    - "\u01A0, l\u1EA1i kh\xF3a \xE0"
+    - "C\xF3 g\xEC trong \u0111\xE2y m\xE0 ph\u1EA3i kh\xF3a nh\u1EC9"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  monologueAbountStick:
+    sentances: []
+    Name: 
+    DisplayName: 
+    emotion: 0
+  thereSomthingUnderTheChair:
+    sentances:
+    - "Hmm, c\xF3 g\xEC \u0111\xF3 s\xE2u trong g\u1EA7m gh\u1EBF th\xEC ph\u1EA3i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0

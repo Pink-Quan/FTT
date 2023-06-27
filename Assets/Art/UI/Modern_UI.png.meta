@@ -10893,7 +10893,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_521
+      name: X_icon
       rect:
         serializedVersion: 2
         x: 404
@@ -18574,7 +18574,6 @@ TextureImporter:
       Modern_UI_518: -1697047820
       Modern_UI_519: 2085358747
       Modern_UI_52: -88217959
-      Modern_UI_521: -2131385499
       Modern_UI_522: 2022091686
       Modern_UI_523: -880725765
       Modern_UI_524: 1772724899
@@ -18968,6 +18967,7 @@ TextureImporter:
       UI_Rec_Button00: -1913287922
       UI_Squ_Buton00: -1860865971
       White_Bag_Icon: -106142599
+      X_icon: -2131385499
       yellowBar: -1811552865
   spritePackingTag: 
   pSDRemoveMatte: 0
