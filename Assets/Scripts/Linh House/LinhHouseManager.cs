@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LinhHouseManager : MonoBehaviour
 {
+    [SerializeField] private GameObject door;
+
     private PlayerController player;
     private LinhHouseTexts texts;
     private void Start()
@@ -71,13 +73,14 @@ public class LinhHouseManager : MonoBehaviour
         }
     }
 
-    public void GetLastPage()
+    public void GetLastPage(InteractableEntity entity)
     {
         DisablePlayerMoveAndUI();
         if (player.curItem.itemName == "stick")
         {
             GameManager.instance.textBoard.ShowText(texts.getLastPage, MonologueAboutTheLastPage);
             InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Last page of cookery book", 1, player.inventory);
+            entity.gameObject.SetActive(false);
         }
         else
         {
@@ -88,5 +91,33 @@ public class LinhHouseManager : MonoBehaviour
     private void MonologueAboutTheLastPage()
     {
         GameManager.instance.dialogManager.StartDialogue(texts.monologueAboutThePage, EnablePlayerMoveAndUI);
+    }
+
+    public void HandleAfterLoginFacebook()
+    {
+        DisablePlayerMoveAndUI();
+        GameManager.instance.dialogManager.StartSequanceDialogue(texts.monologueAfterOpenningFacebook, () =>
+        {
+            EnablePlayerMoveAndUI();
+            Invoke("NamKnockTheDoor", 3);
+        });
+    }
+
+    private void NamKnockTheDoor()
+    {
+        DisablePlayerMoveAndUI();
+        // Play knock sound
+        Invoke("MonodialogueSomebodyKnockTheDoor", 2);
+    }
+
+    private void MonodialogueSomebodyKnockTheDoor()
+    {
+        door.SetActive(true);
+        GameManager.instance.dialogManager.StartDialogue(texts.monodialogueSomebodyKnockTheDoor, EnablePlayerMoveAndUI);
+    }
+
+    public void MonoDialogueThereNoOneOutside()
+    {
+        GameManager.instance.dialogManager.StartDialogue(texts.monodialogueThereNoOneOutside, EnablePlayerMoveAndUI);
     }
 }

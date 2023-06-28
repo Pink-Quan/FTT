@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -13,7 +14,9 @@ public class InteractableEntity : MonoBehaviour
     [SerializeField] private string interactName = "Interact";
     [SerializeField] private bool canInteract = true;
     [SerializeField] private bool isGizmos;
-    public UnityEvent OnInteract;
+    public OnInteractEntity OnInteract;
+    [Serializable]
+    public class OnInteractEntity:UnityEvent<InteractableEntity> { }
 
     public UnityEvent onPlayerEnterZone;
     public UnityEvent onPlayerInZone;
@@ -64,7 +67,7 @@ public class InteractableEntity : MonoBehaviour
     {
         //Debug.Log("Player enter zone");
         if (canInteract)
-            player.ShowInteractButton(OnInteract, interactName);
+            player.ShowInteractButton(OnInteract, interactName,this);
         onPlayerEnterZone?.Invoke();
     }
 
@@ -100,6 +103,7 @@ public class InteractableEntity : MonoBehaviour
 
     public void HideInteractButton()
     {
+        player.interactButton.onClick.RemoveAllListeners();
         player.HideInteractButton();
     }
 }

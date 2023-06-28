@@ -41,9 +41,11 @@ MonoBehaviour:
     emotion: 0
   getStick: "Nh\u1EADn \u0111\u01B0\u1EE3c 1 g\u1EADy s\u1EAFt"
   monologueAbountStick:
-    sentances: []
-    Name: 
-    DisplayName: 
+    sentances:
+    - "Sao c\xE1i g\u1EADy s\u1EAFt l\u1EA1i b\u1ECB gi\u1EA5u trong \u0111\xE2y
+      nh\u1EC9"
+    Name: Linh
+    DisplayName: Linh
     emotion: 0
   getLastPage: "Nh\u1EADn \u0111\u01B0\u1EE3c trang cu\u1ED1i c\u1EE7a s\xE1ch n\u1EA5u
     \u0103n"
@@ -62,3 +64,35 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
+  monologueAfterOpenningFacebook:
+  - sentances:
+    - "Yeah, cu\u1ED1i c\xF9ng c\u0169ng \u0111\u0103ng nh\u1EADp \u0111\u01B0\u1EE3c
+      facebook c\u1EE7a m\xECnh"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+  - sentances:
+    - "M\xECnh ng\xE0y tr\u01B0\u1EDBc c\xF3 v\u1EBB \xEDt t\u01B0\u01A1ng t\xE1c
+      tr\xEAn facebook gh\xEA"
+    - "Th\u1EADm ch\xED m\xECnh c\u0169ng ch\u1EB3ng c\xF3 m\u1EA5y b\u1EA1n b\xE8"
+    - "M\u1ECDi ng\u01B0\u1EDDi c\u0169ng ch\u1EC9 b\xE0n t\xE1n m\u1ED9t \xEDt v\u1EC1
+      m\xECnh sau v\u1EE5 \u0111\u1EA5y r\u1ED3i th\xF4i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "Haha, cu\u1ED9c s\u1ED1ng m\xE0"
+    - "M\xECnh c\xF3 ch\u1EBFt th\u1EADt th\xEC c\u0169ng ch\u1EA3 ai quan t\xE2m
+      \u0111\xE2u"
+    - "Cu\u1ED9c s\u1ED1ng v\u1EABn di\u1EC5n ra b\xECnh th\u01B0\u1EDDng th\xF4i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+  monodialogueSomebodyKnockTheDoor:
+    sentances:
+    - "Sao l\u1EA1i c\xF3 ai gh\xF5 c\u1EEDa nh\u1EC9"
+    - "\u0110\xE3 ai bi\u1EBFt m\xECnh v\u1EC1 nh\xE0 ngo\xE0i b\xE1c s\u1EF9 v\xE0
+      anh t\xECnh nguy\u1EC7n vi\xEAn kia \u0111\xE2u"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5

@@ -5,12 +5,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using ExtendedAnimation;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class TextBoard : MonoBehaviour
 {
     [SerializeField] private Button outButton;
     [SerializeField] private TextMeshProUGUI textUI;
     [SerializeField] private UIAnimation board;
+
+    //private InputAction cancelInput;
+
+    //private void Start()
+    //{
+    //    cancelInput = GameManager.instance.input.UI.Cancel;
+    //}
     public void ShowText(string text)
     {
         textUI.text = text;
@@ -19,9 +27,18 @@ public class TextBoard : MonoBehaviour
 
     public void ShowText(string text,UnityAction OnClose)
     {
-        outButton.onClick.RemoveAllListeners();
-        outButton.onClick.AddListener(OnClose);
+        //cancelInput.performed += ctx => HideBoard();
+        onClose = OnClose;
         ShowText(text);
+    }
+
+    UnityAction onClose;
+
+    public void HideBoard()
+    {
+        board.Hide();
+        onClose?.Invoke();
+        //cancelInput.performed -= ctx => HideBoard();
     }
 
 }

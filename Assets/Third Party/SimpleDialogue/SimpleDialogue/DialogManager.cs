@@ -5,12 +5,13 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class DialogManager : MonoBehaviour
 {
     private Queue<string> senctences = new Queue<string>();
 
-    private void Awake()
+    private void Start()
     {
         Init();
     }
@@ -33,7 +34,11 @@ public class DialogManager : MonoBehaviour
         SellectYesButton.gameObject.SetActive(false);
         SellectNoButton.gameObject.SetActive(false);
         DialogueBroad.gameObject.SetActive(false);
+
+        //submitInput = GameManager.instance.input.UI.Submit;
     }
+
+    //private InputAction submitInput;
 
     [SerializeField] private Button SellectNextButton;
     [SerializeField] private Button Sellect1Button;
@@ -56,7 +61,6 @@ public class DialogManager : MonoBehaviour
     private List<int> AnswersList;
 
     private GameObject charactorAvatar;
-
 
 
     public void Start1Quesion(Dialogue dialogue, Action<int> TriggerAnswerQuestion)
@@ -134,6 +138,8 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue, Action OnDoneDialogue)
     {
+        //submitInput.performed += ctx => DisplayNextSentance();
+        //OnDoneDialogue += () => { submitInput.performed -= ctx => DisplayNextSentance(); };
         this.OnDoneDialogue = OnDoneDialogue;
 
         SellectNextButton.gameObject.SetActive(true);
@@ -293,7 +299,7 @@ public struct Dialogue
         Normal = 0,
         Shocked = 5,
         Serious = 6,
-        Sad=7,
+        Sad = 7,
     }
 
     public string GetResourseAddress()

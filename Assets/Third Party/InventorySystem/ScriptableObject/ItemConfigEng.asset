@@ -81,7 +81,7 @@ MonoBehaviour:
     itemValue: 0
     icon: {fileID: 21300000, guid: cfe48541789c81548bed551abf174b62, type: 3}
     info: "No: 1234885548515\nFull name: Nguy\u1EC5n Th\u1ECB Linh\nDate of bird:
-      23/08/1998\nSex: Female \nNationality: Vi\xEA\u0323t Nam\n"
+      23/08/1999\nSex: Female \nNationality: Vi\xEA\u0323t Nam\n"
   - item:
       data: 
     name: How to take medicine
@@ -120,8 +120,8 @@ MonoBehaviour:
     amount: 1
     maxAmount: 1
     itemValue: 0
-    icon: {fileID: -588244930, guid: e46de1167a70f4c4a9993675efe04ba0, type: 3}
-    info: '1974
+    icon: {fileID: 21300000, guid: 4277dc948d44b0149ab3b6a5b994fa6d, type: 3}
+    info: '0452
 
       NguyenThiLinh7712
 

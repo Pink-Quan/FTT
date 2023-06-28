@@ -11208,15 +11208,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_536
+      name: Cursor0
       rect:
         serializedVersion: 2
         x: 162
         y: 194
         width: 12
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -11229,15 +11229,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_537
+      name: Cursor1
       rect:
         serializedVersion: 2
         x: 177
         y: 192
         width: 15
         height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -11250,15 +11250,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_538
+      name: Cursor2
       rect:
         serializedVersion: 2
         x: 193
         y: 192
         width: 15
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -11271,15 +11271,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_539
+      name: Cursor3
       rect:
         serializedVersion: 2
         x: 211
         y: 192
         width: 13
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -12384,15 +12384,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_592
+      name: Cursor4
       rect:
         serializedVersion: 2
         x: 161
         y: 177
         width: 13
         height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -12405,15 +12405,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_593
+      name: Cursor5
       rect:
         serializedVersion: 2
         x: 179
         y: 176
         width: 12
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -12426,15 +12426,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_594
+      name: Cursor6
       rect:
         serializedVersion: 2
         x: 195
         y: 176
         width: 11
         height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -12447,15 +12447,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_595
+      name: Cursor7
       rect:
         serializedVersion: 2
         x: 211
         y: 176
         width: 12
         height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -18108,6 +18108,14 @@ TextureImporter:
     nameFileIdTable:
       Arrow: 1853936267
       Bar_Border: 1947340597
+      Cursor0: -1361351192
+      Cursor1: 367600814
+      Cursor2: -866146471
+      Cursor3: -6251539
+      Cursor4: 1417781761
+      Cursor5: 1117605344
+      Cursor6: 102296394
+      Cursor7: 148087196
       GreenBar: 992983911
       Modern_UI_0: 1357951152
       Modern_UI_1: 123959240
@@ -18589,10 +18597,6 @@ TextureImporter:
       Modern_UI_533: -333852175
       Modern_UI_534: 1402860755
       Modern_UI_535: -18360687
-      Modern_UI_536: -1361351192
-      Modern_UI_537: 367600814
-      Modern_UI_538: -866146471
-      Modern_UI_539: -6251539
       Modern_UI_54: -1253387057
       Modern_UI_540: 488704593
       Modern_UI_541: -940907722
@@ -18651,10 +18655,6 @@ TextureImporter:
       Modern_UI_59: 205077215
       Modern_UI_590: -1896844118
       Modern_UI_591: -1932310508
-      Modern_UI_592: 1417781761
-      Modern_UI_593: 1117605344
-      Modern_UI_594: 102296394
-      Modern_UI_595: 148087196
       Modern_UI_596: 1098520999
       Modern_UI_597: -493635641
       Modern_UI_598: -366443898

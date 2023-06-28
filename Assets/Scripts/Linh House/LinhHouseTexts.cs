@@ -21,4 +21,9 @@ public class LinhHouseTexts : ScriptableObject
     public string getLastPage;
     public Dialogue thereSomthingUnderTheChair;
     public Dialogue monologueAboutThePage;
+
+    public Dialogue[] monologueAfterOpenningFacebook;
+    public Dialogue monodialogueSomebodyKnockTheDoor;
+
+    public Dialogue monodialogueThereNoOneOutside;
 }

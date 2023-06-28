@@ -328,7 +328,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1208,9 +1208,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6997401296877661132}
-        m_TargetAssemblyTypeName: ExtendedAnimation.UIAnimation, Assembly-CSharp
-        m_MethodName: Hide
+      - m_Target: {fileID: 105109485317681451}
+        m_TargetAssemblyTypeName: TextBoard, Assembly-CSharp
+        m_MethodName: HideBoard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1828,7 +1828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8190981765434142147, guid: 79bf74ce02eeeb64695b307b8fba67c9, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8190981765434142148, guid: 79bf74ce02eeeb64695b307b8fba67c9, type: 3}
       propertyPath: m_Pivot.x

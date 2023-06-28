@@ -61,11 +61,11 @@ public class PlayerController : CharacterController
         arrowPointer.gameObject.SetActive(false);
     }
 
-    public void ShowInteractButton(UnityEvent OnInteract, string interactName)
+    public void ShowInteractButton(InteractableEntity.OnInteractEntity OnInteract, string interactName, InteractableEntity entity)
     {
         interactButton.gameObject.SetActive(true);
         interactButton.onClick.RemoveAllListeners();
-        interactButton.onClick.AddListener(() => OnInteract?.Invoke());
+        interactButton.onClick.AddListener(() => OnInteract?.Invoke(entity));
         interactButton.GetComponentInChildren<TMP_Text>().text = interactName;
     }
 
