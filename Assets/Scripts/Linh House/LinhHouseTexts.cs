@@ -25,5 +25,9 @@ public class LinhHouseTexts : ScriptableObject
     public Dialogue[] monologueAfterOpenningFacebook;
     public Dialogue monodialogueSomebodyKnockTheDoor;
 
+    public Dialogue[] readingDocInLocker;
+
     public Dialogue monodialogueThereNoOneOutside;
+
+    public Dialogue[] firstMeetNam;
 }

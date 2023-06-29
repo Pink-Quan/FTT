@@ -5,9 +5,10 @@ using UnityEngine;
 public class LinhHouseManager : MonoBehaviour
 {
     [SerializeField] private GameObject door;
-
+    [SerializeField] private GameObject nam;
     private PlayerController player;
     private LinhHouseTexts texts;
+
     private void Start()
     {
         player = GameManager.instance.player;
@@ -17,7 +18,7 @@ public class LinhHouseManager : MonoBehaviour
         player.stress.HideBreathButton();
         Invoke("FirstSeftConversation", 2);
 
-        texts = Resources.Load<LinhHouseTexts>("Texts/Linh House/Viet");
+        texts = Resources.Load<LinhHouseTexts>($"Texts/Linh House/{PlayerPrefs.GetString("Language","Viet")}");
 
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Citizen Identity Card", 1, player.inventory);
@@ -103,6 +104,11 @@ public class LinhHouseManager : MonoBehaviour
         });
     }
 
+    public void ReadingDocInLocker()
+    {
+        GameManager.instance.dialogManager.StartSequanceDialogue(texts.readingDocInLocker, EnablePlayerMoveAndUI);
+    }
+
     private void NamKnockTheDoor()
     {
         DisablePlayerMoveAndUI();
@@ -118,6 +124,15 @@ public class LinhHouseManager : MonoBehaviour
 
     public void MonoDialogueThereNoOneOutside()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.monodialogueThereNoOneOutside, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogManager.StartDialogue(texts.monodialogueThereNoOneOutside, () =>
+        {
+            nam.SetActive(true);
+            EnablePlayerMoveAndUI();
+        });
+    }
+
+    public void CommunicateWithNam()
+    {
+        GameManager.instance.dialogManager.StartSequanceDialogue(texts.firstMeetNam, EnablePlayerMoveAndUI);
     }
 }
