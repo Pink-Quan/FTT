@@ -85,6 +85,18 @@ public class SimpleBoxCollider : SimpleCollider
         minPoint = value;
     }
 
+    public void SetBottonRight(Vector2 value)
+    {
+        maxPoint.x = value.x;
+        minPoint.y = value.y;
+    }
+
+    public void SetTopLeft(Vector2 value)
+    {
+        maxPoint.y = value.y;
+        minPoint.x = value.x;
+    }
+
     public float GetArea() => (maxPoint.x - minPoint.x) * (maxPoint.y - minPoint.y);
 
 }

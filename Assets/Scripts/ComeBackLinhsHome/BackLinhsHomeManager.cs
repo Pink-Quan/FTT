@@ -15,13 +15,13 @@ public class BackLinhsHomeManager : MonoBehaviour
 
     private void StartConversations()
     {
-        GameManager.instance.dialogManager.StartSequanceDialogue(texts.conversationBetweenHelperAndLinh, ()=>Invoke("AboutToHomeConversations",1));
+        GameManager.instance.dialogManager.StartDialogue(texts.conversationBetweenHelperAndLinh, ()=>Invoke("AboutToHomeConversations",1));
     }
 
     private void AboutToHomeConversations()
     {
         loopStreet.ChangeSpeed(1f / 2);
-        GameManager.instance.dialogManager.StartSequanceDialogue(squenceDialogue:texts.aboutToGoHome,OnDoneAllDialogues:TransitionsToLinhHouse);
+        GameManager.instance.dialogManager.StartDialogue(squenceDialogue:texts.aboutToGoHome,OnDoneAllDialogues:TransitionsToLinhHouse);
     }
 
     private void TransitionsToLinhHouse()

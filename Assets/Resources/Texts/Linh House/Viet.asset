@@ -160,3 +160,30 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
+  seeFoodInFirdge:
+  - sentances:
+    - "C\u1EADu \u1EA5y mua nhi\u1EC1u \u0111\u1ED3 \u0103n gh\xEA"
+    - "S\u1EDF th\xEDch \u0103n c\u1EE7a m\xECnh \u0111\u01A1n gi\u1EA3n gh\xEA"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  LinhFeelingNotGood:
+  - sentances:
+    - "Sao m\xECnh c\u1EA3m th\u1EA5y ch\xF3ng m\u1EB7t th\u1EBF nh\u1EC9"
+    - "NAM \u01A1i"
+    - "Gi\xFAp t\u1EDB v\u1EDBi"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+  NamTalkWithLinhWhenHerInBed:
+    sentances:
+    - "Hey, t\u1EC9nh r\u1ED3i \u0111\u1EA5y \xE0"
+    - "C\xF3 th\u1EC3 do khi ti\u1EBFp c\u1EADu s\u1EAFp nh\u1EDB v\u1EC1 g\xEC \u0111\xF3
+      s\u1EBD g\xE2y ra h\u01A1i ch\xF3ng m\u1EB7t"
+    - "Nh\u01B0ng c\u1EADu kh\xF4ng ph\u1EA3i lo, n\u1EBFu cho\xE1ng qu\xE1 th\xEC
+      v\u1EABn c\xF3 c\xE1nh \u0111\u1EC3 c\xF3 th\u1EC3 c\u1EA3m nh\u1EADn \u0111\u01B0\u1EE3c
+      t\u1ED1t h\u01A1n"
+    - "\u0110\u1EC3 t\u1EDB h\u01B0\u1EDBng d\u1EABn c\u1EADu nh\xE9"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0

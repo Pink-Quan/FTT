@@ -22,6 +22,7 @@ public class SimpleBoxColliderEditor : Editor
     }
 
     Vector3 left, right, up, down;
+    Vector3 topLeft, bottomRight;
 
     private void OnSceneGUI()
     {
@@ -35,9 +36,11 @@ public class SimpleBoxColliderEditor : Editor
         col.SetMaxPoint(new Vector2(right.x, up.y) - (Vector2)col.transform.position);
         col.SetMinPoint(new Vector2(left.x, down.y) - (Vector2)col.transform.position);
 
-        col.SetMaxPoint((Handles.FreeMoveHandle((Vector3)col.GetMaxPoint(), Quaternion.identity, 0.08f, Vector3.one, Handles.DotHandleCap)) - col.transform.position);
-        col.SetMinPoint((Handles.FreeMoveHandle((Vector3)col.GetMinPoint(), Quaternion.identity, 0.08f, Vector3.one, Handles.DotHandleCap)) - col.transform.position);
-    }
+        col.SetMaxPoint(Handles.FreeMoveHandle((Vector3)col.GetMaxPoint(), Quaternion.identity, 0.08f, Vector3.one, Handles.DotHandleCap) - col.transform.position);
+        col.SetMinPoint(Handles.FreeMoveHandle((Vector3)col.GetMinPoint(), Quaternion.identity, 0.08f, Vector3.one, Handles.DotHandleCap) - col.transform.position);
+        col.SetTopLeft( Handles.FreeMoveHandle(new Vector3(col.GetMinPoint().x, col.GetMaxPoint().y), Quaternion.identity, 0.08f, Vector3.one, Handles.DotHandleCap) - col.transform.position);
+        col.SetBottonRight(Handles.FreeMoveHandle(new Vector3(col.GetMaxPoint().x, col.GetMinPoint().y), Quaternion.identity, 0.08f, Vector3.one, Handles.DotHandleCap) - col.transform.position);
+    }   
 
     private void GetBoundFromRenderer()
     {

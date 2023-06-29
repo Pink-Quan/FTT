@@ -30,4 +30,10 @@ public class LinhHouseTexts : ScriptableObject
     public Dialogue monodialogueThereNoOneOutside;
 
     public Dialogue[] firstMeetNam;
+
+    public Dialogue[] seeFoodInFirdge;
+
+    public Dialogue[] LinhFeelingNotGood;
+
+    public Dialogue NamTalkWithLinhWhenHerInBed;
 }

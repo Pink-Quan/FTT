@@ -3,11 +3,13 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "C:/Users/Hi/Disk/Tiled Project/Maps/School.tmx",
+    "activeFile": "Map/Linh_House.tmx",
     "expandedProjectPaths": [
-        "Map",
+        "Tileset/Singles/Villas",
         "Tileset/Singles",
-        "Tileset/Singles/Villas"
+        ".",
+        "Map",
+        "Tileset"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -233,11 +235,11 @@
             "scaleInDock": 1
         },
         "Map/Linh_House.tmx": {
-            "scale": 2,
-            "selectedLayer": 1,
+            "scale": 4,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 209,
-                "y": 332.25
+                "x": 189.5,
+                "y": 218.5
             }
         },
         "Map/LivingRoom.tsx": {
@@ -428,7 +430,7 @@
         },
         "Tileset/Room_Builder_3d_walls.tsx": {
             "scaleInDock": 3,
-            "scaleInEditor": 1
+            "scaleInEditor": 4
         },
         "Tileset/Room_Builder_borders.tsx": {
             "scaleInDock": 1,
@@ -562,8 +564,7 @@
         "Tileset/Villas.tsx",
         "Tileset/Worksite.tsx",
         "Tileset/Singles/Villas/Big Villa house red.tsx",
-        "Map/Linh_House.tmx",
-        "C:/Users/Hi/Disk/Tiled Project/Maps/School.tmx"
+        "Map/Linh_House.tmx"
     ],
     "project": "Tiled.tiled-project",
     "recentFiles": [

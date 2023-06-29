@@ -40,7 +40,7 @@ public class InteractableEntity : MonoBehaviour
         }
     }
 
-    bool isEnter;
+    protected bool isEnter;
     protected virtual void Update()
     {
         if (player == null) return;

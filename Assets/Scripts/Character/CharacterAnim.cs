@@ -100,6 +100,16 @@ public class CharacterAnim : MonoBehaviour
             spriteRenderer.sprite = charaterSprites[animIndex];
         }
     }
+
+    public void ResetAnim()
+    {
+        moveDirection = Vector2.down;
+        spriteRenderer.color = Color.white;
+        transform.rotation = Quaternion.identity;
+        OnEnable();
+    }
+
+    public float DieTime => morbundTime + 0.5f;
 }
 #if UNITY_EDITOR
 [CustomEditor(typeof(CharacterAnim))]

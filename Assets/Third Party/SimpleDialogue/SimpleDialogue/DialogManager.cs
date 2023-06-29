@@ -261,7 +261,7 @@ public class DialogManager : MonoBehaviour
 
     Queue<Dialogue> squenceDialogue;
     Action OnDoneAllDialogues;
-    public void StartSequanceDialogue(Dialogue[] squenceDialogue, Action OnDoneAllDialogues)
+    public void StartDialogue(Dialogue[] squenceDialogue, Action OnDoneAllDialogues)
     {
         this.squenceDialogue = new Queue<Dialogue>(squenceDialogue);
         this.OnDoneAllDialogues = OnDoneAllDialogues;

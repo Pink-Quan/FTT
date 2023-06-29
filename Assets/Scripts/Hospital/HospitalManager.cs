@@ -50,7 +50,7 @@ public class HospitalManager : MonoBehaviour
 
     private void NuresComunitcateWithPlayer()
     {
-        GameManager.instance.dialogManager.StartSequanceDialogue(_conversation.talkingWithPlayerAffterWalkingUp, DoneTalkingWithPlayer);
+        GameManager.instance.dialogManager.StartDialogue(_conversation.talkingWithPlayerAffterWalkingUp, DoneTalkingWithPlayer);
     }
 
     public void DoneTalkingWithPlayer()
@@ -195,7 +195,7 @@ public class HospitalManager : MonoBehaviour
         player.transform.position = guidenceNursePos.position + Vector3.right;
         player.anim.SetDirection(new Vector2(0, -1));
         player.TurnFlashLight(false);
-        GameManager.instance.dialogManager.StartSequanceDialogue(_conversation.goHome, ChangeToGoHomeScene);
+        GameManager.instance.dialogManager.StartDialogue(_conversation.goHome, ChangeToGoHomeScene);
     }
 
     private void ChangeToGoHomeScene()

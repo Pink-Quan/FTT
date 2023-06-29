@@ -6,6 +6,11 @@ public class LinhHouseManager : MonoBehaviour
 {
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject nam;
+    [SerializeField] private GameObject fridge;
+
+    [SerializeField] private Vector3 playerInBedPos;
+    [SerializeField] private Vector3 NamNearBedPos;
+
     private PlayerController player;
     private LinhHouseTexts texts;
 
@@ -97,7 +102,7 @@ public class LinhHouseManager : MonoBehaviour
     public void HandleAfterLoginFacebook()
     {
         DisablePlayerMoveAndUI();
-        GameManager.instance.dialogManager.StartSequanceDialogue(texts.monologueAfterOpenningFacebook, () =>
+        GameManager.instance.dialogManager.StartDialogue(texts.monologueAfterOpenningFacebook, () =>
         {
             EnablePlayerMoveAndUI();
             Invoke("NamKnockTheDoor", 3);
@@ -106,7 +111,7 @@ public class LinhHouseManager : MonoBehaviour
 
     public void ReadingDocInLocker()
     {
-        GameManager.instance.dialogManager.StartSequanceDialogue(texts.readingDocInLocker, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogManager.StartDialogue(texts.readingDocInLocker, EnablePlayerMoveAndUI);
     }
 
     private void NamKnockTheDoor()
@@ -119,6 +124,7 @@ public class LinhHouseManager : MonoBehaviour
     private void MonodialogueSomebodyKnockTheDoor()
     {
         door.SetActive(true);
+        player.anim.SetMove(false);
         GameManager.instance.dialogManager.StartDialogue(texts.monodialogueSomebodyKnockTheDoor, EnablePlayerMoveAndUI);
     }
 
@@ -133,6 +139,41 @@ public class LinhHouseManager : MonoBehaviour
 
     public void CommunicateWithNam()
     {
-        GameManager.instance.dialogManager.StartSequanceDialogue(texts.firstMeetNam, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogManager.StartDialogue(texts.firstMeetNam, EnablePlayerMoveAndUI);
+        fridge.SetActive(true);
     }
+
+    public void GetFoodInFridge()
+    {
+        GameManager.instance.dialogManager.StartDialogue(texts.seeFoodInFirdge, () =>
+        {
+            EnablePlayerMoveAndUI();
+            Invoke("FeelDizzy", 2);
+        });
+    }
+
+    private void FeelDizzy()
+    {
+        DisablePlayerMoveAndUI();
+        player.anim.SetMove(false);
+        GameManager.instance.dialogManager.StartDialogue(texts.LinhFeelingNotGood, () =>{
+            player.anim.Die();
+            Invoke("GoToBed", player.anim.DieTime);
+        });
+    }
+
+    private void GoToBed()
+    {
+        GameManager.instance.transitions.Transition(1,1, NamTalkWithLinhWhenHerInBed, () =>{
+            player.anim.ResetAnim();
+            player.transform.position = playerInBedPos;
+            nam.transform.position = NamNearBedPos;
+        });
+    }
+
+    private void NamTalkWithLinhWhenHerInBed()
+    {
+        GameManager.instance.dialogManager.StartDialogue(texts.NamTalkWithLinhWhenHerInBed, null);
+    }
+    
 }
