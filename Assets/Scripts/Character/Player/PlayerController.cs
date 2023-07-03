@@ -80,6 +80,18 @@ public class PlayerController : CharacterController
         interactButton.gameObject.SetActive(false);
     }
 
+    public void HideUI()
+    {
+        HideButtons();
+        stress.HideStressBar();
+    }
+
+    public void ShowUI()
+    {
+        ShowButtons();
+        stress.ShowStressBar();
+    }
+
     Image currentItemButtonImage;
     public void SelectItem(Item item)
     {

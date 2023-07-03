@@ -24,17 +24,36 @@ public class Breath : MonoBehaviour
         inputs.started -= BreathChect;
     }
 
-    public void StartBreath(Action<int> OnComplete,float breathTime)
+    private void InitBreath(Action<int> OnComplete)
     {
-        score = 0;
-        this.OnComplete= OnComplete;
+        this.OnComplete = OnComplete;
         spriteRenderer.enabled = true;
-        Invoke("DoneBreath", breathTime);
         HandleVariable();
         inputs.started += BreathChect;
     }
+
+    public void StartBreath(Action<int> OnComplete, float breathTime)
+    {
+        InitBreath(OnComplete);
+        score = 0;
+        Invoke("DoneBreath", breathTime);
+    }
+
+    public void StartBreath(Action<int> OnComplete, int breathCount)
+    {
+        OnComplete += index =>
+        {
+            inputs.started -= BreathChect;
+            spriteRenderer.enabled = false;
+        };
+        InitBreath(OnComplete);
+        this.breathCount = breathCount;
+    }
+
     int answer;
     int score;
+    int breathCount;
+
     Action<int> OnComplete;
     private void BreathChect(InputAction.CallbackContext ctx)
     {
@@ -57,16 +76,19 @@ public class Breath : MonoBehaviour
             player.anim.TakeDamge();
         }
         HandleVariable();
+
+        breathCount--;
+        if (breathCount == 0) OnComplete?.Invoke(score);
     }
 
     private void HandleVariable()
     {
         answer = Random.Range(0, 2);
-        if(answer == 0)
+        if (answer == 0)
         {
             spriteRenderer.sprite = leftArrowSprte;
         }
-        else if(answer == 1)
+        else if (answer == 1)
         {
             spriteRenderer.sprite = rightArrowSprte;
         }

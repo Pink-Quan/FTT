@@ -27,6 +27,8 @@ public class CharacterAnim : MonoBehaviour
     }
     private void OnEnable()
     {
+        moveDirection = Vector2.down;
+        spriteRenderer.sprite = charaterSprites[3];
         SetDirection(moveDirection);
         StartCoroutine(UpdateSprite());
     }

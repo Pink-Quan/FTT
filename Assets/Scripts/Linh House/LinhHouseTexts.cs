@@ -36,4 +36,9 @@ public class LinhHouseTexts : ScriptableObject
     public Dialogue[] LinhFeelingNotGood;
 
     public Dialogue NamTalkWithLinhWhenHerInBed;
+
+    public Dialogue NamGuideLinhToBreath;
+    public Dialogue NamTalkAfterLinhDoneBreath;
+
+    public Dialogue[] LinhCommucatateThroughPhone;
 }

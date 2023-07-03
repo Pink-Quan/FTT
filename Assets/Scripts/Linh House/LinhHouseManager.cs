@@ -10,6 +10,7 @@ public class LinhHouseManager : MonoBehaviour
 
     [SerializeField] private Vector3 playerInBedPos;
     [SerializeField] private Vector3 NamNearBedPos;
+    [SerializeField] private Vector3 playerBreathPos;
 
     private PlayerController player;
     private LinhHouseTexts texts;
@@ -23,7 +24,7 @@ public class LinhHouseManager : MonoBehaviour
         player.stress.HideBreathButton();
         Invoke("FirstSeftConversation", 2);
 
-        texts = Resources.Load<LinhHouseTexts>($"Texts/Linh House/{PlayerPrefs.GetString("Language","Viet")}");
+        texts = Resources.Load<LinhHouseTexts>($"Texts/Linh House/{PlayerPrefs.GetString("Language", "Viet")}");
 
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Citizen Identity Card", 1, player.inventory);
@@ -156,7 +157,8 @@ public class LinhHouseManager : MonoBehaviour
     {
         DisablePlayerMoveAndUI();
         player.anim.SetMove(false);
-        GameManager.instance.dialogManager.StartDialogue(texts.LinhFeelingNotGood, () =>{
+        GameManager.instance.dialogManager.StartDialogue(texts.LinhFeelingNotGood, () =>
+        {
             player.anim.Die();
             Invoke("GoToBed", player.anim.DieTime);
         });
@@ -164,16 +166,52 @@ public class LinhHouseManager : MonoBehaviour
 
     private void GoToBed()
     {
-        GameManager.instance.transitions.Transition(1,1, NamTalkWithLinhWhenHerInBed, () =>{
-            player.anim.ResetAnim();
+        GameManager.instance.transitions.Transition(1, 1, NamTalkWithLinhWhenHerInBed, () =>
+        {
             player.transform.position = playerInBedPos;
             nam.transform.position = NamNearBedPos;
+            player.anim.ResetAnim();
+            player.anim.StopAllCoroutines();
         });
     }
 
     private void NamTalkWithLinhWhenHerInBed()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.NamTalkWithLinhWhenHerInBed, null);
+        GameManager.instance.dialogManager.StartDialogue(texts.NamTalkWithLinhWhenHerInBed, GuidePlayerToBreath);
     }
-    
+
+    private void GuidePlayerToBreath()
+    {
+        player.transform.position = playerBreathPos;
+        player.anim.ResetAnim();
+        GameManager.instance.dialogManager.StartDialogue(texts.NamGuideLinhToBreath, () =>
+        {
+            GameManager.instance.player.EnableMove();
+            player.stress.AddStress(100);
+            player.stress.ShowStressBar();
+            player.stress.breath.StartBreath(CompleteBreath, 10);
+        });
+    }
+
+    private void CompleteBreath(int score)
+    {
+        player.stress.AddStress(-score * 10);
+        GameManager.instance.dialogManager.StartDialogue(texts.NamTalkAfterLinhDoneBreath, () =>
+        {
+            player.ShowUI();
+            player.EnableMove();
+            Invoke("TalkWithPhone", 5);
+        });
+    }
+
+    private void TalkWithPhone()
+    {
+        DisablePlayerMoveAndUI();
+        player.anim.SetMove(false);
+        player.anim.StopAllCoroutines();
+        player.EnableMove();
+        player.HideButtons();
+        GameManager.instance.dialogManager.StartDialogue(texts.LinhCommucatateThroughPhone, null);
+    }
+
 }
