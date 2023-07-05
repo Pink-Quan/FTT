@@ -33,10 +33,10 @@ RectTransform:
   m_Father: {fileID: 2357025070887612223}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.995811, y: 23.74292}
-  m_SizeDelta: {x: 34.527603, y: 29.180496}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 6.199997, y: 20.900002}
+  m_SizeDelta: {x: -85.1252, y: -143.4871}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3987667184842974468
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b1c7c6c93526be740b592423bd540b79, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6a02e9d4b756ff4bb2d09d75a221201, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -173,12 +173,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7989349354703826573, guid: 92d73d764f74d6d4bab53079a56b6a48, type: 3}
       propertyPath: m_Name
-      value: Mai_Normal
+      value: Hung_Sad
       objectReference: {fileID: 0}
     - target: {fileID: 7989349354703826575, guid: 92d73d764f74d6d4bab53079a56b6a48, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: dd3fa21dbceadf1489db7037128cfb0f, type: 3}
+      objectReference: {fileID: 21300000, guid: 68968494e21423f46afa88a2dee1bf68, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92d73d764f74d6d4bab53079a56b6a48, type: 3}
 --- !u!224 &2357025070887612223 stripped

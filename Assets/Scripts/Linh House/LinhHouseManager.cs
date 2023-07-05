@@ -12,6 +12,10 @@ public class LinhHouseManager : MonoBehaviour
     [SerializeField] private Vector3 NamNearBedPos;
     [SerializeField] private Vector3 playerBreathPos;
 
+    [SerializeField] private GameObject hung;
+    [SerializeField] private GameObject mai;
+    [SerializeField] private Vector3 playerMeetFriendsPos;
+
     private PlayerController player;
     private LinhHouseTexts texts;
 
@@ -184,6 +188,7 @@ public class LinhHouseManager : MonoBehaviour
     {
         player.transform.position = playerBreathPos;
         player.anim.ResetAnim();
+        player.HideButtons();
         GameManager.instance.dialogManager.StartDialogue(texts.NamGuideLinhToBreath, () =>
         {
             GameManager.instance.player.EnableMove();
@@ -211,7 +216,23 @@ public class LinhHouseManager : MonoBehaviour
         player.anim.StopAllCoroutines();
         player.EnableMove();
         player.HideButtons();
-        GameManager.instance.dialogManager.StartDialogue(texts.LinhCommucatateThroughPhone, null);
+        GameManager.instance.dialogManager.StartDialogue(texts.LinhCommucatateThroughPhone, () =>
+        {
+            GameManager.instance.transitions.Transition(1, 1, MeetFriends, ComunicateWithFriends);
+        });
+    }
+
+    private void ComunicateWithFriends()
+    {
+        
+    }
+
+    private void MeetFriends()
+    {
+        mai.SetActive(true);
+        hung.SetActive(true);
+        player.transform.position = playerMeetFriendsPos;
+        player.anim.SetDirection(Vector2.left);
     }
 
 }

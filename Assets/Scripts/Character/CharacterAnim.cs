@@ -27,8 +27,6 @@ public class CharacterAnim : MonoBehaviour
     }
     private void OnEnable()
     {
-        moveDirection = Vector2.down;
-        spriteRenderer.sprite = charaterSprites[3];
         SetDirection(moveDirection);
         StartCoroutine(UpdateSprite());
     }
@@ -106,6 +104,7 @@ public class CharacterAnim : MonoBehaviour
     public void ResetAnim()
     {
         moveDirection = Vector2.down;
+        spriteRenderer.sprite = charaterSprites[3];
         spriteRenderer.color = Color.white;
         transform.rotation = Quaternion.identity;
         OnEnable();
