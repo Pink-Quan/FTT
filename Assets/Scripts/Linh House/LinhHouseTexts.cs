@@ -41,4 +41,6 @@ public class LinhHouseTexts : ScriptableObject
     public Dialogue NamTalkAfterLinhDoneBreath;
 
     public Dialogue[] LinhCommucatateThroughPhone;
+
+    public Dialogue[] friendsConversations;
 }

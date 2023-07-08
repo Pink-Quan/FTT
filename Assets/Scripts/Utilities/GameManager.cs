@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour
         input.Enable();
     }
 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void InitGameManager()
+    {
+        Instantiate(Resources.Load<GameObject>("GameManager"));
+    }
+
     public DialogManager dialogManager;
     public Transitions transitions;
     public PlayerController player;

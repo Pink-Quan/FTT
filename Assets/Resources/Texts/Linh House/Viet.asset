@@ -274,3 +274,9 @@ MonoBehaviour:
     Name: CallingPhone
     DisplayName: CallingPhone
     emotion: 0
+  friendsConversations:
+  - sentances:
+    - 
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0

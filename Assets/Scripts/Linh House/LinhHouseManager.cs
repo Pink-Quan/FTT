@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LinhHouseManager : MonoBehaviour
 {
@@ -200,7 +201,9 @@ public class LinhHouseManager : MonoBehaviour
 
     private void CompleteBreath(int score)
     {
-        player.stress.AddStress(-score * 10);
+        player.stress.AddStress(-100);
+        player.HideButtons();
+        player.DisableMove();
         GameManager.instance.dialogManager.StartDialogue(texts.NamTalkAfterLinhDoneBreath, () =>
         {
             player.ShowUI();
@@ -214,17 +217,12 @@ public class LinhHouseManager : MonoBehaviour
         DisablePlayerMoveAndUI();
         player.anim.SetMove(false);
         player.anim.StopAllCoroutines();
-        player.EnableMove();
+        player.DisableMove();
         player.HideButtons();
         GameManager.instance.dialogManager.StartDialogue(texts.LinhCommucatateThroughPhone, () =>
         {
-            GameManager.instance.transitions.Transition(1, 1, MeetFriends, ComunicateWithFriends);
+            GameManager.instance.transitions.Transition(1, 1, ComunicateWithFriends, MeetFriends);
         });
-    }
-
-    private void ComunicateWithFriends()
-    {
-        
     }
 
     private void MeetFriends()
@@ -232,7 +230,22 @@ public class LinhHouseManager : MonoBehaviour
         mai.SetActive(true);
         hung.SetActive(true);
         player.transform.position = playerMeetFriendsPos;
+        player.anim.ResetAnim();
         player.anim.SetDirection(Vector2.left);
+    }
+
+    private void ComunicateWithFriends()
+    {
+        GameManager.instance.dialogManager.StartDialogue(texts.friendsConversations, () =>
+        {
+            GameManager.instance.transitions.Transition(1, 1, null, GoToMainScene);
+        });
+    }
+
+    private void GoToMainScene()
+    {
+        PlayerPrefs.SetString("Progress", "Start Camping");
+        SceneManager.LoadScene("Main map");
     }
 
 }

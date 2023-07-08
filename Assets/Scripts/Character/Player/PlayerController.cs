@@ -28,6 +28,12 @@ public class PlayerController : CharacterController
         GameManager.instance.player = this;
     }
 
+    protected override void Start()
+    {
+        base.Start();
+        canvas.worldCamera = Camera.main;
+    }
+
     public void EnableMove()
     {
         playerMovement.enabled = true;
