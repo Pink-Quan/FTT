@@ -3,13 +3,13 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/Linh_House.tmx",
+    "activeFile": "Map/Main_map.tmx",
     "expandedProjectPaths": [
         "Tileset/Singles/Villas",
-        "Tileset/Singles",
-        ".",
+        "Tileset",
         "Map",
-        "Tileset"
+        "Tileset/Singles",
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -174,8 +174,8 @@
             "scale": 4,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 159.875,
-                "y": 160
+                "x": 160,
+                "y": 159.875
             }
         },
         "Map/Comback_street.tmx": {
@@ -206,7 +206,7 @@
             "selectedLayer": 3,
             "viewCenter": {
                 "x": 88,
-                "y": 64
+                "y": 64.125
             }
         },
         "Map/Inside cave.tmx": {
@@ -216,16 +216,16 @@
             "scale": 3,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 79.83333333333333,
-                "y": 80
+                "x": 80,
+                "y": 80.16666666666667
             }
         },
         "Map/Inside hospital.tmx": {
             "scale": 3.09133064516129,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 97.85430118046045,
-                "y": 124.21835257288203
+                "x": 112.8963673123329,
+                "y": 123.73312463314421
             }
         },
         "Map/Kitchen.tsx": {
@@ -238,8 +238,8 @@
             "scale": 4,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 189.5,
-                "y": 218.5
+                "x": 158,
+                "y": 232.125
             }
         },
         "Map/LivingRoom.tsx": {
@@ -249,11 +249,11 @@
             "expandedObjectLayers": [
                 19
             ],
-            "scale": 0.75,
-            "selectedLayer": 3,
+            "scale": 1.5,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 830,
-                "y": 662.6666666666667
+                "x": 1286.6666666666665,
+                "y": 1635
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -277,8 +277,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 283.25,
-                "y": 132.5
+                "x": 240,
+                "y": 118.75
             }
         },
         "Map/Terrains and Fences.tsx": {
@@ -291,19 +291,19 @@
             "scaleInDock": 1
         },
         "Map/Villa_House.tmx": {
-            "scale": 2,
-            "selectedLayer": 2,
+            "scale": 3,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 237.75,
-                "y": 168
+                "x": 160,
+                "y": 143.83333333333331
             }
         },
         "Map/Villa_House_Second_Floor.tmx": {
             "scale": 2.661979166666667,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 159.84347485814908,
-                "y": 144.25357072979847
+                "x": 159.65564468792797,
+                "y": 143.69008021913518
             }
         },
         "Map/Villas.tsx": {
@@ -564,7 +564,15 @@
         "Tileset/Villas.tsx",
         "Tileset/Worksite.tsx",
         "Tileset/Singles/Villas/Big Villa house red.tsx",
-        "Map/Linh_House.tmx"
+        "Map/Linh_House.tmx",
+        "Map/Main_map.tmx",
+        "Map/Villa_House.tmx",
+        "Map/Inside camping trailer.tmx",
+        "Map/Cliff.tmx",
+        "Map/Inside cave.tmx",
+        "Map/Inside hospital.tmx",
+        "Map/Street.tmx",
+        "Map/Villa_House_Second_Floor.tmx"
     ],
     "project": "Tiled.tiled-project",
     "recentFiles": [
