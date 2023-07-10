@@ -59,7 +59,7 @@ namespace ExtendedAnimation
             rectTransform.DOAnchorPos(defaultPos + moveBouchOffset, duration).OnComplete(() =>
             {
                 rectTransform.DOAnchorPos(defaultPos, bouchDuration);
-            });
+            }).SetUpdate(UpdateType.Normal, true);
 
             //Rotate effect
             transform.localRotation = Quaternion.Euler(defaultRot + rotOffset);

@@ -27,8 +27,8 @@ namespace ExtendedAnimation
         {
             transform.DOScale(defaultScale - defaultScale * bouchOffset, bouchButtonDuration).OnComplete(() =>
             {
-                transform.DOScale(defaultScale, bouchOffset);
-            });
+                transform.DOScale(defaultScale, bouchOffset).SetUpdate(UpdateType.Normal,true);
+            }).SetUpdate(UpdateType.Normal,true);
         }
     }
 }

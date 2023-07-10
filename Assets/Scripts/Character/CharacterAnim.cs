@@ -109,6 +109,18 @@ public class CharacterAnim : MonoBehaviour
         transform.rotation = Quaternion.identity;
         OnEnable();
     }
+    public void RandomDelayAnim()
+    {
+        StopAllCoroutines();
+        Delay(Random.Range(0.1f, 1f), ResetAnim);
+    }
+
+    public IEnumerator Delay(float time,System.Action onDone)
+    {
+        yield return new WaitForSeconds(time);
+        onDone?.Invoke();
+    }
+
 
     public float DieTime => morbundTime + 0.5f;
 }

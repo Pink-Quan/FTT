@@ -5,11 +5,11 @@
     },
     "activeFile": "Map/Main_map.tmx",
     "expandedProjectPaths": [
-        "Tileset/Singles/Villas",
+        ".",
         "Tileset",
-        "Map",
+        "Tileset/Singles/Villas",
         "Tileset/Singles",
-        "."
+        "Map"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -250,10 +250,10 @@
                 19
             ],
             "scale": 1.5,
-            "selectedLayer": 5,
+            "selectedLayer": 13,
             "viewCenter": {
-                "x": 1286.6666666666665,
-                "y": 1635
+                "x": 2265.333333333333,
+                "y": 1452.3333333333333
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
