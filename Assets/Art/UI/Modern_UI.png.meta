@@ -18200,6 +18200,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Modern_UI_477
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 227
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd00c4afebe2c6c4d8500d9ce6ef962d
+      internalID: -1194294437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infor_Button_White
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8bcd0b770072c742b7e1d922945930d
+      internalID: -431021568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -18222,6 +18264,7 @@ TextureImporter:
       Cursor6: 102296394
       Cursor7: 148087196
       GreenBar: 992983911
+      Infor_Button_White: -431021568
       Modern_UI_0: 1357951152
       Modern_UI_1: 123959240
       Modern_UI_10: -288134566

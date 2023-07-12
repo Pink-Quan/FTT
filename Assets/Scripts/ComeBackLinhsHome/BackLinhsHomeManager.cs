@@ -31,7 +31,7 @@ public class BackLinhsHomeManager : MonoBehaviour
 
     private void ChangeToLinhHouseScene()
     {
-        PlayerPrefs.SetString("Progress", "Linh House");
+        PlayerPrefs.SetInt("Progress", (int)GameProgress.InsideLinhHouse);
         SceneManager.LoadScene("LinhHouse");
     }
 }

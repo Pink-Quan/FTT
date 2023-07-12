@@ -8,17 +8,15 @@ public class MainMenuBG : MonoBehaviour
 {
     [SerializeField] private float frequency;
     [SerializeField] private float amplitude;
-    [SerializeField] private RectTransform rectTransform;
+    [SerializeField] private Material material;
 
     private void Start()
     {
-        rectTransform.anchoredPosition = Vector3.zero;
+        material.mainTextureOffset = Vector2.zero;
     }
 
     private void Update()
     {
-        Vector2 tOffset = rectTransform.anchoredPosition;
-        tOffset.x += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
-        rectTransform.anchoredPosition = tOffset;
+        material.mainTextureOffset = Vector2.right*Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
     }
 }

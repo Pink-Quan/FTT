@@ -201,7 +201,7 @@ public class HospitalManager : MonoBehaviour
     private void ChangeToGoHomeScene()
     {
         GameManager.instance.transitions.Transition(1,1,null,()=> SceneManager.LoadScene("GoingHome"));
-        PlayerPrefs.SetString("Progress", "Going Home");
+        PlayerPrefs.SetInt("Progress", (int)GameProgress.GoingHome);
     }
 
 }

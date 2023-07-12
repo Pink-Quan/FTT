@@ -244,7 +244,7 @@ public class LinhHouseManager : MonoBehaviour
 
     private void GoToMainScene()
     {
-        PlayerPrefs.SetString("Progress", "Start Camping");
+        PlayerPrefs.SetInt("Progress", (int)GameProgress.StartCamping);
         SceneManager.LoadScene("Mainmap");
     }
 
