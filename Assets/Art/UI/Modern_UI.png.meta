@@ -801,7 +801,7 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2817,7 +2817,7 @@ TextureImporter:
         height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2901,7 +2901,7 @@ TextureImporter:
         height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 3, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3279,7 +3279,7 @@ TextureImporter:
         height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -6261,7 +6261,7 @@ TextureImporter:
         height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 6, y: 3, z: 6, w: 7}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -7605,7 +7605,7 @@ TextureImporter:
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 8, y: 0, z: 7, w: 7}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -10326,7 +10326,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_492
+      name: yellow gear
       rect:
         serializedVersion: 2
         x: 628
@@ -10347,7 +10347,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_493
+      name: Yellow house
       rect:
         serializedVersion: 2
         x: 643
@@ -11082,27 +11082,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_530
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 212
-        width: 24
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f32517e01b2d704e9b5b998b3e8dad6
-      internalID: -281625335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Modern_UI_531
       rect:
         serializedVersion: 2
@@ -11691,7 +11670,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_559
+      name: Yellow left
       rect:
         serializedVersion: 2
         x: 614
@@ -11712,7 +11691,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_560
+      name: Yellow right
       rect:
         serializedVersion: 2
         x: 629
@@ -12783,27 +12762,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_611
-      rect:
-        serializedVersion: 2
-        x: 612
-        y: 164
-        width: 8
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4112d15d2de52354d8e61a312f389c1b
-      internalID: 409869381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Modern_UI_612
       rect:
         serializedVersion: 2
@@ -12841,27 +12799,6 @@ TextureImporter:
       bones: []
       spriteID: d40b87f941ce55f49bd8d7dbffd8b3d0
       internalID: 1869070367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Modern_UI_614
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 180
-        width: 24
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 460c4df21882a0f49961d8dd68a9803e
-      internalID: 1049116782
       vertices: []
       indices: 
       edges: []
@@ -13245,27 +13182,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_633
-      rect:
-        serializedVersion: 2
-        x: 615
-        y: 167
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b15304545e9a044b870f911f62633e4
-      internalID: 528220945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Modern_UI_634
       rect:
         serializedVersion: 2
@@ -13296,7 +13212,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 3, y: 4, z: 3, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -18095,6 +18011,195 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: yellow options
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 228
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667e2e8b0ee67884498f5d9a2d6ab119
+      internalID: 381292200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_UI_106
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 212
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3859e0be875f36040a1476c4c7039f84
+      internalID: -930579029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_UI_107
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 215
+        width: 8
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffe8d62a5644684c85d35412c9e19c7
+      internalID: -186171296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_UI_126
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 180
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca476d9c9fb07c418002b8f84855ca0
+      internalID: 588433619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_UI_186
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 180
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9270c5ed2677844b0d54c609894655
+      internalID: -332631126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_UI_342
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 228
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728f5e06b0648a94c90b627c906827a1
+      internalID: 593391324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_UI_343
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 164
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f917778cfee0b5f44bccf117d0da5e7a
+      internalID: -1190467131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_UI_363
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 180
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ed1290e16382b45b5c78ca73792108
+      internalID: -1932455378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_UI_476
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 197
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80d19cde117edc46b20edbc88375b1b
+      internalID: -115707840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -18126,6 +18231,8 @@ TextureImporter:
       Modern_UI_103: 474649695
       Modern_UI_104: -75218864
       Modern_UI_105: 2118894933
+      Modern_UI_106: -930579029
+      Modern_UI_107: -186171296
       Modern_UI_108: -625152224
       Modern_UI_109: 823163510
       Modern_UI_11: -613051839
@@ -18146,6 +18253,7 @@ TextureImporter:
       Modern_UI_123: 1237554380
       Modern_UI_124: 1121278750
       Modern_UI_125: -1664851385
+      Modern_UI_126: 588433619
       Modern_UI_127: 94662729
       Modern_UI_128: -70323730
       Modern_UI_129: -1955153745
@@ -18211,6 +18319,7 @@ TextureImporter:
       Modern_UI_183: -1778690576
       Modern_UI_184: -363745512
       Modern_UI_185: -1209395722
+      Modern_UI_186: -332631126
       Modern_UI_187: -227145076
       Modern_UI_188: 1827062273
       Modern_UI_189: 372502826
@@ -18550,8 +18659,6 @@ TextureImporter:
       Modern_UI_49: 1943243676
       Modern_UI_490: -1853428219
       Modern_UI_491: -883008112
-      Modern_UI_492: 1129348490
-      Modern_UI_493: 1254687257
       Modern_UI_494: -778676673
       Modern_UI_495: -486201665
       Modern_UI_496: 1720680537
@@ -18618,9 +18725,7 @@ TextureImporter:
       Modern_UI_556: -382853075
       Modern_UI_557: 1843598314
       Modern_UI_558: -1600868529
-      Modern_UI_559: 198338556
       Modern_UI_56: -1110405727
-      Modern_UI_560: 959388570
       Modern_UI_561: 100935956
       Modern_UI_562: 1658306620
       Modern_UI_563: -1569181159
@@ -18968,6 +19073,11 @@ TextureImporter:
       UI_Squ_Buton00: -1860865971
       White_Bag_Icon: -106142599
       X_icon: -2131385499
+      Yellow house: 1254687257
+      Yellow left: 198338556
+      Yellow right: 959388570
+      yellow gear: 1129348490
+      yellow options: 381292200
       yellowBar: -1811552865
   spritePackingTag: 
   pSDRemoveMatte: 0
