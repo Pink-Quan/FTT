@@ -167,6 +167,7 @@ public class HospitalManager : MonoBehaviour
         GameManager.instance.dialogManager.StartDialogue(_conversation.imFeelingNotGood, ()=> 
         {
             player.Die();
+            PlayerPrefs.SetInt("FAINT IN HOSPITAL", 1);
             Invoke("LoseHospital", 2.5f);
         });
     }

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private TMP_Text inforText;
+    private MainMenuTexts texts;
     public void StartGame()
     {
         string sceneName = "";
@@ -30,9 +33,30 @@ public class MainMenu : MonoBehaviour
         });
     }
 
+    private void Start()
+    {
+        
+    }
+
     public void Exit()
     {
-        Application.Quit();
+        GameManager.instance.transitions.Transition(1, 1, null, () => { Application.Quit(); });
+    }
+
+    public void ResetProgress()
+    {
+        PlayerPrefs.SetInt("Progress", 0);
+    }
+
+    public void UpdateInfoText()
+    {
+        inforText.text = texts.information;
+    }
+
+    public void ChanngeLanguage(string language)
+    {
+        PlayerPrefs.SetString("Language", language);
+
     }
 }
 
