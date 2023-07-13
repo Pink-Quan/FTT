@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84940da76883ef4aa70d6d15e1c91d9, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  conversationBetweenHelperAndLinh:
+  - sentances:
+    - How do you feel when you're about to go home?
+    Name: Helper
+    DisplayName: Volunteer
+    emotion: 0
+  - sentances:
+    - I do not know
+    - I really don't remember much
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - So that accident caused you not to remember anything
+    Name: Helper
+    DisplayName: Volunteer
+    emotion: 0
+  - sentances:
+    - Not really
+    - I still remember what I learned, the past from before the accident happened
+    - But the past is so long ago that I don't remember much
+    - "\rFor example, I still remember some knowledge from university"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - Oh is that so?
+    - "\rSo do you remember the Maclaurin expansion of the function f(x)?"
+    - Or do you remember the relationship between infrastructure and superstructure?
+    Name: Helper
+    DisplayName: Volunteer
+    emotion: 0
+  - sentances:
+    - The Maclaurin expansion of the function f(x) is
+    - 'f(a) + (f''(a)*(x-a))/1! + (f''''(a)*(x-a)^2)/2! + ... + (fn(a)*(x-a)^n)/n! '
+    - The relationship between infrastructure and superstructure and infrastructure
+      is
+    - A dialectical relationship in which infrastructure or production relations
+      play a decisive role
+    - In other words, it is the relationship between economics and politics, in which
+      economics is the key and dominates politics
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - Ohhh...
+    - I was just teasing you, but you really remember
+    - "\rEven you can't remember"
+    Name: Helper
+    DisplayName: Volunteer
+    emotion: 0
+  - sentances:
+    - Haha
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+  - sentances:
+    - Though
+    - The past is so long that I don't remember much
+    - I can't remember my past and previous relationships, even what my parents looked
+      like
+    - I only remember them taking care of me, but I can't really feel any emotions
+    - I wish they were here to help me
+    - Hic
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+  - sentances:
+    - It's okay, I'm sure someone will help me when I'm in trouble
+    - Especially the relatives, I think they won't leave you
+    Name: Helper
+    DisplayName: Volunteer
+    emotion: 0
+  aboutToGoHome:
+  - sentances:
+    - Coming to your house soon
+    - I bought some food, if you're hungry, make it and eat it
+    Name: Helper
+    DisplayName: Volunteer
+    emotion: 0
+  - sentances:
+    - Thanks you
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0

@@ -1,0 +1,308 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3fdb1c8e6eaa8f48bf064b155df5bec, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  firstSeftDialogue:
+    sentances:
+    - My house is so clean
+    - Probably helped by volunteers or relatives to clean up
+    - I hope that after exploring around my house, I will remember something
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  getCookBookGuide: "\rGet the cookbook"
+  seftDialogueAbountCookBook:
+    sentances:
+    - Why is the cookbook here, it should be on the bookshelf
+    - Also, why was the last page torn out?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  monologueAbountLocker:
+    sentances:
+    - Oh, there's a key again
+    - Is there anything in here that needs to be locked?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  getStick: Get 1 iron rod
+  monologueAbountStick:
+    sentances:
+    - Why is the iron rod hidden here
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  getLastPage: Get the last page of the cookbook
+  thereSomthingUnderTheChair:
+    sentances:
+    - Hmm, there must be something deep under the seat
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  monologueAboutThePage:
+    sentances:
+    - That's great, the last page has the password of my locker and my facebook account
+    - But why is my facebook password missing, it must be written in pencil
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  monologueAfterOpenningFacebook:
+  - sentances:
+    - Yeah, finally logged into my facebook
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+  - sentances:
+    - I didn't seem to interact much on facebook the other day
+    - I don't even have many friends
+    - Everyone just talked a little bit about me after that
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - Haha, that's life
+    - If I die, no one will care
+    - Life goes on as usual
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+  monodialogueSomebodyKnockTheDoor:
+    sentances:
+    - Why is someone knocking on the door?
+    - No one knows I'm home other than the doctor and the volunteer
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+  readingDocInLocker:
+  - sentances:
+    - Yeah, finally unlocked it
+    - Turns out these are my parents
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+  - sentances:
+    - But why only pictures of my family
+    - Most of the photos don't have any relatives
+    - So what's there to lock?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  monodialogueThereNoOneOutside:
+    sentances:
+    - There anyone outside
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  firstMeetNam:
+  - sentances:
+    - Ahhhh..
+    - Who are you
+    - How did you get in here?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+  - sentances:
+    - Don't you remember anything?
+    - I'm Nam
+    - A friend of one of your relatives
+    - I lived with your family while you were in college
+    - I heard you've been discharged from the hospital, so come back here to see
+      how you're doing
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+  - sentances:
+    - You appeared so suddenly, it scared me
+    - Hic, I don't remember anything
+    Name: Linh
+    DisplayName: LInh
+    emotion: 0
+  - sentances:
+    - Oh is that so?
+    - You just rest, I do housework for you
+    - I also bought food and put it in the fridge
+    - There are many things you like
+    - Who knows what you might remember after seeing something you like
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+  - sentances:
+    - Thanks
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  seeFoodInFirdge:
+  - sentances:
+    - He buys a lot of food
+    - My favorite food is simple
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  LinhFeelingNotGood:
+  - sentances:
+    - Why do I feel so dizzy?
+    - NAM
+    - Help me
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+  NamTalkWithLinhWhenHerInBed:
+    sentances:
+    - Hey, you're finally awake
+    - Maybe it's because when exposed to something that has the ability to recall,
+      it will cause dizziness
+    - But you don't have to worry, if you're too dizzy, you still have wings so you
+      can feel better
+    - Let me guide you
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+  NamGuideLinhToBreath:
+    sentances:
+    - Look at the arrow above your head
+    - You just need to breathe in the direction of the arrow, move accordingly
+    - But be careful with your wrong breathing, you won't be able to relieve your
+      stress, you may be more tired
+    - Let's try it now
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+  NamTalkAfterLinhDoneBreath:
+    sentances:
+    - Well done, you're much better now
+    - Right now you are still mildly ill so you can breathe like that
+    - You can press the 2 arrow button below to relieve stress
+    - But next time you can only breathe for 10 seconds and after each breath you
+      need to rest a bit
+    - So be careful
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+  LinhCommucatateThroughPhone:
+  - sentances:
+    - Oh, the phone rings
+    - Strange number
+    - Alo
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - Hello Linh
+    - Are you better?
+    Name: CallingPhone
+    DisplayName: CallingPhone
+    emotion: 0
+  - sentances:
+    - I'm discharged from the hospital
+    - Who are you?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - Don't you remember me
+    - I'm Mai, your high school classmate
+    - I saw you Online Facebook so I thought you were awake
+    - Don't you remember me
+    Name: CallingPhone
+    DisplayName: CallingPhone
+    emotion: 0
+  - sentances:
+    - Hic, I don't really remember anything
+    - After the accident, I forgot a lot of things
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+  - sentances:
+    - It's okay, are you free now
+    Name: CallingPhone
+    DisplayName: CallingPhone
+    emotion: 0
+  - sentances:
+    - I'm free now
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - I'll come visit you now, then help you too
+    Name: CallingPhone
+    DisplayName: CallingPhone
+    emotion: 0
+  - sentances:
+    - I'm in such a hurry, I haven't prepared anything yet
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - Don't be polite, you don't need to prepare anything
+    Name: CallingPhone
+    DisplayName: CallingPhone
+    emotion: 0
+  friendsConversations:
+  - sentances:
+    - It's good that you're healthy like this
+    - But you really don't remember anything
+    - Don't you remember the past when we studied together
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+  - sentances:
+    - "C\u1EADu \u0111\u1EBFn \u0111\xE2y l\xE0m t\u1EDB c\u0169ng nh\u1EDB m\u1ED9t
+      ch\xFAt"
+    - "H\xECnh nh\u01B0 ch\xFAng ta t\u1EEBng r\u1EA5t th\xE2n nhau"
+    - "Nh\u01B0ng sau ch\xFAng ta kh\xF4ng c\xF2n li\xEAn l\u1EA1c th\u01B0\u1EDDng
+      xuy\xEAn n\u1EEFa nh\u1EC9"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "Do ch\xFAng ta m\u1ED7i ng\u01B0\u1EDDi \u0111i m\u1ED9t con \u0111\u01B0\u1EDDng
+      kh\xE1c nhau, n\xEAn ng\xE0y c\xE0ng li\xEAn l\u1EA1c v\u1EDBi nhau c\xE0ng
+      \xEDt \u0111i"
+    - "Gi\u1EDD ch\xFAng ta m\u1EDBi c\xF3 c\u01A1 h\u1ED9i g\u1EB7p nhau, \u0111\u1EC3
+      t\u1EDB gi\xFAp \u0111\u1EE1 c\u1EADu nh\u1EDB l\u1EA1i m\u1ECDi th\u1EE9 nh\xE1"
+    - "T\u1ED1i nay t\u1EDB s\u1EBD k\u1EC3 cho c\u1EADu nh\u1EEFng g\xEC t\u1EDB
+      nh\u1EDB v\u1EC1 c\u1EADu h\u1ED3i c\u1EA5p 3"
+    - "Mai th\xEC ch\xFAng ta s\u1EBD \u0111\u1EBFn l\u1EA1i khu c\u1EAFm tr\u1EA1i
+      n\u01A1i c\u1EADu x\u1EA3y ra tai n\u1EA1n nh\xE9, ch\u1EAFc ki\u1EC3u g\xEC
+      c\u1EADu c\u0169ng s\u1EBD nh\u1EDB \u0111\u01B0\u1EE3c m\u1ED9t \xEDt khi
+      \u1EDF \u0111\u1EA5y"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+  - sentances:
+    - "Th\xF4i kh\xF4ng c\u1EA7n \u0111\xE2u, t\u1EDB c\xF3 th\u1EC3 t\u1EF1 c\u1ED1
+      g\u1EAFng nh\u1EDB l\u1EA1i m\xE0, th\u1EBF th\xEC phi\u1EC1n qu\xE1"
+    - "V\u1EDBi c\u1EA3 ch\u1ED7 \u0111\u1EA5y t\u1EDB s\u1EE3 kh\xF4ng \u0111\u01B0\u1EE3c
+      v\xE0o"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "Kh\xF4ng sao \u0111\xE2u, gi\u1EDD l\xE0 h\xE8 m\xE0 n\xEAn r\u1EA3nh l\u1EAFm"
+    - "V\u1EDBi c\u1EA3 t\u1EEB l\xFAc x\u1EA3y ra tai n\u1EA1n, ch\u1ED7 \u0111\u1EA5y
+      \u0111\xE3 \u0111\u01B0\u1EE3c s\u1EEDa sang l\u1EA1i v\xE0 \u0111\u1EA3m b\u1EA3o
+      an to\xE0n s\u1EBD kh\xF4ng x\u1EA3y ra tai n\u1EA1n t\u01B0\u01A1ng t\u1EF1"
+    - "C\xF3 g\xEC anh H\u01B0ng s\u1EBD gi\xFAp c\u1EADu"
+    - "Anh \u1EA5y c\xF3 hi\u1EC3u bi\u1EBFt r\u1EA5t nhi\u1EC1u v\u1EC1 t\xE2m l\xFD
+      v\xE0 t\xE2m th\u1EA7n"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+  - sentances:
+    - Hi em
+    - "C\xF3 g\xEC mai anh s\u1EBD gi\xFAp em"
+    - "Anh c\u0169ng s\u1EBD ch\u1EDF m\u1ECDi ng\u01B0\u1EDDi \u0111\u1EBFn \u0111\u1EA5y
+      lu\xF4n"
+    Name: Hung
+    DisplayName: Hung
+    emotion: 0

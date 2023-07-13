@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 952cd9adb987e47428835ecfe8389a1d, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  firstConversation:
+    sentances:
+    - AHHHHHH!
+    - I can't move
+    - HELP !!!!!
+    - Somebody help me !!!!!!!
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+  wakeUp:
+    sentances:
+    - Am I at the hospital?
+    - Why can't I remember anything?
+    - "\rWhat happened to me?"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  talkingWithPlayerAffterWalkingUp:
+  - sentances:
+    - "\rGreat, you awake"
+    - You should rest, I'll go call the doctor
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+  - sentances:
+    - Can I ask you a question?
+    - "\rWhat happened to me?"
+    - Why am I in here?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - You don't remember anything?
+    - You was swept away in a serious landslide, maybe that's why I can't remember
+      anything
+    - When someone found you, they didn't think you could survive
+    - But you really survived
+    - A lot of people sympathized with your situation, so they sent me a lot of help
+    - Do you remember who you are, do you remember what happened before the accident?
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+  - sentances:
+    - I don't remember much at all
+    - What day is it today?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - It's already June 13, 2023
+    - "\rAnd you've been in a coma here for about 11 months"
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+  - sentances:
+    - '!!!'
+    - It's been so long
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+  - sentances:
+    - So get some rest now, the medicine is on the table
+    - I'll go call the doctor and continue taking care of the other patients
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+  afewDayLatter: A few days later
+  nurseShowPlayerHowToMove:
+    sentances:
+    - I see you are recovering very well
+    - I tried walking around the room to see if there were any problems
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+  nurseShowPlayerToTakeStuff:
+    sentances:
+    - "\rIt's good, you're getting better"
+    - Your stuff is in the closet, try reading it and see if you remember anything
+    - When you're done, take your medicine, I'll come back when you're done
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+  guideHowToMove: 'Mission: Go through all pre-specified points, use WASD or arrows
+    to move'
+  afterDoneHowToMove:
+    sentances:
+    - "\rIt's good, you're getting better"
+    - Your stuff is in the closet, try reading it and see if you remember anything
+    - When you're done, take your medicine, I'll come back when you're done
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+  getItemNotification: Get ID, phone. For more information about the item, go to
+    the item bag and tap on the item in the inventory. Holding an item is similar
+    to viewing item information. To use the item, hold the item and exit the inventory,
+    press on the held item to use if the item is usable
+  getPrescriptionNofication: <color="white">Get a prescription
+  seftAskWhereIsPrescription:
+    sentances:
+    - Ohh, what's the dose?
+    - I remember the nurse just gave it to me
+    - It must have just fallen somewhere around here
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  imFeelingNotGood:
+    sentances:
+    - Ohh, I'm not feeling well
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  lose: Patient number 2001 is in a drug shock and is in a deep coma, it is not known
+    when she will wake up
+  goHome:
+  - sentances:
+    - You're better now
+    - You're also eligible to be discharged from the hospital
+    - This is a volunteer, he is one of the people who actively help you when you
+      are in trouble
+    - Now he'll take you home
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+  - sentances:
+    - Hi
+    - Let's go home
+    Name: Helper
+    DisplayName: Volunteer
+    emotion: 0
+  - sentances:
+    - Yes
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1

@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private TMP_Text inforText;
-    private MainMenuTexts texts;
+    [HideInInspector] public MainMenuTexts texts;
     public void StartGame()
     {
         string sceneName = "";
@@ -35,7 +34,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        
+        texts = Resources.Load<MainMenuTexts>("Texts/MainMenu/" + PlayerPrefs.GetString("Language", "Eng"));
     }
 
     public void Exit()
@@ -48,15 +47,22 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("Progress", 0);
     }
 
-    public void UpdateInfoText()
-    {
-        inforText.text = texts.information;
-    }
-
     public void ChanngeLanguage(string language)
     {
         PlayerPrefs.SetString("Language", language);
+    }
 
+    public void OpenFacebook()
+    {
+        Application.OpenURL("https://www.facebook.com/profile.php?id=100089991012819");
+    }
+
+    public void CopyEmail()
+    {
+        TextEditor textEditor = new TextEditor();
+        textEditor.text = "contact.lily.84@gmail.com";
+        textEditor.SelectAll();
+        textEditor.Copy();
     }
 }
 
