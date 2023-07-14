@@ -50,6 +50,7 @@ public class MainMenu : MonoBehaviour
     public void ChanngeLanguage(string language)
     {
         PlayerPrefs.SetString("Language", language);
+        texts = Resources.Load<MainMenuTexts>("Texts/MainMenu/" + PlayerPrefs.GetString("Language", "Eng"));
     }
 
     public void OpenFacebook()

@@ -29,7 +29,7 @@ public class LinhHouseManager : MonoBehaviour
         player.stress.HideBreathButton();
         Invoke("FirstSeftConversation", 2);
 
-        texts = Resources.Load<LinhHouseTexts>($"Texts/Linh House/{PlayerPrefs.GetString("Language", "Viet")}");
+        texts = Resources.Load<LinhHouseTexts>($"Texts/Linh House/{PlayerPrefs.GetString("Language", "Eng")}");
 
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Citizen Identity Card", 1, player.inventory);
@@ -176,6 +176,7 @@ public class LinhHouseManager : MonoBehaviour
             player.transform.position = playerInBedPos;
             nam.transform.position = NamNearBedPos;
             player.anim.ResetAnim();
+            player.anim.SetDirection(Vector2.down);
             player.anim.StopAllCoroutines();
         });
     }
@@ -189,6 +190,7 @@ public class LinhHouseManager : MonoBehaviour
     {
         player.transform.position = playerBreathPos;
         player.anim.ResetAnim();
+        player.anim.SetDirection(Vector2.down);
         player.HideButtons();
         GameManager.instance.dialogManager.StartDialogue(texts.NamGuideLinhToBreath, () =>
         {

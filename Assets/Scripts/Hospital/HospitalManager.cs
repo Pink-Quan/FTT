@@ -22,7 +22,7 @@ public class HospitalManager : MonoBehaviour
     [SerializeField] private GameObject helper;
     private void Start()
     {
-        _conversation = Resources.Load<HospitalConversation>($"Texts/Hospital/{PlayerPrefs.GetString("Language", "Viet")}");
+        _conversation = Resources.Load<HospitalConversation>($"Texts/Hospital/{PlayerPrefs.GetString("Language", "Eng")}");
         PlayFirstScene();
     }
 

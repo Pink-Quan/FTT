@@ -16,9 +16,9 @@ public class MainMapManager : MonoBehaviour
 
     private void Start()
     {
-        switch (PlayerPrefs.GetString("Progress"))
+        switch ((GameProgress)PlayerPrefs.GetInt("Progress"))
         {
-            case "Start Camping":
+            case GameProgress.StartCamping:
                 InitStartCamping();
                 Invoke("FirstComunicateWithManager", 2);
                 break;
@@ -31,18 +31,18 @@ public class MainMapManager : MonoBehaviour
         player.HideUI();
 
         player.transform.position = playerStartCampingPos;
-        Ngan.transform.position = playerStartCampingPos + Vector3.up * 2 + Vector3.left / 2;
-        Minh.transform.position = playerStartCampingPos + Vector3.up * 2 + Vector3.right / 2;
-        Mai.transform.position = playerStartCampingPos + Vector3.left;
-        Hung.transform.position = playerStartCampingPos + Vector3.left * 2;
-        Nam.transform.position = playerStartCampingPos + Vector3.right;
+        Ngan.transform.position = playerStartCampingPos + Vector3.up * 2 + Vector3.left * 1.5f;
+        Minh.transform.position = playerStartCampingPos + Vector3.up * 2 + Vector3.left / 2;
+        Mai.transform.position = playerStartCampingPos + Vector3.left * 1.1f;
+        Hung.transform.position = playerStartCampingPos + Vector3.left * 2 * 1.1f;
+        Nam.transform.position = playerStartCampingPos + Vector3.right * 1.1f;
 
-        player.anim.RandomDelayAnim();
-        Ngan.anim.RandomDelayAnim();
-        Minh.anim.RandomDelayAnim();
-        Mai.anim.RandomDelayAnim();
-        Hung.anim.RandomDelayAnim();
-        Nam.anim.RandomDelayAnim();
+        //player.anim.RandomDelayAnim();
+        //Ngan.anim.RandomDelayAnim();
+        //Minh.anim.RandomDelayAnim();
+        //Mai.anim.RandomDelayAnim();
+        //Hung.anim.RandomDelayAnim();
+        ////Nam.anim.RandomDelayAnim();
 
         player.anim.SetDirection(Vector3.up);
         Ngan.anim.SetDirection(Vector3.down);
@@ -54,6 +54,9 @@ public class MainMapManager : MonoBehaviour
 
     private void FirstComunicateWithManager()
     {
-        Debug.Log("Comunicate with managers");
+        //Debug.Log("Comunicate with managers");
+        string information = "";
+        information = Resources.Load<MainMenuTexts>("Texts/MainMenu/" + PlayerPrefs.GetString("Language", "Eng")).information;
+        GameManager.instance.textBoard.ShowText(information, GameManager.instance.pauseMenu.BackToMenu);
     }
 }

@@ -9,7 +9,7 @@ public class BackLinhsHomeManager : MonoBehaviour
     private ComeBackLinhsHomeText texts;
     private void Start()
     {
-        texts = Resources.Load<ComeBackLinhsHomeText>("Texts/BackToLinhsHome/Viet");
+        texts = Resources.Load<ComeBackLinhsHomeText>("Texts/BackToLinhsHome/"+PlayerPrefs.GetString("Language","Eng"));
         Invoke("StartConversations", 2);
     }
 

@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     public TextBoard textBoard;
     public PlayerInput input;
     public FastNotification fastNotification;
+    public DBManager dbManager;
+    public PauseMenu pauseMenu;
 
     private void OnDestroy()
     {

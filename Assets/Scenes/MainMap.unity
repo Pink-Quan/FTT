@@ -831,7 +831,7 @@ MonoBehaviour:
   Nam: {fileID: 605560077}
   Hung: {fileID: 591075819}
   player: {fileID: 845325256}
-  playerStartCampingPos: {x: 111.2, y: -48.64, z: 0}
+  playerStartCampingPos: {x: 112.09, y: -48.64, z: 0}
 --- !u!1001 &1093962197
 PrefabInstance:
   m_ObjectHideFlags: 0

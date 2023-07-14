@@ -103,7 +103,6 @@ public class CharacterAnim : MonoBehaviour
 
     public void ResetAnim()
     {
-        moveDirection = Vector2.down;
         spriteRenderer.sprite = charaterSprites[3];
         spriteRenderer.color = Color.white;
         transform.rotation = Quaternion.identity;
@@ -112,7 +111,7 @@ public class CharacterAnim : MonoBehaviour
     public void RandomDelayAnim()
     {
         StopAllCoroutines();
-        Delay(Random.Range(0.1f, 1f), ResetAnim);
+        StartCoroutine(Delay(Random.Range(0.1f, 1f), ResetAnim));
     }
 
     public IEnumerator Delay(float time,System.Action onDone)

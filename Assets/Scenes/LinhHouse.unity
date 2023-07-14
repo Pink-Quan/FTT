@@ -1547,6 +1547,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 844949377}
+        m_TargetAssemblyTypeName: InteractableEntity, Assembly-CSharp
+        m_MethodName: HideInteractButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
       m_Calls: []
@@ -6887,6 +6899,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8231316056586273205, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 87.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231316056586273205, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.900024
+      objectReference: {fileID: 0}
     - target: {fileID: 8236884115759756875, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8059,6 +8079,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mai
       objectReference: {fileID: 0}
+    - target: {fileID: 5189842596163737063, guid: bd2cf75525b932047831f56abe24674f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5189842596163737071, guid: bd2cf75525b932047831f56abe24674f, type: 3}
       propertyPath: moveDirection.x
       value: 1
@@ -8131,6 +8155,10 @@ PrefabInstance:
     - target: {fileID: 4845109160711590622, guid: 596bf953f13fade4bb53dc8d422d3502, type: 3}
       propertyPath: m_Name
       value: Nam
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845109160711590622, guid: 596bf953f13fade4bb53dc8d422d3502, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 596bf953f13fade4bb53dc8d422d3502, type: 3}
@@ -8285,6 +8313,10 @@ PrefabInstance:
     - target: {fileID: 2102506597480511266, guid: ef0397a8ba7ecb34180bd48a02fb2f08, type: 3}
       propertyPath: m_Name
       value: Hung
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102506597480511266, guid: ef0397a8ba7ecb34180bd48a02fb2f08, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2102506597480511270, guid: ef0397a8ba7ecb34180bd48a02fb2f08, type: 3}
       propertyPath: m_RootOrder
