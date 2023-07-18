@@ -57,6 +57,7 @@ public class MainMapManager : MonoBehaviour
         //Debug.Log("Comunicate with managers");
         string information = "";
         information = Resources.Load<MainMenuTexts>("Texts/MainMenu/" + PlayerPrefs.GetString("Language", "Eng")).information;
+        PlayerPrefs.SetInt("DONE DEMO", 1);
         GameManager.instance.textBoard.ShowText(information, GameManager.instance.pauseMenu.BackToMenu);
     }
 }

@@ -37,7 +37,7 @@ public class LinhHouseManager : MonoBehaviour
 
     private void FirstSeftConversation()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.firstSeftDialogue, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogueManager.StartDialogue(texts.firstSeftDialogue, EnablePlayerMoveAndUI);
     }
 
     private void EnablePlayerMoveAndUI()
@@ -54,7 +54,7 @@ public class LinhHouseManager : MonoBehaviour
     }
     private void SeftDiaglogueAboutCookBook()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.seftDialogueAbountCookBook, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogueManager.StartDialogue(texts.seftDialogueAbountCookBook, EnablePlayerMoveAndUI);
     }
     public void DisablePlayerMoveAndUI()
     {
@@ -71,7 +71,7 @@ public class LinhHouseManager : MonoBehaviour
 
     private void MonologueAbountStick()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.monologueAbountStick, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogueManager.StartDialogue(texts.monologueAbountStick, EnablePlayerMoveAndUI);
     }
 
 
@@ -81,7 +81,7 @@ public class LinhHouseManager : MonoBehaviour
         if (!isMonologueTheLocker)
         {
             isMonologueTheLocker = true;
-            GameManager.instance.dialogManager.StartDialogue(texts.monologueAbountLocker, null);
+            GameManager.instance.dialogueManager.StartDialogue(texts.monologueAbountLocker, null);
         }
     }
 
@@ -96,19 +96,19 @@ public class LinhHouseManager : MonoBehaviour
         }
         else
         {
-            GameManager.instance.dialogManager.StartDialogue(texts.thereSomthingUnderTheChair, EnablePlayerMoveAndUI);
+            GameManager.instance.dialogueManager.StartDialogue(texts.thereSomthingUnderTheChair, EnablePlayerMoveAndUI);
         }
     }
 
     private void MonologueAboutTheLastPage()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.monologueAboutThePage, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogueManager.StartDialogue(texts.monologueAboutThePage, EnablePlayerMoveAndUI);
     }
 
     public void HandleAfterLoginFacebook()
     {
         DisablePlayerMoveAndUI();
-        GameManager.instance.dialogManager.StartDialogue(texts.monologueAfterOpenningFacebook, () =>
+        GameManager.instance.dialogueManager.StartDialogue(texts.monologueAfterOpenningFacebook, () =>
         {
             EnablePlayerMoveAndUI();
             Invoke("NamKnockTheDoor", 3);
@@ -117,7 +117,7 @@ public class LinhHouseManager : MonoBehaviour
 
     public void ReadingDocInLocker()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.readingDocInLocker, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogueManager.StartDialogue(texts.readingDocInLocker, EnablePlayerMoveAndUI);
     }
 
     private void NamKnockTheDoor()
@@ -131,12 +131,12 @@ public class LinhHouseManager : MonoBehaviour
     {
         door.SetActive(true);
         player.anim.SetMove(false);
-        GameManager.instance.dialogManager.StartDialogue(texts.monodialogueSomebodyKnockTheDoor, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogueManager.StartDialogue(texts.monodialogueSomebodyKnockTheDoor, EnablePlayerMoveAndUI);
     }
 
     public void MonoDialogueThereNoOneOutside()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.monodialogueThereNoOneOutside, () =>
+        GameManager.instance.dialogueManager.StartDialogue(texts.monodialogueThereNoOneOutside, () =>
         {
             nam.SetActive(true);
             EnablePlayerMoveAndUI();
@@ -145,13 +145,13 @@ public class LinhHouseManager : MonoBehaviour
 
     public void CommunicateWithNam()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.firstMeetNam, EnablePlayerMoveAndUI);
+        GameManager.instance.dialogueManager.StartDialogue(texts.firstMeetNam, EnablePlayerMoveAndUI);
         fridge.SetActive(true);
     }
 
     public void GetFoodInFridge()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.seeFoodInFirdge, () =>
+        GameManager.instance.dialogueManager.StartDialogue(texts.seeFoodInFirdge, () =>
         {
             EnablePlayerMoveAndUI();
             Invoke("FeelDizzy", 2);
@@ -162,7 +162,7 @@ public class LinhHouseManager : MonoBehaviour
     {
         DisablePlayerMoveAndUI();
         player.anim.SetMove(false);
-        GameManager.instance.dialogManager.StartDialogue(texts.LinhFeelingNotGood, () =>
+        GameManager.instance.dialogueManager.StartDialogue(texts.LinhFeelingNotGood, () =>
         {
             player.anim.Die();
             Invoke("GoToBed", player.anim.DieTime);
@@ -183,7 +183,7 @@ public class LinhHouseManager : MonoBehaviour
 
     private void NamTalkWithLinhWhenHerInBed()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.NamTalkWithLinhWhenHerInBed, GuidePlayerToBreath);
+        GameManager.instance.dialogueManager.StartDialogue(texts.NamTalkWithLinhWhenHerInBed, GuidePlayerToBreath);
     }
 
     private void GuidePlayerToBreath()
@@ -192,7 +192,7 @@ public class LinhHouseManager : MonoBehaviour
         player.anim.ResetAnim();
         player.anim.SetDirection(Vector2.down);
         player.HideButtons();
-        GameManager.instance.dialogManager.StartDialogue(texts.NamGuideLinhToBreath, () =>
+        GameManager.instance.dialogueManager.StartDialogue(texts.NamGuideLinhToBreath, () =>
         {
             GameManager.instance.player.EnableMove();
             player.stress.AddStress(100);
@@ -206,7 +206,7 @@ public class LinhHouseManager : MonoBehaviour
         player.stress.AddStress(-100);
         player.HideButtons();
         player.DisableMove();
-        GameManager.instance.dialogManager.StartDialogue(texts.NamTalkAfterLinhDoneBreath, () =>
+        GameManager.instance.dialogueManager.StartDialogue(texts.NamTalkAfterLinhDoneBreath, () =>
         {
             player.ShowUI();
             player.EnableMove();
@@ -221,7 +221,7 @@ public class LinhHouseManager : MonoBehaviour
         player.anim.StopAllCoroutines();
         player.DisableMove();
         player.HideButtons();
-        GameManager.instance.dialogManager.StartDialogue(texts.LinhCommucatateThroughPhone, () =>
+        GameManager.instance.dialogueManager.StartDialogue(texts.LinhCommucatateThroughPhone, () =>
         {
             GameManager.instance.transitions.Transition(1, 1, ComunicateWithFriends, MeetFriends);
         });
@@ -238,7 +238,7 @@ public class LinhHouseManager : MonoBehaviour
 
     private void ComunicateWithFriends()
     {
-        GameManager.instance.dialogManager.StartDialogue(texts.friendsConversations, () =>
+        GameManager.instance.dialogueManager.StartDialogue(texts.friendsConversations, () =>
         {
             GameManager.instance.transitions.Transition(1, 1, null, GoToMainScene);
         });

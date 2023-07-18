@@ -18515,6 +18515,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: QuestionBut00
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99ae35e947e28941b868ae7dee0bc95
+      internalID: 246637563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -19378,6 +19399,7 @@ TextureImporter:
       PauseBut01: -486981587
       PauseBut02: -802670732
       PauseButton: -985155072
+      QuestionBut00: 246637563
       Rec_Board: -1662589879
       RedBar: -6280801
       Square_Board: -401158104

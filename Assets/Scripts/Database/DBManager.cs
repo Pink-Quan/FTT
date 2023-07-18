@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -16,7 +17,7 @@ public class DBManager : MonoBehaviour
         UpdateDB();
     }
 
-    public void UpdateDB()
+    public void UpdateDB(Action onDone = null)
     {
         UpdatePlayedTime();
         Login((isSuccess, res) =>
@@ -40,19 +41,12 @@ public class DBManager : MonoBehaviour
             //{
             //    Debug.Log("Loggin error: " + res);
             //}
+            onDone?.Invoke();
         });
     }
 
     public void Login(Action<bool, string> OnDone)
     {
-        if (isTest)
-        {
-            StartCoroutine(Upload(uri + "/Login.php", OnDone,
-            new PostData("userName", "dev"),
-            new PostData("firstTimePlay", "2012/12/12")
-            ));
-            return;
-        }
         var firstTimePlay = PlayerPrefs.GetString("First Time Play", "");
         if (firstTimePlay == "")
         {
@@ -61,6 +55,7 @@ public class DBManager : MonoBehaviour
         }
         StartCoroutine(Upload(uri + "/Login.php", OnDone,
             new PostData("userName", SystemInfo.deviceUniqueIdentifier),
+            new PostData("Version", Application.version),
             new PostData("firstTimePlay", firstTimePlay)
             ));
 
@@ -68,23 +63,21 @@ public class DBManager : MonoBehaviour
 
     public void UpdateUserData(Action<bool, string> OnDone)
     {
-        if (isTest)
-        {
-            StartCoroutine(Upload(uri + "/UpdateUserInfo.php", OnDone,
-            new PostData("userName", "DevTest"),
-            new PostData("firstTimePlay", "2012/12/12"),
-            new PostData("Progress", ((GameProgress)PlayerPrefs.GetInt("Progress")).ToString()),
-            new PostData("PlayedTime", (PlayerPrefs.GetFloat("Played Time", 0)).ToString()),
-            new PostData("LastTimePlay", DateTime.Now.ToString("yyyy/MM/dd"))
-            ));
-        }
-
         StartCoroutine(Upload(uri + "/UpdateUserInfo.php", OnDone,
             new PostData("userName", SystemInfo.deviceUniqueIdentifier),
+            new PostData("Version", Application.version),
             new PostData("firstTimePlay", PlayerPrefs.GetString("First Time Play")),
             new PostData("Progress", ((GameProgress)PlayerPrefs.GetInt("Progress")).ToString()),
-            new PostData("PlayedTime", (PlayerPrefs.GetFloat("Played Time", 0)).ToString()),
-            new PostData("LastTimePlay", DateTime.Now.ToString("yyyy/MM/dd"))
+            new PostData("PlayedTime", ((int)PlayerPrefs.GetFloat("Played Time", 0)).ToString()),
+            new PostData("LastTimePlay", DateTime.Now.ToString("yyyy/MM/dd")),
+            new PostData("Achievement", GetAchievement())
+        ));
+    }
+
+    public void GetAnnouncement(Action<bool, string> OnDone)
+    {
+        StartCoroutine(Upload(uri + "/Announcement.php", OnDone,
+            new PostData("Language", PlayerPrefs.GetString("Language", "Eng"))
         ));
     }
 
@@ -120,12 +113,12 @@ public class DBManager : MonoBehaviour
 
         if (www.result != UnityWebRequest.Result.Success)
         {
-            //Debug.Log("Upload failed: "+www.error);
+            Debug.Log("Upload failed: " + www.error);
             OnDone?.Invoke(false, www.error);
         }
         else
         {
-            //Debug.Log("Upload Success, return: "+ www.downloadHandler.text);
+            Debug.Log("Upload Success, return: " + www.downloadHandler.text);
             OnDone?.Invoke(true, www.downloadHandler.text);
 
         }
@@ -134,7 +127,7 @@ public class DBManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         UpdatePlayedTime();
-        //Debug.Log(PlayerPrefs.GetFloat("Played Time", 0));
+        Debug.Log(PlayerPrefs.GetFloat("Played Time", 0));
     }
 
     private void UpdatePlayedTime()
@@ -142,6 +135,17 @@ public class DBManager : MonoBehaviour
         float playedTime = (float)((DateTime.Now - timePointer).TotalMinutes);
         timePointer = DateTime.Now;
         PlayerPrefs.SetFloat("Played Time", PlayerPrefs.GetFloat("Played Time", 0) + playedTime);
+    }
+
+    private string GetAchievement()
+    {
+        StringBuilder achieve = new StringBuilder();
+
+        achieve.Append(PlayerPrefs.GetInt("DONE DEMO", 0));
+        achieve.Append(PlayerPrefs.GetInt("FAINT IN HOSPITAL", 0));
+
+        string res = achieve.ToString();
+        return res;
     }
 
     public struct PostData

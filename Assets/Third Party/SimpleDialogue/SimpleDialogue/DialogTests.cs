@@ -10,11 +10,11 @@ public class DialogTests : MonoBehaviour
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private Dialogue dialogue2;
 
-    private DialogManager dialogManager;
+    private DialogueManager dialogManager;
 
     private void Awake()
     {
-        dialogManager = FindObjectOfType<DialogManager>();
+        dialogManager = FindObjectOfType<DialogueManager>();
     }
     private void Start()
     {

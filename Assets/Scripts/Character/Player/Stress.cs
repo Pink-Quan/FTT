@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Stress : MonoBehaviour
 {
-    [Range(0, 10)]
+    [Range(0, 100)]
     public int stressIndex;
     public Image stressBar;
     public PlayerController player;

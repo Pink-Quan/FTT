@@ -7,4 +7,6 @@ public class MainMenuTexts : ScriptableObject
 {
     [TextArea]
     public string information;
+    [TextArea]
+    public string howToPlay;
 }

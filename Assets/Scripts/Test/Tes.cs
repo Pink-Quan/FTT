@@ -9,6 +9,12 @@ public class Tes : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(-player.directionTrasform.up);
+        //Debug.Log(-player.directionTrasform.up);
+    }
+
+    public void Login(string tempString)
+    {
+        PlayerPrefs.SetString("First Time Play", tempString);
+        GameManager.instance.dbManager.Login(null);
     }
 }

@@ -34,13 +34,13 @@ public class HospitalManager : MonoBehaviour
 
     private void PlayFirstScene()
     {
-        GameManager.instance.dialogManager.StartDialogue(_conversation.firstConversation, WakeUp);
+        GameManager.instance.dialogueManager.StartDialogue(_conversation.firstConversation, WakeUp);
     }
 
     private void WakeUp()
     {
         blackBackground.SetActive(false);
-        GameManager.instance.dialogManager.StartDialogue(_conversation.wakeUp, OnDoneWakeUpConversation);
+        GameManager.instance.dialogueManager.StartDialogue(_conversation.wakeUp, OnDoneWakeUpConversation);
     }
 
     private void OnDoneWakeUpConversation()
@@ -50,7 +50,7 @@ public class HospitalManager : MonoBehaviour
 
     private void NuresComunitcateWithPlayer()
     {
-        GameManager.instance.dialogManager.StartDialogue(_conversation.talkingWithPlayerAffterWalkingUp, DoneTalkingWithPlayer);
+        GameManager.instance.dialogueManager.StartDialogue(_conversation.talkingWithPlayerAffterWalkingUp, DoneTalkingWithPlayer);
     }
 
     public void DoneTalkingWithPlayer()
@@ -74,7 +74,7 @@ public class HospitalManager : MonoBehaviour
     private void GuideHowToMoveAndTakeStuff()
     {
         nurse.transform.position = guidenceNursePos.position;
-        GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerHowToMove, () =>
+        GameManager.instance.dialogueManager.StartDialogue(_conversation.nurseShowPlayerHowToMove, () =>
         {
             GameManager.instance.textBoard.ShowText(_conversation.guideHowToMove, AllowMovePlayer);
         });
@@ -105,7 +105,7 @@ public class HospitalManager : MonoBehaviour
     {
         player.DisableMove();
         player.anim.SetMove(false);
-        GameManager.instance.dialogManager.StartDialogue(_conversation.nurseShowPlayerToTakeStuff, NurseLeaveRoom);
+        GameManager.instance.dialogueManager.StartDialogue(_conversation.nurseShowPlayerToTakeStuff, NurseLeaveRoom);
     }
 
     private void NurseLeaveRoom()
@@ -156,7 +156,7 @@ public class HospitalManager : MonoBehaviour
         if (!isSelfAsk)
         {
             ForbidPlayerMove();
-            GameManager.instance.dialogManager.StartDialogue(_conversation.seftAskWhereIsPrescription, null);
+            GameManager.instance.dialogueManager.StartDialogue(_conversation.seftAskWhereIsPrescription, null);
             isSelfAsk = true;
         }
     }
@@ -164,7 +164,7 @@ public class HospitalManager : MonoBehaviour
     public void TakeWrongDrug()
     {
         ForbidPlayerMove();
-        GameManager.instance.dialogManager.StartDialogue(_conversation.imFeelingNotGood, ()=> 
+        GameManager.instance.dialogueManager.StartDialogue(_conversation.imFeelingNotGood, ()=> 
         {
             player.Die();
             PlayerPrefs.SetInt("FAINT IN HOSPITAL", 1);
@@ -196,7 +196,7 @@ public class HospitalManager : MonoBehaviour
         player.transform.position = guidenceNursePos.position + Vector3.right;
         player.anim.SetDirection(new Vector2(0, -1));
         player.TurnFlashLight(false);
-        GameManager.instance.dialogManager.StartDialogue(_conversation.goHome, ChangeToGoHomeScene);
+        GameManager.instance.dialogueManager.StartDialogue(_conversation.goHome, ChangeToGoHomeScene);
     }
 
     private void ChangeToGoHomeScene()

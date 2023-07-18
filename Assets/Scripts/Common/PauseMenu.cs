@@ -37,6 +37,6 @@ public class PauseMenu : MonoBehaviour
 
     public void AdjustSFX(float value)
     {
-        audioMixer.SetFloat("Music Volume", Mathf.Log10(value) * 20);
+        audioMixer.SetFloat("SFX Volume", Mathf.Log10(value) * 20);
     }
 }

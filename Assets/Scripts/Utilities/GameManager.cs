@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         Instantiate(Resources.Load<GameObject>("GameManager"));
     }
 
-    public DialogManager dialogManager;
+    public DialogueManager dialogueManager;
     public Transitions transitions;
     public PlayerController player;
     public TextBoard textBoard;
@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public FastNotification fastNotification;
     public DBManager dbManager;
     public PauseMenu pauseMenu;
+    public SoundManager soundManager;
 
     private void OnDestroy()
     {

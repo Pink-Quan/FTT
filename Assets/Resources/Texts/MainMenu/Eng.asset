@@ -31,4 +31,17 @@ MonoBehaviour:
 
     https://rmocci.itch.io
 
-    https://refpixels.itch.io'
+    https://refpixels.itch.io
+
+    https://alan-dalcastagne.itch.io
+
+    https://mayragandra.itch.io'
+  howToPlay: 'Use WASD or arrow buttons to move
+
+    The interactive button will
+    only appear when you are near a certain location, it may not have a position
+    indication, please double check the locations, as it can be interactive
+
+    To
+    use an item in the inventory, click on the item in the inventory to hold the
+    item, then exit the inventory and press on the item in hand'

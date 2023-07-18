@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject loading;
+
     [HideInInspector] public MainMenuTexts texts;
     public void StartGame()
     {
@@ -32,14 +34,21 @@ public class MainMenu : MonoBehaviour
         });
     }
 
+    private void PlayBGMucis()
+    {
+        GameManager.instance.soundManager.PlayMusic("BG");
+    }
+
     private void Start()
     {
         texts = Resources.Load<MainMenuTexts>("Texts/MainMenu/" + PlayerPrefs.GetString("Language", "Eng"));
+        PlayBGMucis();
     }
 
     public void Exit()
     {
-        GameManager.instance.transitions.Transition(1, 1, null, () => { Application.Quit(); });
+        loading.SetActive(true);
+        GameManager.instance.dbManager.UpdateDB(Application.Quit);
     }
 
     public void ResetProgress()
@@ -58,12 +67,43 @@ public class MainMenu : MonoBehaviour
         Application.OpenURL("https://www.facebook.com/profile.php?id=100089991012819");
     }
 
-    public void CopyEmail()
+    public void GetEmail()
     {
         TextEditor textEditor = new TextEditor();
         textEditor.text = "contact.lily.84@gmail.com";
         textEditor.SelectAll();
         textEditor.Copy();
+        GameManager.instance.textBoard.ShowText("Email copied to clipboard <br>contact.lily.84@gmail.com");
+    }
+
+    public void PlayClickSound()
+    {
+        GameManager.instance.soundManager.PlayCommondSound("Click");
+    }
+
+    public void GetAnnouncement()
+    {
+        loading.SetActive(true);
+        GameManager.instance.dbManager.GetAnnouncement((bool isSuccess, string result) =>
+        {
+            if(!loading.activeSelf) return;
+
+            loading.SetActive(false);
+            if (!isSuccess)
+            {
+                GameManager.instance.textBoard.ShowText("Fail to load Announment");
+            }
+            else
+            {
+                GameManager.instance.textBoard.ShowText(result);
+            }
+
+        });
+    }
+
+    public void ShowGuide()
+    {
+        GameManager.instance.textBoard.ShowText(texts.howToPlay);
     }
 }
 

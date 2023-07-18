@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 public class VectorPaths : MonoBehaviour
 {
     public Vector3[] paths;
 }
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(VectorPaths))]
 public class VectorPathsEditor : Editor
 {
@@ -32,3 +34,4 @@ public class VectorPathsEditor : Editor
         Handles.Label(vp.paths[vp.paths.Length - 1] + Vector3.up * 0.5f, (vp.paths.Length - 1).ToString());
     }
 }
+#endif

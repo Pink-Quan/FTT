@@ -8,7 +8,7 @@ public class CharacterController : MonoBehaviour
     public CharacterAnim anim;
     public Animator animator;
     public Collider2D col;
-
+    public CharacterSound sound;
     protected virtual void Start()
     {
         lastPos = transform.position;
