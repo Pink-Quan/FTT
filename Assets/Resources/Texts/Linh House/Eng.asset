@@ -46,6 +46,7 @@ MonoBehaviour:
   thereSomthingUnderTheChair:
     sentances:
     - Hmm, there must be something deep under the seat
+    - I need a flashlight and something long to take it out
     Name: Linh
     DisplayName: Linh
     emotion: 0
@@ -294,3 +295,14 @@ MonoBehaviour:
     Name: Hung
     DisplayName: Hung
     emotion: 0
+  somethingUnderThis:
+    sentances:
+    - There's something under the cupboard
+    - I need a light source to take it out
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  lockerHint: Check the living room to see if you missed something, maybe there's
+    something under the sofa
+  facebookHint: Look for the account first, it can be written on a piece of paper,
+    the password is related to the date of birth

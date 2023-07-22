@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class HospitalManager : MonoBehaviour
 {
     [SerializeField] private GameObject blackBackground;
-    private HospitalConversation _conversation;
+    private HospitalConversation texts;
 
     [SerializeField] private Nurse nurse;
     public Transform guidenceNursePos;
@@ -22,7 +22,7 @@ public class HospitalManager : MonoBehaviour
     [SerializeField] private GameObject helper;
     private void Start()
     {
-        _conversation = Resources.Load<HospitalConversation>($"Texts/Hospital/{PlayerPrefs.GetString("Language", "Eng")}");
+        texts = Resources.Load<HospitalConversation>($"Texts/Hospital/{PlayerPrefs.GetString("Language", "Eng")}");
         PlayFirstScene();
     }
 
@@ -34,13 +34,13 @@ public class HospitalManager : MonoBehaviour
 
     private void PlayFirstScene()
     {
-        GameManager.instance.dialogueManager.StartDialogue(_conversation.firstConversation, WakeUp);
+        GameManager.instance.dialogueManager.StartDialogue(texts.firstConversation, WakeUp);
     }
 
     private void WakeUp()
     {
         blackBackground.SetActive(false);
-        GameManager.instance.dialogueManager.StartDialogue(_conversation.wakeUp, OnDoneWakeUpConversation);
+        GameManager.instance.dialogueManager.StartDialogue(texts.wakeUp, OnDoneWakeUpConversation);
     }
 
     private void OnDoneWakeUpConversation()
@@ -50,7 +50,7 @@ public class HospitalManager : MonoBehaviour
 
     private void NuresComunitcateWithPlayer()
     {
-        GameManager.instance.dialogueManager.StartDialogue(_conversation.talkingWithPlayerAffterWalkingUp, DoneTalkingWithPlayer);
+        GameManager.instance.dialogueManager.StartDialogue(texts.talkingWithPlayerAffterWalkingUp, DoneTalkingWithPlayer);
     }
 
     public void DoneTalkingWithPlayer()
@@ -58,7 +58,7 @@ public class HospitalManager : MonoBehaviour
         nurse.Disappeare(() =>
         {
             GameManager.instance.transitions.TransitionWithText(
-            _conversation.afewDayLatter,
+            texts.afewDayLatter,
             () =>
             {
                 nurse.transform.position = guidenceNursePos.position;
@@ -74,13 +74,13 @@ public class HospitalManager : MonoBehaviour
     private void GuideHowToMoveAndTakeStuff()
     {
         nurse.transform.position = guidenceNursePos.position;
-        GameManager.instance.dialogueManager.StartDialogue(_conversation.nurseShowPlayerHowToMove, () =>
+        GameManager.instance.dialogueManager.StartDialogue(texts.nurseShowPlayerHowToMove, () =>
         {
-            GameManager.instance.textBoard.ShowText(_conversation.guideHowToMove, AllowMovePlayer);
+            GameManager.instance.textBoard.ShowText(texts.guideHowToMove, PlayerCheckpointsStart);
         });
     }
 
-    private void AllowMovePlayer()
+    private void PlayerCheckpointsStart()
     {
         player.playerMovement.enabled = true;
         checkpoints.gameObject.SetActive(true);
@@ -105,7 +105,7 @@ public class HospitalManager : MonoBehaviour
     {
         player.DisableMove();
         player.anim.SetMove(false);
-        GameManager.instance.dialogueManager.StartDialogue(_conversation.nurseShowPlayerToTakeStuff, NurseLeaveRoom);
+        GameManager.instance.dialogueManager.StartDialogue(texts.nurseShowPlayerToTakeStuff, NurseLeaveRoom);
     }
 
     private void NurseLeaveRoom()
@@ -126,7 +126,7 @@ public class HospitalManager : MonoBehaviour
     public void ItemReceivedNotification()
     {
         ForbidPlayerMove();
-        GameManager.instance.textBoard.ShowText(_conversation.getItemNotification, AllowPlayerMove);
+        GameManager.instance.textBoard.ShowText(texts.getItemNotification, AllowPlayerMove);
     }
 
     public void AllowPlayerMove()
@@ -141,13 +141,19 @@ public class HospitalManager : MonoBehaviour
         player.buttons.SetActive(false);
     }
 
-    public void AddPrescriptionToPlayer()
+    public void AddPrescriptionToPlayer(GameObject perscription)
     {
+        if (!player.IsFlashLight())
+        {
+            GameManager.instance.dialogueManager.StartDialogue(texts.monoDialogueAbountSomethingUnderTheBed,AllowPlayerMove);
+            return;
+        }
         isSelfAsk = true;
         player.EnableMove();
         player.ShowButtons();
-        GameManager.instance.fastNotification.Show(GameManager.instance.player.transform.position + Vector3.up * 0.5f, _conversation.getPrescriptionNofication);
+        GameManager.instance.fastNotification.Show(GameManager.instance.player.transform.position + Vector3.up * 0.5f, texts.getPrescriptionNofication);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "How to take medicine", 1, player.inventory);
+        perscription.SetActive(false);
     }
 
     bool isSelfAsk;
@@ -156,7 +162,7 @@ public class HospitalManager : MonoBehaviour
         if (!isSelfAsk)
         {
             ForbidPlayerMove();
-            GameManager.instance.dialogueManager.StartDialogue(_conversation.seftAskWhereIsPrescription, null);
+            GameManager.instance.dialogueManager.StartDialogue(texts.seftAskWhereIsPrescription, null);
             isSelfAsk = true;
         }
     }
@@ -164,7 +170,7 @@ public class HospitalManager : MonoBehaviour
     public void TakeWrongDrug()
     {
         ForbidPlayerMove();
-        GameManager.instance.dialogueManager.StartDialogue(_conversation.imFeelingNotGood, ()=> 
+        GameManager.instance.dialogueManager.StartDialogue(texts.imFeelingNotGood, ()=> 
         {
             player.Die();
             PlayerPrefs.SetInt("FAINT IN HOSPITAL", 1);
@@ -174,7 +180,7 @@ public class HospitalManager : MonoBehaviour
 
     private void LoseHospital()
     {
-        GameManager.instance.transitions.TransitionWithText(_conversation.lose, PlayAgain, null);
+        GameManager.instance.transitions.TransitionWithText(texts.lose, PlayAgain, null);
     }
 
     private void PlayAgain()
@@ -185,7 +191,7 @@ public class HospitalManager : MonoBehaviour
     public void TakeRightDrug()
     {
         ForbidPlayerMove();
-        GameManager.instance.transitions.TransitionWithText(_conversation.afewDayLatter, MeetHelperAndGoHome, null);
+        GameManager.instance.transitions.TransitionWithText(texts.afewDayLatter, MeetHelperAndGoHome, null);
     }
 
     private void MeetHelperAndGoHome()
@@ -196,13 +202,32 @@ public class HospitalManager : MonoBehaviour
         player.transform.position = guidenceNursePos.position + Vector3.right;
         player.anim.SetDirection(new Vector2(0, -1));
         player.TurnFlashLight(false);
-        GameManager.instance.dialogueManager.StartDialogue(_conversation.goHome, ChangeToGoHomeScene);
+        GameManager.instance.dialogueManager.StartDialogue(texts.goHome, ChangeToGoHomeScene);
     }
 
     private void ChangeToGoHomeScene()
     {
         GameManager.instance.transitions.Transition(1,1,null,()=> SceneManager.LoadScene("GoingHome"));
         PlayerPrefs.SetInt("Progress", (int)GameProgress.GoingHome);
+        GameManager.instance.dbManager.UpdateDB();
+    }
+
+    bool isMonoDialougeAboutLocker;
+    public void MonoDialogueAboutLocker()
+    {
+        if(isMonoDialougeAboutLocker) return;
+        GameManager.instance.dialogueManager.StartDialogue(texts.monoDialgueAboutLocker, null);
+        isMonoDialougeAboutLocker = true;
+    }
+
+    public void LockerHint()
+    {
+        GameManager.instance.textBoard.ShowText(texts.lockerHint);
+    }
+
+    public void MedicineHint()
+    {
+        GameManager.instance.textBoard.ShowText(texts.takeMedacineHint);
     }
 
 }

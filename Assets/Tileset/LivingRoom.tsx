@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.2" name="LivingRoom" tilewidth="16" tileheight="16" tilecount="720" columns="16">
+<tileset version="1.10" tiledversion="1.10.1" name="LivingRoom" tilewidth="16" tileheight="16" tilecount="720" columns="16">
  <image source="../Art/Interiors/Theme_Sorter_Shadowless/2_LivingRoom_Shadowless.png" width="256" height="720"/>
  <tile id="36">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="1" width="16" height="15"/>
+   <object id="1" x="2.03977" y="1" width="12.0739" height="15"/>
   </objectgroup>
  </tile>
  <tile id="52">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+   <object id="1" x="1.81818" y="0" width="12.1818" height="16"/>
   </objectgroup>
  </tile>
  <tile id="84">

@@ -173,3 +173,24 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 1
+  monoDialgueAboutLocker:
+    sentances:
+    - "\u1ED2, t\u1EE7 n\xE0y c\xF3 kh\xF3a \xE0"
+    - "Kh\xF3a 3x3 gi\u1ED1ng c\xE1ch b\u1ED1 tr\xED gi\u01B0\u1EDDng \u1EDF trong
+      ph\xF2ng n\xE0y gh\xEA"
+    - "Kh\xF4ng bi\u1EBFt kh\xF3a v\xE0 gi\u01B0\u1EDDng \u1EDF \u0111\xE2y c\xF3
+      li\xEAn quan g\xEC kh\xF4ng"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  monoDialogueAbountSomethingUnderTheBed:
+    sentances:
+    - "C\xF3 g\xEC b\xEAn d\u01B0\u1EDBi gi\u01B0\u1EDDng th\xEC ph\u1EA3i"
+    - "T\u1ED1i qu\xE1, m\xECnh kh\xF4ng l\u1EA5y n\xF3 ra \u0111\u01B0\u1EE3c"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  lockerHint: "M\u1EADt kh\u1EA9u v\xE0 b\u1EC7nh nh\xE2n \u0111ang n\u1EB1m tr\xEAn
+    gi\u01B0\u1EDDng c\xF3 li\xEAn quan t\u1EDBi nhau"
+  takeMedacineHint: "T\xECm \u0111\u01A1n thu\u1ED1c, n\xF3 c\xF3 th\u1EC3 \u1EDF
+    d\u01B0\u1EDBi g\u1EA7m gi\u01B0\u1EDDng n\xE0o \u0111\xF3"

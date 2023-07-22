@@ -52,6 +52,8 @@ MonoBehaviour:
   thereSomthingUnderTheChair:
     sentances:
     - "Hmm, c\xF3 g\xEC \u0111\xF3 s\xE2u trong g\u1EA7m gh\u1EBF th\xEC ph\u1EA3i"
+    - "M\xECnh c\u1EA7n \u0111\xE8n v\xE0 c\xE1i g\xEC \u0111\xF3 d\xE0i \u0111\u1EC3
+      l\u1EA5y n\xF3 ra"
     Name: Linh
     DisplayName: Linh
     emotion: 0
@@ -337,3 +339,16 @@ MonoBehaviour:
     Name: Hung
     DisplayName: Hung
     emotion: 0
+  somethingUnderThis:
+    sentances:
+    - "C\xF3 g\xEC \u0111\xF3 d\u01B0\u1EDBi \u0111\xE2y th\xEC ph\u1EA3i"
+    - "M\xECnh c\u1EA7n m\u1ED9t ngu\u1ED3n s\xE1ng \u0111\u1EC3 l\u1EA5y n\xF3 ra"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  lockerHint: "Ki\u1EC3m tra ph\xF2ng kh\xE1ch xem b\u1EA1n c\xF3 b\u1ECF l\u1EE1
+    th\u1EE9 g\xEC kh\xF4ng, c\xF3 th\u1EC3 c\xF3 th\u1EE9 g\xEC \u1EDF d\u01B0\u1EDBi
+    gh\u1EBF sofa"
+  facebookHint: "H\xE3y t\xECm t\xE0i kho\u1EA3n tr\u01B0\u1EDBc, n\xF3 c\xF3 th\u1EC3
+    ghi \u1EDF m\u1ED9t t\u1EDD gi\u1EA5y n\xE0o \u0111\xF3, m\u1EADt kh\u1EA9u li\xEAn
+    quan t\u1EDBi ng\xE0y th\xE1ng n\u0103m sinh"

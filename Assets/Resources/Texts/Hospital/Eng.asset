@@ -146,3 +146,20 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 1
+  monoDialgueAboutLocker:
+    sentances:
+    - Oh, this locker has a lock
+    - The 3x3 lock is similar to the bed layout in this room
+    - This lock and the beds here may be related
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  monoDialogueAbountSomethingUnderTheBed:
+    sentances:
+    - There's something under the bed
+    - It's too dark, I can't take it out
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  lockerHint: The password and the patient lying on the bed are related
+  takeMedacineHint: Look for a prescription, it might be under a certain bed

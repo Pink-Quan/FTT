@@ -3,13 +3,13 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/Main_map.tmx",
+    "activeFile": "Tileset/LivingRoom.tsx",
     "expandedProjectPaths": [
-        ".",
-        "Tileset",
-        "Tileset/Singles/Villas",
         "Tileset/Singles",
-        "Map"
+        "Tileset/Singles/Villas",
+        "Tileset",
+        "Map",
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -236,10 +236,10 @@
         },
         "Map/Linh_House.tmx": {
             "scale": 4,
-            "selectedLayer": 8,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 158,
-                "y": 232.125
+                "x": 95.5,
+                "y": 108.125
             }
         },
         "Map/LivingRoom.tsx": {
@@ -252,8 +252,8 @@
             "scale": 1.5,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 2265.333333333333,
-                "y": 1452.3333333333333
+                "x": 1196,
+                "y": 1197
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -587,7 +587,7 @@
         "Tileset/Hospital.tsx",
         "Tileset/Kitchen.tsx",
         "Tileset/Linh.tsx",
-        "Tileset/LivingRoom.tsx"
+        "Map/Villa_House_Second_Floor.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.margin": 0,

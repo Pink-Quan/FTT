@@ -103,8 +103,12 @@ public class InteractableEntity : MonoBehaviour
 
     public void HideInteractButton()
     {
-        player.interactButton.onClick.RemoveAllListeners();
         player.HideInteractButton();
+    }
+
+    private void OnDisable()
+    {
+        HideInteractButton();
     }
 }
 

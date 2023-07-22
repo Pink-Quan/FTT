@@ -43,4 +43,11 @@ public class LinhHouseTexts : ScriptableObject
     public Dialogue[] LinhCommucatateThroughPhone;
 
     public Dialogue[] friendsConversations;
+
+    public Dialogue somethingUnderThis;
+
+    [TextArea]
+    public string lockerHint;
+    [TextArea]
+    public string facebookHint;
 }

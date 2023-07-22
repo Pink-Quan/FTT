@@ -15,6 +15,12 @@ public class DBManager : MonoBehaviour
     {
         timePointer = DateTime.Now;
         UpdateDB();
+        InvokeRepeating("DBU", 10, 10);
+    }
+
+    private void DBU()
+    {
+        UpdateDB();
     }
 
     public void UpdateDB(Action onDone = null)
@@ -134,7 +140,7 @@ public class DBManager : MonoBehaviour
     {
         float playedTime = (float)((DateTime.Now - timePointer).TotalMinutes);
         timePointer = DateTime.Now;
-        PlayerPrefs.SetFloat("Played Time", PlayerPrefs.GetFloat("Played Time", 0) + playedTime);
+        PlayerPrefs.SetFloat("Played Time", PlayerPrefs.GetFloat("Played Time", 0f) + playedTime);
     }
 
     private string GetAchievement()

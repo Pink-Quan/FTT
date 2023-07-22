@@ -11,6 +11,7 @@ public class BackLinhsHomeManager : MonoBehaviour
     {
         texts = Resources.Load<ComeBackLinhsHomeText>("Texts/BackToLinhsHome/"+PlayerPrefs.GetString("Language","Eng"));
         Invoke("StartConversations", 2);
+        GameManager.instance.dbManager.UpdateDB();
     }
 
     private void StartConversations()
@@ -26,6 +27,7 @@ public class BackLinhsHomeManager : MonoBehaviour
 
     private void TransitionsToLinhHouse()
     {
+        GameManager.instance.dbManager.UpdateDB();
         GameManager.instance.transitions.Transition(1,1,null,ChangeToLinhHouseScene);
     }
 

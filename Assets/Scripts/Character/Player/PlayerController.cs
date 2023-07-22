@@ -82,7 +82,7 @@ public class PlayerController : CharacterController
 
     public void HideInteractButton()
     {
-        interactButton.onClick.RemoveAllListeners();
+        if(interactButton==null) return;
         interactButton.gameObject.SetActive(false);
     }
 

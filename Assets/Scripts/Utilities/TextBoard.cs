@@ -38,6 +38,7 @@ public class TextBoard : MonoBehaviour
     {
         board.Hide();
         onClose?.Invoke();
+        onClose = null;
         //cancelInput.performed -= ctx => HideBoard();
     }
 

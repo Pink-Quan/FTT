@@ -28,4 +28,11 @@ public class HospitalConversation : ScriptableObject
     public string lose;
 
     public Dialogue[] goHome;
+
+    public Dialogue monoDialgueAboutLocker;
+
+    public Dialogue monoDialogueAbountSomethingUnderTheBed;
+
+    public string lockerHint;
+    public string takeMedacineHint;
 }

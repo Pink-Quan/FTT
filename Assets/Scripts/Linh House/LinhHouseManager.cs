@@ -33,6 +33,8 @@ public class LinhHouseManager : MonoBehaviour
 
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Citizen Identity Card", 1, player.inventory);
+
+        GameManager.instance.dbManager.UpdateDB();
     }
 
     private void FirstSeftConversation()
@@ -62,11 +64,18 @@ public class LinhHouseManager : MonoBehaviour
         player.HideButtons();
     }
 
-    public void AddStickToPlayer()
+    public void AddStickToPlayer(InteractableEntity entity)
     {
+        if(!player.IsFlashLight()) 
+        {
+            GameManager.instance.dialogueManager.StartDialogue(texts.somethingUnderThis, EnablePlayerMoveAndUI);
+            player.ShowInteractButton();
+            return;
+        }
         DisablePlayerMoveAndUI();
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "stick", 1, player.inventory);
         GameManager.instance.textBoard.ShowText(texts.getStick, MonologueAbountStick);
+        entity.gameObject.SetActive(false);
     }
 
     private void MonologueAbountStick()
@@ -88,7 +97,7 @@ public class LinhHouseManager : MonoBehaviour
     public void GetLastPage(InteractableEntity entity)
     {
         DisablePlayerMoveAndUI();
-        if (player.curItem.itemName == "stick")
+        if (player.curItem.itemName == "stick" && player.IsFlashLight())
         {
             GameManager.instance.textBoard.ShowText(texts.getLastPage, MonologueAboutTheLastPage);
             InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Last page of cookery book", 1, player.inventory);
@@ -96,7 +105,11 @@ public class LinhHouseManager : MonoBehaviour
         }
         else
         {
-            GameManager.instance.dialogueManager.StartDialogue(texts.thereSomthingUnderTheChair, EnablePlayerMoveAndUI);
+            GameManager.instance.dialogueManager.StartDialogue(texts.thereSomthingUnderTheChair, () => 
+            {
+                EnablePlayerMoveAndUI();
+                player.ShowInteractButton();
+            });
         }
     }
 
@@ -183,6 +196,7 @@ public class LinhHouseManager : MonoBehaviour
 
     private void NamTalkWithLinhWhenHerInBed()
     {
+        GameManager.instance.dbManager.UpdateDB();
         GameManager.instance.dialogueManager.StartDialogue(texts.NamTalkWithLinhWhenHerInBed, GuidePlayerToBreath);
     }
 
@@ -248,6 +262,17 @@ public class LinhHouseManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Progress", (int)GameProgress.StartCamping);
         SceneManager.LoadScene("Mainmap");
+    }
+
+    public void HintOfLocker()
+    {
+        GameManager.instance.textBoard.ShowText(texts.lockerHint);
+    }
+
+    public void HintOfFacebook()
+    {
+        GameManager.instance.textBoard.ShowText(texts.facebookHint);
+
     }
 
 }
