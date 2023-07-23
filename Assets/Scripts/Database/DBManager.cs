@@ -104,6 +104,7 @@ public class DBManager : MonoBehaviour
                     OnDone?.Invoke(true, webRequest.downloadHandler.text);
                     break;
             }
+            webRequest.Dispose();
         }
     }
 
@@ -128,6 +129,7 @@ public class DBManager : MonoBehaviour
             OnDone?.Invoke(true, www.downloadHandler.text);
 
         }
+        www.Dispose();
     }
 
     private void OnApplicationQuit()
@@ -165,5 +167,9 @@ public class DBManager : MonoBehaviour
             this.value = value;
         }
     }
-
+    private void OnDestroy()
+    {
+        CancelInvoke();
+        StopAllCoroutines();
+    }
 }

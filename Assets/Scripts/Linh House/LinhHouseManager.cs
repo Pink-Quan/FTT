@@ -33,8 +33,6 @@ public class LinhHouseManager : MonoBehaviour
 
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Citizen Identity Card", 1, player.inventory);
-
-        GameManager.instance.dbManager.UpdateDB();
     }
 
     private void FirstSeftConversation()

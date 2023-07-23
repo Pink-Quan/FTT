@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System;
+using Unity.Jobs;
+using Unity.Collections;
+using Unity.Burst;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -38,13 +41,27 @@ public class InteractableEntity : MonoBehaviour
         {
             player = GameManager.instance.player;
         }
+        isIn = new NativeArray<bool>(1, Allocator.Persistent);
+    }
+    NativeArray<bool> isIn;
+    private void OnDestroy()
+    {
+        isIn.Dispose();
     }
 
     protected bool isEnter;
     protected virtual void Update()
     {
         if (player == null) return;
-        if ((transform.position - player.transform.position).sqrMagnitude <= radius * radius)
+
+        new CheckRadius
+        {
+            p1=transform.position,
+            p2=player.transform.position,
+            radius=radius,
+            isIn = isIn
+        }.Schedule().Complete();
+        if (isIn[0])
         {
             if (!isEnter)
             {
@@ -62,6 +79,24 @@ public class InteractableEntity : MonoBehaviour
             OnPlayerLeaveZone();
         }
     }
+    [BurstCompile]
+    public struct CheckRadius : IJob
+    {
+        public float radius;
+        public Vector3 p1;
+        public Vector3 p2;
+        public NativeArray<bool> isIn;
+        public void Execute()
+        {
+            p1.z = 0;
+            p2.z = 0;
+            if((p1-p2).sqrMagnitude<= radius * radius)
+                isIn[0]=true;
+            else
+                isIn[0]=false;
+        }
+    }
+
 
     protected virtual void OnPlayerEnterZone()
     {
