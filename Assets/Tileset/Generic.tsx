@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.2" name="Generic" tilewidth="16" tileheight="16" tilecount="1248" columns="16">
+<tileset version="1.10" tiledversion="1.10.1" name="Generic" tilewidth="16" tileheight="16" tilecount="1248" columns="16">
  <image source="../Art/Interiors/Theme_Sorter_Shadowless/1_Generic_Shadowless.png" width="256" height="1248"/>
  <tile id="101">
   <objectgroup draworder="index" id="2">
@@ -58,7 +58,7 @@
  </tile>
  <tile id="840">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+   <object id="1" x="0" y="4" width="16" height="12"/>
   </objectgroup>
  </tile>
  <tile id="842">

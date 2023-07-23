@@ -16,6 +16,7 @@ public class PlayerController : CharacterController
     public GameObject buttons;
     public Button interactButton;
     public Button inventoryButton;
+    public GameObject joystick;
     public Canvas canvas;
     public Button currentItemButton;
     public SmartPhone phone;
@@ -38,21 +39,25 @@ public class PlayerController : CharacterController
     {
         playerMovement.enabled = true;
         buttons.SetActive(true);
+        if(SystemInfo.deviceType==DeviceType.Handheld) joystick.SetActive(true);
     }
 
     public void DisableMove()
     {
         playerMovement.enabled = false;
+        joystick.SetActive(false);
     }
 
     public void HideButtons()
     {
         buttons.SetActive(false);
+        joystick.SetActive(false);
     }
 
     public void ShowButtons()
     {
         buttons.SetActive(true);
+        if (SystemInfo.deviceType == DeviceType.Handheld) joystick.SetActive(true);
     }
 
     public void SetArrowPointer(Transform target)

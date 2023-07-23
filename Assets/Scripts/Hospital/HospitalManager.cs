@@ -23,6 +23,7 @@ public class HospitalManager : MonoBehaviour
     private void Start()
     {
         texts = Resources.Load<HospitalConversation>($"Texts/Hospital/{PlayerPrefs.GetString("Language", "Eng")}");
+        player.DisableMove();
         PlayFirstScene();
     }
 
@@ -82,7 +83,7 @@ public class HospitalManager : MonoBehaviour
 
     private void PlayerCheckpointsStart()
     {
-        player.playerMovement.enabled = true;
+        player.EnableMove();
         checkpoints.gameObject.SetActive(true);
         player.SetArrowPointer(checkpoints.GetCheckPoints()[0]);
 
@@ -131,13 +132,13 @@ public class HospitalManager : MonoBehaviour
 
     public void AllowPlayerMove()
     {
-        player.playerMovement.enabled = true;
+        player.EnableMove();
         player.buttons.SetActive(true);
     }
 
     public void ForbidPlayerMove()
     {
-        player.playerMovement.enabled = false;
+        player.DisableMove();
         player.buttons.SetActive(false);
     }
 

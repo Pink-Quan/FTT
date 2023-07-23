@@ -35,16 +35,28 @@ public class CharacterAnim : MonoBehaviour
     {
         if (Mathf.Abs(moveDirection.x) == Mathf.Abs(moveDirection.y))
         {
-            if (isPriorityX) moveDirection.y = 0;
-            else moveDirection.x = 0;
+            if (isPriorityX)
+            {
+                moveDirection.y = 0;
+                if (moveDirection.x != 0) moveDirection.x /= Mathf.Abs(moveDirection.x);
+            }
+            else
+            {
+                moveDirection.x = 0;
+                if (moveDirection.y != 0) moveDirection.y /= Mathf.Abs(moveDirection.y);
+            }
         }
         else if (Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.y))
         {
             isPriorityX = true;
+            moveDirection.y = 0;
+            if (moveDirection.x != 0) moveDirection.x /= Mathf.Abs(moveDirection.x);
         }
         else if (Mathf.Abs(moveDirection.x) < Mathf.Abs(moveDirection.y))
         {
             isPriorityX = false;
+            moveDirection.x = 0;
+            if (moveDirection.y != 0) moveDirection.y /= Mathf.Abs(moveDirection.y);
         }
         this.moveDirection = moveDirection;
         animator.SetFloat("HorizontalMoverment", this.moveDirection.x);
@@ -114,7 +126,7 @@ public class CharacterAnim : MonoBehaviour
         StartCoroutine(Delay(Random.Range(0.1f, 1f), ResetAnim));
     }
 
-    public IEnumerator Delay(float time,System.Action onDone)
+    public IEnumerator Delay(float time, System.Action onDone)
     {
         yield return new WaitForSeconds(time);
         onDone?.Invoke();

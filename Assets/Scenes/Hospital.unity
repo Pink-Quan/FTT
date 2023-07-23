@@ -553,11 +553,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6805930435765034831, guid: ae6706d89177cd644b20db648356626d, type: 3}
   m_PrefabInstance: {fileID: 1616651779}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &179400732 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6475424464016571686, guid: ae6706d89177cd644b20db648356626d, type: 3}
-  m_PrefabInstance: {fileID: 1382932616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &179400734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6805930435765034831, guid: ae6706d89177cd644b20db648356626d, type: 3}
@@ -2073,18 +2068,6 @@ MonoBehaviour:
   OnInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 768549682}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 602558844}
         m_TargetAssemblyTypeName: HospitalManager, Assembly-CSharp
         m_MethodName: AddPrescriptionToPlayer
@@ -2099,19 +2082,7 @@ MonoBehaviour:
         m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 179400732}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   onPlayerInZone:
     m_PersistentCalls:
       m_Calls:
@@ -2134,18 +2105,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: InteractableEntity, Assembly-CSharp
         m_MethodName: HideInteractButton
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 179400732}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3833,6 +3792,10 @@ PrefabInstance:
       propertyPath: damping
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2817225635896051810, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2862759293477842035, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -16.256588
@@ -4180,6 +4143,14 @@ PrefabInstance:
     - target: {fileID: 3798505649744539214, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805533129935786024, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805533129935786024, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3815371490933739205, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13820,7 +13791,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5323935714479428856, guid: ae6706d89177cd644b20db648356626d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6475424464016571686, guid: ae6706d89177cd644b20db648356626d, type: 3}
       propertyPath: m_Name
@@ -13828,7 +13799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6475424464016571686, guid: ae6706d89177cd644b20db648356626d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6805930435765034831, guid: ae6706d89177cd644b20db648356626d, type: 3}
       propertyPath: m_RootOrder
@@ -13840,7 +13811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6805930435765034831, guid: ae6706d89177cd644b20db648356626d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: 0.139
       objectReference: {fileID: 0}
     - target: {fileID: 6805930435765034831, guid: ae6706d89177cd644b20db648356626d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13882,8 +13853,7 @@ PrefabInstance:
       propertyPath: isGizmos
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7421100459680750563, guid: ae6706d89177cd644b20db648356626d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae6706d89177cd644b20db648356626d, type: 3}
 --- !u!1 &1410330026
 GameObject:
@@ -14052,11 +14022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b9431452c17eb4996e9b6cfe81041a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1419500684 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6475424464016571686, guid: ae6706d89177cd644b20db648356626d, type: 3}
-  m_PrefabInstance: {fileID: 880634304}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1440171318
 GameObject:
   m_ObjectHideFlags: 0
@@ -15843,37 +15808,13 @@ MonoBehaviour:
         m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1419500684}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   onPlayerInZone:
     m_PersistentCalls:
       m_Calls: []
   onPlayerLeaveZone:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1419500684}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &1843743813
 Transform:
   m_ObjectHideFlags: 0

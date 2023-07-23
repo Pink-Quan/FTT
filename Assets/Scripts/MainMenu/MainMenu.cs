@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
                 sceneName = "GoingHome";
                 break;;
             case GameProgress.InsideLinhHouse:
-                sceneName = "GoingHome";
+                sceneName = "LinhHouse";
                 break;
             case GameProgress.StartCamping:
                 sceneName = "Hospital";
