@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void InitGameManager()
     {
-        //Application.targetFrameRate = 60;
+        Application.targetFrameRate = 60;
         Instantiate(Resources.Load<GameObject>("GameManager"));
     }
 

@@ -1,22 +1,17 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Fps : MonoBehaviour
 {
-    private float count;
+    [SerializeField] private TMP_Text fpsText;
 
     private IEnumerator Start()
     {
-        GUI.depth = 2;
         while (true)
         {
-            count = 1f / Time.unscaledDeltaTime;
-            yield return new WaitForSeconds(0.1f);
+            fpsText.text = ((int)(1f / Time.unscaledDeltaTime)).ToString()+" FPS";
+            yield return new WaitForSecondsRealtime(0.1f);
         }
-    }
-
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(5, 40, 100, 25), "FPS: " + Mathf.Round(count));
     }
 }

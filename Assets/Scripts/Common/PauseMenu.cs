@@ -1,6 +1,4 @@
 using ExtendedAnimation;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -38,5 +36,10 @@ public class PauseMenu : MonoBehaviour
     public void AdjustSFX(float value)
     {
         audioMixer.SetFloat("SFX Volume", Mathf.Log10(value) * 20);
+    }
+
+    public void SetFps(int fps)
+    {
+        Application.targetFrameRate = fps;
     }
 }
