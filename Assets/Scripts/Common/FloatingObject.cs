@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst;
+//using Unity.Burst;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
@@ -36,7 +36,7 @@ public class FloatingObject : MonoBehaviour
     {
         position.Dispose();
     }
-    [BurstCompile]
+    //[BurstCompile]
     public struct FloatingYJob : IJob
     {
         public float frequency;

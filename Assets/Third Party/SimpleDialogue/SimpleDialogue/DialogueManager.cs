@@ -221,7 +221,12 @@ public class DialogueManager : MonoBehaviour
             charactorAvatar = Instantiate(pb);
             charactorAvatar.transform.SetParent(DialogueBroad.transform);
             charactorAvatar.transform.SetAsFirstSibling();
-            charactorAvatar.transform.localScale = Vector3.one;
+            Vector3 lastScale = charactorAvatar.transform.localScale;
+            Vector3 avaScale=Vector3.one;
+            avaScale.x = Mathf.Abs(lastScale.x) /lastScale.x;
+            avaScale.y = Mathf.Abs(lastScale.y) /lastScale.y;
+            avaScale.z = Mathf.Abs(lastScale.z) /lastScale.z;
+            charactorAvatar.transform.localScale = avaScale;
 
             var recChar = charactorAvatar.GetComponent<RectTransform>();
             var recBase = baseAvatar.GetComponent<RectTransform>();

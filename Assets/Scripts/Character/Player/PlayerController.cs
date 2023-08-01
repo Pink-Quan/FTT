@@ -16,6 +16,7 @@ public class PlayerController : CharacterController
     public GameObject buttons;
     public Button interactButton;
     public Button inventoryButton;
+    public Button missionButton;
     public GameObject joystick;
     public Canvas canvas;
     public Button currentItemButton;
@@ -172,5 +173,10 @@ public class PlayerController : CharacterController
         base.Die();
         DisableMove();
         HideButtons();
+    }
+
+    public void OpenMissions()
+    {
+        GameManager.instance.missions.ShowMissions();
     }
 }

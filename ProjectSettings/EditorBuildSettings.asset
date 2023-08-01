@@ -21,4 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Hospital.unity
     guid: 76058beb56cc5624089acc63f73385fb
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 4b05a55de5c1ac54ba97e7591b0d3fd5, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 91b09f39dd6d4f64da551f84f561032d, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: b5eef7e6875fc174694b9ef1ec06b525, type: 2}

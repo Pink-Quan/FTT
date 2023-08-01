@@ -3,13 +3,13 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Tileset/Generic.tsx",
+    "activeFile": "Map/Main_map.tmx",
     "expandedProjectPaths": [
         "Tileset/Singles",
-        "Tileset/Singles/Villas",
-        "Tileset",
         "Map",
-        "."
+        ".",
+        "Tileset",
+        "Tileset/Singles/Villas"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -238,8 +238,8 @@
             "scale": 8,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 135.5,
-                "y": 253.3125
+                "x": 159,
+                "y": 188.0625
             }
         },
         "Map/LivingRoom.tsx": {
@@ -249,11 +249,11 @@
             "expandedObjectLayers": [
                 19
             ],
-            "scale": 1.5,
-            "selectedLayer": 13,
+            "scale": 4,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 1196,
-                "y": 1197
+                "x": 1173.25,
+                "y": 1378.625
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -578,16 +578,16 @@
     "recentFiles": [
         "Tileset/Bedroom.tsx",
         "Tileset/Camping.tsx",
-        "Map/Villa_House_Second_Floor.tmx",
-        "Map/Street.tmx",
-        "Map/Inside hospital.tmx",
-        "Map/Inside cave.tmx",
-        "Map/Cliff.tmx",
-        "Map/Inside camping trailer.tmx",
-        "Map/Villa_House.tmx",
-        "Map/Main_map.tmx",
-        "Map/Linh_House.tmx",
-        "Tileset/Singles/Villas/Big Villa house red.tsx"
+        "Tileset/Generic.tsx",
+        "Tileset/Bathroom.tsx",
+        "Tileset/Buses_3.tsx",
+        "Tileset/City Props.tsx",
+        "Tileset/Classroom_and_library.tsx",
+        "Tileset/Floors.tsx",
+        "Tileset/Hospital.tsx",
+        "Tileset/Kitchen.tsx",
+        "Tileset/Linh.tsx",
+        "Tileset/LivingRoom.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.margin": 0,

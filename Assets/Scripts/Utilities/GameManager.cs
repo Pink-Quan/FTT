@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public DBManager dbManager;
     public PauseMenu pauseMenu;
     public SoundManager soundManager;
+    public Missions missions;
 
     private void OnDestroy()
     {

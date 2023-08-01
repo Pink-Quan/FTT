@@ -19,7 +19,7 @@ public class InteractableEntity : MonoBehaviour
     [SerializeField] private bool isGizmos;
     public OnInteractEntity OnInteract;
     [Serializable]
-    public class OnInteractEntity:UnityEvent<InteractableEntity> { }
+    public class OnInteractEntity : UnityEvent<InteractableEntity> { }
 
     public UnityEvent onPlayerEnterZone;
     public UnityEvent onPlayerInZone;
@@ -56,9 +56,9 @@ public class InteractableEntity : MonoBehaviour
 
         new CheckRadius
         {
-            p1=transform.position,
-            p2=player.transform.position,
-            radius=radius,
+            p1 = transform.position,
+            p2 = player.transform.position,
+            radius = radius,
             isIn = isIn
         }.Schedule().Complete();
         if (isIn[0])
@@ -90,10 +90,10 @@ public class InteractableEntity : MonoBehaviour
         {
             p1.z = 0;
             p2.z = 0;
-            if((p1-p2).sqrMagnitude<= radius * radius)
-                isIn[0]=true;
+            if ((p1 - p2).sqrMagnitude <= radius * radius)
+                isIn[0] = true;
             else
-                isIn[0]=false;
+                isIn[0] = false;
         }
     }
 
@@ -102,7 +102,7 @@ public class InteractableEntity : MonoBehaviour
     {
         //Debug.Log("Player enter zone");
         if (canInteract)
-            player.ShowInteractButton(OnInteract, interactName,this);
+            player.ShowInteractButton(OnInteract, interactName, this);
         onPlayerEnterZone?.Invoke();
     }
 
@@ -129,6 +129,18 @@ public class InteractableEntity : MonoBehaviour
         player.ShowButtons();
         player.EnableMove();
         player.interactButton.gameObject.SetActive(false);
+    }
+
+    public void MoveAndShowAllUI()
+    {
+        player.ShowUI(); 
+        EnableMoveAndUI();
+    }
+
+    public void DisableMoveAndHideAllUI()
+    {
+        player.HideUI();
+        DisableMoveAndUI();
     }
 
     public void ShowInteractButton()

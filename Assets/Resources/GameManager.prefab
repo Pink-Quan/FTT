@@ -3280,6 +3280,7 @@ GameObject:
   - component: {fileID: 1061769302634450697}
   - component: {fileID: 9142889506591934109}
   - component: {fileID: 2774800061788448524}
+  - component: {fileID: 8109339640014323132}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3328,6 +3329,7 @@ MonoBehaviour:
   dbManager: {fileID: 2774800061788448524}
   pauseMenu: {fileID: 8792572394611653}
   soundManager: {fileID: 3029156859951784871}
+  missions: {fileID: 8109339640014323132}
 --- !u!114 &2774800061788448524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3342,6 +3344,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uri: https://quickteam98.000webhostapp.com/FTT
   isTest: 0
+--- !u!114 &8109339640014323132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4295372558909939447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ef5a75e707db44abd461568702f7f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missions: []
 --- !u!1 &4326405663219947924
 GameObject:
   m_ObjectHideFlags: 0
