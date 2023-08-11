@@ -109,11 +109,11 @@ public class ItemConfig : ScriptableObject
                 Item item = new Item();
                 item.amount = manaRcoveryConfigList[i].amount;
                 item.maxAmount = manaRcoveryConfigList[i].maxAmount;
-                item.itemValue=manaRcoveryConfigList[i].itemValue;
+                item.itemValue = manaRcoveryConfigList[i].itemValue;
                 item.itemData = JsonUtility.ToJson(manaRcoveryConfigList[i].mana);
                 item.itemName = name;
                 item.slotId = -1;
-                item.itemType=ItemType.ManaFlask;
+                item.itemType = ItemType.ManaFlask;
                 item.info = manaRcoveryConfigList[i].info;
                 item.icon = manaRcoveryConfigList[i].icon;
                 return item;
@@ -142,11 +142,11 @@ public class ItemConfig : ScriptableObject
                 Item item = new Item();
                 item.amount = healFlaskConfigList[i].amount;
                 item.maxAmount = healFlaskConfigList[i].maxAmount;
-                item.itemValue=healFlaskConfigList[i].itemValue;
+                item.itemValue = healFlaskConfigList[i].itemValue;
                 item.itemData = JsonUtility.ToJson(healFlaskConfigList[i].heal);
                 item.itemName = name;
                 item.slotId = -1;
-                item.itemType=ItemType.LifeFlask;
+                item.itemType = ItemType.LifeFlask;
                 item.info = healFlaskConfigList[i].info;
                 item.icon = healFlaskConfigList[i].icon;
                 return item;
@@ -176,11 +176,11 @@ public class ItemConfig : ScriptableObject
                 Item item = new Item();
                 item.amount = foodConfigList[i].amount;
                 item.maxAmount = foodConfigList[i].maxAmount;
-                item.itemValue=foodConfigList[i].itemValue;
+                item.itemValue = foodConfigList[i].itemValue;
                 item.itemData = JsonUtility.ToJson(foodConfigList[i].food);
                 item.itemName = name;
                 item.slotId = -1;
-                item.itemType=ItemType.Food;
+                item.itemType = ItemType.Food;
                 item.info = foodConfigList[i].info;
                 item.icon = foodConfigList[i].icon;
                 return item;
@@ -210,11 +210,11 @@ public class ItemConfig : ScriptableObject
                 Item item = new Item();
                 item.amount = gunConfigList[i].amount;
                 item.maxAmount = gunConfigList[i].maxAmount;
-                item.itemValue=gunConfigList[i].itemValue;
+                item.itemValue = gunConfigList[i].itemValue;
                 item.itemData = JsonUtility.ToJson(gunConfigList[i].gun);
                 item.itemName = name;
                 item.slotId = -1;
-                item.itemType=ItemType.Gun;
+                item.itemType = ItemType.Gun;
                 item.info = gunConfigList[i].info;
                 item.icon = gunConfigList[i].icon;
                 return item;
@@ -225,9 +225,8 @@ public class ItemConfig : ScriptableObject
 
     #endregion
 
-    #region Book
-
-    public NormalItem GetBookConfig(string name)
+    #region Normal Item
+    public NormalItem GetNormalConfig(string name)
     {
         for (int i = 0; i < normalItemConfigList.Count; i++)
             if (name == normalItemConfigList[i].name)
@@ -235,7 +234,7 @@ public class ItemConfig : ScriptableObject
         Debug.LogError("Cant find the item: " + name);
         return new NormalItem();
     }
-    public Item GetBookItemConfig(string name)
+    public Item GetNormalItemConfig(string name)
     {
         for (int i = 0; i < normalItemConfigList.Count; i++)
             if (name == normalItemConfigList[i].name)
@@ -243,11 +242,11 @@ public class ItemConfig : ScriptableObject
                 Item item = new Item();
                 item.amount = normalItemConfigList[i].amount;
                 item.maxAmount = normalItemConfigList[i].maxAmount;
-                item.itemValue=normalItemConfigList[i].itemValue;
+                item.itemValue = normalItemConfigList[i].itemValue;
                 item.itemData = JsonUtility.ToJson(normalItemConfigList[i].item);
                 item.itemName = name;
                 item.slotId = -1;
-                item.itemType=ItemType.NormalItem;
+                item.itemType = ItemType.NormalItem;
                 item.info = normalItemConfigList[i].info;
                 item.icon = normalItemConfigList[i].icon;
                 return item;
@@ -277,11 +276,11 @@ public class ItemConfig : ScriptableObject
                 Item item = new Item();
                 item.amount = swordConfigList[i].amount;
                 item.maxAmount = swordConfigList[i].maxAmount;
-                item.itemValue=swordConfigList[i].itemValue;
+                item.itemValue = swordConfigList[i].itemValue;
                 item.itemData = JsonUtility.ToJson(swordConfigList[i].sword);
                 item.itemName = name;
                 item.slotId = -1;
-                item.itemType=ItemType.Sword;
+                item.itemType = ItemType.Sword;
                 item.info = swordConfigList[i].info;
                 item.icon = swordConfigList[i].icon;
                 return item;
@@ -303,7 +302,7 @@ public class ItemConfig : ScriptableObject
         switch (item.itemType)
         {
             case ItemType.NormalItem:
-                item = GetBookItemConfig(item.itemName);
+                item = GetNormalItemConfig(item.itemName);
                 return item;
             case ItemType.Gun:
                 item = GetGunItemConfig(item.itemName);
@@ -335,7 +334,7 @@ public class ItemConfig : ScriptableObject
         switch (item.itemType)
         {
             case ItemType.NormalItem:
-                item = GetBookItemConfig(item.itemName);
+                item = GetNormalItemConfig(item.itemName);
                 break;
             case ItemType.Gun:
                 item = GetGunItemConfig(item.itemName);
@@ -350,11 +349,105 @@ public class ItemConfig : ScriptableObject
                 item = GetSwordItemConfig(item.itemName);
                 break;
             case ItemType.ManaFlask:
-                item=GetManaFlaskItemConfig(item.itemName);
+                item = GetManaFlaskItemConfig(item.itemName);
                 break;
             default:
                 Debug.LogError("Cant find the item: " + name);
                 break;
+        }
+    }
+    public Dictionary<string, Item> itemDictionary;
+    private void OnEnable()
+    {
+        //InitDictionary();
+    }
+
+    private void InitDictionary()
+    {
+        itemDictionary = new Dictionary<string, Item>();
+        for (int i = 0; i < manaRcoveryConfigList.Count; i++)
+        {
+            Item item = new Item();
+            item.amount = manaRcoveryConfigList[i].amount;
+            item.maxAmount = manaRcoveryConfigList[i].maxAmount;
+            item.itemValue = manaRcoveryConfigList[i].itemValue;
+            item.itemData = JsonUtility.ToJson(manaRcoveryConfigList[i].mana);
+            item.itemName = manaRcoveryConfigList[i].name;
+            item.slotId = -1;
+            item.itemType = ItemType.ManaFlask;
+            item.info = manaRcoveryConfigList[i].info;
+            item.icon = manaRcoveryConfigList[i].icon;
+            itemDictionary.Add(item.itemName, item);
+        }
+        for (int i = 0; i < healFlaskConfigList.Count; i++)
+        {
+            Item item = new Item();
+            item.amount = healFlaskConfigList[i].amount;
+            item.maxAmount = healFlaskConfigList[i].maxAmount;
+            item.itemValue = healFlaskConfigList[i].itemValue;
+            item.itemData = JsonUtility.ToJson(healFlaskConfigList[i].heal);
+            item.itemName = healFlaskConfigList[i].name;
+            item.slotId = -1;
+            item.itemType = ItemType.LifeFlask;
+            item.info = healFlaskConfigList[i].info;
+            item.icon = healFlaskConfigList[i].icon;
+            itemDictionary.Add(item.itemName, item);
+        }
+        for (int i = 0; i < foodConfigList.Count; i++)
+        {
+            Item item = new Item();
+            item.amount = foodConfigList[i].amount;
+            item.maxAmount = foodConfigList[i].maxAmount;
+            item.itemValue = foodConfigList[i].itemValue;
+            item.itemData = JsonUtility.ToJson(foodConfigList[i].food);
+            item.itemName = foodConfigList[i].name;
+            item.slotId = -1;
+            item.itemType = ItemType.Food;
+            item.info = foodConfigList[i].info;
+            item.icon = foodConfigList[i].icon;
+            itemDictionary.Add(item.itemName, item);
+        }
+        for (int i = 0; i < gunConfigList.Count; i++)
+        {
+            Item item = new Item();
+            item.amount = gunConfigList[i].amount;
+            item.maxAmount = gunConfigList[i].maxAmount;
+            item.itemValue = gunConfigList[i].itemValue;
+            item.itemData = JsonUtility.ToJson(gunConfigList[i].gun);
+            item.itemName = gunConfigList[i].name;
+            item.slotId = -1;
+            item.itemType = ItemType.Gun;
+            item.info = gunConfigList[i].info;
+            item.icon = gunConfigList[i].icon;
+            itemDictionary.Add(item.itemName, item);
+        }
+        for (int i = 0; i < normalItemConfigList.Count; i++)
+        {
+            Item item = new Item();
+            item.amount = normalItemConfigList[i].amount;
+            item.maxAmount = normalItemConfigList[i].maxAmount;
+            item.itemValue = normalItemConfigList[i].itemValue;
+            item.itemData = JsonUtility.ToJson(normalItemConfigList[i].item);
+            item.itemName = normalItemConfigList[i].name;
+            item.slotId = -1;
+            item.itemType = ItemType.NormalItem;
+            item.info = normalItemConfigList[i].info;
+            item.icon = normalItemConfigList[i].icon;
+            itemDictionary.Add(item.itemName, item);
+        }
+        for (int i = 0; i < swordConfigList.Count; i++)
+        {
+            Item item = new Item();
+            item.amount = swordConfigList[i].amount;
+            item.maxAmount = swordConfigList[i].maxAmount;
+            item.itemValue = swordConfigList[i].itemValue;
+            item.itemData = JsonUtility.ToJson(swordConfigList[i].sword);
+            item.itemName = swordConfigList[i].name;
+            item.slotId = -1;
+            item.itemType = ItemType.Sword;
+            item.info = swordConfigList[i].info;
+            item.icon = swordConfigList[i].icon;
+            itemDictionary.Add(item.itemName, item);
         }
     }
 }

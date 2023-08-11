@@ -10,6 +10,7 @@ namespace ExtendedAnimation
 {
     public class UIAnimation : MonoBehaviour
     {
+        public bool playOnEnable;
         [Header("Time")]
         public float duration = 0.3f;
         public float bouchDuration = 0.15f;
@@ -48,7 +49,8 @@ namespace ExtendedAnimation
 
         protected virtual void OnEnable()
         {
-            //Show();
+            if (playOnEnable)
+                Show();
         }
 
         public void Show()

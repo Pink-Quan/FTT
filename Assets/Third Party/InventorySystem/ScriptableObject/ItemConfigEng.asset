@@ -126,6 +126,22 @@ MonoBehaviour:
       NguyenThiLinh7712
 
       Linh23'
+  - item:
+      data: 
+    name: Key
+    amount: 1
+    maxAmount: 1
+    itemValue: 0
+    icon: {fileID: 21300000, guid: adf34759cdce3884ca74ab867cbc72a7, type: 3}
+    info: A key :>
+  - item:
+      data: 
+    name: Magnet
+    amount: 1
+    maxAmount: 1
+    itemValue: 0
+    icon: {fileID: 21300000, guid: adf34759cdce3884ca74ab867cbc72a7, type: 3}
+    info: A very strong Magnet that can attract anything with iron components
   swordConfigList:
   - sword:
       durability: 0

@@ -19,6 +19,7 @@ public class MainMapManager : MonoBehaviour
 
     private void Start()
     {
+        AddKeyToPlayer();
         texts = Resources.Load<MainMapTexts>($"Texts/MainMap/{PlayerPrefs.GetString("Language", "Eng")}");
         switch ((GameProgress)PlayerPrefs.GetInt("Progress"))
         {
@@ -60,5 +61,10 @@ public class MainMapManager : MonoBehaviour
     {
         player.EnableMove();
         player.ShowUI();
+    }
+
+    public void AddKeyToPlayer()
+    {
+        InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Key", 1, player.inventory);
     }
 }

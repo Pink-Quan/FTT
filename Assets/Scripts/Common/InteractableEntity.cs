@@ -15,7 +15,7 @@ public class InteractableEntity : MonoBehaviour
     [SerializeField] protected PlayerController player;
     [SerializeField] private float radius = 1;
     [SerializeField] private string interactName = "Interact";
-    [SerializeField] private bool canInteract = true;
+    public bool canInteract = true;
     [SerializeField] private bool isGizmos;
     public OnInteractEntity OnInteract;
     [Serializable]
