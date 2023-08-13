@@ -25,6 +25,8 @@ public class InteractableEntity : MonoBehaviour
     public UnityEvent onPlayerInZone;
     public UnityEvent onPlayerLeaveZone;
 
+    protected Transform playerTransform;
+
     public float Radius
     {
         get { return radius; }
@@ -41,6 +43,7 @@ public class InteractableEntity : MonoBehaviour
         {
             player = GameManager.instance.player;
         }
+        playerTransform = player.transform;
         isIn = new NativeArray<bool>(1, Allocator.Persistent);
     }
     NativeArray<bool> isIn;
@@ -57,7 +60,7 @@ public class InteractableEntity : MonoBehaviour
         new CheckRadius
         {
             p1 = transform.position,
-            p2 = player.transform.position,
+            p2 = playerTransform.position,
             radius = radius,
             isIn = isIn
         }.Schedule().Complete();

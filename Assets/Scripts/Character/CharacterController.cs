@@ -9,6 +9,7 @@ public class CharacterController : MonoBehaviour
     public Animator animator;
     public Collider2D col;
     public CharacterSound sound;
+    public InteractableEntity interact;
     protected virtual void Start()
     {
         lastPos = transform.position;
@@ -37,6 +38,17 @@ public class CharacterController : MonoBehaviour
 
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
+    }
+
+    public void StartUpdateMove()
+    {
+        StartCoroutine(UpdateMove());
+    }
+
+    public void StopMove()
+    {
+        StopAllCoroutines();
+        anim.SetMove(false);
     }
 
     public virtual void Die()

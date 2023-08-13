@@ -3329,7 +3329,7 @@ MonoBehaviour:
   dbManager: {fileID: 2774800061788448524}
   pauseMenu: {fileID: 8792572394611653}
   soundManager: {fileID: 3029156859951784871}
-  missions: {fileID: 8109339640014323132}
+  missionsManager: {fileID: 8109339640014323132}
 --- !u!114 &2774800061788448524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4005,6 +4005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b9431452c17eb4996e9b6cfe81041a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: -200}
@@ -5914,6 +5915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -6095,6 +6097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -7562,6 +7565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b9431452c17eb4996e9b6cfe81041a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.05
   moveOffset: {x: 0, y: -2000}

@@ -311,6 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -745,6 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -1776,6 +1778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -2166,6 +2169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -2492,6 +2496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -4231,6 +4236,10 @@ PrefabInstance:
     - target: {fileID: 4192191368224369392, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -58.4256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252489602826132912, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15.914001
       objectReference: {fileID: 0}
     - target: {fileID: 4393288517157269419, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8323,6 +8332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -9244,6 +9254,10 @@ MonoBehaviour:
   - {x: -1.1050653, y: 4.7642126, z: 0}
   - {x: 0.008584499, y: 6.3551397, z: 0}
   - {x: 0.008586705, y: 8.374649, z: 0}
+  isDraw: 0
+  isClosed: 0
+  lineThickness: 1
+  color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &984245402
 Transform:
   m_ObjectHideFlags: 0
@@ -12219,6 +12233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -12376,6 +12391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -12555,6 +12571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -12805,6 +12822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -14075,6 +14093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -14417,6 +14436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -15103,6 +15123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -15347,6 +15368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -15526,6 +15548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -16187,6 +16210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -16341,6 +16365,10 @@ MonoBehaviour:
   - {x: -2.316564, y: 4.7114425, z: 0}
   - {x: -1.4458909, y: 2.2452724, z: 0}
   - {x: -0.08687091, y: 0.1505189, z: 0}
+  isDraw: 0
+  isClosed: 0
+  lineThickness: 1
+  color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &1982354493
 Transform:
   m_ObjectHideFlags: 0
@@ -16409,6 +16437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -16765,6 +16794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}

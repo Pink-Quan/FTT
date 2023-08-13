@@ -510,6 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: -200}
@@ -1042,6 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -3134,6 +3136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b9431452c17eb4996e9b6cfe81041a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 400}
@@ -7758,6 +7761,7 @@ MonoBehaviour:
   animator: {fileID: 7097875168110513525}
   col: {fileID: 7097875168110513529}
   sound: {fileID: 2064252111592096192}
+  interact: {fileID: 0}
   playerMovement: {fileID: 7097875168110513528}
   directionTrasform: {fileID: 237748861519800262}
   rb: {fileID: 7097875168110513524}
@@ -7766,7 +7770,7 @@ MonoBehaviour:
   buttons: {fileID: 394660219158719327}
   interactButton: {fileID: 4640289044039806779}
   inventoryButton: {fileID: 2792686132184471305}
-  missionButton: {fileID: 0}
+  missionButton: {fileID: 3504978578274643969}
   joystick: {fileID: 2817225635896051810}
   canvas: {fileID: 8213173516218912384}
   currentItemButton: {fileID: 7742724527948896842}

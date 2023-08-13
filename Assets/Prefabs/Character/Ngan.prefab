@@ -2175,6 +2175,10 @@ PrefabInstance:
       propertyPath: charaterSprites.Array.data[540]
       value: 
       objectReference: {fileID: -1912182841, guid: fa2faccb824e41b4d9cf8f7dc688f08d, type: 3}
+    - target: {fileID: 6484854179113682295, guid: 71c2fc28cde1487418984a54f06b1d0b, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6484854179113682296, guid: 71c2fc28cde1487418984a54f06b1d0b, type: 3}
       propertyPath: m_RootOrder
       value: 0

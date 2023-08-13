@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4416126221011121204, guid: fdf101ed65f3bb94d99dbaae3aceb05f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4416126221011121207, guid: fdf101ed65f3bb94d99dbaae3aceb05f, type: 3}
       propertyPath: charaterSprites.Array.size
       value: 541

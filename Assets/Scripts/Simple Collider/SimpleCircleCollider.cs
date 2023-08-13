@@ -8,10 +8,12 @@ public class SimpleCircleCollider : SimpleCollider
     [SerializeField, Min(0)] private float radius;
 
     public Vector2 GetCenter() => center + (Vector2)transform.position;
+    public Vector2 Center => center + (Vector2)_transform.position;
     public float GetRadius() => radius;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         SetType(ColliderType.Circle);
     }
 
@@ -25,11 +27,11 @@ public class SimpleCircleCollider : SimpleCollider
         else if (target.colliderType == ColliderType.Box)
         {
             SimpleBoxCollider box = (SimpleBoxCollider)target;
-            float Xn = Mathf.Max(box.GetMinPoint().x, Mathf.Min(GetCenter().x, box.GetMaxPoint().x));
-            float Yn = Mathf.Max(box.GetMinPoint().y, Mathf.Min(GetCenter().y, box.GetMaxPoint().y));
-            float Dx = Xn - GetCenter().x;
-            float Dy = Yn - GetCenter().y;
-            return (Dx * Dx + Dy * Dy) <= GetRadius()* GetRadius();
+            float Xn = Mathf.Max(box.MinPoint.x, Mathf.Min(Center.x, box.MaxPoint.x));
+            float Yn = Mathf.Max(box.MinPoint.y, Mathf.Min(Center.y, box.MaxPoint.y));
+            float Dx = Xn - Center.x;
+            float Dy = Yn - Center.y;
+            return (Dx * Dx + Dy * Dy) <= GetRadius() * GetRadius();
         }
         else
         {
@@ -40,7 +42,7 @@ public class SimpleCircleCollider : SimpleCollider
 
     public bool CheckPoint(Vector2 target)
     {
-        return Mathf.Pow(Vector2.SqrMagnitude(GetCenter()- target),2) - Mathf.Pow(GetRadius(),2) < 0;
+        return Mathf.Pow(Vector2.SqrMagnitude(Center - target), 2) - Mathf.Pow(GetRadius(), 2) < 0;
     }
 
     public override void OnDrawGizmosSelected()

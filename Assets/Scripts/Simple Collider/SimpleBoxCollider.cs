@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
+using Unity.Jobs;
 using UnityEngine;
 
 public class SimpleBoxCollider : SimpleCollider
@@ -10,9 +12,13 @@ public class SimpleBoxCollider : SimpleCollider
     public Vector2 GetMaxPoint() => maxPoint + (Vector2)transform.position;
     public Vector2 GetMinPoint() => minPoint + (Vector2)transform.position;
 
+    public Vector2 MaxPoint => maxPoint+(Vector2)_transform.position;
+    public Vector2 MinPoint => minPoint+(Vector2)_transform.position;
 
-    private void Awake()
+
+    protected override void Awake()
     {
+        base.Awake();
         SetType(ColliderType.Box);
 
         if (maxPoint.x < minPoint.x || minPoint.y > maxPoint.y)
@@ -25,10 +31,10 @@ public class SimpleBoxCollider : SimpleCollider
         {
             SimpleBoxCollider targetBox = (SimpleBoxCollider)target;
 
-            float d1x = targetBox.GetMinPoint().x - this.GetMaxPoint().x;
-            float d1y = targetBox.GetMinPoint().y - this.GetMaxPoint().y;
-            float d2x = this.GetMinPoint().x - targetBox.GetMaxPoint().x;
-            float d2y = this.GetMinPoint().y - targetBox.GetMaxPoint().y;
+            float d1x = targetBox.MinPoint.x - this.MaxPoint.x;
+            float d1y = targetBox.MinPoint.y - this.MaxPoint.y;
+            float d2x = this.MinPoint.x - targetBox.MaxPoint.x;
+            float d2y = this.MinPoint.y - targetBox.MaxPoint.y;
 
             if (d1x > 0.0f || d1y > 0.0f)
                 return false;
@@ -41,10 +47,10 @@ public class SimpleBoxCollider : SimpleCollider
         else if (target.colliderType == ColliderType.Circle)
         {
             SimpleCircleCollider cirle = (SimpleCircleCollider)target; ;
-            float Xn = Mathf.Max(GetMinPoint().x, Mathf.Min(cirle.GetCenter().x, GetMaxPoint().x));
-            float Yn = Mathf.Max(GetMinPoint().y, Mathf.Min(cirle.GetCenter().y, GetMaxPoint().y));
-            float Dx = Xn - cirle.GetCenter().x;
-            float Dy = Yn - cirle.GetCenter().y;
+            float Xn = Mathf.Max(MinPoint.x, Mathf.Min(cirle.Center.x, MaxPoint.x));
+            float Yn = Mathf.Max(MinPoint.y, Mathf.Min(cirle.Center.y, MaxPoint.y));
+            float Dx = Xn - cirle.Center.x;
+            float Dy = Yn - cirle.Center.y;
             return (Dx * Dx + Dy * Dy) <= cirle.GetRadius() * cirle.GetRadius();
         }
         else
@@ -56,7 +62,35 @@ public class SimpleBoxCollider : SimpleCollider
 
     public bool CheckPoint(Vector3 target)
     {
-        return target.x < GetMaxPoint().x && target.y < GetMaxPoint().y && target.x > GetMinPoint().x && target.y > GetMinPoint().y;
+        return target.x < MaxPoint.x && target.y < MaxPoint.y && target.x > MinPoint.x && target.y > MinPoint.y;
+    }
+
+    public bool CheckPointJob(Vector3 target)
+    {
+        NativeArray<bool> isIn = new NativeArray<bool>(1, Allocator.TempJob);
+        bool isin;
+        new CheckPointUseJob
+        {
+            isIn = isIn,
+            target = target,
+            maxPoint = MaxPoint,
+            minPoint = MinPoint,
+        }.Schedule().Complete();
+        isin = isIn[0];
+        isIn.Dispose();
+        return isin;
+    }
+
+    public struct CheckPointUseJob : IJob
+    {
+        public Vector3 target;
+        public Vector3 maxPoint;
+        public Vector3 minPoint;
+        public NativeArray<bool> isIn;
+        public void Execute()
+        {
+            isIn[0]= target.x < maxPoint.x && target.y < maxPoint.y && target.x > minPoint.x && target.y > minPoint.y;
+        }
     }
 
     public override void OnDrawGizmosSelected()
@@ -84,7 +118,6 @@ public class SimpleBoxCollider : SimpleCollider
     {
         minPoint = value;
     }
-
     public void SetBottonRight(Vector2 value)
     {
         maxPoint.x = value.x;

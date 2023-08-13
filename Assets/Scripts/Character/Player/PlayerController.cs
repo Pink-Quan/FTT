@@ -177,6 +177,6 @@ public class PlayerController : CharacterController
 
     public void OpenMissions()
     {
-        GameManager.instance.missions.ShowMissions();
+        GameManager.instance.missionsManager.ShowMissions();
     }
 }

@@ -24,7 +24,7 @@ public class SimpleBoxColliderTargetEvent : MonoBehaviour
     {
         if(target==null) return;
 
-        if (col.CheckPoint(target.position))
+        if (col.CheckPointJob(target.position))
         {
             if (!isEnter)
             {

@@ -6,10 +6,16 @@ using UnityEngine;
 public class InteractableEntityBoxCollider : InteractableEntity
 {
     [SerializeField] private SimpleBoxCollider col;
+
+    private void Awake()
+    {
+        if(col == null)
+            col = GetComponent<SimpleBoxCollider>();
+    }
     protected override void Update()
     {
         if (player == null) return;
-        if (col.CheckPoint(player.transform.position))
+        if (col.CheckPointJob(playerTransform.position))
         {
             if (!isEnter)
             {

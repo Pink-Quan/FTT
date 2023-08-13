@@ -46,8 +46,8 @@ MonoBehaviour:
     - "Ch\u1ECB t\u1EEBng \u1EDF \u0111\xE2y tr\u01B0\u1EDBc v\xE0 sau v\u1EE5 tai
       n\u1EA1n, n\xEAn ch\u1ECB c\u0169ng nh\u1EDB m\u1ED9t v\xE0i th\u1EE9"
     - "Em ngh\u0129 sao, hay mu\u1ED1n ch\u1ECB k\u1EC3 lu\xF4n"
-    Name: Minh
-    DisplayName: Minh
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
     emotion: 0
   - sentances:
     - "\u0110\u01B0\u1EE3c \u1EA1, b\u1ECDn em s\u1EB5n l\xF2ng gi\xFAp ch\u1ECB"
@@ -59,6 +59,44 @@ MonoBehaviour:
     - "V\u1EADy t\u1ED1t qu\xE1, ch\xFAng ta b\u1EAFt \u0111\u1EA7u lu\xF4n nh\xE1"
     - "Xong s\u1EDBm ch\xFAng ta s\u1EBD ngh\u1EC9 s\u1EDBm, ch\u1ECB s\u1EBD k\u1EC3
       \u0111\u01B0\u1EE3c nhi\u1EC1u th\u1EE9 h\u01A1n \u0111\u1EA5y"
+    - "Ch\u1ECB s\u1EBD giao vi\u1EC7c cho c\xE1c em"
+    - "Gi\u1EDD ch\xFAng ta b\u1EAFt \u0111\u1EA7u lu\xF4n nh\xE1"
     Name: Ngan
     DisplayName: "Ng\xE2n"
+    emotion: 0
+  firstMission: "D\u1ECDn d\u1EB9p t\u1EA5t c\u1EA3 \u0111inh v\xE0 c\xE1c m\u1EA3nh
+    v\u1EE5n kim lo\u1EA1i \u1EDF khu v\u1EF1c \u0111\u1ED7 xe"
+  NamCamping1:
+    sentances:
+    - "Hey, \u0111\u1EEBng \u0111\u1EBFn g\u1EA7n \u0111\xE2y, nguy hi\u1EC3m l\u1EAFm"
+    - "Ch\u1ED7 n\xE0y r\u1EA5t s\xE2u, gi\xF3 r\u1EA5t m\u1EA1nh v\xE0 h\xE0ng r\xE0o
+      \u0111ang b\u1ECB h\u1ECFng"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+  MinhCamping1:
+    sentances:
+    - "N\u1EBFu c\xF3 g\xEC c\u1EA7n gi\xFAp th\xEC c\u1EE9 n\xF3i anh nh\xE9"
+    Name: Minh
+    DisplayName: 
+    emotion: 0
+  NganCamping1:
+    sentances:
+    - "Em c\u1EE9 tho\u1EA3i m\xE1i l\xE0m vi\u1EC7c nh\xE1, n\u1EBFu m\u1EC7t qu\xE1
+      th\xEC c\u1EE9 ngh\u1EC9 ng\u01A1i"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+  HungCamping1:
+    sentances:
+    - "C\xF3 g\xEC h\u1ECFi Mai nh\xE9, anh \u0111ang t\u1EADp trung l\xE0m vi\u1EC7c"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+  MaiCamping1:
+    sentances:
+    - "L\xFAc n\xE0o xong vi\u1EC7c c\u1EADu v\xE0o \u0111\xE2y gi\xFAp t\u1EDB n\u1EA5u
+      c\u01A1m t\xFD nh\xE9"
+    Name: Mai
+    DisplayName: Mai
     emotion: 0

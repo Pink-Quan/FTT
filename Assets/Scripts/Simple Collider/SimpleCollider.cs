@@ -6,6 +6,12 @@ using UnityEditor;
 public class SimpleCollider : MonoBehaviour
 {
     public bool alwaysOnGizmos=false;
+    protected Transform _transform;
+
+    protected virtual void Awake()
+    {
+        _transform = transform;
+    }
 
     public ColliderType colliderType { get; private set; } = ColliderType.Point;
 
