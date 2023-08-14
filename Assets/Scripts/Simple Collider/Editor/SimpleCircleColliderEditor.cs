@@ -25,6 +25,7 @@ public class SimpleCircleColliderEditor : Editor
     {
         SimpleCircleCollider col = (SimpleCircleCollider)target;
         //Handles.Label(col.transform.position,col.name);
+        Undo.RecordObject(col, "ChangeCirleColliderSize");
         col.SetRadius(Handles.RadiusHandle(Quaternion.identity, col.GetCenter(), col.GetRadius()));
         col.SetCenter(Handles.FreeMoveHandle(col.GetCenter(), Quaternion.identity, 0.08f, Vector3.one, Handles.DotHandleCap) - col.transform.position);
     }

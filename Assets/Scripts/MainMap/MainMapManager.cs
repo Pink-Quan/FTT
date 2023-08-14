@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class MainMapManager : MonoBehaviour
     [SerializeField] private CharacterController Hung;
     [SerializeField] private PlayerController player;
 
+    [SerializeField] private ParticleSystem[] effs;
     [SerializeField] private StartCamping startCamping;
 
     private MainMapTexts texts;
@@ -21,8 +23,61 @@ public class MainMapManager : MonoBehaviour
         switch ((GameProgress)PlayerPrefs.GetInt("Progress"))
         {
             case GameProgress.StartCamping:
-                startCamping.Init(Ngan,Minh,Mai,Nam,Hung,player,texts);
+                startCamping.Init(Ngan, Minh, Mai, Nam, Hung, player, texts, this);
                 break;
         }
+    }
+
+    public void AddConversationToCharacter(CharacterController character, Dialogue dialogue, Action onDone = null)
+    {
+        var onInteract = character.interact.OnInteract;
+        character.interact.canInteract = true;
+        onInteract.RemoveAllListeners();
+        onInteract.AddListener(TalkWithCharacter);
+
+        void TalkWithCharacter(InteractableEntity entity)
+        {
+            player.HideUI();
+            player.DisableMove();
+            GameManager.instance.dialogueManager.StartDialogue(dialogue, DoneTalkWithCharacter);
+
+            void DoneTalkWithCharacter()
+            {
+                player.ShowUI();
+                player.EnableMove();
+                player.ShowInteractButton();
+            }
+
+            onDone?.Invoke();
+        }
+    }
+    public void AddConversationToCharacter(CharacterController character, Dialogue[] dialogue, Action onDone = null)
+    {
+        var onInteract = character.interact.OnInteract;
+        character.interact.canInteract = true;
+        onInteract.RemoveAllListeners();
+        onInteract.AddListener(TalkWithCharacter);
+
+        void TalkWithCharacter(InteractableEntity entity)
+        {
+            player.HideUI();
+            player.DisableMove();
+            GameManager.instance.dialogueManager.StartDialogue(dialogue, DoneTalkWithCharacter);
+
+            void DoneTalkWithCharacter()
+            {
+                player.ShowUI();
+                player.EnableMove();
+                player.ShowInteractButton();
+            }
+
+            onDone?.Invoke();
+        }
+    }
+
+    public void PlayParticalEffect(int index, Vector3 pos)
+    {
+        effs[index].transform.position = pos;
+        effs[index].Play();
     }
 }

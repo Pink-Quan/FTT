@@ -27,7 +27,7 @@ public class SimpleBoxColliderEditor : Editor
     private void OnSceneGUI()
     {
         //Handles.Label(col.transform.position, col.name);
-        Undo.RecordObject(col,"ChangeColliderSize");
+        Undo.RecordObject(col,"ChangeBoxColliderSize");
 
         left = Handles.Slider(new Vector3(col.GetMinPoint().x, (col.GetMaxPoint().y + col.GetMinPoint().y) / 2), Vector3.left, 0.08f, Handles.DotHandleCap, 0.1f);
         right = Handles.Slider(new Vector3(col.GetMaxPoint().x, (col.GetMaxPoint().y + col.GetMinPoint().y) / 2), Vector3.right, 0.08f, Handles.DotHandleCap, 0.1f);

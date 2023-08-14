@@ -100,3 +100,56 @@ MonoBehaviour:
     Name: Mai
     DisplayName: Mai
     emotion: 0
+  cantDoFirstMission:
+    sentances:
+    - "Nhi\u1EC1u m\u1EA3nh v\u1EE5n s\u1EAFt qu\xE1, m\xECnh kh\xF4ng th\u1EC3 nh\u1EB7t
+      b\u1EB1ng tay \u0111\u01B0\u1EE3c"
+    - "Ch\u1EAFc anh Minh c\xF3 th\u1EC3 gi\xFAp m\xECnh"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  needMagnet:
+    sentances:
+    - "M\xECnh c\u1EA7n d\xF9ng nam ch\xE2m \u0111\u1EC3 h\xFAt h\u1EBFt ch\u1ED7
+      v\u1EE5n s\u1EAFt n\xE0y"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  MinhGuideToTakeMagnet:
+  - sentances:
+    - "Em kh\xF4ng th\u1EC3 nh\u1EB7t h\u1EBFt m\u1EA5y v\u1EE5n s\u1EAFt \u1EDF
+      ch\u1ED7 \u0111\u01B0\u1EE3c xe \u0111\xE2u anh \u01A1i"
+    - "N\xF3 qu\xE1 nh\u1ECF v\xE0 nhi\u1EC1u"
+    - "Anh c\xF3 c\xE1ch n\xE0o kh\xF4ng anh"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "\xC0, anh nh\u1EDB h\xECnh nh\u01B0 c\xF3 \u0111\u1ED3 \u0111\u1EC3 thu d\u1ECDn
+      m\u1EA5y c\xE1i \u0111\u1EA5y \u0111\u1EA5y"
+    - "H\xECnh nh\u01B0 \u0111\u1EC3 trong m\u1EA5y t\u1EE7 \u0111i\u1EC7n s\u1EAFt
+      \u1EDF khu c\xF4ng tr\u01B0\u1EDDng \u1EA5y"
+    - "Anh kh\xF4ng nh\u1EDB l\xE0 t\u1EED n\xE0o, em ra \u0111\u1EA5y ki\u1EC3m
+      tra t\u1EEBng t\u1EE7 xem"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+  - sentances:
+    - "\u01A0, sao anh kh\xF4ng n\xF3i em s\u1EDBm l\xE0 c\xF3 d\u1EE5ng c\u1EE5
+      \u0111\u1EC3 l\xE0m"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+  - sentances:
+    - "Sorry, anh qu\xEAn m\u1EA5y"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 7
+  doneFirstMissons:
+    sentances:
+    - "Yeah xong r\u1ED3i, gi\u1EDD b\xE1o ch\u1ECB Ng\xE2n th\xF4i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+  getMagnet: 
+  scecondStartMission: 

@@ -163,7 +163,7 @@ public class InteractableEntity : MonoBehaviour
 }
 
 #if UNITY_EDITOR
-[CustomEditor(typeof(InteractableEntity), true)]
+[CustomEditor(typeof(InteractableEntity), true),CanEditMultipleObjects]
 public class InteractableEntityEditor : Editor
 {
     private InteractableEntity obj;

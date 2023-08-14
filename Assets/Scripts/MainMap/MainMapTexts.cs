@@ -15,4 +15,12 @@ public class MainMapTexts : ScriptableObject
     public Dialogue NganCamping1;
     public Dialogue HungCamping1;
     public Dialogue MaiCamping1;
+    public Dialogue cantDoFirstMission;
+    public Dialogue needMagnet;
+    public Dialogue[] MinhGuideToTakeMagnet;
+
+    public Dialogue doneFirstMissons;
+    public string getMagnet;
+
+    [TextArea] public string scecondStartMission;
 }
