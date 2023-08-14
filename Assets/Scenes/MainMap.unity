@@ -1236,7 +1236,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2423,7 +2423,7 @@ MonoBehaviour:
   m_Follow: {fileID: 845325255}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 4
+    OrthographicSize: 6
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -2858,6 +2858,7 @@ MonoBehaviour:
   - {fileID: 1796520698}
   - {fileID: 2063406090}
   - {fileID: 1555057705}
+  vCam: {fileID: 911668979}
 --- !u!1 &1048568171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2186774567370573801, guid: 38da504cc3fe6424c90ae5ff51f836d6, type: 3}
@@ -3393,8 +3394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - {x: 107.651886, y: -45.05975, z: 0}
-  - {x: 101.51693, y: -43.803272, z: 0}
-  - {x: 97.50212, y: -42.1965, z: 0}
+  - {x: 100.83255, y: -43.36331, z: 0}
+  - {x: 92.76033, y: -45.08068, z: 0}
   isDraw: 1
   isClosed: 0
   lineThickness: 1
@@ -3445,8 +3446,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - {x: 108.30693, y: -46.067497, z: 0}
-  - {x: 102.39024, y: -46.52373, z: 0}
-  - {x: 98.42087, y: -47.61247, z: 0}
+  - {x: 101.60809, y: -46.621502, z: 0}
+  - {x: 96.26995, y: -48.394615, z: 0}
   isDraw: 1
   isClosed: 0
   lineThickness: 1
@@ -4995,8 +4996,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - {x: 110.83982, y: -49.553055, z: 0}
-  - {x: 110.91289, y: -52.204483, z: 0}
-  - {x: 111.130104, y: -55.061558, z: 0}
+  - {x: 111.10842, y: -53.18217, z: 0}
+  - {x: 111.52117, y: -56.576973, z: 0}
   isDraw: 1
   isClosed: 0
   lineThickness: 1
@@ -5047,8 +5048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - {x: 108.70647, y: -49.229168, z: 0}
-  - {x: 106.18413, y: -52.694958, z: 0}
-  - {x: 104.1064, y: -55.457993, z: 0}
+  - {x: 105.6464, y: -53.28157, z: 0}
+  - {x: 102.44432, y: -57.315598, z: 0}
   isDraw: 1
   isClosed: 0
   lineThickness: 1
@@ -6544,7 +6545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7097875168110513528, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: playerSpeed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7097875168110513530, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_SortingOrder

@@ -1,3 +1,4 @@
+using Cinemachine;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ public class StartCamping : MonoBehaviour
     [SerializeField] private MainMapManager mainMapManager;
 
     [SerializeField] private InteractableEntity[] piecesOfIron;
+    [SerializeField] private CinemachineVirtualCamera vCam;
 
     private CharacterController Ngan;
     private CharacterController Minh;
@@ -104,12 +106,11 @@ public class StartCamping : MonoBehaviour
     {
         GameManager.instance.missionsManager.missions.Add(texts.firstMission);
         GameManager.instance.missionsManager.ShowMissions(EnablePlayerMoveAndUI);
-
-        mainMapManager.AddConversationToCharacter(Minh, texts.MinhCamping1);
-        mainMapManager.AddConversationToCharacter(Mai, texts.MaiCamping1);
-        mainMapManager.AddConversationToCharacter(Hung, texts.HungCamping1);
-        mainMapManager.AddConversationToCharacter(Ngan, texts.NganCamping1);
-        mainMapManager.AddConversationToCharacter(Nam, texts.NamCamping1);
+        Minh.AddConversationToCharacter(texts.MinhCamping1);
+        Mai.AddConversationToCharacter(texts.MaiCamping1);
+        Hung.AddConversationToCharacter(texts.HungCamping1);
+        Ngan.AddConversationToCharacter(texts.NganCamping1);
+        Nam.AddConversationToCharacter(texts.NamCamping1);
     }
 
     public void AddKeyToPlayer()
@@ -135,11 +136,11 @@ public class StartCamping : MonoBehaviour
         {
             DisablePlayerMoveAndUI();
             isStartDoMission1 = true;
-            mainMapManager.AddConversationToCharacter(Minh, texts.MinhGuideToTakeMagnet, () => isAskMinh = true);
-            GameManager.instance.dialogueManager.StartDialogue(texts.cantDoFirstMission, EnablePlayerMoveAndUI);
+            Minh.AddConversationToCharacter(texts.MinhGuideToTakeMagnet, () => isAskMinh = true);
+            GameManager.instance.dialogueManager.StartDialogue(texts.cantDoFirstMission, MoveCamToMinh);
             return;
         }
-        else if (isAskMinh || !isGetMagnet)
+        else if (!isAskMinh || !isGetMagnet)
         {
             DisablePlayerMoveAndUI();
             GameManager.instance.dialogueManager.StartDialogue(texts.cantDoFirstMission, EnablePlayerMoveAndUI);
@@ -166,12 +167,34 @@ public class StartCamping : MonoBehaviour
         mission1Progress++;
         if (mission1Progress < piecesOfIron.Length) return;
         DisablePlayerMoveAndUI();
+        Ngan.AddConversationToCharacter(texts.annouchToNganDoneFirstMission, NganGiveNewMission);
         GameManager.instance.missionsManager.missions.Remove(texts.firstMission);
-        GameManager.instance.missionsManager.missions.Add(texts.scecondStartMission);
+        GameManager.instance.missionsManager.missions.Add(texts.callNganStartCampingMission);
         GameManager.instance.dialogueManager.StartDialogue(texts.doneFirstMissons, () =>
         {
             GameManager.instance.missionsManager.ShowMissions(EnablePlayerMoveAndUI);
+            player.SetArrowPointer(Ngan.transform);
         });
+    }
+
+    private void MoveCamToMinh()
+    {
+        var cam = vCam.GetCinemachineComponent<CinemachineTransposer>();
+        DOVirtual.Vector3(cam.m_FollowOffset, cam.m_FollowOffset + Minh.transform.position - vCam.transform.position, 2, value =>
+        {
+            cam.m_FollowOffset = value;
+        });
+        vCam.transform.DOMove(Minh.transform.position - new Vector3(0, 0, 10), 2);
+        Invoke("MoveCamBackToLinh", 2);
+    }
+
+    private void MoveCamBackToLinh()
+    {
+        var cam = vCam.GetCinemachineComponent<CinemachineTransposer>();
+        DOVirtual.Vector3(cam.m_FollowOffset, new Vector3(0, 0, -10), 2, value =>
+        {
+            cam.m_FollowOffset = value;
+        }).OnComplete(EnablePlayerMoveAndUI);
     }
 
     public void DisablePlayerMoveAndUI()
@@ -184,5 +207,16 @@ public class StartCamping : MonoBehaviour
     {
         player.EnableMove();
         player.ShowUI();
+    }
+
+    private void NganGiveNewMission()
+    {
+        DisablePlayerMoveAndUI();
+        GameManager.instance.textBoard.ShowText(texts.scecondStartMission, EnablePlayerMoveAndUI);
+        Ngan.AddConversationToCharacter(texts.callNganSecondMission);
+        Mai.AddConversationToCharacter(texts.callMaiSecondMission);
+        Minh.AddConversationToCharacter(texts.callMinhSecondMission);
+        Hung.AddConversationToCharacter(texts.callHungSecondMission);
+        Nam.AddConversationToCharacter(texts.callNamSecondMission);
     }
 }

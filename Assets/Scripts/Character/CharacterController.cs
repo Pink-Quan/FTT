@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,5 +55,45 @@ public class CharacterController : MonoBehaviour
     public virtual void Die()
     {
         anim.Die();
+    }
+    public void AddConversationToCharacter(Dialogue dialogue, Action onDone = null)
+    {
+        interact.canInteract = true;
+        interact.OnInteract.RemoveAllListeners();
+        interact.OnInteract.AddListener(TalkWithCharacter);
+
+        void TalkWithCharacter(InteractableEntity entity)
+        {
+            GameManager.instance.DisablePlayerMoveAndUI();
+            GameManager.instance.dialogueManager.StartDialogue(dialogue, DoneTalkWithCharacter);
+
+            void DoneTalkWithCharacter()
+            {
+                GameManager.instance.EnablePlayerMoveAndUI();
+                GameManager.instance.player.ShowInteractButton();
+            }
+
+            onDone?.Invoke();
+        }
+    }
+    public void AddConversationToCharacter(Dialogue[] dialogue, Action onDone = null)
+    {
+        interact.canInteract = true;
+        interact.OnInteract.RemoveAllListeners();
+        interact.OnInteract.AddListener(TalkWithCharacter);
+
+        void TalkWithCharacter(InteractableEntity entity)
+        {
+            GameManager.instance.DisablePlayerMoveAndUI();
+            GameManager.instance.dialogueManager.StartDialogue(dialogue, DoneTalkWithCharacter);
+
+            void DoneTalkWithCharacter()
+            {
+                GameManager.instance.EnablePlayerMoveAndUI();
+                GameManager.instance.player.ShowInteractButton();
+            }
+
+            onDone?.Invoke();
+        }
     }
 }

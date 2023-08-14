@@ -37,14 +37,12 @@ public class MainMapManager : MonoBehaviour
 
         void TalkWithCharacter(InteractableEntity entity)
         {
-            player.HideUI();
-            player.DisableMove();
+            DisablePlayerMoveAndUI();
             GameManager.instance.dialogueManager.StartDialogue(dialogue, DoneTalkWithCharacter);
 
             void DoneTalkWithCharacter()
             {
-                player.ShowUI();
-                player.EnableMove();
+                EnablePlayerMoveAndUI();
                 player.ShowInteractButton();
             }
 
@@ -60,14 +58,12 @@ public class MainMapManager : MonoBehaviour
 
         void TalkWithCharacter(InteractableEntity entity)
         {
-            player.HideUI();
-            player.DisableMove();
+            DisablePlayerMoveAndUI();
             GameManager.instance.dialogueManager.StartDialogue(dialogue, DoneTalkWithCharacter);
 
             void DoneTalkWithCharacter()
             {
-                player.ShowUI();
-                player.EnableMove();
+                EnablePlayerMoveAndUI();
                 player.ShowInteractButton();
             }
 
@@ -79,5 +75,17 @@ public class MainMapManager : MonoBehaviour
     {
         effs[index].transform.position = pos;
         effs[index].Play();
+    }
+
+    public void DisablePlayerMoveAndUI()
+    {
+        player.DisableMove();
+        player.HideUI();
+    }
+
+    public void EnablePlayerMoveAndUI()
+    {
+        player.EnableMove();
+        player.ShowUI();
     }
 }

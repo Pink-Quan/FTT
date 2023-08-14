@@ -40,4 +40,16 @@ public class GameManager : MonoBehaviour
         instance = null;
     }
 
+    public void DisablePlayerMoveAndUI()
+    {
+        player.HideUI();
+        player.DisableMove();
+    }
+
+    public void EnablePlayerMoveAndUI()
+    {
+        player.ShowUI();
+        player.EnableMove();
+    }
+
 }

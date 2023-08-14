@@ -22,5 +22,16 @@ public class MainMapTexts : ScriptableObject
     public Dialogue doneFirstMissons;
     public string getMagnet;
 
+    [TextArea] public string callNganStartCampingMission;
+
+    public Dialogue annouchToNganDoneFirstMission;
+
     [TextArea] public string scecondStartMission;
+
+    [Header("Start camping second mission")]
+    public Dialogue[] callNamSecondMission;
+    public Dialogue[] callNganSecondMission;
+    public Dialogue[] callMinhSecondMission;
+    public Dialogue[] callHungSecondMission;
+    public Dialogue[] callMaiSecondMission;
 }
