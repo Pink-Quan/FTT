@@ -2068,7 +2068,7 @@ MonoBehaviour:
   interactName: Take
   canInteract: 1
   isGizmos: 1
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 602558844}
@@ -15790,7 +15790,7 @@ MonoBehaviour:
   interactName: Open
   canInteract: 1
   isGizmos: 1
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1048195598}
@@ -16576,7 +16576,7 @@ MonoBehaviour:
   interactName: Take medicine
   canInteract: 1
   isGizmos: 1
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2097294921}

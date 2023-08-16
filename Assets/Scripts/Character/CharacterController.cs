@@ -59,8 +59,8 @@ public class CharacterController : MonoBehaviour
     public void AddConversationToCharacter(Dialogue dialogue, Action onDone = null)
     {
         interact.canInteract = true;
-        interact.OnInteract.RemoveAllListeners();
-        interact.OnInteract.AddListener(TalkWithCharacter);
+        interact.onInteract.RemoveAllListeners();
+        interact.onInteract.AddListener(TalkWithCharacter);
 
         void TalkWithCharacter(InteractableEntity entity)
         {
@@ -71,16 +71,15 @@ public class CharacterController : MonoBehaviour
             {
                 GameManager.instance.EnablePlayerMoveAndUI();
                 GameManager.instance.player.ShowInteractButton();
+                onDone?.Invoke();
             }
-
-            onDone?.Invoke();
         }
     }
     public void AddConversationToCharacter(Dialogue[] dialogue, Action onDone = null)
     {
         interact.canInteract = true;
-        interact.OnInteract.RemoveAllListeners();
-        interact.OnInteract.AddListener(TalkWithCharacter);
+        interact.onInteract.RemoveAllListeners();
+        interact.onInteract.AddListener(TalkWithCharacter);
 
         void TalkWithCharacter(InteractableEntity entity)
         {
@@ -91,9 +90,8 @@ public class CharacterController : MonoBehaviour
             {
                 GameManager.instance.EnablePlayerMoveAndUI();
                 GameManager.instance.player.ShowInteractButton();
+                onDone?.Invoke();
             }
-
-            onDone?.Invoke();
         }
     }
 }

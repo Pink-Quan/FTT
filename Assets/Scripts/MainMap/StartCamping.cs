@@ -27,6 +27,8 @@ public class StartCamping : MonoBehaviour
     [SerializeField] private InteractableEntity[] piecesOfIron;
     [SerializeField] private CinemachineVirtualCamera vCam;
 
+    [SerializeField] private InteractableEntity toHouseDoor;
+
     private CharacterController Ngan;
     private CharacterController Minh;
     private CharacterController Mai;
@@ -47,7 +49,7 @@ public class StartCamping : MonoBehaviour
 
         InitStartCamping();
         Invoke("FirstComunicateWithManager", 2);
-        AddKeyToPlayer();
+        //AddKeyToPlayer();
     }
     private void InitStartCamping()
     {
@@ -105,12 +107,16 @@ public class StartCamping : MonoBehaviour
     private void PlayerStartFirstMission()
     {
         GameManager.instance.missionsManager.missions.Add(texts.firstMission);
+        GameManager.instance.dialogueManager.StartDialogue(texts.annouchToNganDoneFirstMission, () =>{
+            
+        });
         GameManager.instance.missionsManager.ShowMissions(EnablePlayerMoveAndUI);
         Minh.AddConversationToCharacter(texts.MinhCamping1);
         Mai.AddConversationToCharacter(texts.MaiCamping1);
         Hung.AddConversationToCharacter(texts.HungCamping1);
         Ngan.AddConversationToCharacter(texts.NganCamping1);
         Nam.AddConversationToCharacter(texts.NamCamping1);
+        player.SetArrowPointer(piecesOfIron[0].transform);
     }
 
     public void AddKeyToPlayer()
@@ -132,6 +138,7 @@ public class StartCamping : MonoBehaviour
 
     public void CleanPieceOfIron(InteractableEntity entity)
     {
+        player.OffArrowPointer();
         if (!isStartDoMission1)
         {
             DisablePlayerMoveAndUI();
@@ -160,11 +167,11 @@ public class StartCamping : MonoBehaviour
             }
         }
 
-
         mainMapManager.PlayParticalEffect(0, entity.transform.position);
         entity.HideInteractButton();
         entity.gameObject.SetActive(false);
         mission1Progress++;
+
         if (mission1Progress < piecesOfIron.Length) return;
         DisablePlayerMoveAndUI();
         Ngan.AddConversationToCharacter(texts.annouchToNganDoneFirstMission, NganGiveNewMission);
@@ -182,6 +189,7 @@ public class StartCamping : MonoBehaviour
         var cam = vCam.GetCinemachineComponent<CinemachineTransposer>();
         DOVirtual.Vector3(cam.m_FollowOffset, cam.m_FollowOffset + Minh.transform.position - vCam.transform.position, 2, value =>
         {
+            value.z = -10;
             cam.m_FollowOffset = value;
         });
         vCam.transform.DOMove(Minh.transform.position - new Vector3(0, 0, 10), 2);
@@ -193,6 +201,7 @@ public class StartCamping : MonoBehaviour
         var cam = vCam.GetCinemachineComponent<CinemachineTransposer>();
         DOVirtual.Vector3(cam.m_FollowOffset, new Vector3(0, 0, -10), 2, value =>
         {
+            value.z = -10;
             cam.m_FollowOffset = value;
         }).OnComplete(EnablePlayerMoveAndUI);
     }
@@ -212,11 +221,40 @@ public class StartCamping : MonoBehaviour
     private void NganGiveNewMission()
     {
         DisablePlayerMoveAndUI();
+
+        charNeedToCall = new List<Transform>();
+        charNeedToCall.Add(Minh.transform);
+        charNeedToCall.Add(Nam.transform);
+        charNeedToCall.Add(Hung.transform);
+
         GameManager.instance.textBoard.ShowText(texts.scecondStartMission, EnablePlayerMoveAndUI);
         Ngan.AddConversationToCharacter(texts.callNganSecondMission);
         Mai.AddConversationToCharacter(texts.callMaiSecondMission);
-        Minh.AddConversationToCharacter(texts.callMinhSecondMission);
-        Hung.AddConversationToCharacter(texts.callHungSecondMission);
-        Nam.AddConversationToCharacter(texts.callNamSecondMission);
+        Minh.AddConversationToCharacter(texts.callMinhSecondMission, () => CallPeople(Minh.transform));
+        Hung.AddConversationToCharacter(texts.callHungSecondMission, () => CallPeople(Hung.transform));
+        Nam.AddConversationToCharacter(texts.callNamSecondMission, () => CallPeople(Nam.transform));
+
+        player.SetArrowPointer(Nam.transform);
+    }
+    int ppCalled;
+    List<Transform> charNeedToCall;
+    private void CallPeople(Transform character)
+    {
+        ppCalled++;
+        charNeedToCall.Remove(character);
+        if (ppCalled == 3)
+        {
+            player.SetArrowPointer(toHouseDoor.transform);
+            toHouseDoor.onInteract.AddListener(e => DoneMission2());
+        }
+        else
+        {
+            player.SetArrowPointer(charNeedToCall[0]);
+        }
+    }
+
+    private void DoneMission2()
+    {
+
     }
 }

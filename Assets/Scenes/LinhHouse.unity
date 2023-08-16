@@ -498,7 +498,7 @@ MonoBehaviour:
   interactName: Interact
   canInteract: 1
   isGizmos: 0
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1619848676}
@@ -1443,7 +1443,7 @@ MonoBehaviour:
   interactName: Interact
   canInteract: 1
   isGizmos: 0
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 810078215}
@@ -1725,7 +1725,7 @@ MonoBehaviour:
   interactName: Interact
   canInteract: 1
   isGizmos: 1
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1619848676}
@@ -2985,7 +2985,7 @@ MonoBehaviour:
   interactName: Interact
   canInteract: 1
   isGizmos: 1
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1619848676}
@@ -3167,7 +3167,7 @@ MonoBehaviour:
   interactName: Interact
   canInteract: 1
   isGizmos: 1
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1619848676}
@@ -3880,7 +3880,7 @@ MonoBehaviour:
   interactName: Interact
   canInteract: 1
   isGizmos: 1
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1619848676}
@@ -9091,7 +9091,7 @@ MonoBehaviour:
   interactName: Interact
   canInteract: 0
   isGizmos: 1
-  OnInteract:
+  onInteract:
     m_PersistentCalls:
       m_Calls: []
   onPlayerEnterZone:

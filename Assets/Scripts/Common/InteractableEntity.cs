@@ -17,7 +17,7 @@ public class InteractableEntity : MonoBehaviour
     [SerializeField] private string interactName = "Interact";
     public bool canInteract = true;
     [SerializeField] private bool isGizmos;
-    public OnInteractEntity OnInteract;
+    public OnInteractEntity onInteract;
     [Serializable]
     public class OnInteractEntity : UnityEvent<InteractableEntity> { }
 
@@ -105,7 +105,7 @@ public class InteractableEntity : MonoBehaviour
     {
         //Debug.Log("Player enter zone");
         if (canInteract)
-            player.ShowInteractButton(OnInteract, interactName, this);
+            player.ShowInteractButton(onInteract, interactName, this);
         onPlayerEnterZone?.Invoke();
     }
 

@@ -30,7 +30,7 @@ public class MainMapManager : MonoBehaviour
 
     public void AddConversationToCharacter(CharacterController character, Dialogue dialogue, Action onDone = null)
     {
-        var onInteract = character.interact.OnInteract;
+        var onInteract = character.interact.onInteract;
         character.interact.canInteract = true;
         onInteract.RemoveAllListeners();
         onInteract.AddListener(TalkWithCharacter);
@@ -51,7 +51,7 @@ public class MainMapManager : MonoBehaviour
     }
     public void AddConversationToCharacter(CharacterController character, Dialogue[] dialogue, Action onDone = null)
     {
-        var onInteract = character.interact.OnInteract;
+        var onInteract = character.interact.onInteract;
         character.interact.canInteract = true;
         onInteract.RemoveAllListeners();
         onInteract.AddListener(TalkWithCharacter);

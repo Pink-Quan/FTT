@@ -173,7 +173,34 @@ MonoBehaviour:
     Name: Nam
     DisplayName: Nam
     emotion: 0
-  callNganSecondMission: []
-  callMinhSecondMission: []
-  callHungSecondMission: []
-  callMaiSecondMission: []
+  callNganSecondMission:
+  - sentances:
+    - "Em h\xE3y g\u1ECDi m\u1ECDi ng\u01B0\u1EDDi v\xE0o nh\xE0 ngh\u1EC9 ng\u01A1i
+      \u0111i"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+  callMinhSecondMission:
+  - sentances:
+    - "Oke anh v\xE0o lu\xF4n \u0111\xE2y"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+  callHungSecondMission:
+  - sentances:
+    - "Anh s\u1EAFp xong r\u1ED3i, 2 ph\xFAt n\u1EEFa anh v\xE0o nh\xE0 nh\xE9"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+  callMaiSecondMission:
+  - sentances:
+    - "C\u1EADu chu\u1EA9n b\u1ECB c\u01A1m xong ch\u01B0a"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "S\u1EAFp xong r\u1ED3i, m\u1ECDi ng\u01B0\u1EDDi v\xE0o l\xE0 c\xF3 th\u1EC3
+      xong lu\xF4n"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
