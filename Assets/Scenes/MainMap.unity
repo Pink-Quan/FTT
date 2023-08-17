@@ -2979,7 +2979,7 @@ MonoBehaviour:
   - {fileID: 2063406090}
   - {fileID: 1555057705}
   vCam: {fileID: 911668979}
-  toHouseDoor: {fileID: 0}
+  toHouseDoor: {fileID: 2124904093}
 --- !u!1 &1048568171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2186774567370573801, guid: 38da504cc3fe6424c90ae5ff51f836d6, type: 3}
@@ -6250,6 +6250,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60dc33c3f54e93d40b85ef362ee654d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2124904093 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5149893645346211059, guid: 7141b303906dae84195114ea791c0c50, type: 3}
+  m_PrefabInstance: {fileID: 7407462516154756920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5dda3f459862246b21e24db114b191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3320639243177065019

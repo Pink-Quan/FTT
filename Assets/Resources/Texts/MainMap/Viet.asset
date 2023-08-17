@@ -156,9 +156,19 @@ MonoBehaviour:
   callNganStartCampingMission: "Th\xF4ng b\xE1o cho ch\u1ECB Ng\xE2n \u1EDF khu c\u1EAFm
     tr\u1EA1i, khu c\u1EAFm tr\u1EA1i \u1EDF b\xEAn tr\xE1i "
   annouchToNganDoneFirstMission:
-    sentances: []
-    Name: 
-    DisplayName: 
+  - sentances:
+    - "Ch\u1ECB \u01A1i, em xong t\u01B0\u01A1ng \u0111\u1ED1i vi\u1EC7c r\u1ED3i
+      \u1EA1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "T\u1ED1t l\u1EAFm em"
+    - "Gi\u1EDD c\u0169ng mu\u1ED9n r\u1ED3i, em g\u1ECDi m\u1ECDi ng\u01B0\u1EDDi
+      ngh\u1EC9 tay v\xE0 v\xE0o nh\xE0 ngh\u1EC9 ng\u01A1i nh\xE9"
+    - "C\xF3 g\xEC s\xE1ng mai ch\xFAng ta s\u1EBD l\xE0m ti\u1EBFp"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
     emotion: 0
   scecondStartMission: "G\u1ECDi m\u1ECDi ng\u01B0\u1EDDi h\xE3y ngh\u1EC9 ng\u01A1i,
     chu\u1EA9n b\u1ECB cho bu\u1ED5i t\u1ED1i"

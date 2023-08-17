@@ -15,15 +15,12 @@ public class MainMapManager : MonoBehaviour
     [SerializeField] private ParticleSystem[] effs;
     [SerializeField] private StartCamping startCamping;
 
-    private MainMapTexts texts;
-
     private void Start()
     {
-        texts = Resources.Load<MainMapTexts>($"Texts/MainMap/{PlayerPrefs.GetString("Language", "Eng")}");
         switch ((GameProgress)PlayerPrefs.GetInt("Progress"))
         {
             case GameProgress.StartCamping:
-                startCamping.Init(Ngan, Minh, Mai, Nam, Hung, player, texts, this);
+                startCamping.Init(Ngan, Minh, Mai, Nam, Hung, player, this);
                 break;
         }
     }

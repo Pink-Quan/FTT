@@ -35,16 +35,17 @@ public class StartCamping : MonoBehaviour
     private CharacterController Nam;
     private CharacterController Hung;
     private PlayerController player;
-    private MainMapTexts texts;
-    public void Init(CharacterController Ngan, CharacterController Minh, CharacterController Mai, CharacterController Nam, CharacterController Hung, PlayerController player, MainMapTexts texts, MainMapManager mainMapManager)
+    private MainMapStartCampingTexts texts;
+    public void Init(CharacterController Ngan, CharacterController Minh, CharacterController Mai, CharacterController Nam, CharacterController Hung, PlayerController player, MainMapManager mainMapManager)
     {
+        texts = texts = Resources.Load<MainMapStartCampingTexts>($"Texts/MainMap/{PlayerPrefs.GetString("Language", "Eng")}");
+
         this.Ngan = Ngan;
         this.Minh = Minh;
         this.Mai = Mai;
         this.Nam = Nam;
         this.Hung = Hung;
         this.player = player;
-        this.texts = texts;
         this.mainMapManager = mainMapManager;
 
         InitStartCamping();
@@ -107,9 +108,6 @@ public class StartCamping : MonoBehaviour
     private void PlayerStartFirstMission()
     {
         GameManager.instance.missionsManager.missions.Add(texts.firstMission);
-        GameManager.instance.dialogueManager.StartDialogue(texts.annouchToNganDoneFirstMission, () =>{
-            
-        });
         GameManager.instance.missionsManager.ShowMissions(EnablePlayerMoveAndUI);
         Minh.AddConversationToCharacter(texts.MinhCamping1);
         Mai.AddConversationToCharacter(texts.MaiCamping1);
@@ -127,7 +125,7 @@ public class StartCamping : MonoBehaviour
     public void AddMagnetToPlayer()
     {
         isGetMagnet = true;
-        GameManager.instance.textBoard.ShowText(texts.getMagnet, EnablePlayerMoveAndUI);
+        GameManager.instance.textBoard.ShowText(texts   .getMagnet, EnablePlayerMoveAndUI);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, player.inventory);
     }
 
@@ -139,7 +137,11 @@ public class StartCamping : MonoBehaviour
     public void CleanPieceOfIron(InteractableEntity entity)
     {
         player.OffArrowPointer();
-        if (!isStartDoMission1)
+        if (string.Compare(player.curItem.itemName, "Magnet") != 0)
+        {
+            GameManager.instance.dialogueManager.StartDialogue(texts.needMagnet, EnablePlayerMoveAndUI);
+        }
+        else if (!isStartDoMission1)
         {
             DisablePlayerMoveAndUI();
             isStartDoMission1 = true;
@@ -156,11 +158,6 @@ public class StartCamping : MonoBehaviour
         else
         {
             if (player.curItem == null)
-            {
-                GameManager.instance.dialogueManager.StartDialogue(texts.needMagnet, EnablePlayerMoveAndUI);
-                return;
-            }
-            else if (string.Compare(player.curItem.itemName, "Magnet") != 0)
             {
                 GameManager.instance.dialogueManager.StartDialogue(texts.needMagnet, EnablePlayerMoveAndUI);
                 return;

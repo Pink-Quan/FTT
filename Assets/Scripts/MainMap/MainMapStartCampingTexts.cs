@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Texts/MainMap", fileName = "Language")]
-public class MainMapTexts : ScriptableObject
+[CreateAssetMenu(menuName = "ScriptableObjects/Texts/MainMapStartCamping", fileName = "Language")]
+public class MainMapStartCampingTexts : ScriptableObject
 {
     public Dialogue[] theFirstConversationsWithManagers;
 
@@ -24,7 +24,7 @@ public class MainMapTexts : ScriptableObject
 
     [TextArea] public string callNganStartCampingMission;
 
-    public Dialogue annouchToNganDoneFirstMission;
+    public Dialogue[] annouchToNganDoneFirstMission;
 
     [TextArea] public string scecondStartMission;
 
@@ -34,4 +34,5 @@ public class MainMapTexts : ScriptableObject
     public Dialogue[] callMinhSecondMission;
     public Dialogue[] callHungSecondMission;
     public Dialogue[] callMaiSecondMission;
+
 }
