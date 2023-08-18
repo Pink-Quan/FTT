@@ -178,7 +178,7 @@ public class DialogueManager : MonoBehaviour
     private string displayingSectance;
     IEnumerator DisplaySentance(string sentance)
     {
-        var sound=StartCoroutine(PlayDialogSound());
+        var sound = StartCoroutine(PlayDialogSound());
         displayingSectance = sentance;
         Text.text = "";
         int i = 0;
@@ -218,14 +218,13 @@ public class DialogueManager : MonoBehaviour
         if (pb == null) baseAvatar.SetActive(true);
         else
         {
-            charactorAvatar = Instantiate(pb);
-            charactorAvatar.transform.SetParent(DialogueBroad.transform);
+            charactorAvatar = Instantiate(pb, DialogueBroad.transform, false);
             charactorAvatar.transform.SetAsFirstSibling();
             Vector3 lastScale = charactorAvatar.transform.localScale;
-            Vector3 avaScale=Vector3.one;
-            avaScale.x = Mathf.Abs(lastScale.x) /lastScale.x;
-            avaScale.y = Mathf.Abs(lastScale.y) /lastScale.y;
-            avaScale.z = Mathf.Abs(lastScale.z) /lastScale.z;
+            Vector3 avaScale = Vector3.one;
+            avaScale.x = Mathf.Abs(lastScale.x) / lastScale.x;
+            avaScale.y = Mathf.Abs(lastScale.y) / lastScale.y;
+            avaScale.z = Mathf.Abs(lastScale.z) / lastScale.z;
             charactorAvatar.transform.localScale = avaScale;
 
             var recChar = charactorAvatar.GetComponent<RectTransform>();
@@ -233,9 +232,8 @@ public class DialogueManager : MonoBehaviour
 
             recChar.anchorMin = recBase.anchorMin;
             recChar.anchorMax = recBase.anchorMax;
-            recChar.anchoredPosition3D = recBase.anchoredPosition3D;
-            recChar.sizeDelta = recBase.sizeDelta;
 
+            recChar.anchoredPosition = new Vector2(recChar.sizeDelta.x/2, recChar.sizeDelta.y/2);
         }
 
         senctences?.Clear();

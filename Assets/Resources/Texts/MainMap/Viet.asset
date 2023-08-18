@@ -78,7 +78,7 @@ MonoBehaviour:
     sentances:
     - "N\u1EBFu c\xF3 g\xEC c\u1EA7n gi\xFAp th\xEC c\u1EE9 n\xF3i anh nh\xE9"
     Name: Minh
-    DisplayName: 
+    DisplayName: Minh
     emotion: 0
   NganCamping1:
     sentances:
@@ -111,8 +111,8 @@ MonoBehaviour:
     emotion: 0
   needMagnet:
     sentances:
-    - "M\xECnh c\u1EA7n d\xF9ng nam ch\xE2m \u0111\u1EC3 h\xFAt h\u1EBFt ch\u1ED7
-      v\u1EE5n s\u1EAFt n\xE0y"
+    - "M\xECnh c\u1EA7n d\xF9ng d\u1EE5ng c\u1EE5 \u0111\u1EC3 d\u1ECDn h\u1EBFt
+      ch\u1ED7 v\u1EE5n s\u1EAFt n\xE0y"
     Name: Linh
     DisplayName: Linh
     emotion: 0
@@ -214,3 +214,5 @@ MonoBehaviour:
     Name: Mai
     DisplayName: Mai
     emotion: 0
+  getMagnetHint: "H\xE3y quan s\xE1t nh\u1EEFng chi\u1EBFc xe \u1EDF b\xE3i \u0111\u1EADu
+    xe"

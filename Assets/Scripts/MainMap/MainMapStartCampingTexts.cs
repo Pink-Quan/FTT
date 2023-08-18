@@ -35,4 +35,5 @@ public class MainMapStartCampingTexts : ScriptableObject
     public Dialogue[] callHungSecondMission;
     public Dialogue[] callMaiSecondMission;
 
+    public string getMagnetHint;
 }

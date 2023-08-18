@@ -7750,6 +7750,22 @@ PrefabInstance:
       propertyPath: DialogueBroad
       value: 
       objectReference: {fileID: 7130537231427484984}
+    - target: {fileID: 3374034285668189546, guid: 79bf74ce02eeeb64695b307b8fba67c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3374034285668189546, guid: 79bf74ce02eeeb64695b307b8fba67c9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3374034285668189546, guid: 79bf74ce02eeeb64695b307b8fba67c9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 59.38365
+      objectReference: {fileID: 0}
+    - target: {fileID: 3374034285668189546, guid: 79bf74ce02eeeb64695b307b8fba67c9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 81
+      objectReference: {fileID: 0}
     - target: {fileID: 8190981765092501104, guid: 79bf74ce02eeeb64695b307b8fba67c9, type: 3}
       propertyPath: m_SizeDelta.x
       value: -14.8003

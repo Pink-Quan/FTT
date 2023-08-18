@@ -2,6 +2,7 @@ using Cinemachine;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class StartCamping : MonoBehaviour
@@ -125,7 +126,7 @@ public class StartCamping : MonoBehaviour
     public void AddMagnetToPlayer()
     {
         isGetMagnet = true;
-        GameManager.instance.textBoard.ShowText(texts   .getMagnet, EnablePlayerMoveAndUI);
+        GameManager.instance.textBoard.ShowText(texts.getMagnet, EnablePlayerMoveAndUI);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, player.inventory);
     }
 
@@ -137,32 +138,48 @@ public class StartCamping : MonoBehaviour
     public void CleanPieceOfIron(InteractableEntity entity)
     {
         player.OffArrowPointer();
-        if (string.Compare(player.curItem.itemName, "Magnet") != 0)
+        if (player.curItem == null)
         {
-            GameManager.instance.dialogueManager.StartDialogue(texts.needMagnet, EnablePlayerMoveAndUI);
-        }
-        else if (!isStartDoMission1)
-        {
-            DisablePlayerMoveAndUI();
-            isStartDoMission1 = true;
-            Minh.AddConversationToCharacter(texts.MinhGuideToTakeMagnet, () => isAskMinh = true);
-            GameManager.instance.dialogueManager.StartDialogue(texts.cantDoFirstMission, MoveCamToMinh);
-            return;
-        }
-        else if (!isAskMinh || !isGetMagnet)
-        {
-            DisablePlayerMoveAndUI();
-            GameManager.instance.dialogueManager.StartDialogue(texts.cantDoFirstMission, EnablePlayerMoveAndUI);
-            return;
-        }
-        else
-        {
-            if (player.curItem == null)
+            if (!isStartDoMission1)
             {
+                DisablePlayerMoveAndUI();
+                isStartDoMission1 = true;
+                Minh.AddConversationToCharacter(texts.MinhGuideToTakeMagnet, () => isAskMinh = true);
+                GameManager.instance.dialogueManager.StartDialogue(texts.cantDoFirstMission, MoveCamToMinh);
+                return;
+            }
+            else if (!isAskMinh)
+            {
+                DisablePlayerMoveAndUI();
+                GameManager.instance.dialogueManager.StartDialogue(texts.cantDoFirstMission, EnablePlayerMoveAndUI);
+                return;
+            }
+            GameManager.instance.dialogueManager.StartDialogue(texts.needMagnet, EnablePlayerMoveAndUI);
+            return;
+        }
+        else 
+        {
+            if (string.Compare(player.curItem.itemName, "Magnet") != 0)
+            {
+                if (!isStartDoMission1)
+                {
+                    DisablePlayerMoveAndUI();
+                    isStartDoMission1 = true;
+                    Minh.AddConversationToCharacter(texts.MinhGuideToTakeMagnet, () => isAskMinh = true);
+                    GameManager.instance.dialogueManager.StartDialogue(texts.cantDoFirstMission, MoveCamToMinh);
+                    return;
+                }
+                else if (!isAskMinh)
+                {
+                    DisablePlayerMoveAndUI();
+                    GameManager.instance.dialogueManager.StartDialogue(texts.cantDoFirstMission, EnablePlayerMoveAndUI);
+                    return;
+                }
                 GameManager.instance.dialogueManager.StartDialogue(texts.needMagnet, EnablePlayerMoveAndUI);
                 return;
             }
         }
+
 
         mainMapManager.PlayParticalEffect(0, entity.transform.position);
         entity.HideInteractButton();
@@ -237,8 +254,11 @@ public class StartCamping : MonoBehaviour
     List<Transform> charNeedToCall;
     private void CallPeople(Transform character)
     {
-        ppCalled++;
-        charNeedToCall.Remove(character);
+        if(charNeedToCall.Contains(character))
+        {
+            charNeedToCall.Remove(character);
+            ppCalled++;
+        }
         if (ppCalled == 3)
         {
             player.SetArrowPointer(toHouseDoor.transform);
@@ -253,5 +273,10 @@ public class StartCamping : MonoBehaviour
     private void DoneMission2()
     {
 
+    }
+
+    public void GetMagnetHint()
+    {
+        GameManager.instance.textBoard.ShowText(texts.getMagnetHint);
     }
 }
