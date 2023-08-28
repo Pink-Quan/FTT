@@ -36,4 +36,6 @@ public class MainMapStartCampingTexts : ScriptableObject
     public Dialogue[] callMaiSecondMission;
 
     public string getMagnetHint;
+
+    public Dialogue[] insideHouseConversations;
 }

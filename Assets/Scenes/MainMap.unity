@@ -910,7 +910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239620019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.76, y: -89.58, z: 0}
+  m_LocalPosition: {x: 108.85, y: -61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2812,6 +2812,7 @@ MonoBehaviour:
   - {fileID: 1555057705}
   vCam: {fileID: 911668979}
   toHouseDoor: {fileID: 2124904093}
+  playerInsideHousePos: {x: 108.85, y: -59.8, z: 0}
 --- !u!1 &1048568171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2186774567370573801, guid: 38da504cc3fe6424c90ae5ff51f836d6, type: 3}
@@ -6257,11 +6258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394562402793141417, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -51
+      value: -51.000015
       objectReference: {fileID: 0}
     - target: {fileID: 2623586233373398907, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -30.299988
+      value: -30.300049
       objectReference: {fileID: 0}
     - target: {fileID: 2623586233373398907, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.y

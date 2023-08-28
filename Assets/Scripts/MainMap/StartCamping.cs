@@ -30,6 +30,8 @@ public class StartCamping : MonoBehaviour
 
     [SerializeField] private InteractableEntity toHouseDoor;
 
+    [SerializeField] private Vector3 playerInsideHousePos;
+
     private CharacterController Ngan;
     private CharacterController Minh;
     private CharacterController Mai;
@@ -39,7 +41,7 @@ public class StartCamping : MonoBehaviour
     private MainMapStartCampingTexts texts;
     public void Init(CharacterController Ngan, CharacterController Minh, CharacterController Mai, CharacterController Nam, CharacterController Hung, PlayerController player, MainMapManager mainMapManager)
     {
-        texts = texts = Resources.Load<MainMapStartCampingTexts>($"Texts/MainMap/{PlayerPrefs.GetString("Language", "Eng")}");
+        texts = texts = Resources.Load<MainMapStartCampingTexts>($"Texts/MainMap/StartCamping/{PlayerPrefs.GetString("Language", "Eng")}");
 
         this.Ngan = Ngan;
         this.Minh = Minh;
@@ -48,6 +50,9 @@ public class StartCamping : MonoBehaviour
         this.Hung = Hung;
         this.player = player;
         this.mainMapManager = mainMapManager;
+
+        ppCalled = 3;
+        CallPeople(player.transform);
 
         InitStartCamping();
         Invoke("FirstComunicateWithManager", 2);
@@ -125,12 +130,10 @@ public class StartCamping : MonoBehaviour
 
     public void AddMagnetToPlayer()
     {
-        isGetMagnet = true;
         GameManager.instance.textBoard.ShowText(texts.getMagnet, EnablePlayerMoveAndUI);
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, player.inventory);
     }
 
-    bool isGetMagnet;
     bool isStartDoMission1;
     int mission1Progress;
     bool isAskMinh;
@@ -157,7 +160,7 @@ public class StartCamping : MonoBehaviour
             GameManager.instance.dialogueManager.StartDialogue(texts.needMagnet, EnablePlayerMoveAndUI);
             return;
         }
-        else 
+        else
         {
             if (string.Compare(player.curItem.itemName, "Magnet") != 0)
             {
@@ -254,15 +257,16 @@ public class StartCamping : MonoBehaviour
     List<Transform> charNeedToCall;
     private void CallPeople(Transform character)
     {
-        if(charNeedToCall.Contains(character))
-        {
-            charNeedToCall.Remove(character);
-            ppCalled++;
-        }
+        if (character != player.transform)
+            if (charNeedToCall.Contains(character))
+            {
+                charNeedToCall.Remove(character);
+                ppCalled++;
+            }
         if (ppCalled == 3)
         {
             player.SetArrowPointer(toHouseDoor.transform);
-            toHouseDoor.onInteract.AddListener(e => DoneMission2());
+            toHouseDoor.onInteract.AddListener(DoneMission2);
         }
         else
         {
@@ -270,13 +274,44 @@ public class StartCamping : MonoBehaviour
         }
     }
 
-    private void DoneMission2()
-    {
-
-    }
-
     public void GetMagnetHint()
     {
         GameManager.instance.textBoard.ShowText(texts.getMagnetHint);
+    }
+
+    private void DoneMission2(InteractableEntity entity)
+    {
+        DisablePlayerMoveAndUI();
+        player.anim.SetDirection(Vector2.left);
+        toHouseDoor.onInteract.RemoveListener(DoneMission2);
+        player.OffArrowPointer();
+        GameManager.instance.transitions.Transition(1, 1, ConversationInsideHouse, SetCharacterInsideHouse);
+    }
+
+    private void SetCharacterInsideHouse()
+    {
+        player.transform.position = playerInsideHousePos;
+        Nam.transform.position = playerInsideHousePos + Vector3.down;
+        Mai.transform.position = playerInsideHousePos + Vector3.up;
+        Hung.transform.position = playerInsideHousePos + Vector3.up * 2;
+        Ngan.transform.position = playerInsideHousePos + Vector3.up * 0.7f / 2 + Vector3.left * 1.5f;
+        Minh.transform.position = playerInsideHousePos + Vector3.down + Vector3.left * 1.5f;
+
+        player.anim.SetDirection(Vector2.left);
+        Nam.anim.SetDirection(Vector2.left);
+        Hung.anim.SetDirection(Vector2.left);
+        Mai.anim.SetDirection(Vector2.left);
+        Ngan.anim.SetDirection(Vector2.right);
+        Minh.anim.SetDirection(Vector2.right);
+
+        Nam.transform.SetParent(houseFirstFloor, true);
+        Hung.transform.SetParent(houseFirstFloor, true);
+        Ngan.transform.SetParent(houseFirstFloor, true);
+        Minh.transform.SetParent(houseFirstFloor, true);
+    }
+
+    private void ConversationInsideHouse()
+    {
+        Debug.Log("Conversation");
     }
 }
