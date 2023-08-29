@@ -2812,7 +2812,7 @@ MonoBehaviour:
   - {fileID: 1555057705}
   vCam: {fileID: 911668979}
   toHouseDoor: {fileID: 2124904093}
-  playerInsideHousePos: {x: 108.85, y: -59.8, z: 0}
+  playerInsideHousePos: {x: 108.85, y: -60, z: 0}
 --- !u!1 &1048568171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2186774567370573801, guid: 38da504cc3fe6424c90ae5ff51f836d6, type: 3}
@@ -5654,6 +5654,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1686657672}
     m_Modifications:
+    - target: {fileID: -8840124373322349346, guid: 147619da6d4305344945ea5897d5ded1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8449008843794777529, guid: 147619da6d4305344945ea5897d5ded1, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -5685,6 +5689,10 @@ PrefabInstance:
     - target: {fileID: 3058788702458423447, guid: 147619da6d4305344945ea5897d5ded1, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585717520990496606, guid: 147619da6d4305344945ea5897d5ded1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5196236392606460357, guid: 147619da6d4305344945ea5897d5ded1, type: 3}
       propertyPath: m_SortingOrder

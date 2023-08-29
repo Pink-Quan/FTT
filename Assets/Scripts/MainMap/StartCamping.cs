@@ -38,6 +38,7 @@ public class StartCamping : MonoBehaviour
     private CharacterController Nam;
     private CharacterController Hung;
     private PlayerController player;
+
     private MainMapStartCampingTexts texts;
     public void Init(CharacterController Ngan, CharacterController Minh, CharacterController Mai, CharacterController Nam, CharacterController Hung, PlayerController player, MainMapManager mainMapManager)
     {
@@ -51,12 +52,8 @@ public class StartCamping : MonoBehaviour
         this.player = player;
         this.mainMapManager = mainMapManager;
 
-        ppCalled = 3;
-        CallPeople(player.transform);
-
         InitStartCamping();
         Invoke("FirstComunicateWithManager", 2);
-        //AddKeyToPlayer();
     }
     private void InitStartCamping()
     {
@@ -308,10 +305,11 @@ public class StartCamping : MonoBehaviour
         Hung.transform.SetParent(houseFirstFloor, true);
         Ngan.transform.SetParent(houseFirstFloor, true);
         Minh.transform.SetParent(houseFirstFloor, true);
+        Mai.transform.SetParent(houseFirstFloor, true);
     }
 
     private void ConversationInsideHouse()
     {
-        Debug.Log("Conversation");
+        GameManager.instance.dialogueManager.StartDialogue(texts.insideHouseConversations, null);
     }
 }

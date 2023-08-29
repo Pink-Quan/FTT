@@ -3,13 +3,13 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/Main_map.tmx",
+    "activeFile": "Map/Villa_House.tmx",
     "expandedProjectPaths": [
-        "Tileset/Singles",
         "Tileset",
-        "Map",
+        ".",
+        "Tileset/Singles",
         "Tileset/Singles/Villas",
-        "."
+        "Map"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -252,8 +252,8 @@
             "scale": 0.5,
             "selectedLayer": 14,
             "viewCenter": {
-                "x": 1166,
-                "y": 1111
+                "x": 1196,
+                "y": 1197
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -291,11 +291,11 @@
             "scaleInDock": 1
         },
         "Map/Villa_House.tmx": {
-            "scale": 2,
+            "scale": 5.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 160,
-                "y": 144.25
+                "x": 104.18181818181819,
+                "y": 120.0909090909091
             }
         },
         "Map/Villa_House_Second_Floor.tmx": {

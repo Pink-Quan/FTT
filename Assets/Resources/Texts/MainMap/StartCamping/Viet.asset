@@ -216,3 +216,92 @@ MonoBehaviour:
     emotion: 0
   getMagnetHint: "H\xE3y quan s\xE1t nh\u1EEFng chi\u1EBFc xe \u1EDF b\xE3i \u0111\u1EADu
     xe"
+  insideHouseConversations:
+  - sentances:
+    - "C\u1EA3m \u01A1n m\u1ECDi ng\u01B0\u1EDDi \u0111\xE3 l\xE0m vi\u1EC7c gi\xFAp
+      anh ch\u1ECB m\u1ED9t c\xE1ch ch\u0103m ch\u1EC9 nh\xE9"
+    - "Mai c\xF3 g\xEC th\xEC l\xE0m n\u1ED1t, n\u1EBFu n\u1EB7ng qu\xE1 ch\u01B0a
+      xong \u0111\u01B0\u1EE3c th\xEC c\u1EE9 \u0111\u1EC3 v\u1EADy, c\xF4ng nh\xE2n
+      tu\u1EA7n sau s\u1EBD \u0111\u1EBFn l\xE0m n\u1ED1t"
+    - "M\u1ECDi ng\u01B0\u1EDDi c\u1EE9 ngh\u1EC9 ng\u01A1i sinh ho\u1EA1t tho\u1EA3i
+      m\xE1i nh\xE9"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+  - sentances:
+    - "Ch\u1ECB c\xF3 th\u1EC3 k\u1EC3 nh\u1EEFng g\xEC ch\u1ECB bi\u1EBFt v\u1EC1
+      v\u1EE5 tai n\u1EA1n \u0111\u01B0\u1EE3c kh\xF4ng \u1EA1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "\u1EDC \u0111\u1EA5y, em kh\xF4ng n\xF3i th\xEC ch\u1ECB c\u0169ng qu\xEAn
+      lu\xF4n \u0111\u1EA5y"
+    - "Em c\xF3 nh\u1EDB l\xE0 chuy\u1EBFn \u0111i ch\u01A1i tr\u01B0\u1EDBc \u0111\xF3
+      c\u1EE7a em c\xF3 m\u1EA5y ng\u01B0\u1EDDi \u0111i kh\xF4ng"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+  - sentances:
+    - "Theo nh\u01B0 m\u1ECDi ng\u01B0\u1EDDi k\u1EC3 th\xEC \u0111\xF3 l\xE0 chuy\u1EBFn
+      \u0111i ch\u01A1i gia \u0111\xECnh"
+    - "N\xEAn kh\u1EA3 n\u0103ng c\xF3 b\xE0 ng\u01B0\u1EDDi \u0111i g\u1ED3m em
+      v\xE0 b\u1ED1 m\u1EB9"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "Theo nh\u01B0 ch\u1ECB nh\u1EDB kh\xF4ng nh\u1EA7m, v\xE0 m\u1ED9t s\u1ED1
+      ng\u01B0\u1EDDi c\xF3 m\u1EB7t xung quanh \u0111\xE2y n\xF3i r\u1EB1ng"
+    - "Chuy\u1EBFn \u0111i \u0111\xF3 g\u1ED3m b\u1ED1n ng\u01B0\u1EDDi"
+    - "Ng\u01B0\u1EDDi th\u1EE9 t\u01B0 l\xE0 m\u1ED9t thanh ni\xEAn kh\xE1 cao,
+      hay \u0111eo kh\u1EA9u trang"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+  - sentances:
+    - "Th\u1EADt sao, v\u1EADy ch\u1ECB c\xF3 th\xF4ng tin g\xEC v\u1EC1 thanh ni\xEAn
+      \u0111\u1EA5y kh\xF4ng"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5
+  - sentances:
+    - "Thanh ni\xEAn \u0111\u1EA5y xu\u1EA5t hi\u1EC7n m\u1ED9t c\xE1ch b\xED \u1EA9n,
+      v\xE0 bi\u1EBFn m\u1EA5t m\u1ED9t c\xE1ch b\xED \u1EA9n kh\xF4ng k\xE9m"
+    - "Sau v\u1EE5 tai n\u1EA1n, c\u1EA3nh s\xE1t kh\xF4ng t\xECm th\u1EA5y th\xF4ng
+      tin thanh ni\xEAn \u0111\xF3 \u0111\xE2u"
+    - "N\xEAn \u0111\xE3 cho v\xE0o di\u1EC7n m\u1EA5t t\xEDch"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+  - sentances:
+    - "V\u1EADy sao th\xF4ng tin n\xE0y em kh\xF4ng th\u1EA5y \u0111\u01B0\u1EE3c
+      vi\u1EBFt g\xEC tr\xEAn b\xE1o"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5
+  - sentances:
+    - "Do sau v\u1EE5 tai n\u1EA1n, c\u1EA3nh s\xE1t \u0111i\u1EC1u tra th\xEC kh\xF4ng
+      t\xECm \u0111\u01B0\u1EE3c m\u1ED9t th\xF4ng tin n\xE0o li\xEAn quan t\u1EDBi
+      ng\u01B0\u1EDDi th\u1EE9 t\u01B0 \u0111\u1EA5y v\u1EDBi gia \u0111\xECnh c\u1EE7a
+      em"
+    - "Th\u1EADm ch\xED h\u1ECD c\xF2n kh\xF4ng t\xECm \u0111\u01B0\u1EE3c th\xF4ng
+      tin g\xEC v\u1EC1 thanh ni\xEAn \u0111\xF3"
+    - "N\xEAn h\u1ECD k\u1EBFt lu\u1EADn c\xF3 th\u1EC3 du kh\xE1ch n\xE0y l\xE0
+      ng\u01B0\u1EDDi \u0111i t\u1EF1 do c\xF3 l\u1ECBch tr\xECnh \u0111i ch\u01A1i
+      gi\u1ED1ng gia \u0111\xECnh em th\xF4i"
+    - "Kh\xF4ng ch\xED th\u1EBF, n\xF3 c\xF2n do b\xE1o ch\xED n\u1EEFa"
+    - "Vi\u1EC7c em s\u1ED1ng s\xF3t v\xE0 m\u1EA5t m\xE1t qu\xE1 n\u1ED5i, khi\u1EBFn
+      c\xE1c b\xE0i b\xE1o v\xE0 \u0111\u1ED9c gi\u1EA3 ch\u1EC9 t\u1EADp trung v\xE0o
+      em"
+    - "M\u1EB7c d\xF9 b\xE1o ch\xEDnh th\u1ED1ng c\u1EE7a nh\xE0 n\u01B0\u1EDBc c\xF3
+      \u0111\u0103ng \u0111\u1EA7y \u0111\u1EE7 th\xF4ng tin, nh\u01B0ng v\xEC hi\u1EC7u
+      \u1EE9ng truy\u1EC1n th\xF4ng qu\xE1 m\u1EA1nh khi\u1EBFn cho ng\u01B0\u1EDDi
+      m\u1EA5t t\xEDch v\xF4 danh kia kh\xF4ng h\u1EC1 \u0111\u01B0\u1EE3c ch\xFA
+      \xFD"
+    - "Em bi\u1EBFt \u0111\u1EA5y, c\xE1c trang \u0111\u01B0a tin ch\u1EC9 quan t\xE2m
+      t\u1EDBi s\u1ED1 ti\u1EC1n ki\u1EBFm \u0111\u01B0\u1EE3c th\xF4i, n\xEAn h\u1ECD
+      l\xE3ng qu\xEAn \u0111i thanh ni\xEAn kia c\u0169ng ph\u1EA3i"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
