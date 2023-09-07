@@ -111,6 +111,7 @@ public enum GameProgress
 {
     InsideHospital=0,
     GoingHome=1,
-    StartCamping=2,
     InsideLinhHouse=3,
+    StartCamping=2,
+    CampingDay2=4,
 }

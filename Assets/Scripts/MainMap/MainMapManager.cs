@@ -5,22 +5,26 @@ using UnityEngine;
 
 public class MainMapManager : MonoBehaviour
 {
-    [SerializeField] private CharacterController Ngan;
-    [SerializeField] private CharacterController Minh;
-    [SerializeField] private CharacterController Mai;
-    [SerializeField] private CharacterController Nam;
-    [SerializeField] private CharacterController Hung;
-    [SerializeField] private PlayerController player;
+    public CharacterController Ngan;
+    public CharacterController Minh;
+    public CharacterController Mai;
+    public CharacterController Nam;
+    public CharacterController Hung;
+    public PlayerController player;
 
     [SerializeField] private ParticleSystem[] effs;
     [SerializeField] private StartCamping startCamping;
+    [SerializeField] private CampingDay2 campingDay2;
 
     private void Start()
     {
         switch ((GameProgress)PlayerPrefs.GetInt("Progress"))
         {
             case GameProgress.StartCamping:
-                startCamping.Init(Ngan, Minh, Mai, Nam, Hung, player, this);
+                InitStartCamping();
+                break;
+            case GameProgress.CampingDay2:
+                InitCampingDay2();
                 break;
         }
     }
@@ -84,5 +88,15 @@ public class MainMapManager : MonoBehaviour
     {
         player.EnableMove();
         player.ShowUI();
+    }
+
+    public void InitStartCamping()
+    {
+        startCamping.Init(Ngan, Minh, Mai, Nam, Hung, player, this);
+    }
+
+    public void InitCampingDay2()
+    {
+        campingDay2.Init(this);
     }
 }

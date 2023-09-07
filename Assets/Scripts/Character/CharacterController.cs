@@ -75,6 +75,13 @@ public class CharacterController : MonoBehaviour
             }
         }
     }
+
+    public void ClearConversation()
+    {
+        interact.canInteract = false;
+        interact.onInteract.RemoveAllListeners();
+    }
+
     public void AddConversationToCharacter(Dialogue[] dialogue, Action onDone = null)
     {
         interact.canInteract = true;

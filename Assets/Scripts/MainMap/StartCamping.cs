@@ -310,6 +310,12 @@ public class StartCamping : MonoBehaviour
 
     private void ConversationInsideHouse()
     {
-        GameManager.instance.dialogueManager.StartDialogue(texts.insideHouseConversations, null);
+        GameManager.instance.dialogueManager.StartDialogue(texts.insideHouseConversations, ChangeToDay2);
+    }
+
+    private void ChangeToDay2()
+    {
+        PlayerPrefs.SetInt("Progress", (int)GameProgress.CampingDay2);
+        GameManager.instance.transitions.Transition(1, 1, null, mainMapManager.InitCampingDay2);
     }
 }
