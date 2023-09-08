@@ -37,10 +37,19 @@ MonoBehaviour:
     Name: Nam
     DisplayName: Nam
     emotion: 0
+  firstMission: "H\xE3y nh\u1EB7t n\u1ED1t c\xE1c m\u1EA3nh v\u1EE5n s\u1EAFt \u1EDF
+    b\xE3i c\u1ECF"
+  playerMonologueAboutFirstMisson:
+    sentances:
+    - "\u1EDE \u0111\xE2y c\xF3 nhi\u1EC1u s\u1EAFt v\u1EE5n qu\xE1"
+    - "\u0110\xE3 th\u1EBF l\u1EA1i \u1EDF tr\xEAn b\xE3i c\u1ECF n\u1EEFa ch\u1EE9"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
   callPlayerBackToCar:
   - sentances:
-    - "\u01A0, sao Mai l\u1EA1i g\u1ECDi m\xECnh nh\u1EC9"
-    - Alo
+    - "C\xF3 chuy\u1EC7n g\xEC m\xE0 c\u1EADu ph\u1EA3i ch\u1EA1y \u0111\u1EBFn t\u1EADn
+      \u0111\xE2y th\u1EBF"
     Name: Linh
     DisplayName: Linh
     emotion: 0
@@ -48,19 +57,19 @@ MonoBehaviour:
     - "Ey ra ch\u1ED7 \u0111\u1ED7 xe \u0111i"
     - "C\xF3 chuy\u1EC7n r\u1ED3i"
     - "Ra ngay l\u1EADp t\u1EE9c \u0111i"
-    Name: CallingPhone
+    Name: Mai
     DisplayName: Mai
     emotion: 0
   - sentances:
-    - "Chuy\u1EC7n g\xEC m\xE0 g\u1EA5p th\u1EBF, n\xF3i qua \u0111i\u1EC7n tho\u1EA1i
-      \u0111\u01B0\u1EE3c kh\xF4ng"
+    - "Chuy\u1EC7n g\xEC m\xE0 g\u1EA5p th\u1EBF, n\xF3 lu\xF4n \u0111\u01B0\u1EE3c
+      kh\xF4ng"
     Name: Linh
     DisplayName: Linh
     emotion: 0
   - sentances:
     - "Kh\xF4ng \u0111\u01B0\u1EE3c, h\xE3y ra ch\u1ED7 \u0111\u1EA5y \u0111i"
     - "Nhanh l\xEAn"
-    Name: CallingPhone
+    Name: Mai
     DisplayName: Mai
     emotion: 0
   - sentances:
@@ -71,6 +80,22 @@ MonoBehaviour:
   confessTheTruth:
   - sentances:
     - "C\xF3 chuy\u1EC7n g\xEC v\u1EADy \u1EA1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "Ch\xFAng ta \u0111\xE3 b\u1ECB ph\xE1 ho\u1EA1i "
+    - "Xe c\u1EE7a ch\xFAng ta \u0111\u1EC1u b\u1ECB h\u1ECFng do ai \u0111\xF3 c\u1ED1
+      \xFD ph\xE1, v\xE0 gi\u1EDD ch\xFAng ta \u0111\u1EC1u b\u1ECB k\u1EB9t \u1EDF
+      \u0111\xE2y"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+  - sentances:
+    - "Ch\xFAng ta \u0111\xE3 b\u1ECB ph\xE1 ho\u1EA1i "
+    - "Xe c\u1EE7a ch\xFAng ta \u0111\u1EC1u b\u1ECB h\u1ECFng do ai \u0111\xF3 c\u1ED1
+      \xFD ph\xE1, v\xE0 gi\u1EDD ch\xFAng ta \u0111\u1EC1u b\u1ECB k\u1EB9t \u1EDF
+      \u0111\xE2y"
     Name: Linh
     DisplayName: Linh
     emotion: 0

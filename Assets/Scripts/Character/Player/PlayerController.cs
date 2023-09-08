@@ -104,6 +104,18 @@ public class PlayerController : CharacterController
         stress.ShowStressBar();
     }
 
+    public void DisableMoveAndUI()
+    {
+        HideUI();
+        DisableMove();
+    }
+
+    public void EnableMoveAndUI()
+    {
+        EnableMove();
+        ShowUI();
+    }
+
     Image currentItemButtonImage;
     public void SelectItem(Item item)
     {

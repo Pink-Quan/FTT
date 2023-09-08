@@ -9,7 +9,10 @@ public class MainMapDay2Texts : ScriptableObject
     public Dialogue HungFirstConversation;
     public Dialogue NganFirstConversation;
     public Dialogue NamFirstConversation;
+    [TextArea]
+    public string firstMission;
 
+    public Dialogue playerMonologueAboutFirstMisson;
     public Dialogue[] callPlayerBackToCar;
 
     public Dialogue[] confessTheTruth;

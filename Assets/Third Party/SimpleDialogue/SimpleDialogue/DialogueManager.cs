@@ -140,6 +140,9 @@ public class DialogueManager : MonoBehaviour
     {
         //submitInput.performed += ctx => DisplayNextSentance();
         //OnDoneDialogue += () => { submitInput.performed -= ctx => DisplayNextSentance(); };
+        if (dialogue.sentances.Length == 0)
+            Debug.LogWarning("Dialogue have no sentance, OnDoneDialogue will call immediately");
+
         this.OnDoneDialogue = OnDoneDialogue;
 
         SellectNextButton.gameObject.SetActive(true);
