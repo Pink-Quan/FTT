@@ -18,7 +18,7 @@ public class CharacterController : MonoBehaviour
 
 
     Vector3 lastPos;
-    public IEnumerator UpdateMove()
+    public IEnumerator StartUpdateMoveAnimation()
     {
         while (true)
         {
@@ -41,9 +41,9 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    public void StartUpdateMove()
+    public void UpdateMoveAnimation()
     {
-        StartCoroutine(UpdateMove());
+        StartCoroutine(StartUpdateMoveAnimation());
     }
 
     public void StopMove()
