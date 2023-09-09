@@ -92,10 +92,70 @@ MonoBehaviour:
     DisplayName: Minh
     emotion: 0
   - sentances:
-    - "Ch\xFAng ta \u0111\xE3 b\u1ECB ph\xE1 ho\u1EA1i "
-    - "Xe c\u1EE7a ch\xFAng ta \u0111\u1EC1u b\u1ECB h\u1ECFng do ai \u0111\xF3 c\u1ED1
-      \xFD ph\xE1, v\xE0 gi\u1EDD ch\xFAng ta \u0111\u1EC1u b\u1ECB k\u1EB9t \u1EDF
+    - "V\u1EADy ch\u1EAFc v\u1EABn ph\u1EA3i c\xF3 c\xE1ch n\xE0o \u0111\u1EC3 ra
+      kh\u1ECFi \u0111\xE2y ch\u1EE9 \u1EA1"
+    - "Nh\u01B0 g\u1ECDi ng\u01B0\u1EDDi th\xE2n ho\u1EB7c c\u1EE9u h\u1ED9 l\xEAn
       \u0111\xE2y"
     Name: Linh
     DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "M\u1ECDi ng\u01B0\u1EDDi c\u0169ng \u0111\xE3 ngh\u0129 \u0111\u1EBFn gi\u1EA3i
+      ph\xE1p \u0111\xF3, nh\u01B0ng \u0111i\u1EC1u \u0111\u1EA5y l\xE0 kh\xF4ng
+      th\u1EC3"
+    - "S\xF3ng \u0111i\u1EC7n tho\u1EA1i \u1EDF \u0111\xE2y r\u1EA5t y\u1EBFu, b\xECnh
+      th\u01B0\u1EDDng s\u1EBD c\xF3 tr\u1EA1m thu ph\xE1t s\xF3ng di \u0111\u1ED9ng
+      \u0111\u1EC3 duy tr\xEC li\xEAn l\u1EA1c"
+    - "Nh\u01B0ng n\xF3 c\u0169ng \u0111\xE3 b\u1ECB ph\xE1 ho\u1EA1i v\xE0 kh\xF4ng
+      th\u1EC3 s\u1EEDa ch\u1EEFa"
+    - "Gi\u1EA3i ph\xE1p duy nh\u1EA5t b\xE2y gi\u1EDD l\xE0 c\u1ED1 g\u1EAFng s\u1EEDa
+      xe, r\u1ED3i r\u1EDDi kh\u1ECFi \u0111\xE2y th\xF4ng b\xE1o cho c\u01A1 quan
+      ch\u1EE9c n\u0103ng"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+  - sentances:
+    - "Kh\xF4ng bi\u1EBFt m\u1ECDi ng\u01B0\u1EDDi ngh\u0129 sao, ch\u1EE9 em th\u1EA5y
+      chuy\u1EC7n n\xE0y c\u0169ng s\u1EBD ph\u1EE9c t\u1EA1p \u0111\u1EA5y"
+    - "K\u1EBB ph\xE1 ho\u1EA1i mu\u1ED1n ch\xFAng ta b\u1ECB c\xF4 l\u1EADp \u1EDF
+      \u0111\xE2y, ngh\u0129a l\xE0 h\u1EAFn s\u1EE3 ch\xFAng ta c\xF3 th\u1EC3 mang
+      m\u1ED9t c\xE1i g\xEC \u0111\xF3 ra b\xEAn ngo\xE0i"
+    - "Ho\u1EB7c s\u1EE3 ch\xFAng ta c\xF3 th\u1EC3 bi\u1EBFt m\u1ED9t th\xF4ng tin
+      n\xE0o \u0111\xF3 r\u1ED3i cho n\xF3 ra ngo\xE0i"
+    - "N\u1EBFu v\u1EADy th\xEC th\u1EF1c s\u1EF1 s\u1EBD li\xEAn quan nhi\u1EC1u
+      t\u1EDBi b\u1EA1n Linh \u0111\u1EA5y, v\xEC b\u1EA1n \u1EA5y \u0111ang b\u1ECB
+      m\u1EA5t tr\xED nh\u1EDB, vi\u1EC7c \u1EDF \u0111\xE2y c\xF3 th\u1EC3 khi\u1EBFn
+      b\u1EA1n \u1EA5y nh\u1EDB l\u1EA1i g\xEC \u0111\xF3"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+  - sentances:
+    - "N\u1EBFu v\u1EADy h\u1EAFn c\xF3 th\u1EC3 gi\u1EBFt ng\u01B0\u1EDDi b\u1ECBt
+      \u0111\u1EA7u m\u1ED1i m\xE0"
+    - "H\u1EAFn c\xF3 th\u1EC3 ph\xE1 ho\u1EA1i nh\u01B0 th\u1EBF n\xE0y ch\u1EE9ng
+      t\u1ECF h\u1EAFn t\u1EEBng \u0111\u1EBFn \u0111\xE2y v\xE0 kh\xE1 thu\u1ED9c
+      \u0111\u1ECBa h\xECnh \u1EDF \u0111\xE2y"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+  - sentances:
+    - "N\u1EBFu v\u1EADy h\u1EAFn c\xF3 th\u1EC3 gi\u1EBFt ng\u01B0\u1EDDi b\u1ECBt
+      \u0111\u1EA7u m\u1ED1i m\xE0"
+    - "H\u1EAFn c\xF3 th\u1EC3 ph\xE1 ho\u1EA1i nh\u01B0 th\u1EBF n\xE0y ch\u1EE9ng
+      t\u1ECF h\u1EAFn t\u1EEBng \u0111\u1EBFn \u0111\xE2y v\xE0 kh\xE1 thu\u1ED9c
+      \u0111\u1ECBa h\xECnh \u1EDF \u0111\xE2y"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+  - sentances:
+    - "C\xF3 th\u1EC3 h\u1EAFn kh\xF4ng d\xE1m l\xE0m v\u1EADy ho\u1EB7c c\xF3 th\u1EC3
+      h\u1EAFn ch\u01B0a t\xECm th\u1EDDi \u0111i\u1EC3m th\xEDch h\u1EE3p"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+  - sentances:
+    - ....................................................................
+    - "Anh ngh\u0129 gi\u1EDD c\xE1c em n\xEAn bi\u1EBFt s\u1EF1 th\u1EADt"
+    Name: Minh
+    DisplayName: Minh
     emotion: 0

@@ -44,6 +44,7 @@ public class CampingDay2 : MonoBehaviour
 
     private void ShowFirstMission()
     {
+        player.SetArrowPointer(firstMissionPoint);
         GameManager.instance.textBoard.ShowText(texts.firstMission, player.EnableMoveAndUI);
     }
 
@@ -82,16 +83,18 @@ public class CampingDay2 : MonoBehaviour
     private void MonologueAboutFirstMissionAndCallPlayerBack()
     {
         player.DisableMoveAndUI();
+        player.OffArrowPointer();
+        player.anim.SetMove(false);
 
         Mai.gameObject.SetActive(true);
         Mai.transform.position = player.transform.position + new Vector3(1, -1) * 10;
-        Mai.StartUpdateMove();
 
         GameManager.instance.dialogueManager.StartDialogue(texts.playerMonologueAboutFirstMisson, MaiApproachPlayer);
 
         void MaiApproachPlayer()
         {
-            Mai.transform.DOMove(player.transform.position + Vector3.right, 2).OnComplete(MaiCallPlayerToMovoToCarPark);
+            Mai.UpdateMoveAnimation();
+            Mai.transform.DOMove(player.transform.position + Vector3.right, 5).OnComplete(MaiCallPlayerToMovoToCarPark);
         }
 
         void MaiCallPlayerToMovoToCarPark()
@@ -99,11 +102,18 @@ public class CampingDay2 : MonoBehaviour
             player.anim.SetDirection(Vector2.right);
             Mai.StopMove();
             Mai.anim.SetDirection(Vector2.left);
-            GameManager.instance.dialogueManager.StartDialogue(texts.callPlayerBackToCar, InitToCarPark);
+            GameManager.instance.dialogueManager.StartDialogue(texts.callPlayerBackToCar, MaiMoveOut);
+        }
+
+        void MaiMoveOut()
+        {
+            Mai.UpdateMoveAnimation();
+            Mai.transform.DOMove(player.transform.position + new Vector3(1, -1) * 10, 5).OnComplete(InitToCarPark);
         }
 
         void InitToCarPark()
         {
+            Mai.gameObject.SetActive(false);
             player.EnableMoveAndUI();
             player.SetArrowPointer(carParkMissionPoint);
             StartCoroutine(CheckMoveToCarParkMission());
@@ -112,7 +122,7 @@ public class CampingDay2 : MonoBehaviour
 
     private IEnumerator CheckMoveToCarParkMission()
     {
-        while(true)
+        while (true)
         {
             if (((Vector2)carParkMissionPoint.position - (Vector2)player.transform.position).sqrMagnitude < 2f)
             {
@@ -126,16 +136,30 @@ public class CampingDay2 : MonoBehaviour
     private void ConfessToPlayer()
     {
         player.DisableMoveAndUI();
-        GameManager.instance.transitions.Transition(1, 1,StartDialogueConfess,MoveCharaceterToCarPark);
+        GameManager.instance.transitions.Transition(1, 1, StartDialogueConfess, MoveCharaceterToCarPark);
 
         void MoveCharaceterToCarPark()
         {
+            Mai.gameObject.SetActive(true);
 
+            Vector3 playerPos = player.transform.position;
+            Nam.transform.position = playerPos + Vector3.right;
+            Hung.transform.position = playerPos + Vector3.down + Vector3.left;
+            Mai.transform.position = playerPos + Vector3.down + Vector3.right * 2;
+            Ngan.transform.position = playerPos + Vector3.down * 2;
+            Minh.transform.position = playerPos + Vector3.down * 2 + Vector3.left;
+
+            player.anim.SetDirection(Vector2.down);
+            Nam.anim.SetDirection(Vector2.down);
+            Mai.anim.SetDirection(Vector2.left);
+            Hung.anim.SetDirection(Vector2.right);
+            Ngan.anim.SetDirection(Vector2.up);
+            Minh.anim.SetDirection(Vector2.up);
         }
 
         void StartDialogueConfess()
         {
-
+            GameManager.instance.dialogueManager.StartDialogue(texts.confessTheTruth, StartMission3);
         }
     }
 
@@ -143,5 +167,10 @@ public class CampingDay2 : MonoBehaviour
     {
         character.transform.position = pos;
         character.anim.SetDirection(dir);
+    }
+
+    private void StartMission3()
+    {
+        Debug.Log("Start Misssion 3");
     }
 }

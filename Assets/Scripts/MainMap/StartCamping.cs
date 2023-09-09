@@ -92,7 +92,7 @@ public class StartCamping : MonoBehaviour
 
     private void CharacterLeaveToFirstMission(CharacterController character, VectorPaths path, Vector3 point, Transform parent = null, Vector2 dir = new Vector2())
     {
-        character.StartUpdateMove();
+        character.UpdateMoveAnimation();
         character.transform.DOPath(path.paths, 5).OnComplete(() =>
         {
             character.StopMove();

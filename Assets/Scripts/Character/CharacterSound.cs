@@ -12,4 +12,6 @@ public class CharacterSound : MonoBehaviour
     {
         audioSource.PlayOneShot(footstep);
     }
+
+    public AudioSource AudioSource { get { return audioSource; } }
 }

@@ -45,6 +45,7 @@ public class PlayerController : CharacterController
 
     public void DisableMove()
     {
+        anim.SetMove(false);
         playerMovement.enabled = false;
         joystick.SetActive(false);
     }
