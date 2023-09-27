@@ -113,8 +113,8 @@ public class CampingDay2 : MonoBehaviour
 
         void InitToCarPark()
         {
+            GameManager.instance.missionsManager.AddAndShowMission(texts.backToCarParkMisson, player.EnableMoveAndUI);
             Mai.gameObject.SetActive(false);
-            player.EnableMoveAndUI();
             player.SetArrowPointer(carParkMissionPoint);
             StartCoroutine(CheckMoveToCarParkMission());
         }
@@ -136,6 +136,7 @@ public class CampingDay2 : MonoBehaviour
     private void ConfessToPlayer()
     {
         player.DisableMoveAndUI();
+        GameManager.instance.missionsManager.RemoveMission(texts.backToCarParkMisson);
         GameManager.instance.transitions.Transition(1, 1, StartDialogueConfess, MoveCharaceterToCarPark);
 
         void MoveCharaceterToCarPark()
@@ -172,5 +173,6 @@ public class CampingDay2 : MonoBehaviour
     private void StartMission3()
     {
         Debug.Log("Start Misssion 3");
+        GameManager.instance.transitions.Transition(1, 1, null, player.EnableMoveAndUI);
     }
 }

@@ -77,6 +77,7 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
+  backToCarParkMisson: 
   confessTheTruth:
   - sentances:
     - "C\xF3 chuy\u1EC7n g\xEC v\u1EADy \u1EA1"
@@ -211,7 +212,23 @@ MonoBehaviour:
     - "T\u1EADp t\xE0i li\u1EC7u \u0111\xE3 b\u1ECB c\xF4ng an thu gi\u1EEF \u0111\u1EC3
       \u0111i\u1EC1u tra, nh\u01B0ng anh v\u1EABn nh\u1EDB \u0111\u01B0\u1EE3c trong
       \u0111\u1EA5y vi\u1EBFt g\xEC"
-    - "T\xE0i li\u1EC7u \u0111\xF3 \u0111\xE2y"
+    - "C\xF3 g\xEC t\xFD n\u1EEFa anh s\u1EBD cho m\u1ECDi ng\u01B0\u1EDDi xem t\xE0i
+      li\u1EC7u \u1EDF trong nh\xE0 \u0111\u1EC3 ph\xE2n t\xEDch"
+    - "Gi\u1EDD anh c\u1EA7n ra ch\u1ED7 v\u01B0\u1EDDn c\xE2y \u0111\u1EC3 ki\u1EC3m
+      tra xem nh\u1EEFng c\xE1i \u0111inh tr\u01B0\u1EDBc \u0111\u01B0\u1EE3c \u0111\xF3ng
+      tr\xEAn c\xE2y nh\u01B0 th\u1EBF n\xE0o, anh tr\u01B0\u1EDBc ch\u1EC9 \u0111\u1EC3
+      \xFD th\xF4i nh\u01B0ng kh\xF4ng ghi l\u1EA1i g\xEC c\u1EA3"
     Name: Minh
     DisplayName: Minh
+    emotion: 0
+  - sentances:
+    - "\u0110\u1EC3 em \u0111i cho, anh h\xE3y c\u1ED1 g\u1EAFng s\u1EEDa xe \u0111i"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+  - sentances:
+    - "Cho em \u0111i v\u1EDBi, bi\u1EBFt \u0111\xE2u em c\xF3 nh\u1EDB \u0111\u01B0\u1EE3c
+      g\xEC \u0111\xF3"
+    Name: Linh
+    DisplayName: Linh
     emotion: 0

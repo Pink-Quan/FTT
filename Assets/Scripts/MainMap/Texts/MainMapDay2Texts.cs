@@ -14,6 +14,7 @@ public class MainMapDay2Texts : ScriptableObject
 
     public Dialogue playerMonologueAboutFirstMisson;
     public Dialogue[] callPlayerBackToCar;
+    public string backToCarParkMisson;
 
     public Dialogue[] confessTheTruth;
 

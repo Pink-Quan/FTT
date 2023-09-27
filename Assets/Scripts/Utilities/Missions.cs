@@ -36,4 +36,15 @@ public class Missions : MonoBehaviour
         if (text.Length > 0)
             GameManager.instance.textBoard.ShowText(text.ToString(),onOK);
     }
+
+    public void AddAndShowMission(string mission,UnityAction onOk = null)
+    {
+        missions.Add(mission);
+        ShowMissions(onOk);
+    }
+
+    public void RemoveMission(string mission)
+    {
+        missions.Remove(mission);
+    }
 }
