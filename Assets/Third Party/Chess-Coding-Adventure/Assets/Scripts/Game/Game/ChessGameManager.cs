@@ -16,6 +16,7 @@ namespace Chess.Game
         public event System.Action onPositionLoaded;
         public event System.Action<Move> onMoveMade;
         public UnityEvent<string> onMovePiece;
+        public UnityEvent<GameResult.Result> onEndGame;
 
         public enum PlayerType { Human, AI }
 
@@ -198,13 +199,6 @@ namespace Chess.Game
             NewGame((humanPlaysWhite) ? PlayerType.Human : PlayerType.AI, (humanPlaysWhite) ? PlayerType.AI : PlayerType.Human);
         }
 
-        [ContextMenu("New Game")]
-        public void NewComputerVersusComputerGame()
-        {
-            boardUI.SetPerspective(true);
-            NewGame(PlayerType.AI, PlayerType.AI);
-        }
-
         void NewGame(PlayerType whitePlayerType, PlayerType blackPlayerType)
         {
             if (loadCustomPosition)
@@ -282,6 +276,7 @@ namespace Chess.Game
             Debug.Log("Game Over " + gameResult);
             PrintGameResult(gameResult);
             clockManager.StopClocks();
+            onEndGame?.Invoke(gameResult);
         }
 
         void PrintGameResult(GameResult.Result result)
