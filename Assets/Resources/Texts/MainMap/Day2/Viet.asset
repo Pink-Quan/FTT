@@ -77,7 +77,8 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
-  backToCarParkMisson: 
+  backToCarParkMisson: "Ra ch\u1ED7 \u0111\u1ED7 xe g\u1EB7p m\u1ECDi ng\u01B0\u1EDDi
+    \u0111ang t\u1EADp trung \u1EDF \u0111\u1EA5y"
   confessTheTruth:
   - sentances:
     - "C\xF3 chuy\u1EC7n g\xEC v\u1EADy \u1EA1"
@@ -231,4 +232,22 @@ MonoBehaviour:
       g\xEC \u0111\xF3"
     Name: Linh
     DisplayName: Linh
+    emotion: 0
+  MinhGuidePlayerToDoMission3:
+    sentances: []
+    Name: 
+    DisplayName: 
+    emotion: 0
+  mission3Description: "H\xE3y ki\u1EC3m tra xem nh\u1EEFng c\xE1i c\xE2y \u0111\u01B0\u1EE3c
+    \u0111\xF3ng bao nhi\xEAu c\xE1i \u0111inh"
+  playerMonodialogueCantTakeNail:
+    sentances:
+    - 
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  talkToMinhAboutNailInTree:
+    sentances: []
+    Name: 
+    DisplayName: 
     emotion: 0

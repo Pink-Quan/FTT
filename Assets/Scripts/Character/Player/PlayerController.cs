@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using System;
+using System.Diagnostics.Tracing;
 
 public class PlayerController : CharacterController
 {
@@ -34,6 +35,8 @@ public class PlayerController : CharacterController
     {
         base.Start();
         canvas.worldCamera = Camera.main;
+        if (SystemInfo.deviceType == DeviceType.Handheld) joystick.SetActive(true);
+        else joystick.SetActive(false);
     }
 
     public void EnableMove()

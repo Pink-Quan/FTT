@@ -315,6 +315,7 @@ public class StartCamping : MonoBehaviour
 
     private void ChangeToDay2()
     {
+        startCampingInteractableEntities.SetActive(false);
         PlayerPrefs.SetInt("Progress", (int)GameProgress.CampingDay2);
         GameManager.instance.transitions.Transition(1, 1, null, mainMapManager.InitCampingDay2);
     }

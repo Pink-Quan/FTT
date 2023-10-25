@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
     public List<Slot> slots;
     [SerializeField] private InventoryItem inventoryPrefab;
 
-    [HideInInspector] public InventoryItemData InventoryData;
+    [HideInInspector] public InventoryData InventoryData;
     [HideInInspector] public InventoryItem[] InventoryItemsArray;
 
     [HideInInspector] public InventoryItem draggedItem;
@@ -40,44 +40,18 @@ public class Inventory : MonoBehaviour
         throwZone.inventory = this;
 
         InventoryItemsArray = new InventoryItem[slots.Count];
-        InventoryData = new InventoryItemData(slots.Count);
+        InventoryData = new InventoryData(slots.Count);
 
     }
 
-    //void Start()
-    //{
-    //    for (int i = 0; i < 4; i++)
-    //    {
-    //        Item book = new Item(ItemType.NormalItem, "book");
-    //        book = itemConfig.GetBookItemConfig("book");
-    //        book.amount = 5;
-    //        AddItemToInventory(book);
+    void Start()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, this);
+        }
 
-    //        Item gun = new Item(ItemType.Gun, "gun");
-    //        gun = itemConfig.GetItemConfig(gun);
-    //        AddItemToInventory(gun);
-
-    //        Item food = new Item(ItemType.Food, "food");
-    //        itemConfig.GetItemConfig(ref food);
-    //        food.amount = 3;
-    //        AddItemToInventory(food);
-
-    //        Item sword = new Item(ItemType.Sword, "sword");
-    //        itemConfig.GetItemConfig(ref sword);
-    //        AddItemToInventory(sword);
-
-    //        Item mana = new Item(ItemType.ManaFlask, "mana");
-    //        itemConfig.GetItemConfig(ref mana);
-    //        mana.amount = 3;
-    //        AddItemToInventory(mana);
-
-    //        Item hp = new Item(ItemType.LifeFlask, "hp");
-    //        hp = itemConfig.GetItemConfig(hp);
-    //        hp.amount = 3;
-    //        AddItemToInventory(hp);
-    //    }
-
-    //}
+    }
     /// <summary>
     /// Add a item to a slot, if success, return true, else return false 
     /// </summary>
@@ -197,7 +171,7 @@ public class Inventory : MonoBehaviour
 
         SetNullDraggedItem();
 
-        InventoryData = new InventoryItemData(slots.Count);
+        InventoryData = new InventoryData(slots.Count);
     }
     public void CleanInventory()
     {
@@ -463,6 +437,13 @@ public class Inventory : MonoBehaviour
         OnSelectItem?.Invoke(InventoryData.Data[slotId]);
     }
 
+    public bool IsContain(string itemName)
+    {
+        foreach(var item in InventoryData.Data)
+            if(string.Compare(itemName,item.itemName) == 0) return true;
+        return false;
+    }
+
     #region Data
     private void SaveData(string data, string fileName)
     {
@@ -492,7 +473,7 @@ public class Inventory : MonoBehaviour
         {
             ClearInventory();
 
-            InventoryItemData tempInventoryItemsListData = JsonUtility.FromJson<InventoryItemData>(data);
+            InventoryData tempInventoryItemsListData = JsonUtility.FromJson<InventoryData>(data);
 
             foreach (var item in tempInventoryItemsListData.Data)
             {
@@ -503,7 +484,7 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            InventoryData = new InventoryItemData(slots.Count);
+            InventoryData = new InventoryData(slots.Count);
         }
     }
     #endregion Data
@@ -512,11 +493,11 @@ public class Inventory : MonoBehaviour
 
 
 [Serializable]
-public struct InventoryItemData
+public struct InventoryData
 {
     public Item[] Data;
 
-    public InventoryItemData(int length)
+    public InventoryData(int length)
     {
         Data = new Item[length];
     }
