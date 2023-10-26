@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CampingDay2 : MonoBehaviour
 {
-    [SerializeField] GameObject gameobjects;
+    [SerializeField] GameObject gameObjects;
 
     [SerializeField] Vector3 HungStartPos;
     [SerializeField] Vector3 MaiStartPos;
@@ -31,7 +31,7 @@ public class CampingDay2 : MonoBehaviour
     private MainMapDay2Texts texts;
     public void Init(MainMapManager mainMapManager)
     {
-        gameobjects.SetActive(true);
+        gameObjects.SetActive(true);
 
         texts = Resources.Load<MainMapDay2Texts>($"Texts/MainMap/Day2/{PlayerPrefs.GetString("Language", "Eng")}");
 
@@ -183,14 +183,14 @@ public class CampingDay2 : MonoBehaviour
     {
         Debug.Log("Start Misssion 3");
 
-        GameManager.instance.transitions.Transition(1, 1, SetCharacterPosition, MinhGuidePlayerToDoMission3);
+        GameManager.instance.transitions.Transition(1, 1, MinhGuidePlayerToDoMission3, SetCharacterPosition);
         if (!player.inventory.IsContain("Magnet"))
             InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, player.inventory);
 
         void SetCharacterPosition()
         {
             SetCharacterPos(player, playerMission3AppearPos, Vector2.right);
-            SetCharacterPos(Minh, playerMission3AppearPos + new Vector3(0.7f, 0), Vector2.left);
+            SetCharacterPos(Minh, playerMission3AppearPos + new Vector3(1.5f, 0), Vector2.left);
         }
 
         void MinhGuidePlayerToDoMission3()
@@ -219,6 +219,7 @@ public class CampingDay2 : MonoBehaviour
         {
             player.DisableMoveAndUI();
             GameManager.instance.dialogueManager.StartDialogue(texts.talkToMinhAboutNailInTree, player.EnableMoveAndUI);
+            firtRealizeCantTakeNail = true;
             return;
         }
 
@@ -232,6 +233,7 @@ public class CampingDay2 : MonoBehaviour
                 Minh.interact.onInteract.RemoveAllListeners();
                 Minh.interact.onInteract.AddListener(_=>AnouchMinhDoneMission3());
             }
+            entity.gameObject.SetActive(false);
         }
         else
         {
@@ -243,6 +245,7 @@ public class CampingDay2 : MonoBehaviour
     private void AnouchMinhDoneMission3()
     {
         player.DisableMoveAndUI();
+        Minh.anim.SetDirection((Vector2)(player.transform.position - Minh.transform.position));
         GameManager.instance.dialogueManager.StartDialogue(texts.anouchMinhDoneMission3, () =>
         {
             GameManager.instance.transitions.Transition(1, 1, FinalDiscussion, () =>
