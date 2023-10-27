@@ -17,3 +17,5 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 520dee6f60816db448924f30114170f1, type: 3}
   - name: Dialogue
     sound: {fileID: 8300000, guid: d5f34e347e13e464981ce1254a737510, type: 3}
+  - name: Get Item
+    sound: {fileID: 8300000, guid: c12b8564e4008be4b89aef84fadc4e78, type: 3}

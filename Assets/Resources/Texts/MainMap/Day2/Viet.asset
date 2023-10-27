@@ -233,21 +233,21 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
-  MinhGuidePlayerToDoMission3:
+  NganGuidePlayerToDoMission3:
     sentances:
-    - "Tr\xEAn nh\u1EEFng g\xEC anh ghi \u0111\u01B0\u1EE3c tr\xEAn gi\u1EA5y \u0111ang
-      b\u1ECB thi\u1EBFu, v\xE0 m\u1ED9t ph\u1EA7n \u0111\xE3 b\u1ECB m\u1EA5t do
-      \u0111\u1EC3 qu\xE1 l\xE2u"
+    - "Tr\xEAn nh\u1EEFng g\xEC ch\u1ECB ghi \u0111\u01B0\u1EE3c tr\xEAn gi\u1EA5y
+      \u0111ang b\u1ECB thi\u1EBFu, v\xE0 m\u1ED9t ph\u1EA7n \u0111\xE3 b\u1ECB m\u1EA5t
+      do \u0111\u1EC3 qu\xE1 l\xE2u"
     - "Em h\xE3y \u0111i ki\u1EC3m tra nh\u1EEFng c\xE1i c\xE2y n\xE0y nh\xE9, anh
       s\u1EBD ki\u1EC3m tra nh\u1EEFng c\xE1i c\xF2n l\u1EA1i"
-    Name: Minh
-    DisplayName: Minh
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
     emotion: 0
   mission3Description: "H\xE3y ki\u1EC3m tra xem nh\u1EEFng c\xE1i c\xE2y \u0111\u01B0\u1EE3c
     \u0111\xF3ng bao nhi\xEAu c\xE1i \u0111inh"
-  talkToMinhAboutNailInTree:
+  talkToNganAboutNailInTree:
   - sentances:
-    - "Kh\xF4ng \u1ED5n r\u1ED3i anh Minh \u01A1i"
+    - "Kh\xF4ng \u1ED5n r\u1ED3i ch\u1ECB \u01A1i"
     - "Em \u0111\u1EC3 \xFD th\u1EA5y c\xF3 m\u1EA5y c\xE1i c\xE2y c\xE1i \u0111inh
       b\u1ECB th\u1EE5t v\xE0o, l\xFAc ki\u1EC3m tra s\u1EBD r\u1EA5t kh\xF3 ph\xE1t
       hi\u1EC7n ra"
@@ -259,8 +259,8 @@ MonoBehaviour:
   - sentances:
     - ........
     - "Em th\u1EED ngh\u0129 xem c\xF3 gi\u1EA3i ph\xE1p n\xE0o kh\xF4ng"
-    Name: Minh
-    DisplayName: Minh
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
     emotion: 0
   playerMonodialogueCantTakeNail:
     sentances:
@@ -269,16 +269,16 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
-  anouchMinhDoneMission3:
+  anouchNganDoneMission3:
   - sentances:
-    - "Em xong r\u1ED3i, anh ki\u1EC3m tra xong n\u1ED1t m\u1EA5y c\xE1i c\xE2y c\xF2n
-      l\u1EA1i ch\u01B0a \u1EA1"
+    - "Em xong r\u1ED3i, ch\u1ECB ki\u1EC3m tra xong n\u1ED1t m\u1EA5y c\xE1i c\xE2y
+      c\xF2n l\u1EA1i ch\u01B0a \u1EA1"
     Name: Linh
     DisplayName: Linh
     emotion: 0
   - sentances:
-    - "Anh c\u0169ng xong r\u1ED3i, m\xECnh quay l\u1EA1i th\xF4i"
-    Name: Minh
-    DisplayName: Minh
+    - "Ch\u1ECB c\u0169ng xong r\u1ED3i, m\xECnh quay l\u1EA1i th\xF4i"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
     emotion: 0
   endDay2Dialogue: []

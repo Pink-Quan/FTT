@@ -76,6 +76,7 @@ public class MainMapManager : MonoBehaviour
     {
         effs[index].transform.position = pos;
         effs[index].Play();
+        GameManager.instance.soundManager.PlayCommondSound("Get Item");
     }
 
     public void DisablePlayerMoveAndUI()

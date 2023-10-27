@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public PauseMenu pauseMenu;
     public SoundManager soundManager;
     public Missions missionsManager;
+    public ShowImage showImage;
 
     private void OnDestroy()
     {

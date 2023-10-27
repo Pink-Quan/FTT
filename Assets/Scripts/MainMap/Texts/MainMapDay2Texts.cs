@@ -17,13 +17,13 @@ public class MainMapDay2Texts : ScriptableObject
     public string backToCarParkMisson;
 
     public Dialogue[] confessTheTruth;
-    public Dialogue MinhGuidePlayerToDoMission3;
+    public Dialogue NganGuidePlayerToDoMission3;
     [TextArea]
     public string mission3Description;
 
-    public Dialogue[] talkToMinhAboutNailInTree;
+    public Dialogue[] talkToNganAboutNailInTree;
     public Dialogue playerMonodialogueCantTakeNail;
 
-    public Dialogue[] anouchMinhDoneMission3;
+    public Dialogue[] anouchNganDoneMission3;
     public Dialogue[] endDay2Dialogue;
 }

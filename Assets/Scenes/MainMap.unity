@@ -942,7 +942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239620019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93.09, y: -28.4, z: 0}
+  m_LocalPosition: {x: 108.85, y: -58.91, z: 0.09361742}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1116,7 +1116,19 @@ MonoBehaviour:
   isGizmos: 1
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048348879}
+        m_TargetAssemblyTypeName: CampingDay2, Assembly-CSharp
+        m_MethodName: GetNailInTheTree
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
       m_Calls: []
@@ -1421,6 +1433,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &413405343
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6973515740810716374, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_Name
+      value: Chess
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716374, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716376, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716377, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: virtualCamera
+      value: 
+      objectReference: {fileID: 911668979}
+    m_RemovedComponents:
+    - {fileID: 6973515739267470066, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
 --- !u!4 &430918666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6805930435765034831, guid: ae6706d89177cd644b20db648356626d, type: 3}
@@ -1478,7 +1556,19 @@ MonoBehaviour:
   isGizmos: 1
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048348879}
+        m_TargetAssemblyTypeName: CampingDay2, Assembly-CSharp
+        m_MethodName: GetNailInTheTree
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
       m_Calls: []
@@ -1610,7 +1700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.2, y: -47.64, z: -10}
+  m_LocalPosition: {x: 91.2, y: -85, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2066,7 +2156,19 @@ MonoBehaviour:
   isGizmos: 1
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048348879}
+        m_TargetAssemblyTypeName: CampingDay2, Assembly-CSharp
+        m_MethodName: GetNailInTheTree
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
       m_Calls: []
@@ -2955,7 +3057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911668978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.2, y: -47.64, z: -10}
+  m_LocalPosition: {x: 91.2, y: -85, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3015,7 +3117,19 @@ MonoBehaviour:
   isGizmos: 1
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048348879}
+        m_TargetAssemblyTypeName: CampingDay2, Assembly-CSharp
+        m_MethodName: GetNailInTheTree
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
       m_Calls: []
@@ -3490,6 +3604,16 @@ MonoBehaviour:
   carParkMissionPoint: {fileID: 533490280}
   playerMission3AppearPos: {x: 93.09, y: -28.4, z: 0}
   mission3ObjectsParent: {fileID: 1541385550}
+  finalDisscusPos: {x: 108.85, y: -58, z: 0}
+  mainMap: {fileID: 609828070}
+  firstFlooor: {fileID: 1861767345}
+  interactTrees:
+  - {fileID: 359223413}
+  - {fileID: 1258336009}
+  - {fileID: 617916233}
+  - {fileID: 504507434}
+  - {fileID: 2111267342}
+  - {fileID: 916396992}
 --- !u!1 &1048568171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2186774567370573801, guid: 38da504cc3fe6424c90ae5ff51f836d6, type: 3}
@@ -3992,7 +4116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3863889215069790939, guid: 53bea09f882c3c7429c0e0d3a403d112, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3863889215069790939, guid: 53bea09f882c3c7429c0e0d3a403d112, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4938,7 +5062,19 @@ MonoBehaviour:
   isGizmos: 1
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048348879}
+        m_TargetAssemblyTypeName: CampingDay2, Assembly-CSharp
+        m_MethodName: GetNailInTheTree
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
       m_Calls: []
@@ -6104,11 +6240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7722120311181376726, guid: 0371e264ca39bce45b92681d31dca9dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 111.93
+      value: 112.980034
       objectReference: {fileID: 0}
     - target: {fileID: 7722120311181376726, guid: 0371e264ca39bce45b92681d31dca9dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -46.38
+      value: -46.309998
       objectReference: {fileID: 0}
     - target: {fileID: 7722120311181376726, guid: 0371e264ca39bce45b92681d31dca9dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6565,7 +6701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1869659566}
   - component: {fileID: 1869659565}
-  - component: {fileID: 1869659564}
+  - component: {fileID: 1869659567}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -6573,26 +6709,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1869659564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869659563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1869659565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6621,8 +6737,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1869659567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869659563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &1872007512
 GameObject:
   m_ObjectHideFlags: 0
@@ -7258,7 +7404,19 @@ MonoBehaviour:
   isGizmos: 1
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048348879}
+        m_TargetAssemblyTypeName: CampingDay2, Assembly-CSharp
+        m_MethodName: GetNailInTheTree
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
       m_Calls: []
@@ -7297,7 +7455,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2124904092 stripped
 MonoBehaviour:
@@ -7435,7 +7593,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 142601047042977582, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 15.92511
+      value: 15.925049
       objectReference: {fileID: 0}
     - target: {fileID: 411612138091252134, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -7483,7 +7641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394562402793141417, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -50.999985
+      value: -51
       objectReference: {fileID: 0}
     - target: {fileID: 2623586233373398907, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -7535,15 +7693,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859350735202429579, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 15.92511
+      value: 15.925049
       objectReference: {fileID: 0}
     - target: {fileID: 5959290034021795702, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 15.92511
+      value: 15.925049
       objectReference: {fileID: 0}
     - target: {fileID: 5979817427143864672, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 41.92511
+      value: 41.92505
       objectReference: {fileID: 0}
     - target: {fileID: 6042350166828884015, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7771,11 +7929,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6095654078185201152, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 15.92511
+      value: 15.925049
       objectReference: {fileID: 0}
     - target: {fileID: 6252765574283090925, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 41.92511
+      value: 41.92505
       objectReference: {fileID: 0}
     - target: {fileID: 6487647943652029404, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -7787,7 +7945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7064235450612829750, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 41.92511
+      value: 41.92505
       objectReference: {fileID: 0}
     - target: {fileID: 7097875168110513528, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: playerSpeed
@@ -7799,15 +7957,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7097875168110513531, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7097875168110513531, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 111.2
+      value: 91.2
       objectReference: {fileID: 0}
     - target: {fileID: 7097875168110513531, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -48.64
+      value: -86
       objectReference: {fileID: 0}
     - target: {fileID: 7097875168110513531, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7855,7 +8013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7758504999762609667, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 41.92511
+      value: 41.92505
       objectReference: {fileID: 0}
     - target: {fileID: 8120759315902154306, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.y

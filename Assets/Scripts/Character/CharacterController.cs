@@ -56,7 +56,7 @@ public class CharacterController : MonoBehaviour
     {
         anim.Die();
     }
-    public void AddConversationToCharacter(Dialogue dialogue, Action onDone = null)
+    public void AddConversationToCharacter(Dialogue dialogue, Action onDone = null, Action onInteract = null)
     {
         interact.canInteract = true;
         interact.onInteract.RemoveAllListeners();
@@ -82,7 +82,7 @@ public class CharacterController : MonoBehaviour
         interact.onInteract.RemoveAllListeners();
     }
 
-    public void AddConversationToCharacter(Dialogue[] dialogue, Action onDone = null)
+    public void AddConversationToCharacter(Dialogue[] dialogue, Action onDone = null, Action onInteract = null)
     {
         interact.canInteract = true;
         interact.onInteract.RemoveAllListeners();
@@ -92,6 +92,7 @@ public class CharacterController : MonoBehaviour
         {
             GameManager.instance.DisablePlayerMoveAndUI();
             GameManager.instance.dialogueManager.StartDialogue(dialogue, DoneTalkWithCharacter);
+            onInteract?.Invoke();
 
             void DoneTalkWithCharacter()
             {
@@ -100,5 +101,11 @@ public class CharacterController : MonoBehaviour
                 onDone?.Invoke();
             }
         }
+    }
+
+    public void SetPositon(Vector3 pos,Vector2 dir)
+    {
+        transform.position = pos;
+        anim.SetDirection(dir);
     }
 }

@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CampingDay2 : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class CampingDay2 : MonoBehaviour
     [SerializeField] Vector3 playerMission3AppearPos;
     [SerializeField] GameObject mission3ObjectsParent;
 
+    [SerializeField] Vector3 finalDisscusPos;
+    [SerializeField] GameObject mainMap;
+    [SerializeField] GameObject firstFlooor;
+
     private CharacterController Minh;
     private CharacterController Nam;
     private CharacterController Hung;
@@ -29,6 +34,9 @@ public class CampingDay2 : MonoBehaviour
 
     private MainMapManager mainMapManager;
     private MainMapDay2Texts texts;
+
+    [SerializeField] private List<InteractableEntity> interactTrees;
+
     public void Init(MainMapManager mainMapManager)
     {
         gameObjects.SetActive(true);
@@ -45,8 +53,9 @@ public class CampingDay2 : MonoBehaviour
         player = mainMapManager.player;
 
         player.DisableMoveAndUI();
-        Invoke(nameof(ShowFirstMission), 1);
-        SetStartDay2Character();
+        //Invoke(nameof(ShowFirstMission), 1);
+        //SetStartDay2Character();
+        AnouchMinhDoneMission3();
     }
 
     private void ShowFirstMission()
@@ -183,19 +192,19 @@ public class CampingDay2 : MonoBehaviour
     {
         Debug.Log("Start Misssion 3");
 
-        GameManager.instance.transitions.Transition(1, 1, MinhGuidePlayerToDoMission3, SetCharacterPosition);
+        GameManager.instance.transitions.Transition(1, 1, NganGuidePlayerToDoMission3, SetCharacterPosition);
         if (!player.inventory.IsContain("Magnet"))
             InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, player.inventory);
 
         void SetCharacterPosition()
         {
             SetCharacterPos(player, playerMission3AppearPos, Vector2.right);
-            SetCharacterPos(Minh, playerMission3AppearPos + new Vector3(1.5f, 0), Vector2.left);
+            SetCharacterPos(Ngan, playerMission3AppearPos + new Vector3(1.5f, 0), Vector2.left);
         }
 
-        void MinhGuidePlayerToDoMission3()
+        void NganGuidePlayerToDoMission3()
         {
-            GameManager.instance.dialogueManager.StartDialogue(texts.MinhGuidePlayerToDoMission3, StartMission3);
+            GameManager.instance.dialogueManager.StartDialogue(texts.NganGuidePlayerToDoMission3, StartMission3);
         }
     }
 
@@ -203,10 +212,10 @@ public class CampingDay2 : MonoBehaviour
     {
         mission3ObjectsParent.SetActive(true);
         GameManager.instance.missionsManager.AddAndShowMission(texts.mission3Description, player.EnableMoveAndUI);
+        player.SetArrowPointer(GetNearestInteractableEntity(interactTrees, player.transform).transform);
     }
 
     bool firtRealizeCantTakeNail;
-    int nail = 6;
     public void GetNailInTheTree(InteractableEntity entity)
     {
         bool isHoldMagnet = false;
@@ -218,22 +227,31 @@ public class CampingDay2 : MonoBehaviour
         if (!firtRealizeCantTakeNail && !isHoldMagnet)
         {
             player.DisableMoveAndUI();
-            GameManager.instance.dialogueManager.StartDialogue(texts.talkToMinhAboutNailInTree, player.EnableMoveAndUI);
+            GameManager.instance.dialogueManager.StartDialogue(texts.talkToNganAboutNailInTree, player.EnableMoveAndUI);
             firtRealizeCantTakeNail = true;
             return;
         }
 
         if (isHoldMagnet)
         {
+            interactTrees.Remove(entity);
             mainMapManager.PlayParticalEffect(0, entity.transform.position);
-            nail--;
-            if (nail == 0)
-            {
-                player.SetArrowPointer(Minh.transform);
-                Minh.interact.onInteract.RemoveAllListeners();
-                Minh.interact.onInteract.AddListener(_=>AnouchMinhDoneMission3());
-            }
             entity.gameObject.SetActive(false);
+            if (interactTrees.Count == 0)
+            {
+                mission3ObjectsParent.SetActive(false);
+                player.SetArrowPointer(Ngan.transform);
+                Ngan.AddConversationToCharacter(texts.anouchNganDoneMission3, AnouchMinhDoneMission3, HeadToPlayer);
+
+                void HeadToPlayer()
+                {
+                    Ngan.anim.SetDirection((Vector2)(player.transform.position - Ngan.transform.position));
+                }
+            }
+            else
+            {
+                player.SetArrowPointer(GetNearestInteractableEntity(interactTrees, player.transform).transform);
+            }
         }
         else
         {
@@ -242,35 +260,54 @@ public class CampingDay2 : MonoBehaviour
         }
     }
 
+    public InteractableEntity GetNearestInteractableEntity(List<InteractableEntity> interactables, Transform target)
+    {
+        InteractableEntity res = null;
+        float minDix = float.MaxValue;
+        foreach (var interactable in interactables)
+        {
+            var vec = target.position - interactable.transform.position;
+            vec.z = 0;
+            var dis = vec.sqrMagnitude;
+            if (dis < minDix)
+            {
+                res = interactable;
+                minDix = dis;
+            }
+        }
+        return res;
+    }
+
     private void AnouchMinhDoneMission3()
     {
         player.DisableMoveAndUI();
-        Minh.anim.SetDirection((Vector2)(player.transform.position - Minh.transform.position));
-        GameManager.instance.dialogueManager.StartDialogue(texts.anouchMinhDoneMission3, () =>
-        {
-            GameManager.instance.transitions.Transition(1, 1, FinalDiscussion, () =>
-            {
-                player.transform.position = carParkMissionPoint.transform.position;
-                Vector3 playerPos = player.transform.position;
-                Nam.transform.position = playerPos + Vector3.right;
-                Hung.transform.position = playerPos + Vector3.down + Vector3.left;
-                Mai.transform.position = playerPos + Vector3.down + Vector3.right * 2;
-                Ngan.transform.position = playerPos + Vector3.down * 2;
-                Minh.transform.position = playerPos + Vector3.down * 2 + Vector3.left;
 
-                player.anim.SetDirection(Vector2.down);
-                Nam.anim.SetDirection(Vector2.down);
-                Mai.anim.SetDirection(Vector2.left);
-                Hung.anim.SetDirection(Vector2.right);
-                Ngan.anim.SetDirection(Vector2.up);
-                Minh.anim.SetDirection(Vector2.up);
-            });
-        });
+        GameManager.instance.transitions.Transition(1, 1, OnComplete: FinalDiscussion, OnStartStay: MoveAllCharToTheHouse);
+        void MoveAllCharToTheHouse()
+        {
+            mainMap.SetActive(false);
+            firstFlooor.SetActive(true);
+
+            player.transform.position = finalDisscusPos;
+            Vector3 playerPos = player.transform.position;
+            Hung.transform.position = playerPos + Vector3.down;
+            Mai.transform.position = playerPos + Vector3.down * 2;
+            Nam.transform.position = playerPos + Vector3.down * 3;
+            Ngan.transform.position = playerPos + Vector3.left * 1.5f + Vector3.down;
+            Minh.transform.position = playerPos + Vector3.down * 2 + Vector3.left * 1.5f;
+
+            player.anim.SetDirection(Vector2.left);
+            Nam.anim.SetDirection(Vector2.left);
+            Mai.anim.SetDirection(Vector2.left);
+            Hung.anim.SetDirection(Vector2.left);
+            Ngan.anim.SetDirection(Vector2.right);
+            Minh.anim.SetDirection(Vector2.right);
+        }
     }
 
     private void FinalDiscussion()
     {
-        GameManager.instance.dialogueManager.StartDialogue(texts.endDay2Dialogue, player.EnableMoveAndUI);
+        //GameManager.instance.dialogueManager.StartDialogue(texts.endDay2Dialogue, player.EnableMoveAndUI);
     }
 }
 
