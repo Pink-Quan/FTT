@@ -53,6 +53,7 @@ public class CampingDay2 : MonoBehaviour
         player = mainMapManager.player;
 
         player.DisableMoveAndUI();
+        //Uncommand 2 line of code and comment AnouchMinhDoneMission3() to end debug
         //Invoke(nameof(ShowFirstMission), 1);
         //SetStartDay2Character();
         AnouchMinhDoneMission3();
@@ -307,7 +308,8 @@ public class CampingDay2 : MonoBehaviour
 
     private void FinalDiscussion()
     {
-        //GameManager.instance.dialogueManager.StartDialogue(texts.endDay2Dialogue, player.EnableMoveAndUI);
+        PlayerPrefs.SetInt("Progress", (int)GameProgress.CampingDay3);
+        GameManager.instance.dialogueManager.StartDialogue(texts.endDay2Dialogue, mainMapManager.InitCampingDay3);
     }
 }
 

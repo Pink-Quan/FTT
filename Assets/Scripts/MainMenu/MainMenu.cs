@@ -114,4 +114,5 @@ public enum GameProgress
     InsideLinhHouse=3,
     StartCamping=2,
     CampingDay2=4,
+    CampingDay3=5,
 }

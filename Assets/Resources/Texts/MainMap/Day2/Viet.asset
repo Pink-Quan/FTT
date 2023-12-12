@@ -281,4 +281,41 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
-  endDay2Dialogue: []
+  endDay2Dialogue:
+  - sentances:
+    - "T\xECnh th\u1EC3 hi\u1EC7n t\u1EA1i r\u1EA5t nguy hi\u1EC3m, k\u1EBB l\u1EA1
+      m\u1EB7t c\xF3 th\u1EC3 t\u1EA5n c\xF4ng v\xE0 ti\u1EBFp c\u1EADn chung ta
+      b\u1EA5t c\u01B0 l\xFAc n\xE0o"
+    - "Anh ngh\u0129 t\u1ED1i ch\xFAng ta s\u1EBD ng\u1EE7 c\xF9ng m\u1ED9t ch\u1ED7,
+      v\xE0 s\u1EBD c\xF3 m\u1ED9t ng\u01B0\u1EDDi canh g\xE1c"
+    - "Ch\xFAng ta s\u1EBD thay phi\xEAn nhau canh g\xE1c, m\u1ED7i ng\u01B0\u1EDDi
+      1 ti\u1EBFng, 2 ng\u01B0\u1EDDi \u0111\u1EA7u v\xE0 cu\u1ED1i s\u1EBD canh
+      1 ti\u1EBFng r\u01B0\u1EE1i"
+    - "N\u1EBFu c\xF3 m\u1EC7nh h\u1EC7 g\xEC h\xE3y t\u1EA1o ra ti\u1EBFng \u0111\u1ED9ng
+      th\u1EADt l\u1EDBn \u0111\u1EC3 b\xE1o m\u1ECDi ng\u01B0\u1EDDi d\u1EADy"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+  - sentances:
+    - "V\u1EADy c\xF2n nh\u1EEFng g\xEC m\xECnh v\u1EEBa thu th\u1EADp \u0111\u01B0\u1EE3c
+      th\xEC sao \u1EA1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "V\u1EADy c\xF2n nh\u1EEFng g\xEC m\xECnh v\u1EEBa thu th\u1EADp \u0111\u01B0\u1EE3c
+      th\xEC sao \u1EA1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+  - sentances:
+    - "Nh\u1EEFng g\xEC m\xECnh thu th\u1EADp \u0111\u01B0\u1EE3c v\xE0 bi\u1EBFt
+      \u0111\u01B0\u1EE3c ch\xFAng ta b\xE1o c\xE1o cho c\u1EA3nh s\xE1t sau"
+    - "Quan trong l\xE0 ph\u1EA3i r\u1EDDi kh\u1ECFi \u0111\xE2y \u0111\u01B0\u1EE3c
+      \u0111\xE3"
+    - "Gi\u1EDD m\u1ECDi ng\u01B0\u1EDDi \u0111i ng\u1EE7 \u0111i nh\xE9"
+    - "Ng\u01B0\u1EDDi canh g\xE1c tr\u01B0\u1EDBc s\u1EBD \u0111\xE1nh th\u1EE9c
+      ng\u01B0\u1EDDi canh g\xE1c sau"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0

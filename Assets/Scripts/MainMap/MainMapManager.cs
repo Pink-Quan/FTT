@@ -15,9 +15,11 @@ public class MainMapManager : MonoBehaviour
     [SerializeField] private ParticleSystem[] effs;
     [SerializeField] private StartCamping startCamping;
     [SerializeField] private CampingDay2 campingDay2;
+    [SerializeField] private CampingDay3 campingDay3;
 
     private void Start()
     {
+        Debug.Log("Progress: " + (GameProgress)PlayerPrefs.GetInt("Progress"));
         switch ((GameProgress)PlayerPrefs.GetInt("Progress"))
         {
             case GameProgress.StartCamping:
@@ -25,6 +27,9 @@ public class MainMapManager : MonoBehaviour
                 break;
             case GameProgress.CampingDay2:
                 InitCampingDay2();
+                break;
+            case GameProgress.CampingDay3:
+                InitCampingDay3();
                 break;
         }
     }
@@ -99,5 +104,10 @@ public class MainMapManager : MonoBehaviour
     public void InitCampingDay2()
     {
         campingDay2.Init(this);
+    }
+
+    public void InitCampingDay3()
+    {
+        campingDay3.Init();
     }
 }

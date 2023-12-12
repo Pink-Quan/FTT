@@ -18,7 +18,6 @@ public class PosHelperEditor : Editor
         base.OnInspectorGUI();
         if (GUILayout.Button("To Scene Center"))
             ToCenter();
-
     }
     private void ToCenter()
     {

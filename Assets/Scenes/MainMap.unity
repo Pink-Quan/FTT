@@ -942,7 +942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239620019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 108.85, y: -58.91, z: 0.09361742}
+  m_LocalPosition: {x: 112.56, y: -57.785, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3497,6 +3497,7 @@ GameObject:
   - component: {fileID: 1048348877}
   - component: {fileID: 1048348878}
   - component: {fileID: 1048348879}
+  - component: {fileID: 1048348880}
   m_Layer: 0
   m_Name: MainMapManager
   m_TagString: Untagged
@@ -3541,6 +3542,7 @@ MonoBehaviour:
   - {fileID: 514354522}
   startCamping: {fileID: 1048348878}
   campingDay2: {fileID: 1048348879}
+  campingDay3: {fileID: 1048348880}
 --- !u!114 &1048348878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3614,6 +3616,21 @@ MonoBehaviour:
   - {fileID: 504507434}
   - {fileID: 2111267342}
   - {fileID: 916396992}
+--- !u!114 &1048348880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048348875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc007d98f3813c4a88bc65e8bbb8994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainHouse: {fileID: 1861767345}
+  mainMap: {fileID: 609828070}
+  playerFirstMissionPos: {x: 112.56, y: -57.785, z: 0}
 --- !u!1 &1048568171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2186774567370573801, guid: 38da504cc3fe6424c90ae5ff51f836d6, type: 3}
