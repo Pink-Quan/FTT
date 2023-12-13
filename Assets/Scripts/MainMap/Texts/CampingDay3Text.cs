@@ -1,0 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "Language", menuName = "ScriptableObjects/Texts/Camping Day 3")]
+public class CampingDay3Text : ScriptableObject 
+{
+    public Dialogue playerFirstDialgue;
+    [TextArea]
+    public string firstMissionText;
+}
