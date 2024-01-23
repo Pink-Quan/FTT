@@ -6,6 +6,7 @@ using TMPro;
 using System;
 using DG.Tweening;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject baseAvatar;
 
-
+    private Dialogue currentDialogue;
     private Action OnDoneDialogue;
     private Action<int> TriggerAnswerQuestion;
     private Action<List<int>> TriggerAnswerQuestions;
@@ -144,6 +145,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Dialogue have no sentance, OnDoneDialogue will call immediately");
 
         this.OnDoneDialogue = OnDoneDialogue;
+        currentDialogue = dialogue;
 
         SellectNextButton.gameObject.SetActive(true);
         SellectNextButton.onClick.RemoveAllListeners();
@@ -159,6 +161,8 @@ public class DialogueManager : MonoBehaviour
         InitDialog(dialogue);
 
         DisplayNextSentance();
+
+        currentDialogue.onStart?.Invoke();
     }
     private void DisplayNextSentance()
     {
@@ -251,6 +255,8 @@ public class DialogueManager : MonoBehaviour
         if (canClose) DialogueBroad.DOAnchorPosY(-DialogueBroad.sizeDelta.y * 5, 0.5f);
         Invoke("OffDialogue", 0.5f);
         OnDoneDialogue?.Invoke();
+        currentDialogue.onDone?.Invoke();
+        currentDialogue = new Dialogue();
     }
 
     private bool canClose = true;
@@ -284,10 +290,10 @@ public class DialogueManager : MonoBehaviour
         this.squenceDialogue = new Queue<Dialogue>(squenceDialogue);
         this.OnDoneAllDialogues = OnDoneAllDialogues;
         DontCloseDialogueBoard();
-        SequanceDialogue();
+        SequenceDialogue();
     }
 
-    private void SequanceDialogue()
+    private void SequenceDialogue()
     {
         if (squenceDialogue.Count == 1)
             StartDialogue(squenceDialogue.Dequeue(), () =>
@@ -296,7 +302,7 @@ public class DialogueManager : MonoBehaviour
                 OnDoneAllDialogues?.Invoke();
             });
         else
-            StartDialogue(squenceDialogue.Dequeue(), SequanceDialogue);
+            StartDialogue(squenceDialogue.Dequeue(), SequenceDialogue);
     }
 }
 [Serializable]
@@ -307,6 +313,11 @@ public struct Dialogue
     public string Name;
     public string DisplayName;
     public Emotion emotion;
+
+    public string keyValue;
+    public Action onDone;
+    public Action onStart;
+
     [Serializable]
     public enum Emotion
     {
@@ -325,4 +336,16 @@ public struct Dialogue
         return $"Charactor Avatar/{Name}/{Name}_{emotion}";
     }
 }
+
+public static class DialogueHelper 
+{ 
+    public static int FindDiague(this Dialogue[] dialogue,string key)
+    {
+        for (int i = 0;i<dialogue.Length;i++)
+            if (string.Compare(dialogue[i].keyValue, key) == 0)
+                return i;
+        return -1;
+    }
+}
+
 

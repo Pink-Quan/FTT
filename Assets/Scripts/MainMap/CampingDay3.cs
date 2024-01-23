@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,16 @@ public class CampingDay3 : MonoBehaviour
     [SerializeField] private GameObject mainHouse;
     [SerializeField] private GameObject mainMap;
     [SerializeField] private Vector3 playerFirstMissionPos;
+    [SerializeField] private GameObject fullBlackUI;
+    [SerializeField] private VectorPaths pathNganFirstMissionMoveOut;
+    [SerializeField] private InteractableEntity to2ndFloor;
+
+    private CharacterController Minh;
+    private CharacterController Ngan;
+    private CharacterController Mai;
+    private CharacterController Hung;
+    private CharacterController Nam;
+
 
     PlayerController player;
     MainMapManager mainMapManager;
@@ -15,34 +26,65 @@ public class CampingDay3 : MonoBehaviour
     public void Init()
     {
         mainMapManager = GetComponent<MainMapManager>();
+        to2ndFloor.canInteract = false;
+        Minh = mainMapManager.Minh;
+        Ngan = mainMapManager.Ngan;
+        Mai = mainMapManager.Mai;
+        Hung = mainMapManager.Hung;
+        Nam = mainMapManager.Nam;
+
         texts = Resources.Load<CampingDay3Text>($"Texts/MainMap/Day3/{PlayerPrefs.GetString("Language", "Eng")}");
         player = GameManager.instance.player;
         player.DisableMoveAndUI();
-        GameManager.instance.transitions.Transition(1, 1, LinhMonodiaglogueFirstMission, MovePlayerToFirstMission);
+        GameManager.instance.transitions.Transition(1, 1, WakePlayerUp, MovePlayerToFirstMission);
+    }
+
+    private void WakePlayerUp()
+    {
+        texts.wakePlayerUp[texts.wakePlayerUp.FindDiague("Yawn")].onStart = () =>
+        {
+            GameManager.instance.soundManager.PlaySound("Yawn");
+        };
+        texts.wakePlayerUp[texts.wakePlayerUp.FindDiague("Strangle Linh")].onStart = () =>
+        {
+            GameManager.instance.soundManager.PlaySound("Being Strangled");
+        };
+        GameManager.instance.dialogueManager.StartDialogue(texts.wakePlayerUp, () =>
+        {
+            GameManager.instance.transitions.Transition(1, 0, NganGiveMissionToLinh, () => fullBlackUI.gameObject.SetActive(false));
+        });
     }
 
     private void MovePlayerToFirstMission()
     {
-        mainMapManager.Mai.gameObject.SetActive(false);
-        mainMapManager.Nam.gameObject.SetActive(false);
-        mainMapManager.Minh.gameObject.SetActive(false);
-        mainMapManager.Ngan.gameObject.SetActive(false);
-        mainMapManager.Hung.gameObject.SetActive(false);
+        fullBlackUI.gameObject.SetActive(true);
+        Mai.gameObject.SetActive(false);
+        Nam.gameObject.SetActive(false);
+        Minh.gameObject.SetActive(false);
+        Hung.gameObject.SetActive(false);
         mainMap.SetActive(false);
         mainHouse.SetActive(true);
-        player.SetPositon(playerFirstMissionPos, Vector2.down);
+        Ngan.gameObject.SetActive(true);
+        player.SetPositon(playerFirstMissionPos, Vector3.right);
+        mainMapManager.Ngan.SetPositon(playerFirstMissionPos + Vector3.right, Vector3.left);
     }
 
-    private void LinhMonodiaglogueFirstMission()
+    private void NganGiveMissionToLinh()
     {
         GameManager.instance.dialogueManager.StartDialogue(texts.playerFirstDialgue, StartFirstMission);
     }
 
     private void StartFirstMission()
     {
-        GameManager.instance.missionsManager.AddAndShowMission(texts.firstMissionText, () =>
+        Ngan.UpdateMoveAnimation();
+        Ngan.transform.DOPath(pathNganFirstMissionMoveOut.paths, 1).SetEase(Ease.Linear).OnComplete(() =>
         {
-            player.EnableMoveAndUI();
+            Ngan.StopMove();
+            Ngan.gameObject.SetActive(false);
+            GameManager.instance.missionsManager.AddAndShowMission(texts.firstMissionText, () =>
+            {
+                player.EnableMoveAndUI();
+            });
         });
     }
 }

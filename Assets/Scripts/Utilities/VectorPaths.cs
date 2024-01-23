@@ -36,6 +36,7 @@ public class VectorPathsEditor : Editor
     {
         if (!wp.isDraw) return;
 
+        Undo.RecordObject(wp, "Change Path");
         Handles.color = wp.color;
         for (int i = 0; i < wp.paths.Length; i++)
         {

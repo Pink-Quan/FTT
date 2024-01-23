@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Language", menuName = "ScriptableObjects/Texts/Camping Day 3")]
 public class CampingDay3Text : ScriptableObject 
 {
-    public Dialogue playerFirstDialgue;
+    public Dialogue[] wakePlayerUp;
+    public Dialogue[] playerFirstDialgue;
     [TextArea]
     public string firstMissionText;
 }

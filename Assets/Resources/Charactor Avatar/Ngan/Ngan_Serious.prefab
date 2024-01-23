@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6572604577000282082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.6, y: 30.0489}
-  m_SizeDelta: {x: 48.3667, y: 34.7361}
+  m_AnchoredPosition: {x: 28.9242, y: 38.0482}
+  m_SizeDelta: {x: 73.015, y: 44.1328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3987667184842974468
 CanvasRenderer:
@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 7989349354703826575, guid: 92d73d764f74d6d4bab53079a56b6a48, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a239d223dc20f974fb2850e2988f8672, type: 3}
+      objectReference: {fileID: 21300000, guid: e38c077a02eaaa84d8b0e768c99ecd6a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92d73d764f74d6d4bab53079a56b6a48, type: 3}
 --- !u!224 &2357025070887612223 stripped

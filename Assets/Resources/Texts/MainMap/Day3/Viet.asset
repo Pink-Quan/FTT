@@ -12,9 +12,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfe2d7f2908fc24ea4e646e3ae176a2, type: 3}
   m_Name: Viet
   m_EditorClassIdentifier: 
-  playerFirstDialgue:
-    sentances: []
+  wakePlayerUp:
+  - sentances:
+    - Linh
+    - Linh
+    - "D\u1EADy \u0111i Linh \u01A1i"
+    - LINHHHH!
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - awwww
+    - "Cho em th\xEAm n\u0103m ph\xFAt n\u1EEFa th\xF4i"
     Name: Linh
     DisplayName: Linh
     emotion: 0
-  firstMissionText: 
+    keyValue: 
+  - sentances:
+    - "Th\xF4i n\xE0o, d\u1EADy \u0111i m\xE0"
+    - "C\xF3 chuy\u1EC7n r\u1ED3i"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "Awww, chuy\u1EC7n g\xEC v\u1EADy \u1EA1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: Yawn
+  - sentances:
+    - "(B\xF3p c\u1ED5 Linh)"
+    - "Chuy\u1EC7n l\xE0 ch\u1ECB \u0111\xE3 thanh to\xE1n h\u1EBFt m\u1ECDi ng\u01B0\u1EDDi
+      r\u1ED3i"
+    - "C\xF2n m\xECnh em th\xF4i"
+    - "Gi\u1EDD em hi\u1EC3u sao chuy\u1EC7n n\xE0y l\u1EA1i x\u1EA3y ra r\u1ED3i
+      \u0111\u1EA5y"
+    - "Ch\u1ECB \u0111\xE3 s\u1ED1ng qu\xE1 l\xE2u \u1EDF \u0111\xE2y r\u1ED3i, hehe"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 4
+    keyValue: Strangle Linh
+  - sentances:
+    - "uww, uwww... C\u1EE9u, uwww, \u01B0 \u01B0...."
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "Haha, ch\u1ECB \u0111\xF9a th\xF4i"
+    - "D\u1EADy \u0111i em, gi\u1EDD \u0111\u1EBFn em \u0111i canh g\xE1c r\u1ED3i
+      \u0111\u1EA5y"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 1
+    keyValue: 
+  - sentances:
+    - Hic
+    - "Ch\u1ECB l\xE0m em s\u1EE3 qu\xE1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+    keyValue: 
+  playerFirstDialgue:
+  - sentances:
+    - "Em ch\u1EC9 c\u1EA7n canh g\xE1c d\u01B0\u1EDBi \u0111\xE2y th\xF4i nh\xE9,
+      kh\xF4ng c\u1EA7n l\xEAn tr\xEAn \u0111\xE2u, hay \u0111\u1EC3 m\u1ECDi ng\u01B0\u1EDDi
+      \u0111\u01B0\u1EE3c ng\u1EE7"
+    - "M\u1ECDi ng\u01B0\u1EDDi \u0111\xE3 kh\xE1 m\u1EC7t v\xEC ph\u1EA3i g\xE1c
+      \u0111\xEAm r\u1ED3i"
+    - "V\u1EDBi c\u1EA3 \u1EDF tr\xEAn \u0111\u1EA5y to\xE0n khung c\u1EEDa s\u1EAFt
+      th\xF4i, n\xEAn kh\xF4ng th\u1EC3 v\xE0o \u0111\u01B0\u1EE3c"
+    - "\u1EDE d\u01B0\u1EDBi \u0111\xE2y d\u1EC5 d\xE0ng \u0111\u1ED9t nh\u1EADp
+      h\u01A1n, v\u1EADy n\xEAn em h\xE3y ki\u1EC3m tra k\u1EF9 xem c\xE1c lo\u1EA1i
+      c\u1EEDa kh\xF3a ch\u01B0a"
+    - "Ch\u1ECB \u0111\xE3 kh\xF3a ch\u1EAFc ch\u1EAFn r\u1ED3i, n\xEAn ch\u1EAFc
+      c\u0169ng kh\xF4ng c\u1EA7n lo \u0111\xE2u"
+    - "Gi\u1EDD 5h r\u1ED3i, em canh g\xE1c \u0111\u1EBFn 6h r\u01B0\u1EE1i l\xE0
+      v\u1EEBa, n\u1EBFu m\u1EC7t qu\xE1 th\xEC c\xF3 th\u1EC3 ng\u1EE7 ti\u1EBFp"
+    - "V\u1EDBi c\u1EA3 r\u1EEDa b\xE1t \u0111i \u0111\u1EA5y nh\xE9, h\u1EE9a r\u1EEDa
+      t\u1ED1i qua m\xE0 gi\u1EDD v\u1EABn ch\u01B0a r\u1EEDa"
+    - "Ti\u1EC7n th\xEC n\u1EA5u \u0111\u1ED3 \u0103n s\xE1ng lu\xF4n cho m\u1ECDi
+      ng\u01B0\u1EDDi nh\xE9"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "V\xE2ng \u1EA1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  firstMissionText: "R\u1EEDa b\xE1t\nN\u1EA5u \u0111\u1ED3 b\u1EEFa s\xE1ng\nKi\u1EC3m
+    c\xE1c tra c\xE1c lo\u1EA1i c\u1EEDa"
