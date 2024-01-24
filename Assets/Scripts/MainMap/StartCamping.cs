@@ -9,6 +9,7 @@ public class StartCamping : MonoBehaviour
 {
     [SerializeField] private Vector3 playerStartCampingPos;
     [SerializeField] private GameObject startCampingInteractableEntities;
+    [SerializeField] private GameObject startCampingGameObjects;
 
     [SerializeField] private VectorPaths NganPath;
     [SerializeField] private VectorPaths MinhPath;
@@ -72,7 +73,8 @@ public class StartCamping : MonoBehaviour
         Hung.anim.SetDirection(Vector3.up);
         Nam.anim.SetDirection(Vector3.up);
 
-        startCampingInteractableEntities.gameObject.SetActive(true);
+        startCampingInteractableEntities.SetActive(true);
+        startCampingGameObjects.SetActive(true);
     }
 
     private void FirstComunicateWithManager()

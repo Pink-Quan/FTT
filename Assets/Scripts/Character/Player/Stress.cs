@@ -11,9 +11,14 @@ public class Stress : MonoBehaviour
     public PlayerController player;
     public Breath breath;
 
+    private void Start()
+    {
+        SetBarColor();
+    }
+
     public void AddStress(int add)
     {
-        stressIndex += add;
+        stressIndex += add*10;
         SetBarColor();
     }
 
@@ -33,13 +38,13 @@ public class Stress : MonoBehaviour
         }
         else if (stressIndex > 20 && stressIndex < 50)
         {
-            player.playerMovement.SetSpeed(player.playerMovement.DefaultSpeed / 2);
+            player.playerMovement.SetSpeed(player.playerMovement.DefaultSpeed / 2f);
             stressBar.color = Color.yellow;
 
         }
         else if (stressIndex >= 50 && stressIndex < 80)
         {
-            player.playerMovement.SetSpeed(player.playerMovement.DefaultSpeed / 3);
+            player.playerMovement.SetSpeed(player.playerMovement.DefaultSpeed / 3f);
             stressBar.color = new Color(1, 69f / 255, 0, 1);
         }
         else

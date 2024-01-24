@@ -9,4 +9,8 @@ public class CampingDay3Text : ScriptableObject
     public Dialogue[] playerFirstDialgue;
     [TextArea]
     public string firstMissionText;
+    public Dialogue monodialogueAboutDiryDisks;
+    public string doneWashingDisksNotify;
+    public string prepareFoodNotify;
+    public string cookingFoodNotify;
 }

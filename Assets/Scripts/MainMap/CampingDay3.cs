@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class CampingDay3 : MonoBehaviour
 {
+    [SerializeField] private GameObject gameObjects;
     [SerializeField] private GameObject mainHouse;
     [SerializeField] private GameObject mainMap;
     [SerializeField] private Vector3 playerFirstMissionPos;
     [SerializeField] private GameObject fullBlackUI;
     [SerializeField] private VectorPaths pathNganFirstMissionMoveOut;
     [SerializeField] private InteractableEntity to2ndFloor;
+    [SerializeField] private InteractableEntity toCamp;
+
+    [SerializeField] private GameObject dirtyDisks;
+    [SerializeField] private GameObject foodsOnTable;
+    [SerializeField] private InteractableEntity door;
 
     private CharacterController Minh;
     private CharacterController Ngan;
@@ -37,6 +43,8 @@ public class CampingDay3 : MonoBehaviour
         player = GameManager.instance.player;
         player.DisableMoveAndUI();
         GameManager.instance.transitions.Transition(1, 1, WakePlayerUp, MovePlayerToFirstMission);
+        gameObjects.SetActive(true);
+        toCamp.canInteract = false;
     }
 
     private void WakePlayerUp()
@@ -86,5 +94,44 @@ public class CampingDay3 : MonoBehaviour
                 player.EnableMoveAndUI();
             });
         });
+    }
+
+    bool isDoneWashDisks;
+    public void WashDishes()
+    {
+        if (isDoneWashDisks) return;
+        isDoneWashDisks = true;
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.monodialogueAboutDiryDisks, () =>
+        {
+            player.EnableMoveAndUI();
+            mainMapManager.PlayParticalEffect(0, player.transform.position);
+            dirtyDisks.SetActive(false);
+            GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.doneWashingDisksNotify);
+        });
+        CheckDoneFirstMissions();
+    }
+
+    bool isDonePrepareFoods;
+    bool isDoneCookingFoods;
+    public void PrepareFoods()
+    {
+        isDonePrepareFoods = true;
+        GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.prepareFoodNotify);
+    }
+
+    public void Cooking()
+    {
+        if (!isDonePrepareFoods) return;
+        foodsOnTable.SetActive(true);
+        isDonePrepareFoods = true;
+        GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.cookingFoodNotify);
+        CheckDoneFirstMissions();
+    }
+
+    private void CheckDoneFirstMissions()
+    {
+        if (!(isDoneCookingFoods && isDoneWashDisks)) return;
+        door.canInteract = true;
     }
 }

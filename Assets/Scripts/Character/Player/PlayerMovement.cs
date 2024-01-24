@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        defaultSpeed = playerSpeed;
         GetComponentInit();
     }
 
@@ -31,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        defaultSpeed = playerSpeed;
+
     }
 
     private void GetComponentInit()

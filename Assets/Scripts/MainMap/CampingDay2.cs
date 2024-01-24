@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 
 public class CampingDay2 : MonoBehaviour
 {
+    [SerializeField] GameObject interactableEntityes;
     [SerializeField] GameObject gameObjects;
 
     [SerializeField] Vector3 HungStartPos;
@@ -39,7 +40,7 @@ public class CampingDay2 : MonoBehaviour
 
     public void Init(MainMapManager mainMapManager)
     {
-        gameObjects.SetActive(true);
+        interactableEntityes.SetActive(true);
 
         texts = Resources.Load<MainMapDay2Texts>($"Texts/MainMap/Day2/{PlayerPrefs.GetString("Language", "Eng")}");
 
