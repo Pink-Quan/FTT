@@ -107,3 +107,16 @@ MonoBehaviour:
     keyValue: 
   firstMissionText: "R\u1EEDa b\xE1t\nN\u1EA5u \u0111\u1ED3 b\u1EEFa s\xE1ng\nKi\u1EC3m
     c\xE1c tra c\xE1c lo\u1EA1i c\u1EEDa"
+  monodialogueAboutDiryDisks:
+    sentances:
+    - "Nhi\u1EC1u b\xE1t \u0111\u0169a qu\xE1, \u0111\xE1ng ra m\xECnh n\xEAn r\u1EEDa
+      lu\xF4n t\u1EEB t\u1ED1i h\xF4m qua"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  doneWashingDisksNotify: "R\u1EEDa b\xE1t ho\xE0n th\xE0nh"
+  prepareFoodNotify: "\u0110\xE3 chu\u1EA9n b\u1ECB \u0111\u1ED3 \u0103n"
+  cookingFoodNotify: "Ho\xE0n th\xE0nh n\u1EA5u \u0103n"
+  needPrepareFoodInFridgeFirst: "C\u1EA7n chu\u1EA9n b\u1ECB \u0111\u1ED3 \u0103n
+    trong t\u1EE7 l\u1EA1nh tr\u01B0\u1EDBc"

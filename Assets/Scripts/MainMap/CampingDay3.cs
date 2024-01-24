@@ -97,7 +97,7 @@ public class CampingDay3 : MonoBehaviour
     }
 
     bool isDoneWashDisks;
-    public void WashDishes()
+    public void WashDishes(InteractableEntity entity)
     {
         if (isDoneWashDisks) return;
         isDoneWashDisks = true;
@@ -110,20 +110,27 @@ public class CampingDay3 : MonoBehaviour
             GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.doneWashingDisksNotify);
         });
         CheckDoneFirstMissions();
+        entity.gameObject.SetActive(false);
     }
 
     bool isDonePrepareFoods;
     bool isDoneCookingFoods;
-    public void PrepareFoods()
+    public void PrepareFoods(InteractableEntity entity)
     {
+        entity.gameObject.SetActive(false);
         isDonePrepareFoods = true;
         GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.prepareFoodNotify);
     }
 
-    public void Cooking()
+    public void Cooking(InteractableEntity entity)
     {
-        if (!isDonePrepareFoods) return;
+        if (!isDonePrepareFoods)
+        {
+            GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.needPrepareFoodInFridgeFirst);
+            return;
+        }
         foodsOnTable.SetActive(true);
+        entity.gameObject.SetActive(false);
         isDonePrepareFoods = true;
         GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.cookingFoodNotify);
         CheckDoneFirstMissions();

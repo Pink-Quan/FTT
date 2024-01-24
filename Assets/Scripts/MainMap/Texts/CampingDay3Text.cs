@@ -13,4 +13,5 @@ public class CampingDay3Text : ScriptableObject
     public string doneWashingDisksNotify;
     public string prepareFoodNotify;
     public string cookingFoodNotify;
+    public string needPrepareFoodInFridgeFirst;
 }
