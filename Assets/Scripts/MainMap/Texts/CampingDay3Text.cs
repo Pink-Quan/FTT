@@ -14,4 +14,10 @@ public class CampingDay3Text : ScriptableObject
     public string prepareFoodNotify;
     public string cookingFoodNotify;
     public string needPrepareFoodInFridgeFirst;
+    public Dialogue forgotCheckDoor;
+    public string lockDoor;
+    public Dialogue monoDialogueAboutUnlockDoor;
+    public Dialogue monoDialogueAboutPhone;
+    public Dialogue monoDialogueAboutChess;
+    public Dialogue fellDizzyAfterLookingAtChess;
 }

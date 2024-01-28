@@ -1418,6 +1418,7 @@ MonoBehaviour:
   chessManager: {fileID: 6973515740128726850}
   tmpText: {fileID: 6973515739724068588}
   virtualCamera: {fileID: 0}
+  outButton: {fileID: 6973515740958122192}
   onChessGameDone:
     m_PersistentCalls:
       m_Calls: []

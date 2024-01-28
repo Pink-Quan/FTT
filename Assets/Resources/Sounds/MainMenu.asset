@@ -15,3 +15,5 @@ MonoBehaviour:
   soundsList:
   - name: BG
     sound: {fileID: 8300000, guid: b7646076e2c8d0d43a848f5cc1d766a1, type: 3}
+  - name: BG
+    sound: {fileID: 8300000, guid: b7646076e2c8d0d43a848f5cc1d766a1, type: 3}

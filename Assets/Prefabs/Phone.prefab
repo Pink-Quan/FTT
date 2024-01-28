@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -278,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -683,6 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -839,6 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -983,6 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -1127,6 +1132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -1271,6 +1277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -1415,6 +1422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -1559,6 +1567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -3086,6 +3095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}
@@ -3378,6 +3388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3a3e56c4205a141841a13c1e9dafeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnEnable: 0
   duration: 0.3
   bouchDuration: 0.15
   moveOffset: {x: 0, y: 200}

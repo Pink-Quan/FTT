@@ -46,10 +46,10 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < 4; i++)
-        {
-            InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, this);
-        }
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, this);
+        //}
 
     }
     /// <summary>

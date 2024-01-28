@@ -1,11 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using System;
-using System.Diagnostics.Tracing;
 
 public class PlayerController : CharacterController
 {
@@ -141,10 +140,14 @@ public class PlayerController : CharacterController
                 break;
         }
     }
-
+    public Action onOpenPhone;
     private void InitPhoneButton()
     {
-        currentItemButton.onClick.AddListener(() => phone.gameObject.SetActive(true));
+        currentItemButton.onClick.AddListener(() =>
+        {
+            phone.gameObject.SetActive(true);
+            onOpenPhone?.Invoke();
+        });
         currentItemButton.onClick.AddListener(DisableMove);
         currentItemButton.onClick.AddListener(HideButtons);
         phone.outButton.onClick.AddListener(EnableMove);

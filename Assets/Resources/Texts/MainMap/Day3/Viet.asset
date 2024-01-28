@@ -120,3 +120,55 @@ MonoBehaviour:
   cookingFoodNotify: "Ho\xE0n th\xE0nh n\u1EA5u \u0103n"
   needPrepareFoodInFridgeFirst: "C\u1EA7n chu\u1EA9n b\u1ECB \u0111\u1ED3 \u0103n
     trong t\u1EE7 l\u1EA1nh tr\u01B0\u1EDBc"
+  forgotCheckDoor:
+    sentances:
+    - "C\u1EEDa s\u1ED5 kh\xF3a ch\u1EAFc r\u1ED3i th\xEC ph\u1EA3i, c\xF3 c\u1EEDa
+      ch\xEDnh m\xECnh ch\u01B0a ki\u1EC3m tra"
+    - "Ch\u1EAFc l\u1EA1i ch\u1EA3 ai qu\xEAn kh\xF3a c\u1EEDa ch\xEDnh \u0111\xE2u
+      :)"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  lockDoor: "\u0110\xE3 kh\xF3a c\u1EEDa"
+  monoDialogueAboutUnlockDoor:
+    sentances:
+    - "Sao c\u1EEDa ch\xEDnh l\u1EA1i ch\u01B0a kh\xF3a"
+    - "M\xECnh nh\u1EDB ch\u1ECB Ng\xE2n b\u1EA3o l\xE0 \u0111\xE3 kh\xF3a k\u1EF9
+      h\u1EBFt r\u1ED3i m\xE0"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5
+    keyValue: 
+  monoDialogueAboutPhone:
+    sentances:
+    - "Ai l\u1EA1i g\u1ECDi \u0111i\u1EC7n cho m\xECnh gi\u1EDD n\xE0y nh\u1EC9"
+    - "\xC0, ch\u1EC9 l\xE0 th\xF4ng b\xE1o app c\u1EDD vua"
+    - "Ch\u1EC9 l\xE0 th\xF4ng b\xE1o c\u1EDD vua m\xECnh \u0111\u1EB7t c\xE1ch \u0111\xE2y
+      h\u01A1n 1 n\u0103m tr\u01B0\u1EDBc"
+    - "M\xECnh gi\u1EDD c\u1EA7n ki\u1EC3m tra k\u1EF9 c\xE1i c\u1EEDa s\u1ED5 th\xEAm
+      l\u1EA7n n\u1EEFa"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  monoDialogueAboutChess:
+    sentances:
+    - "T\u1EEB \u0111\xE3, c\xE1i th\u1EBF c\u1EDD trong th\xF4ng b\xE1o n\xE0y tr\xF4ng
+      quen l\u1EAFm"
+    - ohhhhh
+    - "N\xF3 r\u1EA5t gi\u1ED1ng nh\u01B0 c\xE1ch b\u1ED1 tr\xED c\u1EAFm \u0111inh
+      \u1EDF tr\xEAn c\xE2y l\xFAc m\xECnh thu th\u1EADp h\xF4m qua"
+    - "M\xECnh ph\u1EA3i v\xE0o xem th\u1EED xem"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5
+    keyValue: 
+  fellDizzyAfterLookingAtChess:
+    sentances:
+    - "Sao gi\u1EDD m\xECnh l\u1EA1i c\u1EA3m th\u1EA5y \u0111au \u0111\u1EA7u th\u1EBF
+      nh\u1EC9"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+    keyValue: 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ChessGame : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ChessGame : MonoBehaviour
     [SerializeField] private TMP_Text tmpText;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
 
+    public Button outButton;
     public UnityEvent<string, GameResult.Result> onChessGameDone;
 
     private void Awake()
@@ -25,7 +27,8 @@ public class ChessGame : MonoBehaviour
     {
         gameObject.SetActive(true);
         baseFollow = virtualCamera.Follow;
-        virtualCamera.Follow = transform;
+        virtualCamera.Follow = null;
+        virtualCamera.transform.position = transform.position - Vector3.forward * 10;
     }
 
     public void StopPlayChess()

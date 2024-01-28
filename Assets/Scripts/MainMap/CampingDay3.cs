@@ -17,6 +17,7 @@ public class CampingDay3 : MonoBehaviour
     [SerializeField] private GameObject dirtyDisks;
     [SerializeField] private GameObject foodsOnTable;
     [SerializeField] private InteractableEntity door;
+    [SerializeField] private ChessGame chess;
 
     private CharacterController Minh;
     private CharacterController Ngan;
@@ -42,9 +43,13 @@ public class CampingDay3 : MonoBehaviour
         texts = Resources.Load<CampingDay3Text>($"Texts/MainMap/Day3/{PlayerPrefs.GetString("Language", "Eng")}");
         player = GameManager.instance.player;
         player.DisableMoveAndUI();
-        GameManager.instance.transitions.Transition(1, 1, WakePlayerUp, MovePlayerToFirstMission);
+        //GameManager.instance.transitions.Transition(1, 1, WakePlayerUp, MovePlayerToFirstMission);
         gameObjects.SetActive(true);
         toCamp.canInteract = false;
+
+        //Debug
+        MovePlayerToFirstMission();
+        player.EnableMoveAndUI();
     }
 
     private void WakePlayerUp()
@@ -55,7 +60,7 @@ public class CampingDay3 : MonoBehaviour
         };
         texts.wakePlayerUp[texts.wakePlayerUp.FindDiague("Strangle Linh")].onStart = () =>
         {
-            GameManager.instance.soundManager.PlaySound("Being Strangled");
+            //GameManager.instance.soundManager.PlaySound("Being Strangled");
         };
         GameManager.instance.dialogueManager.StartDialogue(texts.wakePlayerUp, () =>
         {
@@ -120,6 +125,7 @@ public class CampingDay3 : MonoBehaviour
         entity.gameObject.SetActive(false);
         isDonePrepareFoods = true;
         GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.prepareFoodNotify);
+        mainMapManager.PlayParticalEffect(0, player.transform.position);
     }
 
     public void Cooking(InteractableEntity entity)
@@ -133,6 +139,8 @@ public class CampingDay3 : MonoBehaviour
         entity.gameObject.SetActive(false);
         isDonePrepareFoods = true;
         GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.cookingFoodNotify);
+        mainMapManager.PlayParticalEffect(0, player.transform.position);
+        isDoneCookingFoods = true;
         CheckDoneFirstMissions();
     }
 
@@ -140,5 +148,59 @@ public class CampingDay3 : MonoBehaviour
     {
         if (!(isDoneCookingFoods && isDoneWashDisks)) return;
         door.canInteract = true;
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.forgotCheckDoor, player.EnableMoveAndUI);
+    }
+
+    public void CheckDoorLock(InteractableEntity entity)
+    {
+        player.DisableMoveAndUI();
+        player.anim.SetDirection(Vector2.down);
+        GameManager.instance.dialogueManager.StartDialogue(texts.monoDialogueAboutUnlockDoor, () =>
+        {
+            player.EnableMoveAndUI();
+            Invoke(nameof(ChessNotify), 5);
+            GameManager.instance.soundManager.PlaySound("Lock Door");
+            GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.lockDoor);
+        });
+        entity.canInteract = false;
+        entity.gameObject.SetActive(false);
+    }
+
+    private void ChessNotify()
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.soundManager.PlaySound("PhoneVibration");
+        GameManager.instance.dialogueManager.StartDialogue(texts.monoDialogueAboutPhone, () =>
+        {
+            player.EnableMoveAndUI();
+            Invoke(nameof(RealizeChessFamiliar), 5);
+        });
+    }
+
+    private void RealizeChessFamiliar()
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.monoDialogueAboutChess, () =>
+        {
+            player.EnableMoveAndUI();
+            Invoke(nameof(FeelDizzyAfterLookingAtChess), 5);
+        });
+    }
+
+    private void FeelDizzyAfterLookingAtChess()
+    {
+        player.DisableMoveAndUI();
+        chess.outButton.onClick.AddListener(player.phone.outButton.onClick.Invoke);
+        player.onOpenPhone = () =>
+        {
+            chess.PlayChess();
+            player.phone.gameObject.SetActive(false);
+        };
+        GameManager.instance.dialogueManager.StartDialogue(texts.fellDizzyAfterLookingAtChess, () =>
+        {
+            player.EnableMoveAndUI();
+            player.stress.StartStress();
+        });
     }
 }

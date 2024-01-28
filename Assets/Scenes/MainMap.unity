@@ -1746,8 +1746,7 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 911668979}
-    m_RemovedComponents:
-    - {fileID: 6973515739267470066, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
 --- !u!4 &430918666 stripped
 Transform:
@@ -3618,7 +3617,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 845325255}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 845325255}
   m_Lens:
     FieldOfView: 40
@@ -3792,11 +3791,23 @@ MonoBehaviour:
   player: {fileID: 0}
   radius: 1
   interactName: Lock
-  canInteract: 1
+  canInteract: 0
   isGizmos: 0
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048348880}
+        m_TargetAssemblyTypeName: CampingDay3, Assembly-CSharp
+        m_MethodName: CheckDoorLock
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerEnterZone:
     m_PersistentCalls:
       m_Calls: []
@@ -4392,6 +4403,7 @@ MonoBehaviour:
   dirtyDisks: {fileID: 769915090}
   foodsOnTable: {fileID: 1229390787}
   door: {fileID: 580634121}
+  chess: {fileID: 1473540049}
 --- !u!1 &1048568171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2186774567370573801, guid: 38da504cc3fe6424c90ae5ff51f836d6, type: 3}
@@ -6877,6 +6889,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7141b303906dae84195114ea791c0c50, type: 3}
+--- !u!114 &1473540049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6973515740810716377, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+  m_PrefabInstance: {fileID: 413405343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d66de98e8f30da4dac25582d4aeb294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1519452555
 GameObject:
   m_ObjectHideFlags: 0
@@ -8798,6 +8821,10 @@ PrefabInstance:
     - target: {fileID: 1898711653086800796, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 145.92511
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014456103859688446, guid: c3fe75788609c6942a37583564a40cec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2090212925085339655, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x

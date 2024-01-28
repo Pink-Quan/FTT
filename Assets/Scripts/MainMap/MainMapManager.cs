@@ -19,6 +19,7 @@ public class MainMapManager : MonoBehaviour
 
     private void Start()
     {
+        InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);
         Debug.Log("Progress: " + (GameProgress)PlayerPrefs.GetInt("Progress"));
         switch ((GameProgress)PlayerPrefs.GetInt("Progress"))
         {
