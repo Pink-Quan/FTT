@@ -10,6 +10,7 @@ public class MainMapManager : MonoBehaviour
     public CharacterController Mai;
     public CharacterController Nam;
     public CharacterController Hung;
+    public CharacterController Killer;
     public PlayerController player;
 
     [SerializeField] private ParticleSystem[] effs;
@@ -19,6 +20,13 @@ public class MainMapManager : MonoBehaviour
 
     private void Start()
     {
+        Mai.gameObject.SetActive(false);
+        Minh.gameObject.SetActive(false);
+        Ngan.gameObject.SetActive(false);
+        Nam.gameObject.SetActive(false);
+        Hung.gameObject.SetActive(false);
+        Killer.gameObject.SetActive(false);
+
         InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Phone", 1, player.inventory);
         Debug.Log("Progress: " + (GameProgress)PlayerPrefs.GetInt("Progress"));
         switch ((GameProgress)PlayerPrefs.GetInt("Progress"))

@@ -172,3 +172,25 @@ MonoBehaviour:
     DisplayName: Linh
     emotion: 7
     keyValue: 
+  wakeUpAfterFainting:
+    sentances:
+    - "M\xECnh v\u1EEBa ng\u1EE7 thi\u1EBFp \u0111i \u1EDF \u0111\xE2y sao"
+    - "L\u1EA1 nh\u1EC9, app c\u1EDD vua c\u1EE7a m\xECnh bi\u1EBFn m\u1EA5t r\u1ED3i"
+    - "B\xE2y gi\u1EDD l\xE0 8 gi\u1EDD r\u1ED3i, sao m\u1ECDi ng\u01B0\u1EDDi ch\u01B0a
+      ai \u0103n s\xE1ng nh\u1EC9"
+    - "M\xECnh c\u1EA7n l\xEAn t\u1EA7ng \u0111\xE1nh th\u1EE9c m\u1ECDi ng\u01B0\u1EDDi
+      d\u1EADy \u0111\xE3 r\u1ED3i t\xEDnh"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  seeEveryoneDead:
+    sentances:
+    - "Chuy\u1EC7n g\xEC \u0111\xE3 x\u1EA3y ra nh\u01B0 th\u1EBF n\xE0y"
+    - "M\xECnh \u0111\xE3 l\xE0m g\xEC v\u1EADy"
+    - Hic
+    - "Gi\u1EDD m\xECnh n\xEAn l\xE0m g\xEC \u0111\xE2y"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 

@@ -1,3 +1,4 @@
+using Cinemachine;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,17 +14,26 @@ public class CampingDay3 : MonoBehaviour
     [SerializeField] private VectorPaths pathNganFirstMissionMoveOut;
     [SerializeField] private InteractableEntity to2ndFloor;
     [SerializeField] private InteractableEntity toCamp;
+    [SerializeField] private Vector3 wakeupAfterFaintingPos = new Vector3(116.14f, -58.63f);
 
     [SerializeField] private GameObject dirtyDisks;
     [SerializeField] private GameObject foodsOnTable;
     [SerializeField] private InteractableEntity door;
     [SerializeField] private ChessGame chess;
 
+    [Header("Band Ending")]
+    [SerializeField] private Vector3[] allCharDiePos;
+    [SerializeField] private GameObject charBloods;
+    [SerializeField] private Transform secondFloor;
+    [SerializeField] private CinemachineVirtualCamera cineCam;
+    [SerializeField] private float killerDuration;
+
     private CharacterController Minh;
     private CharacterController Ngan;
     private CharacterController Mai;
     private CharacterController Hung;
     private CharacterController Nam;
+    private CharacterController Killer;
 
 
     PlayerController player;
@@ -39,6 +49,7 @@ public class CampingDay3 : MonoBehaviour
         Mai = mainMapManager.Mai;
         Hung = mainMapManager.Hung;
         Nam = mainMapManager.Nam;
+        Killer = mainMapManager.Killer;
 
         texts = Resources.Load<CampingDay3Text>($"Texts/MainMap/Day3/{PlayerPrefs.GetString("Language", "Eng")}");
         player = GameManager.instance.player;
@@ -167,6 +178,11 @@ public class CampingDay3 : MonoBehaviour
         entity.gameObject.SetActive(false);
     }
 
+    private void SetPlayerLockDoorPos()
+    {
+
+    }
+
     private void ChessNotify()
     {
         player.DisableMoveAndUI();
@@ -192,6 +208,7 @@ public class CampingDay3 : MonoBehaviour
     {
         player.DisableMoveAndUI();
         chess.outButton.onClick.AddListener(player.phone.outButton.onClick.Invoke);
+        PlayerPrefs.SetInt("ProgressDay3", 1);
         player.onOpenPhone = () =>
         {
             chess.PlayChess();
@@ -201,6 +218,91 @@ public class CampingDay3 : MonoBehaviour
         {
             player.EnableMoveAndUI();
             player.stress.StartStress();
+            player.anim.onDoneDie.AddListener(WakeUpAfterFainting);
+            player.stress.onMaxStress.AddListener(player.Die);
         });
+    }
+
+    private void WakeUpAfterFainting()
+    {
+        player.anim.onDoneDie.RemoveListener(WakeUpAfterFainting);
+        player.stress.StopBeingStress();
+        player.stress.AddStress(-10);
+
+        GameManager.instance.transitions.Transition(1, 1, OnComplete: () =>
+        {
+            GameManager.instance.dialogueManager.StartDialogue(texts.wakeUpAfterFainting, player.EnableMoveAndUI);
+
+        },
+        OnStartStay: () =>
+        {
+            player.Resurrect();
+            player.SetPositon(wakeupAfterFaintingPos, Vector2.down);
+            to2ndFloor.canInteract = true;
+            toCamp.canInteract = true;
+            if (chess.gameObject.activeSelf)
+                chess.outButton?.onClick.Invoke();
+            SetCharactersDie();
+        });
+    }
+
+    private void SetCharactersDie()
+    {
+        secondFloor.gameObject.SetActive(true);
+        charBloods.SetActive(true);
+
+        SetCharDie(Ngan, allCharDiePos[0], 90);
+        SetCharDie(Minh, allCharDiePos[1], 90);
+        SetCharDie(Nam, allCharDiePos[2], 180);
+        SetCharDie(Mai, allCharDiePos[3], -90);
+        SetCharDie(Hung, allCharDiePos[4], -90);
+
+        secondFloor.gameObject.SetActive(false);
+    }
+
+    private void SetCharDie(CharacterController character, Vector3 pos, float rot)
+    {
+        character.gameObject.SetActive(true);
+        character.SetPositon(pos, Vector3.down);
+        character.transform.rotation = Quaternion.Euler(0, 0, rot);
+        character.anim.StopAnimation();
+        character.transform.SetParent(secondFloor.transform, true);
+    }
+
+    public void SeeEveryoneDead(Collision2D collision,Collider2D caller)
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.seeEveryoneDead, BadEnding);
+        caller.enabled = false;
+    }
+
+    private void BadEnding()
+    {
+        DOVirtual.Float(cineCam.m_Lens.OrthographicSize, 2.5f, 2, orthoSize =>
+        {
+            cineCam.m_Lens.OrthographicSize = orthoSize;
+        }).OnComplete(ApproachPlayer);
+
+        void ApproachPlayer()
+        {
+            Killer.gameObject.SetActive(true);
+            Killer.UpdateMoveAnimation();
+            Killer.col.enabled = false;
+            Killer.SetPositon(player.transform.position + Vector3.up * 5, Vector3.down);
+            Killer.transform.DOMoveY(player.transform.position.y, killerDuration).SetEase(Ease.OutQuart).OnComplete(() =>
+            {
+                Killer.StopMove();
+                GameManager.instance.soundManager.PlaySound("Kill");
+                player.ImmediateDie(0.1f,onDone:() =>
+                {
+                    fullBlackUI.gameObject.SetActive(true);
+                });
+            });
+        }
+    }
+
+    public void ReplayGameAfterBadEnding()
+    {
+
     }
 }

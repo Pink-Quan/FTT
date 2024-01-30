@@ -153,7 +153,7 @@ public class InteractableEntity : MonoBehaviour
 
     public void HideInteractButton()
     {
-        player.HideInteractButton();
+        player?.HideInteractButton();
     }
 
     private void OnDisable()

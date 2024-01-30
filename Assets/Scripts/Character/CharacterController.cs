@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -56,6 +57,20 @@ public class CharacterController : MonoBehaviour
     {
         anim.Die();
     }
+
+    public virtual void ImmediateDie(float fallDuration = 0.2f, TweenCallback onDone = null)
+    {
+        anim.StopAnimation();
+        anim.SpriteRenderer.color = Color.red;
+        transform.DORotate(new Vector3(0, 0, 90), fallDuration).OnComplete(onDone);
+    }
+
+    public void Resurrect()
+    {
+        transform.rotation = Quaternion.identity;
+        anim.ResetAnim();
+    }
+
     public void AddConversationToCharacter(Dialogue dialogue, Action onDone = null, Action onInteract = null)
     {
         interact.canInteract = true;
@@ -103,7 +118,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    public void SetPositon(Vector3 pos,Vector2 dir)
+    public void SetPositon(Vector3 pos, Vector2 dir)
     {
         transform.position = pos;
         anim.SetDirection(dir);

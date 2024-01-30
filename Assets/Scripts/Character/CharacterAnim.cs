@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -19,6 +21,9 @@ public class CharacterAnim : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     [SerializeField] private float morbundTime = 2;
+    
+    public SpriteRenderer SpriteRenderer=>spriteRenderer;
+    public UnityEvent onDoneDie;
 
     private void Awake()
     {
@@ -27,6 +32,8 @@ public class CharacterAnim : MonoBehaviour
     }
     private void OnEnable()
     {
+        if (isStopAnimation)
+            return;
         SetDirection(moveDirection);
         StartCoroutine(UpdateSprite());
     }
@@ -89,7 +96,7 @@ public class CharacterAnim : MonoBehaviour
         }
 
         spriteRenderer.color = Color.red;
-        transform.DORotate(new Vector3(0, 0, 90), 0.5f).OnComplete(() => enabled = false);
+        transform.DORotate(new Vector3(0, 0, 90), 0.5f).OnComplete(() => onDoneDie?.Invoke());
     }
 
     public void TakeDamge()
@@ -132,7 +139,19 @@ public class CharacterAnim : MonoBehaviour
         onDone?.Invoke();
     }
 
-
+    public void PlayAnimation()
+    {
+        SetDirection(moveDirection);
+        StartCoroutine(UpdateSprite());
+    }
+    bool isStopAnimation;
+    public void StopAnimation()
+    {
+        isStopAnimation = true;
+        spriteRenderer.sprite = charaterSprites[3];
+        spriteRenderer.color = Color.white;
+        StopAllCoroutines();
+    }
     public float DieTime => morbundTime + 0.5f;
 }
 #if UNITY_EDITOR

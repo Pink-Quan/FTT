@@ -21,3 +21,5 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 8ebff3eedc37ddd4fadc9ca08b5c83a7, type: 3}
   - name: Lock Door
     sound: {fileID: 8300000, guid: 3ed0837b62536c64d9776c711813e9bb, type: 3}
+  - name: Kill
+    sound: {fileID: 8300000, guid: 36be8855dd71c69479f1493b5186ccbe, type: 3}

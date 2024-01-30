@@ -40,7 +40,7 @@ public class Stress : MonoBehaviour
             stressBar.color = Color.green;
             isReachedMaxStress = false;
         }
-        else if (stressIndex > 20 && stressIndex < 50)
+        else if (stressIndex >= 20 && stressIndex < 50)
         {
             player.playerMovement.SetSpeed(player.playerMovement.DefaultSpeed / 2f);
             stressBar.color = Color.yellow;

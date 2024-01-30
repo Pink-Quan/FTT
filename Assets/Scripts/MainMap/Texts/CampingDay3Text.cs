@@ -20,4 +20,6 @@ public class CampingDay3Text : ScriptableObject
     public Dialogue monoDialogueAboutPhone;
     public Dialogue monoDialogueAboutChess;
     public Dialogue fellDizzyAfterLookingAtChess;
+    public Dialogue wakeUpAfterFainting;
+    public Dialogue seeEveryoneDead;
 }
