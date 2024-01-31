@@ -2,7 +2,9 @@ using Cinemachine;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CampingDay3 : MonoBehaviour
 {
@@ -21,12 +23,16 @@ public class CampingDay3 : MonoBehaviour
     [SerializeField] private InteractableEntity door;
     [SerializeField] private ChessGame chess;
 
-    [Header("Band Ending")]
+    [Header("Bad Ending")]
     [SerializeField] private Vector3[] allCharDiePos;
     [SerializeField] private GameObject charBloods;
     [SerializeField] private Transform secondFloor;
     [SerializeField] private CinemachineVirtualCamera cineCam;
     [SerializeField] private float killerDuration;
+    [SerializeField] private GameObject badEndingBoard;
+    [SerializeField] private TMP_Text badEndingText;
+    [SerializeField] private Vector3 replayLockDoorPos;
+
 
     private CharacterController Minh;
     private CharacterController Ngan;
@@ -43,7 +49,6 @@ public class CampingDay3 : MonoBehaviour
     public void Init()
     {
         mainMapManager = GetComponent<MainMapManager>();
-        to2ndFloor.canInteract = false;
         Minh = mainMapManager.Minh;
         Ngan = mainMapManager.Ngan;
         Mai = mainMapManager.Mai;
@@ -54,13 +59,20 @@ public class CampingDay3 : MonoBehaviour
         texts = Resources.Load<CampingDay3Text>($"Texts/MainMap/Day3/{PlayerPrefs.GetString("Language", "Eng")}");
         player = GameManager.instance.player;
         player.DisableMoveAndUI();
-        //GameManager.instance.transitions.Transition(1, 1, WakePlayerUp, MovePlayerToFirstMission);
+
         gameObjects.SetActive(true);
         toCamp.canInteract = false;
+        to2ndFloor.canInteract = false;
 
-        //Debug
-        MovePlayerToFirstMission();
-        player.EnableMoveAndUI();
+        switch (PlayerPrefs.GetInt("ProgressDay3", 0))
+        {
+            case 0:
+                GameManager.instance.transitions.Transition(1, 1, WakePlayerUp, MovePlayerToFirstMission);
+                break;
+            case 1:
+                GameManager.instance.transitions.Transition(1, 1, ReplayAfterLockDoor, InitPlayerAfterLockDoor);
+                break;
+        }
     }
 
     private void WakePlayerUp()
@@ -174,13 +186,22 @@ public class CampingDay3 : MonoBehaviour
             GameManager.instance.soundManager.PlaySound("Lock Door");
             GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.lockDoor);
         });
-        entity.canInteract = false;
-        entity.gameObject.SetActive(false);
+        if (entity != null)
+        {
+            entity.canInteract = false;
+            entity.gameObject.SetActive(false);
+        }
     }
 
-    private void SetPlayerLockDoorPos()
+    private void InitPlayerAfterLockDoor()
     {
+        player.SetPositon(replayLockDoorPos, Vector2.down);
+    }
 
+    private void ReplayAfterLockDoor()
+    {
+        CheckDoorLock(null);
+        foodsOnTable.SetActive(true);
     }
 
     private void ChessNotify()
@@ -269,7 +290,7 @@ public class CampingDay3 : MonoBehaviour
         character.transform.SetParent(secondFloor.transform, true);
     }
 
-    public void SeeEveryoneDead(Collision2D collision,Collider2D caller)
+    public void SeeEveryoneDead(Collision2D collision, Collider2D caller)
     {
         player.DisableMoveAndUI();
         GameManager.instance.dialogueManager.StartDialogue(texts.seeEveryoneDead, BadEnding);
@@ -293,9 +314,10 @@ public class CampingDay3 : MonoBehaviour
             {
                 Killer.StopMove();
                 GameManager.instance.soundManager.PlaySound("Kill");
-                player.ImmediateDie(0.1f,onDone:() =>
+                player.ImmediateDie(0.1f, onDone: () =>
                 {
-                    fullBlackUI.gameObject.SetActive(true);
+                    badEndingBoard.gameObject.SetActive(true);
+                    badEndingText.text = texts.badEnding;
                 });
             });
         }
@@ -303,6 +325,6 @@ public class CampingDay3 : MonoBehaviour
 
     public void ReplayGameAfterBadEnding()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

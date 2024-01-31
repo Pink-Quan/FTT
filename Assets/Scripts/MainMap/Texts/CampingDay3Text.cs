@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Language", menuName = "ScriptableObjects/Texts/Camping Day 3")]
-public class CampingDay3Text : ScriptableObject 
+public class CampingDay3Text : ScriptableObject
 {
     public Dialogue[] wakePlayerUp;
     public Dialogue[] playerFirstDialgue;
@@ -22,4 +22,5 @@ public class CampingDay3Text : ScriptableObject
     public Dialogue fellDizzyAfterLookingAtChess;
     public Dialogue wakeUpAfterFainting;
     public Dialogue seeEveryoneDead;
+    [TextArea] public string badEnding;
 }
