@@ -4394,7 +4394,7 @@ MonoBehaviour:
   player: {fileID: 0}
   radius: 1
   interactName: Lock
-  canInteract: 1
+  canInteract: 0
   isGizmos: 0
   onInteract:
     m_PersistentCalls:
@@ -5007,7 +5007,8 @@ MonoBehaviour:
   wakeupAfterFaintingPos: {x: 116.14, y: -58.63, z: 0}
   dirtyDisks: {fileID: 769915090}
   foodsOnTable: {fileID: 1229390787}
-  door: {fileID: 580634121}
+  door: {fileID: 937488932}
+  checkWindownInteractEntity: {fileID: 1673309992}
   chess: {fileID: 1473540049}
   allCharDiePos:
   - {x: 106.69, y: -60.15, z: 0}
@@ -7914,6 +7915,96 @@ MonoBehaviour:
   isClosed: 0
   lineThickness: 1
   color: {r: 1, g: 0, b: 0, a: 1}
+--- !u!1 &1673309992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673309993}
+  - component: {fileID: 1673309995}
+  - component: {fileID: 1673309994}
+  m_Layer: 0
+  m_Name: Check Window
+  m_TagString: Untagged
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1673309993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673309992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 106.45, y: -57.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1756294691}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1673309994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673309992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5dda3f459862246b21e24db114b191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  radius: 1
+  interactName: Check
+  canInteract: 1
+  isGizmos: 0
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1048348880}
+        m_TargetAssemblyTypeName: CampingDay3, Assembly-CSharp
+        m_MethodName: CheckWindow
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPlayerEnterZone:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerInZone:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerLeaveZone:
+    m_PersistentCalls:
+      m_Calls: []
+  col: {fileID: 0}
+--- !u!114 &1673309995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673309992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5b835fcb9a48d448433f073f1e76a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alwaysOnGizmos: 0
+  maxPoint: {x: 1.0865021, y: 2.6467438}
+  minPoint: {x: -0.9103012, y: 0.9295883}
 --- !u!1 &1673904487
 GameObject:
   m_ObjectHideFlags: 0
@@ -8155,7 +8246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1756294691
 Transform:
   m_ObjectHideFlags: 0
@@ -8174,6 +8265,7 @@ Transform:
   - {fileID: 841057092}
   - {fileID: 334164516}
   - {fileID: 937488931}
+  - {fileID: 1673309993}
   m_Father: {fileID: 1872007513}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

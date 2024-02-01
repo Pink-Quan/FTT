@@ -21,6 +21,7 @@ public class CampingDay3 : MonoBehaviour
     [SerializeField] private GameObject dirtyDisks;
     [SerializeField] private GameObject foodsOnTable;
     [SerializeField] private InteractableEntity door;
+    [SerializeField] private GameObject checkWindownInteractEntity;
     [SerializeField] private ChessGame chess;
 
     [Header("Bad Ending")]
@@ -173,10 +174,20 @@ public class CampingDay3 : MonoBehaviour
         door.canInteract = true;
         player.DisableMoveAndUI();
         GameManager.instance.dialogueManager.StartDialogue(texts.forgotCheckDoor, player.EnableMoveAndUI);
+        checkWindownInteractEntity.SetActive(true);
+    }
+
+    public void CheckWindow(InteractableEntity entity)
+    {
+        player.DisableMoveAndUI();
+        entity.canInteract = false;
+        entity.gameObject.SetActive(false);
+        GameManager.instance.dialogueManager.StartDialogue(texts.checkWindow, player.EnableMoveAndUI);
     }
 
     public void CheckDoorLock(InteractableEntity entity)
     {
+        checkWindownInteractEntity.SetActive(false);
         player.DisableMoveAndUI();
         player.anim.SetDirection(Vector2.down);
         GameManager.instance.dialogueManager.StartDialogue(texts.monoDialogueAboutUnlockDoor, () =>
