@@ -1,5 +1,7 @@
+using Chess.Game;
 using Cinemachine;
 using DG.Tweening;
+using SuperTiled2Unity.Editor.LibTessDotNet;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -33,7 +35,12 @@ public class CampingDay3 : MonoBehaviour
     [SerializeField] private GameObject badEndingBoard;
     [SerializeField] private TMP_Text badEndingText;
     [SerializeField] private Vector3 replayLockDoorPos;
+    [SerializeField] private GameObject wcMission;
 
+    [Header("Not Bad Ending")]
+    [SerializeField] private Vector3 playerInWcPos;
+    [SerializeField] private GameObject wrongWC;
+    [SerializeField] private VectorPaths killerReachPlayerInWcPath;
 
     private CharacterController Minh;
     private CharacterController Ngan;
@@ -72,6 +79,9 @@ public class CampingDay3 : MonoBehaviour
                 break;
             case 1:
                 GameManager.instance.transitions.Transition(1, 1, ReplayAfterLockDoor, InitPlayerAfterLockDoor);
+                break;
+            case 2:
+                GameManager.instance.transitions.Transition(1, 1, () => WashFaceAndBrushTeeth(null), MovePlayerToWc);
                 break;
         }
     }
@@ -175,6 +185,7 @@ public class CampingDay3 : MonoBehaviour
         player.DisableMoveAndUI();
         GameManager.instance.dialogueManager.StartDialogue(texts.forgotCheckDoor, player.EnableMoveAndUI);
         checkWindownInteractEntity.SetActive(true);
+        GameManager.instance.missionsManager.RemoveMission(texts.firstMissionText);
     }
 
     public void CheckWindow(InteractableEntity entity)
@@ -246,6 +257,7 @@ public class CampingDay3 : MonoBehaviour
             chess.PlayChess();
             player.phone.gameObject.SetActive(false);
         };
+        chess.onChessGameDone.AddListener(WinChess);
         GameManager.instance.dialogueManager.StartDialogue(texts.fellDizzyAfterLookingAtChess, () =>
         {
             player.EnableMoveAndUI();
@@ -337,5 +349,60 @@ public class CampingDay3 : MonoBehaviour
     public void ReplayGameAfterBadEnding()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void WinChess(string moves, GameResult.Result res)
+    {
+        if (res != GameResult.Result.BlackIsMated) return;
+
+        chess.onChessGameDone.RemoveListener(WinChess);
+        chess.outButton?.onClick.Invoke();
+
+        player.stress.onMaxStress.RemoveAllListeners();
+        player.anim.onDoneDie.RemoveAllListeners();
+
+        PlayerPrefs.SetInt("ProgressDay3", 1);
+        GameManager.instance.dialogueManager.StartDialogue(texts.playerWinChess, () =>
+        {
+            player.EnableMoveAndUI();
+            wcMission.SetActive(true);
+        });
+    }
+
+    private void MovePlayerToWc()
+    {
+        player.SetPositon(playerInWcPos, Vector2.up);
+    }
+
+    public void WrongWC(InteractableEntity entity)
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.wrongWC, player.EnableMoveAndUI);
+    }
+
+    public void WashFaceAndBrushTeeth(InteractableEntity entity)
+    {
+        if (entity != null)
+        {
+            entity.canInteract = false;
+            entity.gameObject.SetActive(false);
+        }
+        GameManager.instance.dialogueManager.StartDialogue(texts.washFaceAndBrushTeeth, KillerReachPlayerInWC);
+    }
+
+    private void KillerReachPlayerInWC()
+    {
+        DOVirtual.Float(cineCam.m_Lens.OrthographicSize, 2.5f, 2, value =>
+        {
+            cineCam.m_Lens.OrthographicSize = value;
+        }).OnComplete(() =>
+        {
+            Killer.gameObject.SetActive(true);
+            Killer.UpdateMoveAnimation();
+            Killer.transform.DOPath(killerReachPlayerInWcPath.paths, 1).OnComplete(() =>
+            {
+                //Comunitacte with player
+            });
+        });
     }
 }

@@ -2048,6 +2048,18 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 911668979}
+    - target: {fileID: 6973515740810716377, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: onChessGameDone.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716377, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: onChessGameDone.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973515740810716377, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: onChessGameDone.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
 --- !u!1 &428849184
@@ -5023,6 +5035,10 @@ MonoBehaviour:
   badEndingBoard: {fileID: 428849184}
   badEndingText: {fileID: 2021111310}
   replayLockDoorPos: {x: 112.5, y: -71, z: 0}
+  wcMission: {fileID: 0}
+  playerInWcPos: {x: 0, y: 0, z: 0}
+  wrongWC: {fileID: 0}
+  killerReachPlayerInWcPath: {fileID: 0}
 --- !u!1 &1048568171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2186774567370573801, guid: 38da504cc3fe6424c90ae5ff51f836d6, type: 3}
@@ -6843,6 +6859,96 @@ Canvas:
   m_SortingLayerID: 898365667
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1356218986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356218987}
+  - component: {fileID: 1356218989}
+  - component: {fileID: 1356218988}
+  m_Layer: 0
+  m_Name: Wash Face
+  m_TagString: Untagged
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356218987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356218986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 118.54, y: -66.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1756294691}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356218988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356218986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5dda3f459862246b21e24db114b191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  radius: 1
+  interactName: Wash
+  canInteract: 1
+  isGizmos: 0
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1048348880}
+        m_TargetAssemblyTypeName: CampingDay3, Assembly-CSharp
+        m_MethodName: WashFaceAndBrushTeeth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPlayerEnterZone:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerInZone:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerLeaveZone:
+    m_PersistentCalls:
+      m_Calls: []
+  col: {fileID: 0}
+--- !u!114 &1356218989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356218986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5b835fcb9a48d448433f073f1e76a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alwaysOnGizmos: 0
+  maxPoint: {x: 0.83683777, y: 2.6467438}
+  minPoint: {x: -0.8211365, y: 0.9295883}
 --- !u!1 &1364441829
 GameObject:
   m_ObjectHideFlags: 0
@@ -8266,6 +8372,7 @@ Transform:
   - {fileID: 334164516}
   - {fileID: 937488931}
   - {fileID: 1673309993}
+  - {fileID: 1356218987}
   m_Father: {fileID: 1872007513}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -21,7 +21,7 @@ public class Stress : MonoBehaviour
 
     public void AddStress(int add)
     {
-        stressIndex += add*10;
+        stressIndex += add * 10;
         SetBarColor();
     }
 
@@ -56,9 +56,11 @@ public class Stress : MonoBehaviour
         {
             player.playerMovement.SetSpeed(0);
             stressBar.color = Color.red;
-            if (!isReachedMaxStress)
+            if (!isReachedMaxStress && stressIndex >= 99)
+            {
                 onMaxStress?.Invoke();
-            isReachedMaxStress = true;
+                isReachedMaxStress = true;
+            }
         }
         stressBar.fillAmount = stressIndex / 100f;
     }
@@ -70,7 +72,7 @@ public class Stress : MonoBehaviour
         {
             succesBreath = -succesBreath;
             AddStress(succesBreath);
-        },10);
+        }, 10);
     }
 
     public void HideStressBar()
@@ -106,7 +108,7 @@ public class Stress : MonoBehaviour
 
     private IEnumerator BeingMoreStress(int addRate = 1)
     {
-        while(true)
+        while (true)
         {
             yield return new WaitForSeconds(5);
             AddStress(addRate);

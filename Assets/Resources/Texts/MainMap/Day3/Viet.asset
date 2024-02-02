@@ -131,6 +131,14 @@ MonoBehaviour:
     emotion: 0
     keyValue: 
   lockDoor: "\u0110\xE3 kh\xF3a c\u1EEDa"
+  checkWindow:
+    sentances:
+    - "\u0110\xFAng nh\u01B0 ch\u1ECB Ng\xE2n n\xF3i, c\u1EEDa s\u1ED5 \u0111\xE3
+      \u0111\u01B0\u1EE3c kh\xF3a ch\u1EB7t t\u1EEB tr\u01B0\u1EDBc r\u1ED3i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
   monoDialogueAboutUnlockDoor:
     sentances:
     - "Sao c\u1EEDa ch\xEDnh l\u1EA1i ch\u01B0a kh\xF3a"
@@ -195,3 +203,29 @@ MonoBehaviour:
     emotion: 2
     keyValue: 
   badEnding: "B\u1EA1n \u0111\xE3 ch\u1EBFt <br>K\u1EBFt th\xFAc x\u1EA5u"
+  playerWinChess:
+    sentances:
+    - "M\xECnh gi\u1EA3i \u0111\u01B0\u1EE3c r\u1ED3i"
+    - "Kh\xF4ng hi\u1EC3u sao nh\xECn v\xE0o \u0111\xE2y l\u1EA1i khi\u1EBFn m\xECnh
+      ch\xF3ng m\u1EB7t"
+    - "M\xECnh ph\u1EA3i \u0111i \u0111\xE1nh r\u0103ng v\xE0 r\u1EEDa m\u1EB7t tr\u01B0\u1EDBc
+      \u0111\xE3"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  washFaceAndBrushTeeth:
+    sentances:
+    - "M\xECnh tr\xF4ng m\u1EC7t m\u1ECFi qu\xE1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+    keyValue: 
+  wrongWC:
+    sentances:
+    - "M\xECnh \u0111\u1EC3 b\xE0n ch\u1EA3i v\xE0 kh\u0103n m\u1EB7t \u1EDF b\xEAn
+      kia m\u1EA5t r\u1ED3i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
