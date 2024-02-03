@@ -1,3 +1,5 @@
+using Cinemachine;
+using QuanUtilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,4 +55,13 @@ public class GameManager : MonoBehaviour
         player.EnableMove();
     }
 
+    public void CineCamShake(CinemachineVirtualCamera cam,float amplitude,float duration)
+    {
+        var shake = cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        shake.m_AmplitudeGain = amplitude;
+        this.DelayFunction(duration, () =>
+        {
+            shake.m_AmplitudeGain = 0;
+        });
+    }
 }

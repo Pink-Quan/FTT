@@ -13,6 +13,8 @@ public class MainMapManager : MonoBehaviour
     public CharacterController Killer;
     public PlayerController player;
 
+    public ShowImage showImage;
+
     [SerializeField] private ParticleSystem[] effs;
     [SerializeField] private StartCamping startCamping;
     [SerializeField] private CampingDay2 campingDay2;

@@ -28,8 +28,9 @@ public class CampingDay3Text : ScriptableObject
     public Dialogue seeEveryoneDead;
     [TextArea] public string badEnding;
 
-    [Header("Win Chess")]
+    [Header("If Win Chess")]
     public Dialogue playerWinChess;
     public Dialogue washFaceAndBrushTeeth;
     public Dialogue wrongWC;
+    public Dialogue killerTalkWithPlayer;
 }

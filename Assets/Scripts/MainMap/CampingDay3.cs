@@ -1,6 +1,7 @@
 using Chess.Game;
 using Cinemachine;
 using DG.Tweening;
+using QuanUtilities;
 using SuperTiled2Unity.Editor.LibTessDotNet;
 using System.Collections;
 using System.Collections.Generic;
@@ -337,6 +338,7 @@ public class CampingDay3 : MonoBehaviour
             {
                 Killer.StopMove();
                 GameManager.instance.soundManager.PlaySound("Kill");
+                GameManager.instance.CineCamShake(cineCam, 2, 0.2f);
                 player.ImmediateDie(0.1f, onDone: () =>
                 {
                     badEndingBoard.gameObject.SetActive(true);
@@ -360,12 +362,14 @@ public class CampingDay3 : MonoBehaviour
 
         player.stress.onMaxStress.RemoveAllListeners();
         player.anim.onDoneDie.RemoveAllListeners();
+        player.stress.StopBeingStress();
 
-        PlayerPrefs.SetInt("ProgressDay3", 1);
+        PlayerPrefs.SetInt("ProgressDay3", 2);
         GameManager.instance.dialogueManager.StartDialogue(texts.playerWinChess, () =>
         {
             player.EnableMoveAndUI();
             wcMission.SetActive(true);
+            wrongWC.SetActive(true);
         });
     }
 
@@ -399,10 +403,17 @@ public class CampingDay3 : MonoBehaviour
         {
             Killer.gameObject.SetActive(true);
             Killer.UpdateMoveAnimation();
+            killerReachPlayerInWcPath.PushBackPoint(player.transform.position - new Vector3(0,0.5f));
+            Killer.transform.position = killerReachPlayerInWcPath.paths[0];
             Killer.transform.DOPath(killerReachPlayerInWcPath.paths, 1).OnComplete(() =>
             {
                 //Comunitacte with player
-            });
+                Killer.StopMove();
+                Killer.anim.SetDirection(Vector2.up);
+                GameManager.instance.CineCamShake(cineCam, 2, 0.2f);
+                mainMapManager.showImage.Show(Resources.Load<Sprite>("CampingDay3/killerReachPlayer"));
+                mainMapManager.showImage.ResizeImage();
+            }).SetEase(Ease.InCirc);
         });
     }
 }
