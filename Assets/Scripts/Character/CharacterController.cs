@@ -123,4 +123,14 @@ public class CharacterController : MonoBehaviour
         transform.position = pos;
         anim.SetDirection(dir);
     }
+
+    private void OnPunch()
+    {
+
+    }
+
+    private void OnPunchDone()
+    {
+
+    }
 }

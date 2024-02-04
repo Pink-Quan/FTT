@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ShowImage : MonoBehaviour
 {
     public Image image;
+    public CanvasGroup canvasGroup;
 
     public UnityAction onClose;
     public void Show(Sprite img, UnityAction onClose = null)
@@ -38,12 +39,16 @@ public class ShowImage : MonoBehaviour
 
         float scaleFactor = Mathf.Min(scaleFactorWidth, scaleFactorHeight);
 
-        RectTransform rectTransform = image.GetComponent<RectTransform>();
+        RectTransform rectTransform = image.rectTransform;
         if (rectTransform != null)
         {
             rectTransform.sizeDelta = new Vector2(imageWidth * scaleFactor, imageHeight * scaleFactor);
         }
+    }
 
+    public void ScaleImage(Vector2 scaleFactor)
+    {
+        image.rectTransform.sizeDelta = image.rectTransform.sizeDelta * scaleFactor;
     }
 
 }

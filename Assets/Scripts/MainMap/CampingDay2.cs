@@ -2,7 +2,6 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class CampingDay2 : MonoBehaviour
 {
@@ -290,20 +289,7 @@ public class CampingDay2 : MonoBehaviour
             mainMap.SetActive(false);
             firstFlooor.SetActive(true);
 
-            player.transform.position = finalDisscusPos;
-            Vector3 playerPos = player.transform.position;
-            Hung.transform.position = playerPos + Vector3.down;
-            Mai.transform.position = playerPos + Vector3.down * 2;
-            Nam.transform.position = playerPos + Vector3.down * 3;
-            Ngan.transform.position = playerPos + Vector3.left * 1.5f + Vector3.down;
-            Minh.transform.position = playerPos + Vector3.down * 2 + Vector3.left * 1.5f;
-
-            player.anim.SetDirection(Vector2.left);
-            Nam.anim.SetDirection(Vector2.left);
-            Mai.anim.SetDirection(Vector2.left);
-            Hung.anim.SetDirection(Vector2.left);
-            Ngan.anim.SetDirection(Vector2.right);
-            Minh.anim.SetDirection(Vector2.right);
+            SetCharacterPositionInHouse();
         }
     }
 
@@ -311,6 +297,32 @@ public class CampingDay2 : MonoBehaviour
     {
         PlayerPrefs.SetInt("Progress", (int)GameProgress.CampingDay3);
         GameManager.instance.dialogueManager.StartDialogue(texts.endDay2Dialogue, mainMapManager.InitCampingDay3);
+    }
+
+    public void SetCharacterPositionInHouse(PlayerController tplayer = null, CharacterController tHung = null, CharacterController tMai = null,
+        CharacterController tNgan = null, CharacterController tMinh = null, CharacterController tNam = null)
+    {
+        if (player == null) player = tplayer;
+        if (Hung == null) Hung = tHung;
+        if (Mai == null) Mai = tMai;
+        if (Ngan == null) Ngan = tNgan;
+        if (Minh == null) Minh = tMinh;
+        if(Nam==null) Nam = tNam;
+
+        player.transform.position = finalDisscusPos;
+        Vector3 playerPos = player.transform.position;
+        Hung.transform.position = playerPos + Vector3.down;
+        Mai.transform.position = playerPos + Vector3.down * 2;
+        Nam.transform.position = playerPos + Vector3.down * 3;
+        Ngan.transform.position = playerPos + Vector3.left * 1.5f + Vector3.down;
+        Minh.transform.position = playerPos + Vector3.down * 2 + Vector3.left * 1.5f;
+
+        player.anim.SetDirection(Vector2.left);
+        Nam.anim.SetDirection(Vector2.left);
+        Mai.anim.SetDirection(Vector2.left);
+        Hung.anim.SetDirection(Vector2.left);
+        Ngan.anim.SetDirection(Vector2.right);
+        Minh.anim.SetDirection(Vector2.right);
     }
 }
 

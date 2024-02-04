@@ -3,10 +3,13 @@ using Cinemachine;
 using DG.Tweening;
 using QuanUtilities;
 using SuperTiled2Unity.Editor.LibTessDotNet;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class CampingDay3 : MonoBehaviour
@@ -42,6 +45,13 @@ public class CampingDay3 : MonoBehaviour
     [SerializeField] private Vector3 playerInWcPos;
     [SerializeField] private GameObject wrongWC;
     [SerializeField] private VectorPaths killerReachPlayerInWcPath;
+
+    [Header("Second Mission")]
+    [SerializeField] private Vector3 MinhSecondMissionPos;
+    [SerializeField] private Vector3 NganSecondMissionPos;
+    [SerializeField] private Vector3 HungSecondMissionPos;
+    [SerializeField] private Vector3 MaiSecondMissionPos;
+    [SerializeField] private Vector3 NamSecondMissionPos;
 
     private CharacterController Minh;
     private CharacterController Ngan;
@@ -413,7 +423,78 @@ public class CampingDay3 : MonoBehaviour
                 GameManager.instance.CineCamShake(cineCam, 2, 0.2f);
                 mainMapManager.showImage.Show(Resources.Load<Sprite>("CampingDay3/killerReachPlayer"));
                 mainMapManager.showImage.ResizeImage();
+                mainMapManager.showImage.ScaleImage(new Vector2(.7f, .7f));
+
+                mainMapManager.showImage.image.color = new Color(1, 1, 1, 0);
+                mainMapManager.showImage.image.DOFade(1, 1).OnComplete(() =>
+                {
+                    GameManager.instance.dialogueManager.StartDialogue(texts.killerTalkWithPlayer, KillerMoveOut);
+                });
             }).SetEase(Ease.InCirc);
         });
+    }
+
+    private void KillerMoveOut()
+    {
+        fullBlackUI.gameObject.SetActive(false);
+        mainMapManager.showImage.canvasGroup.DOFade(0, 1).OnComplete(() =>
+        {
+            mainMapManager.showImage.OnCloseViewImage();
+            Killer.UpdateMoveAnimation();
+            Array.Reverse(killerReachPlayerInWcPath.paths);
+            Killer.transform.DOPath(killerReachPlayerInWcPath.paths, 2).OnComplete(OnKllerLeave).SetEase(Ease.OutCirc);
+        });
+       
+    }
+
+    private void OnKllerLeave()
+    {
+        Killer.StopMove();
+        Killer.gameObject.SetActive(false);
+        player.anim.SetDirection(Vector2.down);
+
+        DOVirtual.Float(cineCam.m_Lens.OrthographicSize, 6, 2, value =>
+        {
+            cineCam.m_Lens.OrthographicSize = value;
+        }).OnComplete(() =>
+        {
+            GameManager.instance.transitions.Transition(1, 1, CommunicateAfterEveryoneGetUp, InitCharacterWakeUpAfterLinhMeetKiller);
+        });
+    }
+
+    private void InitCharacterWakeUpAfterLinhMeetKiller()
+    {
+        foodsOnTable.gameObject.SetActive(false);
+        InitCharInHouse(Hung);
+        InitCharInHouse(Mai);
+        InitCharInHouse(Minh);
+        InitCharInHouse(Ngan);
+        InitCharInHouse(Nam);
+        GetComponent<CampingDay2>().SetCharacterPositionInHouse(player,Hung,Mai,Ngan,Minh,Nam);
+    }
+
+    private void InitCharInHouse(CharacterController character)
+    {
+        character.gameObject.SetActive(true);
+        character.transform.SetParent(null, true);
+    }
+
+    private void CommunicateAfterEveryoneGetUp()
+    {
+        GameManager.instance.dialogueManager.StartDialogue(texts.firstAllCharConversation, InitSecondMission);
+    }
+
+    private void InitSecondMission()
+    {
+
+    }
+
+    private void InitCharSecondMission(CharacterController character,Vector3 pos,Vector2 dir,Transform parent,UnityAction<InteractableEntity> onInteract)
+    {
+        character.SetPositon(pos, dir);
+        character.transform.SetParent(parent, true);
+        character.interact.canInteract = true;
+        character.interact.onInteract.RemoveAllListeners();
+        character.interact.onInteract.AddListener(onInteract);
     }
 }

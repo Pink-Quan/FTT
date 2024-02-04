@@ -231,3 +231,56 @@ MonoBehaviour:
     DisplayName: Linh
     emotion: 0
     keyValue: 
+  killerTalkWithPlayer:
+  - sentances:
+    - "T\u1ED1t h\u01A1n h\u1EBFt m\xE0y n\xEAn tr\u1EADt t\u1EF1, m\xE0y h\xE9t
+      l\xEAn l\xE0 \u0111i lu\xF4n \u0111\u1EA5y"
+    Name: Trans
+    DisplayName: "K\u1EBB l\u1EA1 m\u1EB7t"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "\u0110\u01B0\u1EE3c r\u1ED3i, t\xF4i s\u1EBD kh\xF4ng l\xE0m g\xEC c\u1EA3"
+    - "Anh mu\u1ED1n g\xEC"
+    Name: Trans
+    DisplayName: Liinh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "T\u1ED1t nh\u1EA5t l\xE0 ch\xFAng m\xE0y n\xEAn v\u1EC1 v\xE0 ng\u1EEBng t\xECm
+      ki\u1EBFm m\u1ECDi th\u1EE9"
+    - "Chuy\u1EC7n m\xE0 \u0111\xE3 x\u1EA3y ra th\xEC kh\xF4ng th\u1EC3 l\xE0m l\u1EA1i
+      \u0111\xE2u"
+    Name: Trans
+    DisplayName: "K\u1EBB l\u1EA1 m\u1EB7t"
+    emotion: 0
+    keyValue: 
+  firstAllCharConversation:
+  - sentances:
+    - "Th\u1EF1c s\u1EF1 qu\xE1 nguy hi\u1EC3m khi \u0111\xE3 \u0111\u1EC3 k\u1EBB
+      l\u1EA1 m\u1EB7t \u0111\xF3 c\u1EADy kh\xF3a \u0111\u1ED9t nh\u1EADp v\xE0o
+      \u0111\xE2y"
+    - "May m\xE0 h\u1EAFn ch\u01B0a l\xE0m b\u1ECB th\u01B0\u01A1ng ai"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "H\u1EAFn bi\u1EBFt n\u1EBFu l\xE0m h\u1EA1i Linh th\xEC s\u1EBD \u0111\xE1nh
+      th\u1EE9c m\u1ECDi ng\u01B0\u1EDDi d\u1EADy n\xEAn ch\u1EAFc ch\u01B0a d\xE1m
+      ra tay"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Hi\u1EC7n t\u1EA1i \u1EDF \u0111\xE2y \u0111\xE3 qu\xE1 nguy hi\u1EC3m"
+    - "Anh s\u1EBD c\u1ED1 g\u1EAFng s\u1EEDa xe xong ngay trong ng\xE0y h\xF4m nay,
+      mai ch\xFAng ta s\u1EBD l\u1EADp t\u1EE9c r\u1EDDi kh\u1ECFi \u0111\xE2y"
+    - "M\u1EA5y \u0111\u1EE9a \u1EDF trong nh\xE0 n\u1EA5u c\u01A1m d\u1ECDn d\u1EB9p
+      gi\xFAp anh ch\u1ECB"
+    - "Anh v\u1EDBi ch\u1ECB Ng\xE2n s\u1EBD c\u1ED1 g\u1EAFng s\u1EEDa xe"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 

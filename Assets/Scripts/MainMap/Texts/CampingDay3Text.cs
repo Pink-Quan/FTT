@@ -32,5 +32,8 @@ public class CampingDay3Text : ScriptableObject
     public Dialogue playerWinChess;
     public Dialogue washFaceAndBrushTeeth;
     public Dialogue wrongWC;
-    public Dialogue killerTalkWithPlayer;
-}
+    public Dialogue[] killerTalkWithPlayer;
+
+    [Header("After all characters waking up")]
+    public Dialogue[] firstAllCharConversation;
+ }
