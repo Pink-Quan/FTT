@@ -36,4 +36,14 @@ public class CampingDay3Text : ScriptableObject
 
     [Header("After all characters waking up")]
     public Dialogue[] firstAllCharConversation;
- }
+
+    [Header("Second Mission")]
+    public Dialogue HungAskPlayer;
+    public Dialogue communicateWithMinh2;
+    public Dialogue communicateWithNgan2;
+    public Dialogue []communicateWithHung2;
+    public Dialogue communicateWithMai2;
+    public Dialogue[] askMinhAboutPassword;
+    public Dialogue HungFindOutMorseCode;
+    public string findMorseCodeString;
+}

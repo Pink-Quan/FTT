@@ -52,6 +52,8 @@ public class CampingDay3 : MonoBehaviour
     [SerializeField] private Vector3 HungSecondMissionPos;
     [SerializeField] private Vector3 MaiSecondMissionPos;
     [SerializeField] private Vector3 NamSecondMissionPos;
+    [SerializeField] private Vector3 playerSecondMissionPos;
+    [SerializeField] private GameObject smartElectricController;
 
     private CharacterController Minh;
     private CharacterController Ngan;
@@ -82,6 +84,9 @@ public class CampingDay3 : MonoBehaviour
         gameObjects.SetActive(true);
         toCamp.canInteract = false;
         to2ndFloor.canInteract = false;
+
+        mainMap.SetActive(false);
+        mainHouse.SetActive(true);
 
         switch (PlayerPrefs.GetInt("ProgressDay3", 0))
         {
@@ -120,8 +125,6 @@ public class CampingDay3 : MonoBehaviour
         Nam.gameObject.SetActive(false);
         Minh.gameObject.SetActive(false);
         Hung.gameObject.SetActive(false);
-        mainMap.SetActive(false);
-        mainHouse.SetActive(true);
         Ngan.gameObject.SetActive(true);
         player.SetPositon(playerFirstMissionPos, Vector3.right);
         mainMapManager.Ngan.SetPositon(playerFirstMissionPos + Vector3.right, Vector3.left);
@@ -413,7 +416,7 @@ public class CampingDay3 : MonoBehaviour
         {
             Killer.gameObject.SetActive(true);
             Killer.UpdateMoveAnimation();
-            killerReachPlayerInWcPath.PushBackPoint(player.transform.position - new Vector3(0,0.5f));
+            killerReachPlayerInWcPath.PushBackPoint(player.transform.position - new Vector3(0, 0.5f));
             Killer.transform.position = killerReachPlayerInWcPath.paths[0];
             Killer.transform.DOPath(killerReachPlayerInWcPath.paths, 1).OnComplete(() =>
             {
@@ -444,7 +447,7 @@ public class CampingDay3 : MonoBehaviour
             Array.Reverse(killerReachPlayerInWcPath.paths);
             Killer.transform.DOPath(killerReachPlayerInWcPath.paths, 2).OnComplete(OnKllerLeave).SetEase(Ease.OutCirc);
         });
-       
+
     }
 
     private void OnKllerLeave()
@@ -470,7 +473,7 @@ public class CampingDay3 : MonoBehaviour
         InitCharInHouse(Minh);
         InitCharInHouse(Ngan);
         InitCharInHouse(Nam);
-        GetComponent<CampingDay2>().SetCharacterPositionInHouse(player,Hung,Mai,Ngan,Minh,Nam);
+        GetComponent<CampingDay2>().SetCharacterPositionInHouse(player, Hung, Mai, Ngan, Minh, Nam);
     }
 
     private void InitCharInHouse(CharacterController character)
@@ -486,15 +489,86 @@ public class CampingDay3 : MonoBehaviour
 
     private void InitSecondMission()
     {
+        GameManager.instance.transitions.Transition(1, 1, HungAskLinhAboutElectric, InitChar);
+        smartElectricController.SetActive(true);
+        toCamp.canInteract = true;
+        to2ndFloor.canInteract = true;
 
+        void InitChar()
+        {
+            InitCharSecondMission(player, playerSecondMissionPos, Vector2.down, null);
+            InitCharSecondMission(Hung, HungSecondMissionPos, Vector2.down, mainMap.transform, OnCommunicateWithHung);
+            InitCharSecondMission(Mai, MaiSecondMissionPos, Vector2.down, mainHouse.transform, OnCommunicateWithMai);
+            InitCharSecondMission(Ngan, NganSecondMissionPos, Vector2.up, mainMap.transform, OnCommunicateWithNgan);
+            InitCharSecondMission(Minh, MinhSecondMissionPos, Vector2.up, mainMap.transform, OnCommunicateWithMinh);
+            Nam.gameObject.SetActive(false);
+            Hung.interact.Radius = 2;
+            Ngan.interact.Radius = 1;
+        }
     }
 
-    private void InitCharSecondMission(CharacterController character,Vector3 pos,Vector2 dir,Transform parent,UnityAction<InteractableEntity> onInteract)
+    void OnCommunicateWithHung(InteractableEntity entity)
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.communicateWithHung2, player.EnableMoveAndUI);
+        Minh.interact.onInteract.RemoveAllListeners();
+        Minh.interact.onInteract.AddListener(MinhDontKnowPassword);
+        Hung.anim.SetDirection(player.transform.position - Hung.transform.position);
+    }
+    void OnCommunicateWithNgan(InteractableEntity entity)
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.communicateWithNgan2, player.EnableMoveAndUI);
+    }
+    void OnCommunicateWithMinh(InteractableEntity entity)
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.communicateWithMinh2, player.EnableMoveAndUI);
+    }
+    void OnCommunicateWithMai(InteractableEntity entity)
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.communicateWithMai2, player.EnableMoveAndUI);
+    }
+
+    private void InitCharSecondMission(CharacterController character, Vector3 pos, Vector2 dir, Transform parent, UnityAction<InteractableEntity> onInteract = null)
     {
         character.SetPositon(pos, dir);
         character.transform.SetParent(parent, true);
-        character.interact.canInteract = true;
-        character.interact.onInteract.RemoveAllListeners();
-        character.interact.onInteract.AddListener(onInteract);
+        if (onInteract != null)
+        {
+            character.interact.onInteract.RemoveAllListeners();
+            character.interact.canInteract = true;
+            character.interact.onInteract.AddListener(onInteract);
+        }
+    }
+
+    private void HungAskLinhAboutElectric()
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.HungAskPlayer, player.EnableMoveAndUI);
+    }
+
+    private void MinhDontKnowPassword(InteractableEntity minh)
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.askMinhAboutPassword, player.EnableMoveAndUI);
+        Hung.interact.onInteract.RemoveAllListeners();
+        Hung.interact.onInteract.AddListener(HungFindOutMorse);
+    }
+
+    private void HungFindOutMorse(InteractableEntity hung)
+    {
+        player.DisableMoveAndUI();
+        GameManager.instance.dialogueManager.StartDialogue(texts.HungFindOutMorseCode, () =>
+        {
+            player.EnableMoveAndUI();
+            GameManager.instance.missionsManager.AddAndShowMission(texts.findMorseCodeString);
+        });
+    }
+
+    public void UnlockSmartElectric(bool isUnlock, GameObject caller)
+    {
+        if (!isUnlock) return;
     }
 }

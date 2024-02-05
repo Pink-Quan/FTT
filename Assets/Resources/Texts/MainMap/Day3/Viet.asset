@@ -284,3 +284,90 @@ MonoBehaviour:
     DisplayName: Minh
     emotion: 0
     keyValue: 
+  HungAskPlayer:
+    sentances:
+    - "Linh \u01A1i, ra ngo\xE0i \u0111\xE2y gi\xFAp anh m\u1ED9t ch\xFAt"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  communicateWithMinh2:
+    sentances:
+    - "Anh ch\u1ECB \u0111ang s\u1EEDa \xF4 t\xF4, em xem nh\u1EEFng ng\u01B0\u1EDDi
+      kh\xE1c c\xF3 c\u1EA7n g\xEC kh\xF4ng r\u1ED3i gi\xFAp h\u1ECD"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  communicateWithNgan2:
+    sentances:
+    - "Anh ch\u1ECB \u0111ang s\u1EEDa \xF4 t\xF4, em xem nh\u1EEFng ng\u01B0\u1EDDi
+      kh\xE1c c\xF3 c\u1EA7n g\xEC kh\xF4ng r\u1ED3i gi\xFAp h\u1ECD"
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  communicateWithHung2:
+  - sentances:
+    - "Em c\xF3 bi\u1EBFt g\xEC v\u1EC1 m\u1EA5y \u0111\u1ED3 \u0111i\u1EC7n t\u1EED
+      th\xF4ng minh n\xE0y kh\xF4ng"
+    - "N\xF3 y\xEAu c\u1EA7u nh\u1EADp m\u1EADt kh\u1EA9u m\u1EDBi xem \u0111\u01B0\u1EE3c
+      b\xEAn trong \u0111\xE3 \u0111i\u1EC1u ch\u1EC9nh nh\u01B0 th\u1EBF n\xE0o"
+    - "Nh\xE0 anh ch\u1ECB \u1EDF \u0111\xE2u d\xF9ng \u0111i\u1EC7n th\xF4ng minh,
+      anh \u0111o\xE1n n\xF3 b\u1ECB nh\u1EA5p nh\xE1y do c\xE0i \u0111\u1EB7t b\xEAn
+      trong "
+    - "Em xem c\xF3 c\xE1ch n\xE0o kh\xF4ng"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Th\u01B0\u1EDDng th\xEC m\u1EB7c \u0111\u1ECBnh m\u1EADt kh\u1EA9u l\xE0 0000"
+    - "Anh th\u1EED xem \u0111\u01B0\u1EE3c kh\xF4ng"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Kh\xF4ng \u0111\u01B0\u1EE3c"
+    - "Em th\u1EED h\u1ECFi anh Minh xem anh \u1EA5y c\xF3 bi\u1EBFt kh\xF4ng"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  communicateWithMai2:
+    sentances:
+    - "S\xE1ng nay t\u1EDB ph\u1EA3i d\u1EADy s\u1EDBm g\xE1c m\u1EC7t qu\xE1, c\u1EADu
+      gi\xFAp t\u1EDB l\xE0m vi\u1EC7c nh\xE0 nh\xE1"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  askMinhAboutPassword:
+  - sentances:
+    - "Anh \u01A1i, c\xE1i m\u1EADt kh\u1EA9u c\u1EE7a b\u1ED9 \u0111i\u1EC1u khi\u1EC3n
+      \u0111i\u1EC7n th\xF4ng minh \u1EDF nh\xE0 anh l\xE0 g\xEC th\u1EBF"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Tr\u01B0\u1EDBc c\xF3 ng\u01B0\u1EDDi l\u1EAFp cho anh n\xF3i l\xE0 \u0111\u1EC3
+      m\u1EB7c \u0111\u1ECBnh l\xE0 0000, em th\u1EED xem"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  HungFindOutMorseCode:
+    sentances:
+    - "Anh v\u1EEBa th\u1EA5y c\xE1i n\xE0y hay l\u1EAFm"
+    - "Anh th\u1EA5y \u0111\xE8n nh\u1EA5p nh\xE1y c\xF3 quy lu\u1EADt, anh v\u1EEBa
+      th\u1EED ghi l\u1EA1i th\xEC n\xF3 gi\u1ED1ng m\xE3 Morse"
+    - "N\xF3 l\xE0 ----- ----- ----- ..---"
+    - "Nh\u01B0ng anh kh\xF4ng nh\u1EDB d\u1ECBch m\xE3 morse, em th\u1EED d\u1ECBch
+      r\u1ED3i nh\u1EADp m\u1EADt kh\u1EA9u xem \u0111\u01B0\u1EE3c kh\xF4ng"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  findMorseCodeString: "T\xECm m\xE3 Morse cho ----- ----- ----- ..---"

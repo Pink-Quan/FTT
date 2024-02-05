@@ -34,12 +34,13 @@ public class Missions : MonoBehaviour
             text.Append('\n');
         }
         if (text.Length > 0)
-            GameManager.instance.textBoard.ShowText(text.ToString(),onOK);
+            GameManager.instance.textBoard.ShowText(text.ToString(), onOK);
     }
 
-    public void AddAndShowMission(string mission,UnityAction onOk = null)
+    public void AddAndShowMission(string mission, UnityAction onOk = null)
     {
-        missions.Add(mission);
+        if (!missions.Contains(mission))
+            missions.Add(mission);
         ShowMissions(onOk);
     }
 
