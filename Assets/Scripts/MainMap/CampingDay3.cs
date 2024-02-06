@@ -461,11 +461,11 @@ public class CampingDay3 : MonoBehaviour
             cineCam.m_Lens.OrthographicSize = value;
         }).OnComplete(() =>
         {
-            GameManager.instance.transitions.Transition(1, 1, CommunicateAfterEveryoneGetUp, InitCharacterWakeUpAfterLinhMeetKiller);
+            GameManager.instance.transitions.Transition(1, 1, CommunicateAfterEveryoneGetUp, InitAllCharMeetInLivingRoom);
         });
     }
 
-    private void InitCharacterWakeUpAfterLinhMeetKiller()
+    private void InitAllCharMeetInLivingRoom()
     {
         foodsOnTable.gameObject.SetActive(false);
         InitCharInHouse(Hung);
@@ -567,8 +567,21 @@ public class CampingDay3 : MonoBehaviour
         });
     }
 
-    public void UnlockSmartElectric(bool isUnlock, GameObject caller)
+    public void UnlockSmartElectric()
     {
-        if (!isUnlock) return;
+        GameManager.instance.dialogueManager.StartDialogue(texts.HungThanksLinhForOpenningLock, EndDay3);
+    }
+
+    private void EndDay3()
+    {
+        GameManager.instance.transitions.Transition(1, 1, () =>
+        {
+            GameManager.instance.dialogueManager.StartDialogue(texts.endDayDialouge, MoveToDay4);
+        }, InitAllCharMeetInLivingRoom);
+    }
+
+    private void MoveToDay4()
+    {
+
     }
 }

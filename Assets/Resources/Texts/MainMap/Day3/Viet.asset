@@ -371,3 +371,11 @@ MonoBehaviour:
     emotion: 0
     keyValue: 
   findMorseCodeString: "T\xECm m\xE3 Morse cho ----- ----- ----- ..---"
+  HungThanksLinhForOpenningLock:
+    sentances:
+    - "Anh c\u1EA3m \u01A1n nh\xE9, gi\u1EDD anh "
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  endDayDialouge: []

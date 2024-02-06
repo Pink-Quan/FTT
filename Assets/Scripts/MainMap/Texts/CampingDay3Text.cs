@@ -46,4 +46,6 @@ public class CampingDay3Text : ScriptableObject
     public Dialogue[] askMinhAboutPassword;
     public Dialogue HungFindOutMorseCode;
     public string findMorseCodeString;
+    public Dialogue HungThanksLinhForOpenningLock;
+    public Dialogue[] endDayDialouge;
 }
