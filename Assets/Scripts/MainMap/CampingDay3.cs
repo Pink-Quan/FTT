@@ -582,6 +582,7 @@ public class CampingDay3 : MonoBehaviour
 
     private void MoveToDay4()
     {
-
+        PlayerPrefs.SetInt("Progress", (int)GameProgress.CampingDay4);
+        mainMapManager.InitCampingDay4();
     }
 }

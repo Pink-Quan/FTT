@@ -373,9 +373,21 @@ MonoBehaviour:
   findMorseCodeString: "T\xECm m\xE3 Morse cho ----- ----- ----- ..---"
   HungThanksLinhForOpenningLock:
     sentances:
-    - "Anh c\u1EA3m \u01A1n nh\xE9, gi\u1EDD anh "
+    - "Anh c\u1EA3m \u01A1n nh\xE9, gi\u1EDD anh c\xF3 th\u1EC3 s\u1EEDa n\u1ED1t
+      r\u1ED3i"
+    - "C\xF3 g\xEC em v\xE0o gi\xFAp Mai nh\xE9"
     Name: Hung
     DisplayName: "H\u01B0ng"
     emotion: 0
     keyValue: 
-  endDayDialouge: []
+  endDayDialouge:
+  - sentances:
+    - "C\u1EA3 ng\xE0y h\xF4m nay c\xF3 v\u1EBB y\xEAn b\xECnh, kh\xF4ng c\xF3 chuy\u1EC7n
+      g\xEC l\u1EDBn x\u1EA3y ra c\u1EA3"
+    - "Mai ch\xFAng ta c\xF3 th\u1EC3 r\u1EDDi kh\u1ECFi \u0111\xE2y r\u1ED3i"
+    - "\u0110\u1EC3 cho ch\u1EAFc \u0103n, t\u1ED1i nay 2 ng\u01B0\u1EDDi s\u1EBD
+      g\xE1c m\u1ED9t l\xFAc nh\xE9"
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 

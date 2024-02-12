@@ -115,5 +115,6 @@ public enum GameProgress
     StartCamping=2,
     CampingDay2=4,
     CampingDay3=5,
-    Chess = 6,
+    CampingDay4 = 6,
+    Cave = 7,
 }

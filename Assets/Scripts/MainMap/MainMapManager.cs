@@ -19,6 +19,7 @@ public class MainMapManager : MonoBehaviour
     [SerializeField] private StartCamping startCamping;
     [SerializeField] private CampingDay2 campingDay2;
     [SerializeField] private CampingDay3 campingDay3;
+    [SerializeField] private CampingDay4 campingDay4;
 
     private void Start()
     {
@@ -41,6 +42,9 @@ public class MainMapManager : MonoBehaviour
                 break;
             case GameProgress.CampingDay3:
                 InitCampingDay3();
+                break;
+            case GameProgress.CampingDay4:
+                InitCampingDay4();
                 break;
         }
     }
@@ -120,5 +124,15 @@ public class MainMapManager : MonoBehaviour
     public void InitCampingDay3()
     {
         campingDay3.Init();
+    }
+
+    public void InitCampingDay4()
+    {
+        campingDay4.Init(this);
+    }
+
+    public void ChangeToCaveScene()
+    {
+        print("Change to cave");
     }
 }

@@ -1,0 +1,169 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3926f1f3a3538d4abb3952b2842540e, type: 3}
+  m_Name: Viet
+  m_EditorClassIdentifier: 
+  playerWakeUpDialogue:
+    sentances:
+    - "Sao m\xECnh l\u1EA1i ng\u1EE7 \u1EDF \u0111\xE2y nh\u1EC9"
+    - "M\xECnh nh\u1EDB m\xECnh ng\u1EE7 tr\xEAn t\u1EA7ng 2 m\xE0"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  playerSeeHung:
+    sentances:
+    - "Anh H\u01B0ng"
+    - "Sao, sao anh l\u1EA1i b\u1ECB v\u1EADy ch\u1EE9"
+    - "M\u1ECDi ng\u01B0\u1EDDi tr\xEAn t\u1EA7ng th\xEC sao"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  playerSeeEveryoneElse:
+    sentances:
+    - "Sao m\u1ECDi ng\u01B0\u1EDDi \u0111\u1EC1u b\u1ECB g\u1EE5c h\u1EBFt v\u1EADy"
+    - "K\u1EBB gi\u1EBFt ng\u01B0\u1EDDi \u0111\xE3 ra tay h\u1EBFt v\u1EDBi m\u1ECDi
+      ng\u01B0\u1EDDi r\u1ED3i"
+    - "C\xF3 ti\u1EBFng \u0111\u1ED9ng \u1EDF d\u01B0\u1EDBi t\u1EA7ng m\u1ED9t"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  playerFirstTalkWithNam:
+  - sentances:
+    - "Sao c\u1EADu l\u1EA1i \u1EDF \u0111\xE2y, c\u1EADu l\xE0m g\xEC \u0111\u1EA5y
+      Nam"
+    - "C\u1EADu l\xE0 ng\u01B0\u1EDDi \u0111\xE3 g\xE2y ra m\u1ECDi chuy\u1EC7n \u0111\xFAng
+      kh\xF4ng"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "Kh\xF4ng"
+    - "T\u1EDB \u0111ang ph\u1EA3i s\u01A1 c\u1EE9u cho anh H\u01B0ng, anh b\u1ECB
+      th\u01B0\u01A1ng n\u1EB7ng qu\xE1"
+    - "C\u1EADu c\u0169ng s\u01A1 c\u1EE9u cho m\u1ECDi ng\u01B0\u1EDDi \u0111i,
+      kh\xF4ng m\u1ECDi chuy\u1EC7n l\u1EA1i tr\u1EDF n\xEAn nghi\xEAm tr\u1ECDng "
+    - "H\u1ED9p s\u01A1 c\u1EE9u \u1EDF b\xEAn ph\u1EA3i \u0111\u1EA5y"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  getFirstAidKit: "Nh\u1EADn \u0111\u01B0\u1EE3c b\u1ED9 s\u01A1 c\u1EE9u"
+  talkWithNamAfterFirstAid:
+  - sentances:
+    - "V\u1EADy m\u1ECDi chuy\u1EC7n x\u1EA3y ra nh\u01B0 th\u1EBF n\xE0o, c\u1EADu
+      gi\u1EA3i th\xEDch xem"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "L\xFAc \u0111\xF3 t\u1EDB v\u1EDBi anh H\u01B0ng \u0111ang n\xF3i v\u1EC1
+      c\xE1c manh m\u1ED1i \u0111\u01B0\u1EE3c \u0111\u1EC3 l\u1EA1i"
+    - "Th\xEC t\xEAn l\u1EA1 m\u1EB7t xu\u1EA5t hi\u1EC7n ngay sau, xi\xEAn t\u1EDB
+      v\u1EDBi anh H\u01B0ng"
+    - "T\u1EDB k\u1ECBp n\xE9 \u0111\u01B0\u1EE3c n\xEAn ch\u1EC9 b\u1ECB th\u01B0\u01A1ng
+      nh\u1EB9"
+    - "R\u1ED3i h\xECnh nh\u01B0 h\u1EAFn l\xEAn tr\xEAn t\u1EA7ng \u0111\xE2m n\u1ED1t
+      m\u1ECDi ng\u01B0\u1EDDi"
+    - "T\u1EDB c\u0169ng kh\xF4ng bi\u1EBFt t\u1EA1i sao h\u1EAFn l\u1EA1i kh\xF4ng
+      l\xE0m g\xEC c\xE2u"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - ...........................
+    - "V\u1EADy ch\xFAng ta n\xEAn l\xE0m g\xEC \u0111\xE2y"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "C\xF2n m\u1ED9t c\xE1i n\u1EEFa"
+    - "Anh H\u01B0ng \u0111\xE3 gi\u1EA3i \u0111\u01B0\u1EE3c th\xF4ng tin \u1EDF
+      m\xE0 t\xE0i li\u1EC7u \u0111\u1EC3 l\u1EA1i"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Gi\u1EA3i \u0111\u01B0\u1EE3c nh\u01B0 th\u1EBF n\xE0o, k\u1EBFt qu\u1EA3
+      ra sao"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Qf6 f6 Bf6 c\xF3 10 k\xFD t\u1EF1, 0002 c\xF3 4 k\xFD t\u1EF1, print s\u1EBD
+      tr\u1EA3 v\u1EC1 s\u1ED1 l\u01B0\u1EE3ng k\xFD t\u1EF1 trong \u0111\u1EA5y"
+    - "L\u1EA5y n\xF3 l\xE0m ph\xE9p t\xEDnh, s\u1EBD ra \u0111\u01B0\u1EE3c 0.7
+      v\xE0 0.02"
+    - "Chi\u1EBFu l\xEAn b\u1EA3n \u0111\u1ED3 \u1EDF \u0111\xE2y, v\u1EDBi g\u1ED1c
+      l\xE0 g\xF3c b\xEAn tr\xE1i d\u01B0\u1EDBi c\xF9ng"
+    - "S\u1EBD ra \u0111\u01B0\u1EE3c v\u1ECB tr\xED"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "V\u1ECB tr\xED c\xF3 g\xEC kh\xF4ng, c\u1EADu ra xem ch\u01B0a"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Ch\u01B0a, t\u1EDB ngh\u0129 gi\u1EDD c\u1EE9 ra xem th\u1EED \u0111i"
+    - "B\u1EA3n \u0111\u1ED3 \u0111\xE2y nh\xE9"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  talkWithLinhInCliff:
+  - sentances:
+    - "\u0110\xE2y l\xE0 ch\u1ED7 h\xE0ng r\xE0o h\xF4m tr\u01B0\u1EDBc c\u1EADu
+      \u0111ang s\u1EEDa m\xE0"
+    - "C\xF3 g\xEC \u1EDF \u0111\u1EA5y \xE0"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "C\xF3 \u0111\u1EA5y, c\u1EADu nh\xECn xu\u1ED1ng m\xE0 xem"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  LinhShouldKnowTheTruth:
+  - sentances:
+    - "T\u1EDB kh\xF4ng nh\xECn r\xF5 l\u1EAFm, c\xE1i g\xEC \u1EDF d\u01B0\u1EDBi
+      \u0111\u1EA5y nh\u1EC9"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Xin l\u1ED7i Linh, c\u1EADu n\xEAn bi\u1EBFt s\u1EF1 th\u1EADt \u1EDF d\u01B0\u1EDBi
+      \u0111\xF3"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "S\u1EF1 th\u1EADt g\xEC c\u01A1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
