@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMapManager : MonoBehaviour
 {
@@ -134,5 +135,9 @@ public class MainMapManager : MonoBehaviour
     public void ChangeToCaveScene()
     {
         print("Change to cave");
+        GameManager.instance.transitions.Transition(1, 1, () =>
+        {
+            SceneManager.LoadScene("Cave");
+        });
     }
 }

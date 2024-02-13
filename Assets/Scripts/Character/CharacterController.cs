@@ -134,23 +134,27 @@ public class CharacterController : MonoBehaviour
 
     }
 
-    public void Move(Vector3[] paths,float speed,TweenCallback onDone = null)
+    public void Move(Vector3[] paths, float speed, TweenCallback onDone = null)
     {
         UpdateMoveAnimation();
         onDone += StopMove;
-        
-        transform.DOPath(paths,GetDistance(paths) / speed).OnComplete(onDone).SetEase(Ease.Linear);
+
+        transform.DOPath(paths, GetDistance(paths) / speed).OnComplete(onDone).SetEase(Ease.Linear);
     }
 
     private float GetDistance(Vector3[] paths)
     {
-        paths[0].z = 0;
+        paths[0].z = transform.position.z;
         float res = 0;
         res += Vector3.Distance(paths[0], transform.position);
-        for (int i = 0; i < paths.Length -1; i++)
+        if (paths.Length > 1)
         {
-            paths[i].z = 0;
-            res += Vector3.Distance(paths[i], paths[i + 1]);
+            for (int i = 0; i < paths.Length - 1; i++)
+            {
+                paths[i].z = 0;
+                paths[i + 1].z = 0;
+                res += Vector3.Distance(paths[i], paths[i + 1]);
+            }
         }
         return res;
     }
