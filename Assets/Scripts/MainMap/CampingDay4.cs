@@ -164,6 +164,7 @@ public class CampingDay4 : MonoBehaviour
         openMapButton.SetActive(true);
         Nam.col.enabled = false;
         Nam.Move(NamOutPath.paths, 6, InitFollowNam);
+        Nam.ClearConversation();
     }
 
     private void InitFollowNam()
