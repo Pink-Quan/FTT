@@ -135,7 +135,7 @@ public class MainMapManager : MonoBehaviour
     public void ChangeToCaveScene()
     {
         print("Change to cave");
-        GameManager.instance.transitions.Transition(1, 1, () =>
+        GameManager.instance.transitions.Transition(1, 1, null, () =>
         {
             SceneManager.LoadScene("Cave");
         });

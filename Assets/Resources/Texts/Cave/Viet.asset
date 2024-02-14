@@ -199,7 +199,7 @@ MonoBehaviour:
     - "\u0110\u01B0\u1EE3c th\xF4i"
     Name: KillerNoMask
     DisplayName: "K\u1EBB l\u1EA1 m\u1EB7t"
-    emotion: 6
+    emotion: 0
     keyValue: 
   killerPushLinhDown:
   - sentances:

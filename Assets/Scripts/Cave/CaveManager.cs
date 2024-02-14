@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CaveManager : MonoBehaviour
 {
@@ -130,6 +131,7 @@ public class CaveManager : MonoBehaviour
 
     private void ToHosiptalScene()
     {
-        print("To Hosiptal scene");
+        //print("To Hosiptal scene");
+        GameManager.instance.transitions.Transition(1, 1, null, () => SceneManager.LoadScene("HosptalAfterCamping"));
     }
 }

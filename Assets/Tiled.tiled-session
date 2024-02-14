@@ -3,13 +3,15 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/Villa_House.tmx",
+    "activeFile": "Map/Hospital Hall/Vertical_Hall.tmx",
     "expandedProjectPaths": [
+        "Plugins/Demigiant",
+        "Tileset/Singles/Villas",
+        "Map/Hospital Hall",
         "Tileset",
         ".",
-        "Tileset/Singles",
-        "Tileset/Singles/Villas",
-        "Map"
+        "Map",
+        "Tileset/Singles"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -174,8 +176,8 @@
             "scale": 4,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 160,
-                "y": 159.875
+                "x": 889,
+                "y": 890.875
             }
         },
         "Map/Comback_street.tmx": {
@@ -198,6 +200,47 @@
         "Map/Hill.tsx": {
             "scaleInDock": 1
         },
+        "Map/Hospital Hall/4Way.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 1.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 468.6666666666667,
+                "y": -205
+            }
+        },
+        "Map/Hospital Hall/Entrance.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 126,
+                "y": 190.75
+            }
+        },
+        "Map/Hospital Hall/Horizontal_Hall.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 140.66666666666666,
+                "y": 258.33333333333337
+            }
+        },
+        "Map/Hospital Hall/Vertical_Hall.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 276.66666666666663,
+                "y": 220.33333333333337
+            }
+        },
         "Map/Hospital.tsx": {
             "scaleInDock": 1
         },
@@ -216,16 +259,16 @@
             "scale": 3,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 80,
-                "y": 80.16666666666667
+                "x": 79.99999999999997,
+                "y": 80.16666666666669
             }
         },
         "Map/Inside hospital.tmx": {
             "scale": 3.09133064516129,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 112.8963673123329,
-                "y": 123.73312463314421
+                "x": 113.21985260549143,
+                "y": 124.05660992630277
             }
         },
         "Map/Kitchen.tsx": {
@@ -238,8 +281,8 @@
             "scale": 8,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 159,
-                "y": 188.0625
+                "x": 160,
+                "y": 143.9375
             }
         },
         "Map/LivingRoom.tsx": {
@@ -294,8 +337,8 @@
             "scale": 5.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 104.18181818181819,
-                "y": 120.0909090909091
+                "x": 104,
+                "y": 142.27272727272725
             }
         },
         "Map/Villa_House_Second_Floor.tmx": {
@@ -413,7 +456,7 @@
             "scaleInEditor": 1
         },
         "Tileset/Hospital.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 1.5,
             "scaleInEditor": 1
         },
         "Tileset/Kitchen.tsx": {
@@ -533,6 +576,7 @@
     "frame.defaultDuration": 100,
     "last.externalTilesetPath": "C:/Users/BonBonDev/Downloads/Remake/Tileset",
     "last.imagePath": "D:/Fork Git/FTT/FTT/Assets/Art/Exteriors/7_Villas_Singles_16x16",
+    "map.fixedSize": true,
     "map.height": 20,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
@@ -572,7 +616,11 @@
         "Map/Inside cave.tmx",
         "Map/Inside hospital.tmx",
         "Map/Street.tmx",
-        "Map/Villa_House_Second_Floor.tmx"
+        "Map/Villa_House_Second_Floor.tmx",
+        "Map/Hospital Hall/Horizontal_Hall.tmx",
+        "Map/Hospital Hall/4Way.tmx",
+        "Map/Hospital Hall/Vertical_Hall.tmx",
+        "Map/Hospital Hall/Entrance.tmx"
     ],
     "project": "Tiled.tiled-project",
     "recentFiles": [
@@ -589,6 +637,7 @@
         "Tileset/Linh.tsx",
         "Tileset/LivingRoom.tsx"
     ],
+    "resizeMap.removeObjects": false,
     "tileset.lastUsedFormat": "tsx",
     "tileset.margin": 0,
     "tileset.tileSize": {

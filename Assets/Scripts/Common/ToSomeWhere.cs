@@ -11,7 +11,11 @@ public class ToSomeWhere : MonoBehaviour
 {
     [SerializeField] private GameObject seflArea;
     [SerializeField] private GameObject toArea;
+
     public Vector3 toAreaPos;
+
+    public bool onDraw = true;
+    public float moveSize = 0.08f;
 
     private Transform player;
 
@@ -22,6 +26,7 @@ public class ToSomeWhere : MonoBehaviour
 
     public void GoToArea()
     {
+        if (seflArea == null || toArea == null) return;
         player.position = toAreaPos;
         toArea.SetActive(true);
         seflArea.SetActive(false);
@@ -29,7 +34,7 @@ public class ToSomeWhere : MonoBehaviour
 
 }
 #if UNITY_EDITOR
-[CustomEditor(typeof(ToSomeWhere))]
+[CustomEditor(typeof(ToSomeWhere)), CanEditMultipleObjects]
 public class ToSomeWhereEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -44,9 +49,12 @@ public class ToSomeWhereEditor : Editor
     }
 
     private void OnSceneGUI()
-    {
+    { 
         var t = (ToSomeWhere)target;
-        t.toAreaPos = Handles.FreeMoveHandle(t.toAreaPos, Quaternion.identity, 0.08f, Vector3.one, Handles.DotHandleCap);
+        if (!t.onDraw) return;
+        Undo.RecordObject(t, "Change To Area Pos");
+        Handles.color = Color.yellow;
+        t.toAreaPos = Handles.FreeMoveHandle(t.toAreaPos, Quaternion.identity, t.moveSize, Vector3.one, Handles.DotHandleCap);
     }
 }
 #endif
