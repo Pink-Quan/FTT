@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstDialogue:
     sentances:
-    - "A, \u0111au qu\xE1"
+    - "A, \u0111au \u0111\u1EA7u qu\xE1"
     - "Kh\xF4ng th\u1EC3 tin n\u1ED5i Nam \u0111\u1EE9ng sau m\u1ECDi chuy\u1EC7n"
     - "\u1EDE \u0111\xE2y c\xF3 1 c\xE1i hang sao"
     Name: Linh
@@ -74,18 +74,149 @@ MonoBehaviour:
     emotion: 0
     keyValue: 
   - sentances:
-    - "V\u1EDBi c\xE1i t\xECnh tr\u1EA1ng v\u1EEBa ng\xE3 t\u1EEB v\xE1ch n\xFAt
-      xu\u1ED1ng th\xEC c\u1EADu kh\xF4ng l\xE0m g\xEC \u0111\u01B0\u1EE3c \u0111\xE2u"
-    - "Sao bi\u1EBFt \u0111\u01B0\u1EE3c c\u1EADu s\u1EBD l\xE0m g\xEC t\xF4i"
+    - "\u0110\u01B0\u1EE3c r\u1ED3i"
     Name: Linh
     DisplayName: Linh
     emotion: 2
     keyValue: 
   talkWithKiller:
   - sentances:
-    - "C\u1EADu kh\xF4ng ph\u1EA3i l\xE0 Nam sao"
+    - "C\u1EADu l\xE0 con g\xE1i, c\u1EADu kh\xF4ng ph\u1EA3i l\xE0 Nam sao"
     - "V\u1EADy m\u1ECDi chuy\u1EC5n di\u1EC5n ra nh\u01B0 th\u1EBF n\xE0o"
     Name: Linh
     DisplayName: Linh
     emotion: 2
+    keyValue: 
+  lazyArtist: "Ph\xE2n c\u1EA3nh n\xE0y \u0111\xE3 n\xEAn \u0111\u01B0\u1EE3c minh
+    h\u1ECDa b\u1EB1ng m\u1ED9t s\u1ED1 h\xECnh \u1EA3nh, nh\u01B0ng ng\u01B0\u1EDDi
+    v\u1EBD kh\xF4ng ch\u1EC9 k\xE9m m\xE0 c\xF2n l\u01B0\u1EDDi, v\u1EADy n\xEAn
+    m\u1ECDi ng\u01B0\u1EDDi h\xE3y ki\xEAn nh\u1EABn \u0111\u1ECDc cu\u1ED9c h\u1ED9i
+    tho\u1EA1i gi\u1EEFa c\xE1c nh\xE2n v\u1EADt nh\xE9"
+  killerTalkAboutTheTruth:
+  - sentances:
+    - "M\u1ECDi chuy\u1EC7n b\u1EAFt \u0111\u1EA7u b\u1EB1ng chuy\u1EBFn \u0111i
+      ch\u01A1i gia \u0111\xECnh c\u1EE7a c\u1EADu"
+    - "Trong \u0111\xF3 c\xF3 c\u1EA3 anh Nam \u0111i c\xF9ng"
+    - "Trong chuy\u1EBFn \u0111i ch\u01A1i, c\u1EADu \u0111\xE3 qu\xEAn u\u1ED1ng
+      thu\u1ED1c"
+    - "V\xE0 c\u1EADu \u0111\xE3 g\u1EB7p \u1EA3o gi\xE1c v\xE0 xi\xEAn anh Nam"
+    - "Anh Nam r\u1EA5t th\xF4ng minh, anh \u0111\xE3 \u0111\u1EC3 l\u1EA1i c\xE1c
+      manh m\u1ED1i v\xE0 ch\u1EA1y xu\u1ED1ng hang n\xE0y"
+    - "Nh\u01B0ng v\u1EDBi v\u1EBFt th\u01B0\u01A1ng \u0111\xF3 n\xEAn anh \u0111\xE3
+      ch\u1EBFt \u1EDF trong hang"
+    - "C\xF2n c\u1EADu, c\u1EADu \u0111\xE3 truy \u0111u\u1ED5i anh \u1EA5y, khi\u1EBFn
+      b\u1ED1 m\u1EB9 lo l\u1EAFng v\xE0 \u0111i t\xECm c\u1EADu"
+    - "Kh\xF4ng may l\xE0 \u1EDF \u0111\xE2y x\u1EA3y ra l\u0169 qu\xE9t khi\u1EBFn
+      b\u1ED1 m\u1EB9 kh\xF4ng qua kh\u1ECFi, c\u1EADu b\u1ECB th\u01B0\u01A1ng n\u1EB7ng
+      v\xE0 t\xECnh tr\u1EA1ng t\xE2m th\u1EA7n c\u1EE7a c\u1EADu \u0111\xE3 tr\u1EDF
+      n\xEAn nghi\xEAm tr\u1ECDng h\u01A1n"
+    Name: KillerNoMask
+    DisplayName: "Ng\u01B0\u1EDDi l\u1EA1 m\u1EB7t"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Sao c\xF3 th\u1EC3 th\u1EBF \u0111\u01B0\u1EE3c, anh Nam sao c\xF3 \u0111\u1EE7
+      th\u1EDDi gian \u0111\u1EC3 \u0111\u1EC3 l\u1EA1i c\xE1c manh m\u1ED1i \u0111\xF3"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "\u0110\u01B0\u01A1ng nhi\xEAn l\xE0 kh\xF4ng \u0111\u1EE7 th\u1EDDi gian r\u1ED3i"
+    - "Nh\u1EEFng manh m\u1ED1i \u0111\u1EC3 l\u1EA1i th\u1EF1c ch\u1EA5t \u0111\xE3
+      \u0111\u01B0\u1EE3c c\u1EADu v\xE0 Nam l\xE0m tr\u01B0\u1EDBc \u0111\xF3 ch\u1EC9
+      \u0111\u1EC3 cho vui th\xF4i, nh\u01B0ng ch\u1EE7 \xFD l\xE0 h\u01B0\u1EDBng
+      \u0111\u1EBFn \u0111\xE2y"
+    - "Anh Nam \u0111\xE3 ph\xE1t hi\u1EC7n ra n\u01A1i n\xE0y tr\u01B0\u1EDBc"
+    Name: KillerNoMask
+    DisplayName: "Ng\u01B0\u1EDDi l\u1EA1 m\u1EB7t"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "V\u1EADy gi\u1EDD sao, c\u1EADu c\xF3 th\u1EC3 tha cho t\u1EDB kh\xF4ng"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "C\u1EADu v\u1EABn ch\u01B0a hi\u1EC3u sao"
+    - "Ch\xFAng ta l\xE0 m\u1ED9t"
+    - "Nh\u1EEFng g\xEC t\xF4i l\xE0m l\xE0 \u0111ang b\u1EA3o v\u1EC7 c\u1EADu \u0111\u1EA5y"
+    - "Khi m\xE0 m\u1ECDi ng\u01B0\u1EDDi bi\u1EBFt \u0111\u01B0\u1EE3c s\u1EF1 th\u1EADt,
+      c\u1EADu s\u1EBD kh\xF4ng bao gi\u1EDD c\xF3 th\u1EC3 ng\xF3c \u0111\u1EA7u
+      l\xEAn trong c\xE1i x\xE3 h\u1ED9i n\xE0y \u0111\xE2u"
+    - "Trong qu\xE1 kh\u1EE9, Mai c\u0169ng l\xE0 m\u1ED9t ph\u1EA7n l\u1EDBn khi\u1EBFn
+      c\u1EADu b\u1ECB ra n\xF4ng n\u1ED7i n\xE0y"
+    - "M\u1ECDi chuy\u1EC7n \u0111\xE3 \u0111\u1EBFn n\u01B0\u1EDBc n\xE0y, h\xE3y
+      x\u1EED n\u1ED1t m\u1ECDi ng\u01B0\u1EDDi r\u1ED3i ch\u1EA1y tr\u1ED1n th\xF4i"
+    Name: KillerNoMask
+    DisplayName: "Ng\u01B0\u1EDDi l\u1EA1 m\u1EB7t"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "\u0110\u01B0\u1EE3c r\u1ED3i, t\u1EDB s\u1EBD theo c\xE2u"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - Hmmm....
+    Name: KillerNoMask
+    DisplayName: "Ng\u01B0\u1EDDi l\u1EA1 m\u1EB7t"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Sao th\u1EBF"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  namJoinConversation:
+  - sentances:
+    - "Th\xF4i \u0111i, m\u1ECDi chuy\u1EC7n n\xEAn d\u1EEBng l\u1EA1i"
+    - "M\u1ECDi chuy\u1EC7n kh\xF4ng \u0111\u01B0\u1EE3c tr\u1EDF n\xEAn t\u1ED3i
+      t\u1EC7 h\u01A1n n\u1EEFa, ai c\u0169ng n\xEAn bi\u1EBFt \u0111\u01B0\u1EE3c
+      s\u1EF1 th\u1EADt"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  - sentances:
+    - "C\u1EADu ngh\u0129 c\u1EADu c\xF3 th\u1EC3 ng\u0103n t\xF4i sao"
+    Name: KillerNoMask
+    DisplayName: "K\u1EBB l\u1EA1 m\u1EB7t"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Tr\u01B0\u1EDBc th\xEC kh\xF4ng, nh\u01B0ng gi\u1EDD \u0111\xE3 kh\xE1c"
+    - "C\u1EADu kh\xF4ng c\xF2n c\xF3 th\u1EC3 ki\u1EC3m so\xE1t ho\xE0n to\xE0n
+      \u0111\u01B0\u1EE3c n\u1EEFa"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  - sentances:
+    - "\u0110\u01B0\u1EE3c th\xF4i"
+    Name: KillerNoMask
+    DisplayName: "K\u1EBB l\u1EA1 m\u1EB7t"
+    emotion: 6
+    keyValue: 
+  killerPushLinhDown:
+  - sentances:
+    - "Xin l\u1ED7i Linh, t\u1EA5t c\u1EA3 l\xE0 v\xEC t\u1ED1t cho c\u1EADu th\xF4i"
+    Name: KillerNoMask
+    DisplayName: "K\u1EBB l\u1EA1 m\u1EB7t"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "L\u1EA1i n\u1EEFa sao"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "Kh\xF4nggggg"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
     keyValue: 

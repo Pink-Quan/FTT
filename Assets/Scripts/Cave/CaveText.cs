@@ -10,4 +10,9 @@ public class CaveText : ScriptableObject
     public Dialogue seeNamDeadBody;
     public Dialogue[] seeKiller;
     public Dialogue[] talkWithKiller;
+    [TextArea]
+    public string lazyArtist;
+    public Dialogue[] killerTalkAboutTheTruth;
+    public Dialogue[] namJoinConversation;
+    public Dialogue[] killerPushLinhDown;
  }
