@@ -10,4 +10,6 @@ public class FightWithNamTexts : ScriptableObject
     public string fightingNote;
     public Dialogue[] endFightDialogue;
     public Dialogue[] namToldLinhToStop;
+
+    public Dialogue[] NamOnCarTellLinhStop;
 }

@@ -84,3 +84,34 @@ MonoBehaviour:
     DisplayName: Nam
     emotion: 2
     keyValue: 
+  NamOnCarTellLinhStop:
+  - sentances:
+    - "D\u1EEBng l\u1EA1i \u0111i Linh \u01A1i"
+    - "C\u1EADu c\xF3 th\u1EC3 g\xE2y tai n\u1EA1n cho ch\xEDnh m\xECnh v\xE0 ng\u01B0\u1EDDi
+      xung quanh \u0111\u1EA5y"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "Kh\xF4ng"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 3
+    keyValue: 
+  - sentances:
+    - "T\u1EDB kh\xF4ng mu\u1ED1n b\u1EAFt c\u1EADu ph\u1EA3i d\u1EEBng \u0111\xE2u"
+    - "N\xF3 c\xF3 th\u1EC3 g\xE2y nguy hi\u1EC3m cho c\u1EADu"
+    - "Xin c\u1EADu \u0111\u1EA5y"
+    - "\u1EDE tr\xEAn n\xF3c xe kh\xF4ng tho\u1EA3i m\xE1i \u0111\xE2u"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "Kh\xF4ng"
+    - "C\u1EADu mu\u1ED1n l\xE0m g\xEC th\xEC l\xE0m"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 3
+    keyValue: 

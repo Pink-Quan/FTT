@@ -133,4 +133,6 @@ public enum GameProgress
     Cave = 7,
     HosptalAfterCamping = 8,
     FightWithNam = 9,
+    ChaseLinh = 10,
+    TheTruth = 11,
 }

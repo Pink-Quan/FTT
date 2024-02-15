@@ -29,6 +29,7 @@ public class HospitalAfterCampingManager : MonoBehaviour
         player.anim.StopAnimation();
         Mai.anim.StopAnimation();
         toEntrance.canInteract = false;
+        player.anim.SpriteRenderer.material.SetFloat("_Blood_Value", 0);
 
         if (PlayerPrefs.GetInt("Restart Hosptal After Camping", 0) == 0)
         {
@@ -174,6 +175,6 @@ public class HospitalAfterCampingManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Progress", (int)GameProgress.FightWithNam);
         GameManager.instance.dbManager.UpdateDB();
-        GameManager.instance.transitions.Transition(1, 1, null, null);
+        GameManager.instance.transitions.Transition(1, 1, null, ()=>SceneManager.LoadScene("FightWithNam"));
     }
 }

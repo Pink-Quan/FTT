@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FightWithNamManager : MonoBehaviour
 {
     public PlayerController Linh;
     public CharacterController Nam;
+    public Cinemachine.CinemachineVirtualCamera mainCam;
 
     public VectorPaths LinhInPath;
     public VectorPaths LinhOutPath;
     public VectorPaths NamInPath;
     public VectorPaths NamOutPath;
 
-    public Cinemachine.CinemachineVirtualCamera mainCam;
+    [SerializeField] private GameObject street;
+    [SerializeField] private GameObject streetToCamp;
+
+    [SerializeField] private Vector3 NamOnCarPos = new Vector3(21.08f, -8.52f);
 
     private FightWithNamTexts texts;
 
@@ -68,11 +73,29 @@ public class FightWithNamManager : MonoBehaviour
 
     private void LinhInCar()
     {
-
+        GameManager.instance.dialogueManager.StartDialogue(texts.NamOnCarTellLinhStop, EndScene);
     }
 
     private void InitLinhInCar()
     {
+        Linh.gameObject.SetActive(false);
+        street.SetActive(false);
+        streetToCamp.SetActive(true);
+        Nam.anim.StopAnimation();
+        Nam.anim.SpriteRenderer.sprite = Nam.anim.charaterSprites[2];
+        Nam.transform.rotation = Quaternion.Euler(0, 0, 90);
+        Nam.anim.SpriteRenderer.sortingOrder = 19;
+        Nam.transform.position = NamOnCarPos;
+    }
 
+    private void EndScene()
+    {
+        PlayerPrefs.SetInt("Progress", (int)GameProgress.ChaseLinh);
+        GameManager.instance.dbManager.UpdateDB();
+        GameManager.instance.transitions.Transition(1, 3, null, () =>
+        {
+            GameManager.instance.soundManager.PlaySound("Car Crash");
+            SceneManager.LoadScene("");
+        });
     }
 }

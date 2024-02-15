@@ -1741,7 +1741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394562402793141417, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -50.999924
+      value: -50.99994
       objectReference: {fileID: 0}
     - target: {fileID: 2413417521549873124, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8397,26 +8397,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 768307603}
     - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1223843793}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1223843793}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EscapeSuccessfully
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HideInteractButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DisableMoveAndHideAllUI
       objectReference: {fileID: 0}
     - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: HospitalAfterCampingManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: InteractableEntity, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: InteractableEntity, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5034587878258527271, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
@@ -8437,6 +8485,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+--- !u!114 &1223843793 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3294464350769809547, guid: 793a5740bf96d8b41a5b3316d476a97f, type: 3}
+  m_PrefabInstance: {fileID: 1223843792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5dda3f459862246b21e24db114b191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404408516
 GameObject:
   m_ObjectHideFlags: 0

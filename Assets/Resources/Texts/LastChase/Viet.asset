@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34853d547794c95499e7ec9b116a4f1b, type: 3}
+  m_Name: Viet
+  m_EditorClassIdentifier: 
+  firstDialogue:
+  - sentances:
+    - "Th\xF4i n\xE0o Linh"
+    - "D\u1EEBng l\u1EA1i \u0111i"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  - sentances:
+    - "Kh\xF4ng"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  namToldLinhToStop:
+  - sentances:
+    - "D\u1EEBng l\u1EA1i th\xF4i Linh"
+    - "C\u1EADu kh\xF4ng c\xF2n \u0111\u01B0\u1EDDng n\xE0o \u0111\u1EC3 ch\u1EA1y
+      n\u1EEFa r\u1ED3i"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  - sentances:
+    - "\u0110\xF9ng v\u1EADy, kh\xF4ng c\xF2n m\u1ED9t c\u01A1 h\u1ED9i n\xE0o n\u1EEFa
+      r\u1ED3i"
+    - "Gi\u1EDD ch\u1EC9 c\xF2n m\u1ED9t con \u0111\u01B0\u1EDDng th\xF4i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Th\xF4i n\xE0o, m\xECnh v\u1EABn c\xF3 th\u1EC3 l\xE0m l\u1EA1i m\xE0"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  lastDialougueWithNam:
+  - sentances:
+    - "Xin l\u1ED7i anh Nam"
+    - "Em \u0111\xE3 g\xE2y ra r\u1EA5t nhi\u1EC1u t\u1ED9i l\u1ED7i, l\xE0m r\u1EA5t
+      nhi\u1EC1u ng\u01B0\u1EDDi th\u1EA5t v\u1ECDng"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+    keyValue: 
+  - sentances:
+    - "Kh\xF4ng sao \u0111\xE2u em, d\xF9 sao \u0111\xE2y l\xE0 con \u0111\u01B0\u1EDDng
+      em \u0111\xE3 ch\u1ECDn"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Em c\u1EA3m \u01A1n anh \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng em trong
+      qu\xE1 kh\xFA"
+    - "Nh\u1EDD anh m\xE0 em c\xF3 \u0111\u01B0\u1EE3c nh\u1EEFng th\u1EDDi gian
+      h\u1EA1nh ph\xFAc"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+    keyValue: 
+  mission: "\u0110u\u1ED5i theo Linh"

@@ -3,15 +3,15 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/Hospital Hall/Vertical_Hall.tmx",
+    "activeFile": "Map/LinhDead.tmx",
     "expandedProjectPaths": [
-        "Plugins/Demigiant",
-        "Tileset/Singles/Villas",
-        "Map/Hospital Hall",
-        "Tileset",
-        ".",
+        "Tileset/Singles",
         "Map",
-        "Tileset/Singles"
+        "Tileset",
+        "Plugins/Demigiant",
+        ".",
+        "Tileset/Singles/Villas",
+        "Map/Hospital Hall"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -184,8 +184,8 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 319.66666666666663,
-                "y": 160
+                "x": 578.6666666666667,
+                "y": 284.99999999999994
             }
         },
         "Map/Floors.tsx": {
@@ -207,8 +207,8 @@
             "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 468.6666666666667,
-                "y": -205
+                "x": 512,
+                "y": -255.66666666666666
             }
         },
         "Map/Hospital Hall/Entrance.tmx": {
@@ -218,8 +218,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 126,
-                "y": 190.75
+                "x": 160,
+                "y": 160.25
             }
         },
         "Map/Hospital Hall/Horizontal_Hall.tmx": {
@@ -229,16 +229,16 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 140.66666666666666,
-                "y": 258.33333333333337
+                "x": 160,
+                "y": 160.33333333333334
             }
         },
         "Map/Hospital Hall/Vertical_Hall.tmx": {
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 276.66666666666663,
-                "y": 220.33333333333337
+                "x": 160,
+                "y": 160.33333333333334
             }
         },
         "Map/Hospital.tsx": {
@@ -259,16 +259,16 @@
             "scale": 3,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 79.99999999999997,
-                "y": 80.16666666666669
+                "x": 80,
+                "y": 80.16666666666667
             }
         },
         "Map/Inside hospital.tmx": {
             "scale": 3.09133064516129,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 113.21985260549143,
-                "y": 124.05660992630277
+                "x": 112.8963673123329,
+                "y": 123.73312463314421
             }
         },
         "Map/Kitchen.tsx": {
@@ -277,12 +277,20 @@
         "Map/Linh.tsx": {
             "scaleInDock": 1
         },
+        "Map/LinhDead.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 223.5,
+                "y": 140.75
+            }
+        },
         "Map/Linh_House.tmx": {
             "scale": 8,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 160,
-                "y": 143.9375
+                "x": 159,
+                "y": 188.0625
             }
         },
         "Map/LivingRoom.tsx": {
@@ -292,11 +300,11 @@
             "expandedObjectLayers": [
                 19
             ],
-            "scale": 0.5,
-            "selectedLayer": 14,
+            "scale": 5.5,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 1196,
-                "y": 1197
+                "x": 1224.5454545454545,
+                "y": 2013.1818181818182
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -337,8 +345,8 @@
             "scale": 5.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 104,
-                "y": 142.27272727272725
+                "x": 160,
+                "y": 143.90909090909093
             }
         },
         "Map/Villa_House_Second_Floor.tmx": {
@@ -620,7 +628,9 @@
         "Map/Hospital Hall/Horizontal_Hall.tmx",
         "Map/Hospital Hall/4Way.tmx",
         "Map/Hospital Hall/Vertical_Hall.tmx",
-        "Map/Hospital Hall/Entrance.tmx"
+        "Map/Hospital Hall/Entrance.tmx",
+        "Map/Comback_street.tmx",
+        "Map/LinhDead.tmx"
     ],
     "project": "Tiled.tiled-project",
     "recentFiles": [
