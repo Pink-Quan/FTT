@@ -117,4 +117,6 @@ public enum GameProgress
     CampingDay3=5,
     CampingDay4 = 6,
     Cave = 7,
+    HosptalAfterCamping = 8,
+    FightWithNam = 9,
 }

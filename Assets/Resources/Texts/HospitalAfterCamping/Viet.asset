@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173046da813d5d4428221a7d66dd135e, type: 3}
+  m_Name: Viet
+  m_EditorClassIdentifier: 
+  dialoguesWithNurse:
+  - sentances:
+    - "Hay qu\xE1, em t\xECnh r\u1ED3i"
+    - "Em c\u1EA3m th\u1EA5y th\u1EBF n\xE0o"
+    Name: Nurse
+    DisplayName: "Y t\xE1"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Em v\u1EEBa c\xF3 gi\u1EA5c m\u01A1 r\u1EA5t l\u1EA1"
+    - "N\xF3 di\u1EC5n ra \u1EDF ch\u1ED7 c\u1EAFm tr\u1EA1i, em b\u1ECB ng\xE3 xu\u1ED1ng
+      v\xE1ch n\xFAi"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+    keyValue: 
+  - sentances:
+    - "V\u1EADy th\xEC kh\xF4ng ph\u1EA3i m\u01A1 \u0111\xE2u, em v\u1EABn nh\u1EDB
+      \u0111\u01B0\u1EE3c m\u1ECDi chuy\u1EC7n x\u1EA3y ra l\xE0 t\u1ED1t r\u1ED3i"
+    - "M\u1ECDi ng\u01B0\u1EDDi b\u1ECB th\u01B0\u01A1ng \u1EDF khu c\u1EAFm tr\u1EA1i
+      \u0111\u1EC1u xu\u1EA5t vi\u1EC7n r\u1ED3i"
+    - "C\xF3 em v\xE0 Mai ph\u1EA3i n\u1EB1m vi\u1EC7n h\u01A1i l\xE2u th\xF4i, em
+      th\xEC b\u1ECB h\xF4n m\xEA, nh\u01B0ng kh\xF4ng b\u1ECB th\u01B0\u01A1ng qu\xE1
+      n\u1EB7ng"
+    - "Mai b\u1ECB th\u01B0\u01A1ng kh\xE1 n\u1EB7ng n\xEAn v\u1EABn n\u1EB1m \u1EDF
+      d\u01B0\u1EDBi kia k\xECa"
+    - "Trong l\xFAc h\xF4n m\xEA th\xEC c\u01A1 th\u1EC3 em \u0111\xE3 h\u1ED3i ph\u1EE5c
+      kh\xE1 t\u1ED1t r\u1ED3i, c\xF3 g\xEC em c\u1EE9 th\u1EED \u0111i l\u1EA1i
+      v\xE0 xu\u1ED1ng kia h\u1ECFi th\u0103m xem Mai th\u1EBF n\xE0o nh\xE1"
+    - "T\u1EA7m 15 ph\xFAt n\u1EEFa c\u1EA3nh s\xE1t s\u1EBD \u0111\u1EBFn \u0111\xE2y
+      h\u1ECFi em v\xE0i c\xE2u h\u1ECFi"
+    Name: Nurse
+    DisplayName: "Y t\xE1"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - '!!!!!!!!!!!!'
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - "V\xE2ng \u1EA1"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  dialoguesWithMai:
+  - sentances:
+    - "C\u1EADu \u1ED5n kh\xF4ng"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Kh\xF4ng \u1ED5n l\u1EAFm"
+    - "T\u1EDB b\u1ECB m\u1EA5t kh\xE1 nhi\u1EC1u m\xE1u v\xE0 c\u0169ng h\xF4n m\xEA
+      kh\xE1 l\xE2u"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 7
+    keyValue: 
+  - sentances:
+    - "\u0110i\u1EC1u \u0111\xF3 x\u1EE9ng \u0111\xE1ng ph\u1EBFt nh\u1EC9"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+    keyValue: 
+  - sentances:
+    - "\xDD c\u1EADu l\xE0 sao"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "\u0110\u1EB7c bi\u1EC7t l\xE0 v\u1EDBi nh\u1EEFng g\xEC c\u1EADu \u0111\xE3
+      l\xE0m trong qu\xE1 kh\u1EE9 v\u1EDBi t\u1EDB"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "N\xF3 \u0111\xE3 l\xE0 qu\xE1 kh\u1EE9 l\xE2u r\u1ED3i m\xE0"
+    - "T\u1EDB gi\u1EDD \u0111ang c\u1ED1 g\u1EAFng \u0111\u1EC3 c\xF3 th\u1EC3 gi\xFAp
+      c\u1EADu m\xE0"
+    - "N\xF3 \u0111\xE2u ph\u1EA3i l\u1ED7i ho\xE0n to\xE0n c\u1EE7a t\u1EDB \u0111\xE2u"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "\u0110\xFAng v\u1EADy, n\xF3 th\u1EADm ch\xED ch\u1EC9 l\xE0 l\u1ED7i c\u1EE7a
+      t\u1EDB th\xF4i"
+    - "Gi\u1EDD c\u1EADu c\u0169ng n\xEAn l\xE3nh m\u1ED9t ph\u1EA7n tr\xE1ch nhi\u1EC7m"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 4
+    keyValue: 
+  - sentances:
+    - "\xDD c\u1EADu l\xE0 sao"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 7
+    keyValue: 
+  needToEscape:
+    sentances:
+    - "M\xECnh c\u1EA7n tho\xE1t kh\u1ECFi \u0111\xE2y c\xE0ng s\u1EDBm c\xE0ng t\u1ED1t"
+    - "Th\xF4i d\u1EDF r\u1ED3i, m\xECnh c\xF2n 2 ph\xFAt th\xF4i"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 6
+    keyValue: 
+  stopPlayer:
+  - sentances:
+    - "\u0110\u1EE8NG IM, \u0110\u1EEANG DI CHUY\u1EC2N"
+    Name: Cop
+    DisplayName: "C\u1EA3nh s\xE1t"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Thoi toang
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  playerFailedToEscape: "Th\u1EA5t b\u1EA1i <br>B\u1EA1n b\u1ECB b\u1EAFt"
+  escapeSuccessfully:
+    sentances:
+    - "Cu\u1ED1i c\xF9ng c\u0169ng tho\xE1t \u0111\u01B0\u1EE3c"
+    - "C\xE1i b\u1EC7nh vi\u1EC7n ki\u1EC3u g\xEC m\xE0 nh\u01B0 c\xE1i m\xEA cung"
+    - "X\u1EED l\xFD n\u1ED1t qu\xE1 kh\u1EE9 n\xE0o"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 4
+    keyValue: 

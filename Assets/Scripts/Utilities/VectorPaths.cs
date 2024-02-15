@@ -19,7 +19,19 @@ public class VectorPaths : MonoBehaviour
         var tList = new List<Vector3>(paths);
         tList.Add(point);
         paths = tList.ToArray();
+    }
 
+    public Vector3[] Reverse()
+    {
+        var array = paths;
+        int length = array.Length;
+        for (int i = 0; i < length / 2; i++)
+        {
+            Vector3 temp = array[i];
+            array[i] = array[length - 1 - i];
+            array[length - 1 - i] = temp;
+        }
+        return array;
     }
 }
 

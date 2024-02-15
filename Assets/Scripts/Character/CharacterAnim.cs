@@ -125,6 +125,7 @@ public class CharacterAnim : MonoBehaviour
         spriteRenderer.sprite = charaterSprites[3];
         spriteRenderer.color = Color.white;
         transform.rotation = Quaternion.identity;
+        isStopAnimation = false;
         OnEnable();
     }
     public void RandomDelayAnim()

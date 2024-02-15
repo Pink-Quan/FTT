@@ -210,6 +210,7 @@ public class CampingDay4 : MonoBehaviour
 
     private void ChangeToCaveScene()
     {
+        GameManager.instance.dbManager.UpdateDB();
         PlayerPrefs.SetInt("Progress", (int)GameProgress.Cave);
         mainMapManager.ChangeToCaveScene();
     }
