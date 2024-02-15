@@ -297,6 +297,7 @@ public class CampingDay2 : MonoBehaviour
     {
         PlayerPrefs.SetInt("Progress", (int)GameProgress.CampingDay3);
         GameManager.instance.dialogueManager.StartDialogue(texts.endDay2Dialogue, mainMapManager.InitCampingDay3);
+        GameManager.instance.dbManager.UpdateDB();
     }
 
     public void SetCharacterPositionInHouse(PlayerController tplayer = null, CharacterController tHung = null, CharacterController tMai = null,

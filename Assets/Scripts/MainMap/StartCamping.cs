@@ -319,6 +319,7 @@ public class StartCamping : MonoBehaviour
     {
         startCampingInteractableEntities.SetActive(false);
         PlayerPrefs.SetInt("Progress", (int)GameProgress.CampingDay2);
+        GameManager.instance.dbManager.UpdateDB();
         GameManager.instance.transitions.Transition(1, 1, null, mainMapManager.InitCampingDay2);
     }
 }

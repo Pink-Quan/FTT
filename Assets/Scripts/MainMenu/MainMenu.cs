@@ -12,16 +12,25 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         string sceneName = "";
-        switch((GameProgress)PlayerPrefs.GetInt("Progress"))
+        switch ((GameProgress)PlayerPrefs.GetInt("Progress"))
         {
             case GameProgress.GoingHome:
                 sceneName = "GoingHome";
-                break;;
+                break; ;
             case GameProgress.InsideLinhHouse:
                 sceneName = "LinhHouse";
                 break;
             case GameProgress.StartCamping:
+            case GameProgress.CampingDay2:
+            case GameProgress.CampingDay3:
+            case GameProgress.CampingDay4:
                 sceneName = "Hospital";
+                break;
+            case GameProgress.Cave:
+                sceneName = "Cave";
+                break;
+            case GameProgress.HosptalAfterCamping:
+                sceneName = "HospitalAfterCamping";
                 break;
             default:
                 sceneName = "Hospital";
@@ -67,6 +76,11 @@ public class MainMenu : MonoBehaviour
         Application.OpenURL("https://www.facebook.com/profile.php?id=100089991012819");
     }
 
+    public void OpenYoutube()
+    {
+        Application.OpenURL("https://www.facebook.com/profile.php?id=100089991012819");
+    }
+
     public void GetEmail()
     {
         TextEditor textEditor = new TextEditor();
@@ -86,7 +100,7 @@ public class MainMenu : MonoBehaviour
         loading.SetActive(true);
         GameManager.instance.dbManager.GetAnnouncement((bool isSuccess, string result) =>
         {
-            if(!loading.activeSelf) return;
+            if (!loading.activeSelf) return;
 
             loading.SetActive(false);
             if (!isSuccess)
@@ -109,12 +123,12 @@ public class MainMenu : MonoBehaviour
 
 public enum GameProgress
 {
-    InsideHospital=0,
-    GoingHome=1,
-    InsideLinhHouse=3,
-    StartCamping=2,
-    CampingDay2=4,
-    CampingDay3=5,
+    InsideHospital = 0,
+    GoingHome = 1,
+    InsideLinhHouse = 3,
+    StartCamping = 2,
+    CampingDay2 = 4,
+    CampingDay3 = 5,
     CampingDay4 = 6,
     Cave = 7,
     HosptalAfterCamping = 8,

@@ -52,7 +52,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
-    - _Blood_Value: 0
+    - _Blood_Value: 1
     - _EnableExternalAlpha: 0
     - _NoiseIdensity: 51
     m_Colors:

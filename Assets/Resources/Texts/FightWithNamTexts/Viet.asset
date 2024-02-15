@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38949c2cfabdbe342aee9b1b4f39c475, type: 3}
+  m_Name: Viet
+  m_EditorClassIdentifier: 
+  linhFirstDialogue:
+  - sentances:
+    - "Haha, \u0111\xE3 xong \u0111\u01B0\u1EE3c v\xE0i ng\u01B0\u1EDDi r\u1ED3i"
+    - "C\xF2n ai n\u1EEFa kh\xF4ng nh\u1EC9"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 4
+    keyValue: 
+  - sentances:
+    - "C\xF2n t\xF4i n\xE8"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 3
+    keyValue: 
+  namFirsetDialogoe: []
+  LinNamCoversation:
+  - sentances:
+    - "M\u1ECDi th\u1EE9 \u0111\xE3 \u0111i qu\xE1 xa r\u1ED3i, h\u1EADu qu\u1EA3
+      \u0111\xE3 r\u1EA5t n\u1EB7ng n\u1EC1"
+    - "M\u1ECDi chuy\u1EC7n ph\u1EA3i \u0111\u01B0\u1EE3c d\u1EEBng l\u1EA1i"
+    - "Kh\xF4ng th\xEC kh\xF4ng c\xF3 g\xEC c\xF3 th\u1EC3 c\u1EE9u m\xE0y \u0111\xE2u"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 3
+    keyValue: 
+  - sentances:
+    - Haha
+    - "B\u1EA1n ch\u1EAFc ch\u1EE9"
+    - "N\u1EBFu kh\xF4ng th\xEC sao"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 4
+    keyValue: 
+  - sentances:
+    - "Th\xEC n\xF3 s\u1EBD b\u1EAFt bu\u1ED9c ph\u1EA3i d\u1EEBng l\u1EA1i"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 3
+    keyValue: 
+  fightingNote: "\u0110\xE1ng ra s\u1EBD c\xF3 m\u1ED9t tr\u1EADn \u0111\xE1nh nhau
+    gi\u1EEFa Nam v\xE0 Linh, nh\u01B0ng v\xEC Dev v\xE0 Art \u0111\u1EC1u l\u01B0\u1EDDi
+    n\xEAn m\u1ECDi ng\u01B0\u1EDDi coi nh\u01B0 l\xE0 2 ng\u01B0\u1EDDi \u0111\xE3
+    \u0111\xE1nh nhau nh\xE1, v\xE0 Linh thua"
+  endFightDialogue:
+  - sentances:
+    - "Gi\u1EDD sao"
+    - "M\u1ECDi th\u1EE9 ph\u1EA3i d\u1EEBng l\u1EA1i r\u1ED3i nh\u1EC9"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 4
+    keyValue: 
+  - sentances:
+    - ...............................
+    - "\u0110\u1EC3 r\u1ED3i xem"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Haha, ch\u1EA1y tr\u1ED1n v\xF4 \xEDch thoi"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 4
+    keyValue: 
+  namToldLinhToStop:
+  - sentances:
+    - "\u01A0, sao l\u1EA1i c\xF3 c\xE1i xe kh\xF4ng kh\xF3a \u1EDF \u0111\u1EA5y"
+    - "Linh, d\u1EEBng l\u1EA1i ngay"
+    Name: Nam
+    DisplayName: Nam
+    emotion: 2
+    keyValue: 
