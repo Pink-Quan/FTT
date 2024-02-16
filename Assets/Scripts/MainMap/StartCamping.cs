@@ -59,22 +59,35 @@ public class StartCamping : MonoBehaviour
     private void InitStartCamping()
     {
         DisablePlayerMoveAndUI();
-        player.transform.position = playerStartCampingPos;
-        Ngan.transform.position = playerStartCampingPos + Vector3.up * 2 + Vector3.left * 1.5f;
-        Minh.transform.position = playerStartCampingPos + Vector3.up * 2 + Vector3.left / 2;
-        Mai.transform.position = playerStartCampingPos + Vector3.left * 1.1f;
-        Hung.transform.position = playerStartCampingPos + Vector3.left * 2 * 1.1f;
-        Nam.transform.position = playerStartCampingPos + Vector3.right * 1.1f;
+        //player.transform.position = playerStartCampingPos;
+        //Ngan.transform.position = playerStartCampingPos + Vector3.up * 2 + Vector3.left * 1.5f;
+        //Minh.transform.position = playerStartCampingPos + Vector3.up * 2 + Vector3.left / 2;
+        //Mai.transform.position = playerStartCampingPos + Vector3.left * 1.1f;
+        //Hung.transform.position = playerStartCampingPos + Vector3.left * 2 * 1.1f;
+        //Nam.transform.position = playerStartCampingPos + Vector3.right * 1.1f;
 
-        player.anim.SetDirection(Vector3.up);
-        Ngan.anim.SetDirection(Vector3.down);
-        Minh.anim.SetDirection(Vector3.down);
-        Mai.anim.SetDirection(Vector3.up);
-        Hung.anim.SetDirection(Vector3.up);
-        Nam.anim.SetDirection(Vector3.up);
+        //player.anim.SetDirection(Vector3.up);
+        //Ngan.anim.SetDirection(Vector3.down);
+        //Minh.anim.SetDirection(Vector3.down);
+        //Mai.anim.SetDirection(Vector3.up);
+        //Hung.anim.SetDirection(Vector3.up);
+        //Nam.anim.SetDirection(Vector3.up);
+
+        InitCharacterStartCamping(player, playerStartCampingPos, Vector2.up);
+        InitCharacterStartCamping(Ngan, playerStartCampingPos + Vector3.up * 2 + Vector3.left * 1.5f, Vector2.down);
+        InitCharacterStartCamping(Minh, playerStartCampingPos + Vector3.up * 2 + Vector3.left / 2, Vector2.down);
+        InitCharacterStartCamping(Mai, playerStartCampingPos + Vector3.left * 1.1f, Vector2.up);
+        InitCharacterStartCamping(Hung, playerStartCampingPos + Vector3.left * 2 * 1.1f, Vector2.up);
+        InitCharacterStartCamping(Nam, playerStartCampingPos + Vector3.right * 1.1f, Vector2.up);
 
         startCampingInteractableEntities.SetActive(true);
         startCampingGameObjects.SetActive(true);
+    }
+
+    private void InitCharacterStartCamping(CharacterController character, Vector3 pos, Vector2 dir)
+    {
+        character.gameObject.SetActive(true);
+        character.SetPositon(pos, dir);
     }
 
     private void FirstComunicateWithManager()

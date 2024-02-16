@@ -65,4 +65,11 @@ public class GameManager : MonoBehaviour
             shake.m_AmplitudeGain = 0;
         });
     }
+
+    public void ResetGameData()
+    {
+        PlayerPrefs.SetInt("Progress", 0);
+        PlayerPrefs.SetInt("ProgressDay3", 0);
+        PlayerPrefs.SetInt("Restart Hosptal After Camping", 0);
+    }
 }

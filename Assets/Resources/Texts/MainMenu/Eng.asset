@@ -45,3 +45,7 @@ MonoBehaviour:
     To
     use an item in the inventory, click on the item in the inventory to hold the
     item, then exit the inventory and press on the item in hand'
+  faintInHospital: Faint in Hospital
+  diedAtCampsite: Died at Campsite
+  arrested: Arrested
+  foundTheTruth: Found The Truth

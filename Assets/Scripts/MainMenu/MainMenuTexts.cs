@@ -9,4 +9,8 @@ public class MainMenuTexts : ScriptableObject
     public string information;
     [TextArea]
     public string howToPlay;
+    public string faintInHospital;
+    public string diedAtCampsite;
+    public string arrested;
+    public string foundTheTruth;
 }

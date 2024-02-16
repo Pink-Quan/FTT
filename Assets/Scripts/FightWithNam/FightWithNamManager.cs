@@ -95,7 +95,7 @@ public class FightWithNamManager : MonoBehaviour
         GameManager.instance.transitions.Transition(1, 3, null, () =>
         {
             GameManager.instance.soundManager.PlaySound("Car Crash");
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("MainMapCatchLinh");
         });
     }
 }

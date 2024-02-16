@@ -23,6 +23,7 @@ public class PauseMenu : MonoBehaviour
             pauseButton.Show();
             pauseBoard.SetActive(false);
             bg.SetActive(false);
+            GameManager.instance.dialogueManager.CloseDialogueBoard();
             SceneManager.LoadScene("MainMenu");
         });
     }

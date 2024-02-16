@@ -18,6 +18,7 @@ public class CaveManager : MonoBehaviour
 
     private void Start()
     {
+        player.transform.rotation = Quaternion.Euler(0, 0, 90);
         player.DisableMoveAndUI();
         killerHaveMask.gameObject.SetActive(false);
         Nam.gameObject.SetActive(false);
@@ -132,6 +133,6 @@ public class CaveManager : MonoBehaviour
     private void ToHosiptalScene()
     {
         //print("To Hosiptal scene");
-        GameManager.instance.transitions.Transition(1, 1, null, () => SceneManager.LoadScene("HosptalAfterCamping"));
+        GameManager.instance.transitions.Transition(1, 1, null, () => SceneManager.LoadScene("HospitalAfterCamping"));
     }
 }

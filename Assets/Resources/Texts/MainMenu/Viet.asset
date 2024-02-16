@@ -12,17 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7721ae5f96f54a94f9cbfe9eacbd788c, type: 3}
   m_Name: Viet
   m_EditorClassIdentifier: 
-  information: "Hi\u1EC7n t\u1EA1i Tr\xF2 ch\u01A1i ch\u1EC9 \u0111ang trong giai
-    \u0111o\u1EA1n th\u1EED nghi\u1EC7m v\xE0 ch\u01B0a \u0111\u01B0\u1EE3c ho\xE0n
-    thi\u1EC7n v\xEC l\xFD do t\xE0i ch\xEDnh v\xE0 con ng\u01B0\u1EDDi, d\u1EF1
-    ki\u1EBFn tr\xF2 ch\u01A1i s\u1EBD \u0111\u01B0\u1EE3c ho\xE0n th\xE0nh v\xE0
-    ph\xE1t h\xE0nh v\xE0o cu\u1ED1i n\u0103m 2023, v\xEC v\u1EADy n\u1EBFu b\u1EA1n
-    ph\xE1t hi\u1EC7n l\u1ED7i ho\u1EB7c c\xF3 nh\u1EADn x\xE9t v\u1EC1 tr\xF2 ch\u01A1i,
-    b\u1EA1n c\xF3 th\u1EC3 li\xEAn h\u1EC7 v\u1EDBi ch\xFAng t\xF4i qua email. ho\u1EB7c
-    c\xE1c k\xEAnh truy\u1EC1n th\xF4ng x\xE3 h\u1ED9i b\xEAn d\u01B0\u1EDBi. C\u1EA3m
-    \u01A1n b\u1EA1n \u0111\xE3 th\u1EED tr\xF2 ch\u01A1i.\r\nGame \u0111\u01B0\u1EE3c
-    ph\xE1t tri\u1EC3n b\u1EDFi QuickTeam bao g\u1ED3m c\xE1c th\xE0nh vi\xEAn Ly
-    Lily, RedQ,...\r\nGhi:\r\nhttps://limezu.itch.io\r\nhttps://rmocci.itch.io\r\nhttps://refpixels.itch.io\nhttps://alan-dalcastagne.itch.io\nhttps://mayragandra.itch.io"
+  information: "V\xEC thi\u1EBFu nh\xE2n l\u1EF1c, th\u1EDDi gian v\xE0 t\xE0i ch\xEDnh,
+    tr\xF2 ch\u01A1i s\u1EBD g\u1EB7p m\u1ED9t s\u1ED1 l\u1ED7i kh\xF4ng mong mu\u1ED1n
+    v\xE0 m\u1ED9t v\xE0i \u0111i\u1EC3m kh\xF4ng hay, v\xEC th\u1EBF n\u1EBFu b\u1EA1n
+    c\xF3 \xFD ki\u1EBFn \u0111\xF3ng g\xF3p, b\u1EA1n c\xF3 th\u1EC3 li\xEAn h\u1EC7
+    qua c\xE1c k\xEAnh nh\u01B0 email, Discord,... ch\xFAng t\xF4i s\u1EB5n s\xE0ng
+    l\u1EAFng nghe nh\u1EEFng \xFD ki\u1EBFn \u0111\xF3ng g\xF3p c\u1EE7a c\xE1c
+    b\u1EA1n\r\n\r\nGame \u0111\u01B0\u1EE3c ph\xE1t tri\u1EC3n b\u1EDFi QuickTeam
+    bao g\u1ED3m c\xE1c th\xE0nh vi\xEAn Ph\u01B0\u01A1ng,H\u1ED3ng Qu\xE2n\r\n\r\nM\u1ED9t
+    s\u1ED1 ngu\u1ED3n t\xE0i nguy\xEAn \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng:\r\nhttps://limezu.itch.io\r\nhttps://rmocci.itch.io\r\nhttps://refpixels.itch.io\r\nhttps://alan-dalcastagne.itch.io\r\nhttps://mayragandra.itch.io"
   howToPlay: "S\u1EED d\u1EE5ng c\xE1c n\xFAt WASD ho\u1EB7c m\u0169i t\xEAn \u0111\u1EC3
     di chuy\u1EC3n\r\nN\xFAt t\u01B0\u01A1ng t\xE1c s\u1EBD ch\u1EC9 xu\u1EA5t hi\u1EC7n
     khi b\u1EA1n \u0111\u1EE9ng g\u1EA7n v\u1ECB tr\xED n\xE0o \u0111\xF3, n\xF3
@@ -32,3 +30,7 @@ MonoBehaviour:
     \u0111\u1ED3, \u1EA5n v\xE0o v\u1EADt ph\u1EA9m \u0111\u1EA5y trong t\xFAi \u0111\u1ED3
     \u0111\u1EC3 c\u1EA7m v\u1EADt ph\u1EA9m, sau \u0111\xF3 tho\xE1t t\xFAi \u0111\u1ED3
     v\xE0 \u1EA5n v\xE0o v\u1EADt ph\u1EA9m \u0111ang c\u1EA7m"
+  faintInHospital: "Ng\u1EA5t t\u1EA1i b\u1EC7nh vi\u1EC7n"
+  diedAtCampsite: "Ch\u1EBFt \u1EDF khu c\u1EAFm tr\u1EA1i"
+  arrested: "B\u1ECB b\u1EAFt"
+  foundTheTruth: "T\xECm th\u1EA5y s\u1EF1 th\u1EADt"

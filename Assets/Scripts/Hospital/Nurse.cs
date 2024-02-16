@@ -23,7 +23,7 @@ public class Nurse : MonoBehaviour
         transform.DOPath(appearPaths.paths, appearDuration).OnComplete(()=>
         {
             OnReached?.Invoke();
-            controller.anim.SetMove(false);
+            controller.StopMove();
             controller.anim.SetDirection(new Vector2(0,-1));
             StopAllCoroutines();
         });
@@ -36,7 +36,7 @@ public class Nurse : MonoBehaviour
         transform.DOPath(appearPaths.paths, appearDuration).OnComplete(() =>
         {
             OnDisappear?.Invoke();
-            controller.anim.SetMove(false);
+            controller.StopMove();
             controller.anim.SetDirection(new Vector2(0, -1));
             StopAllCoroutines();
         });

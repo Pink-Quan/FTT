@@ -89,6 +89,8 @@ public class CampingDay4 : MonoBehaviour
         character.anim.StopAnimation();
         character.transform.rotation = fallDir;
         character.col.enabled = false;
+        character.ClearConversation();
+        character.interact.canInteract = false;
     }
 
     private void LinhWakeUp()
@@ -107,6 +109,7 @@ public class CampingDay4 : MonoBehaviour
     public void SeeEveryoneElse(Collision2D col, Collider2D calller)
     {
         calller.gameObject.SetActive(false);
+        if (player == null) player = GameManager.instance.player;
         player.DisableMoveAndUI();
         player.anim.SetDirection(Vector2.left);
         GameManager.instance.dialogueManager.StartDialogue(texts.playerSeeEveryoneElse, player.EnableMoveAndUI);

@@ -150,6 +150,7 @@ public class HospitalAfterCampingManager : MonoBehaviour
 
     private void EscapeFailed()
     {
+        PlayerPrefs.SetInt("Arrested in hospital", 1);
         player.DisableMoveAndUI();
         GameManager.instance.dialogueManager.StartDialogue(texts.stopPlayer, () =>
         {

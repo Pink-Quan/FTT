@@ -1,12 +1,7 @@
 using Chess.Game;
 using Cinemachine;
 using DG.Tweening;
-using QuanUtilities;
-using SuperTiled2Unity.Editor.LibTessDotNet;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,8 +18,11 @@ public class CampingDay3 : MonoBehaviour
     [SerializeField] private InteractableEntity to2ndFloor;
     [SerializeField] private InteractableEntity toCamp;
     [SerializeField] private Vector3 wakeupAfterFaintingPos = new Vector3(116.14f, -58.63f);
+    [SerializeField] private GameObject doc;
 
     [SerializeField] private GameObject dirtyDisks;
+    [SerializeField] private GameObject foodInFridge;
+    [SerializeField] private GameObject cookingFood;
     [SerializeField] private GameObject foodsOnTable;
     [SerializeField] private InteractableEntity door;
     [SerializeField] private GameObject checkWindownInteractEntity;
@@ -84,6 +82,7 @@ public class CampingDay3 : MonoBehaviour
         gameObjects.SetActive(true);
         toCamp.canInteract = false;
         to2ndFloor.canInteract = false;
+        doc.SetActive(true);
 
         mainMap.SetActive(false);
         mainHouse.SetActive(true);
@@ -238,6 +237,9 @@ public class CampingDay3 : MonoBehaviour
     {
         CheckDoorLock(null);
         foodsOnTable.SetActive(true);
+        dirtyDisks.SetActive(false);
+        foodInFridge.SetActive(false);
+        cookingFood.SetActive(false);
     }
 
     private void ChessNotify()
@@ -266,11 +268,8 @@ public class CampingDay3 : MonoBehaviour
         player.DisableMoveAndUI();
         chess.outButton.onClick.AddListener(player.phone.outButton.onClick.Invoke);
         PlayerPrefs.SetInt("ProgressDay3", 1);
-        player.onOpenPhone = () =>
-        {
-            chess.PlayChess();
-            player.phone.gameObject.SetActive(false);
-        };
+        PlayerPrefs.SetInt("Died at campsite", 1);
+        player.onOpenPhone += PlayChess;
         chess.onChessGameDone.AddListener(WinChess);
         GameManager.instance.dialogueManager.StartDialogue(texts.fellDizzyAfterLookingAtChess, () =>
         {
@@ -279,6 +278,12 @@ public class CampingDay3 : MonoBehaviour
             player.anim.onDoneDie.AddListener(WakeUpAfterFainting);
             player.stress.onMaxStress.AddListener(player.Die);
         });
+    }
+
+    private void PlayChess()
+    {
+        chess.PlayChess();
+        player.phone.gameObject.SetActive(false);
     }
 
     private void WakeUpAfterFainting()
@@ -370,6 +375,7 @@ public class CampingDay3 : MonoBehaviour
     {
         if (res != GameResult.Result.BlackIsMated) return;
 
+        player.onOpenPhone -= PlayChess;
         chess.onChessGameDone.RemoveListener(WinChess);
         chess.outButton?.onClick.Invoke();
 
@@ -389,6 +395,7 @@ public class CampingDay3 : MonoBehaviour
     private void MovePlayerToWc()
     {
         player.SetPositon(playerInWcPos, Vector2.up);
+
     }
 
     public void WrongWC(InteractableEntity entity)
@@ -474,6 +481,8 @@ public class CampingDay3 : MonoBehaviour
         InitCharInHouse(Ngan);
         InitCharInHouse(Nam);
         GetComponent<CampingDay2>().SetCharacterPositionInHouse(player, Hung, Mai, Ngan, Minh, Nam);
+        mainMap.gameObject.SetActive(false);
+        mainHouse.gameObject.SetActive(true);
     }
 
     private void InitCharInHouse(CharacterController character)

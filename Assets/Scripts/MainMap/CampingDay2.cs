@@ -45,6 +45,9 @@ public class CampingDay2 : MonoBehaviour
 
         this.mainMapManager = mainMapManager;
 
+        mainMap.SetActive(true);
+        firstFlooor.SetActive(false);
+
         Minh = mainMapManager.Minh;
         Nam = mainMapManager.Nam;
         Hung = mainMapManager.Hung;
@@ -54,9 +57,9 @@ public class CampingDay2 : MonoBehaviour
 
         player.DisableMoveAndUI();
         //Uncommand 2 line of code and comment AnouchMinhDoneMission3() to end debug
-        //Invoke(nameof(ShowFirstMission), 1);
-        //SetStartDay2Character();
-        AnouchMinhDoneMission3();
+        Invoke(nameof(ShowFirstMission), 1);
+        SetStartDay2Character();
+        //AnouchMinhDoneMission3();
     }
 
     private void ShowFirstMission()
@@ -104,6 +107,7 @@ public class CampingDay2 : MonoBehaviour
         player.anim.SetMove(false);
 
         Mai.gameObject.SetActive(true);
+        Mai.transform.SetParent(null);
         Mai.transform.position = player.transform.position + new Vector3(1, -1) * 10;
 
         GameManager.instance.dialogueManager.StartDialogue(texts.playerMonologueAboutFirstMisson, MaiApproachPlayer);
@@ -163,6 +167,13 @@ public class CampingDay2 : MonoBehaviour
             Mai.gameObject.SetActive(true);
 
             Vector3 playerPos = player.transform.position;
+
+            Nam.gameObject.SetActive(true);
+            Hung.gameObject.SetActive(true);
+            Mai.gameObject.SetActive(true);
+            Ngan.gameObject.SetActive(true);
+            Minh.gameObject.SetActive(true);
+
             Nam.transform.position = playerPos + Vector3.right;
             Hung.transform.position = playerPos + Vector3.down + Vector3.left;
             Mai.transform.position = playerPos + Vector3.down + Vector3.right * 2;
@@ -194,8 +205,8 @@ public class CampingDay2 : MonoBehaviour
         Debug.Log("Start Misssion 3");
 
         GameManager.instance.transitions.Transition(1, 1, NganGuidePlayerToDoMission3, SetCharacterPosition);
-        if (!player.inventory.IsContain("Magnet"))
-            InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, player.inventory);
+
+        InventoryManager.instance.AddItemToInventory(ItemType.NormalItem, "Magnet", 1, player.inventory);
 
         void SetCharacterPosition()
         {
@@ -246,6 +257,7 @@ public class CampingDay2 : MonoBehaviour
 
                 void HeadToPlayer()
                 {
+                    player.arrowPointer.gameObject.SetActive(false);
                     Ngan.anim.SetDirection((Vector2)(player.transform.position - Ngan.transform.position));
                 }
             }
@@ -308,7 +320,7 @@ public class CampingDay2 : MonoBehaviour
         if (Mai == null) Mai = tMai;
         if (Ngan == null) Ngan = tNgan;
         if (Minh == null) Minh = tMinh;
-        if(Nam==null) Nam = tNam;
+        if (Nam == null) Nam = tNam;
 
         player.transform.position = finalDisscusPos;
         Vector3 playerPos = player.transform.position;

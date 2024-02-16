@@ -150,6 +150,7 @@ public class TheTruthManager : MonoBehaviour
 
     private void ChangeToEndGameScene()
     {
+        PlayerPrefs.SetInt("Found the truth", 1);
         GameManager.instance.transitions.Transition(1, 1, null, () => SceneManager.LoadScene("EndGame"));
     }
 }

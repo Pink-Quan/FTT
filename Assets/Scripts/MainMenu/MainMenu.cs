@@ -9,10 +9,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject loading;
 
     [HideInInspector] public MainMenuTexts texts;
+
     public void StartGame()
     {
+        GameManager.instance.soundManager.StopMusic();
         string sceneName = "";
-        switch ((GameProgress)PlayerPrefs.GetInt("Progress"))
+        switch ((GameProgress)PlayerPrefs.GetInt("Progress", 0))
         {
             case GameProgress.GoingHome:
                 sceneName = "GoingHome";
@@ -24,7 +26,7 @@ public class MainMenu : MonoBehaviour
             case GameProgress.CampingDay2:
             case GameProgress.CampingDay3:
             case GameProgress.CampingDay4:
-                sceneName = "Hospital";
+                sceneName = "MainMap";
                 break;
             case GameProgress.Cave:
                 sceneName = "Cave";
@@ -32,9 +34,20 @@ public class MainMenu : MonoBehaviour
             case GameProgress.HosptalAfterCamping:
                 sceneName = "HospitalAfterCamping";
                 break;
+            case GameProgress.FightWithNam:
+                sceneName = "FightWithNam";
+                break;
+            case GameProgress.ChaseLinh:
+                sceneName = "MainMapCatchLinh";
+                break;
+            case GameProgress.TheTruth:
+                sceneName = "TheTruth";
+                break;
+            case GameProgress.EndGame:
+                sceneName = "EndGame";
+                break;
             default:
                 sceneName = "Hospital";
-                //sceneName = "MainMap";
                 break;
         }
         GameManager.instance.transitions.Transition(1, 1, null, () =>
@@ -60,11 +73,6 @@ public class MainMenu : MonoBehaviour
         GameManager.instance.dbManager.UpdateDB(Application.Quit);
     }
 
-    public void ResetProgress()
-    {
-        PlayerPrefs.SetInt("Progress", 0);
-    }
-
     public void ChanngeLanguage(string language)
     {
         PlayerPrefs.SetString("Language", language);
@@ -76,10 +84,11 @@ public class MainMenu : MonoBehaviour
         Application.OpenURL("https://www.facebook.com/profile.php?id=100089991012819");
     }
 
-    public void OpenYoutube()
+    public void OpenUri(string uri)
     {
-        Application.OpenURL("https://www.facebook.com/profile.php?id=100089991012819");
+        Application.OpenURL(uri);
     }
+
 
     public void GetEmail()
     {
@@ -119,14 +128,19 @@ public class MainMenu : MonoBehaviour
     {
         GameManager.instance.textBoard.ShowText(texts.howToPlay);
     }
+
+    public void RestartGame()
+    {
+        GameManager.instance.ResetGameData();
+    }
 }
 
 public enum GameProgress
 {
     InsideHospital = 0,
     GoingHome = 1,
-    InsideLinhHouse = 3,
-    StartCamping = 2,
+    InsideLinhHouse = 2,
+    StartCamping = 3,
     CampingDay2 = 4,
     CampingDay3 = 5,
     CampingDay4 = 6,
@@ -135,4 +149,5 @@ public enum GameProgress
     FightWithNam = 9,
     ChaseLinh = 10,
     TheTruth = 11,
+    EndGame = 12,
 }

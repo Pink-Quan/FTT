@@ -18545,7 +18545,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -18553,6 +18553,48 @@ TextureImporter:
       bones: []
       spriteID: d288b38e39bef7449b4811190e6c328f
       internalID: -1030357681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: V_Button
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96054dcc4b58f6a4dbb9d7557ca3a249
+      internalID: -996848041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lock
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914db5cfe2dbb75458963c00b57b5c08
+      internalID: -76994631
       vertices: []
       indices: 
       edges: []
@@ -18580,6 +18622,7 @@ TextureImporter:
       Cursor7: 148087196
       GreenBar: 992983911
       Infor_Button_White: -431021568
+      Lock: -76994631
       Modern_UI_0: 1357951152
       Modern_UI_1: 123959240
       Modern_UI_10: -288134566
@@ -19429,6 +19472,7 @@ TextureImporter:
       UI_OK_icon00: -1297389234
       UI_Rec_Button00: -1913287922
       UI_Squ_Buton00: -1860865971
+      V_Button: -996848041
       White_Bag_Icon: -106142599
       X_icon: -2131385499
       Yellow house: 1254687257
