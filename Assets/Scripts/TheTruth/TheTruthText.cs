@@ -9,4 +9,10 @@ public class TheTruthText : ScriptableObject
     public Dialogue HungFirstDialogue;
     public Dialogue HungSecondDialogue;
     public string fewMonthsAgo;
+
+    [Header("A few months ago")]
+    public Dialogue[] HungResolveTheQuestWithLinh;
+    public Dialogue[] HungRememberThePast;
+    public Dialogue HungAskWhereIsLinh;
+    public Dialogue killerDialogue;
 }

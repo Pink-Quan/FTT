@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMap.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: 5226a022b60b09e43849c4deb72b948a
+  - enabled: 1
     path: Assets/Scenes/GoingHome.unity
     guid: 42119dca4fabc4841b103626e357f18b
   - enabled: 1

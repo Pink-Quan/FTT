@@ -35,3 +35,92 @@ MonoBehaviour:
     emotion: 0
     keyValue: 
   fewMonthsAgo: "V\xE0i th\xE1ng tr\u01B0\u1EDBc"
+  HungResolveTheQuestWithLinh:
+  - sentances:
+    - "Em m\u1EC7t qu\xE1 th\xEC c\u1EE9 ngh\u1EC9 ng\u01A1i \u0111i nh\xE1, \u0111\u1EC3
+      anh canh g\xE1c cho"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Kh\xF4ng sao \u0111\xE2u, em ch\u1EC9 h\u01A1i \u0111\xE2u \u0111\u1EA7u ch\xFAt
+      th\xF4i"
+    Name: Linh
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "\xC0"
+    - "Anh v\u1EEBa ngh\u0129 ra c\xE1ch gi\u1EA3i m\u1EA5y manh m\u1ED1i \u0111\u1EC3
+      l\u1EA1i"
+    - "Qf6 f6 Bf6 c\xF3 10 k\xFD t\u1EF1, 0002 c\xF3 4 k\xFD t\u1EF1, printf s\u1EBD
+      tr\u1EA3 v\u1EC1 s\u1ED1 l\u01B0\u1EE3ng k\xFD t\u1EF1 trong \u0111\u1EA5y"
+    - "Chi\u1EBFu l\xEAn b\u1EA3n \u0111\u1ED3 \u1EDF \u0111\xE2y, v\u1EDBi g\u1ED1c
+      l\xE0 g\xF3c b\xEAn tr\xE1i d\u01B0\u1EDBi c\xF9ng"
+    - "S\u1EBD ra \u0111\u01B0\u1EE3c v\u1ECB tr\xED"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "Hay th\u1EBF, sao anh l\u1EA1i ngh\u0129 ra \u0111\u01B0\u1EE3c h\u01B0\u1EDBng
+      gi\u1EA3i \u0111\u1EA5y th\u1EC3"
+    Name: Linh
+    DisplayName: Nam
+    emotion: 1
+    keyValue: 
+  - sentances:
+    - "Anh t\u1EF1 nhi\xEAn th\u1EA5y n\xF3 quen quen n\xEAn gi\u1EA3i \u0111\u01B0\u1EE3c
+      th\xF4i"
+    - "\u0110\u1EE3i t\xFD anh \u0111i u\u1ED1ng n\u01B0\u1EDBc"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  HungRememberThePast:
+  - sentances:
+    - "Sao m\xECnh l\u1EA1i c\xF3 th\u1EC3 gi\u1EA3i manh m\u1ED1i theo h\u01B0\u1EDBng
+      \u0111\xF3 \u0111\u01B0\u1EE3c nh\u1EC9"
+    - "N\xF3 nh\u01B0 \u0111\u01B0\u1EE3c ch\xEDnh m\xECnh t\u1EA1o ra v\u1EADy"
+    - ....................................................................
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    - "M\xECnh nh\u1EDB ra r\u1ED3i, nh\u1EDB ra m\u1ECDi th\u1EE9 r\u1ED3i"
+    - "N\xF3 ch\xEDnh l\xE0 do m\xECnh t\u1EA1o ra m\xE0"
+    - "M\xECnh th\u1EF1c s\u1EF1 \u0111\xE3 s\u1ED1ng s\xF3t v\xE0 ch\u1EA1y tho\xE1t
+      kh\u1ECFi s\u1EF1 t\u1EA5n c\xF4ng c\u1EE7a em Linh m\xE0"
+    - "B\u1EA3o sao \u0111\u1EBFn \u0111\xE2y m\xECnh c\u0169ng th\u1EA5y nh\u1EE9c
+      nh\u1EE9c \u0111\u1EA7u gi\u1ED1ng Linh"
+    - "M\u1ECDi th\u1EE9 tr\xF9ng h\u1EE3p \u0111\u1EBFn m\u1EE9c th\u1EADt kh\xF3
+      tin, kh\xF4ng th\u1EC3 tin n\u1ED1i m\xECnh g\u1EB7p l\u1EA1i Linh trong ho\xE0n
+      c\u1EA3nh n\xE0y"
+    - "Linh \u0111ang b\u1ECB DID, t\u1ED1t nh\u1EA5t l\xE0 n\xEAn c\u1EA9n th\u1EADn,
+      n\xF3 m\u1EDBi ch\xEDnh l\xE0 ng\u01B0\u1EDDi \u0111\u1EE9ng sau m\u1ECDi chuy\u1EC7n"
+    - "M\xECnh c\u1EA7n kh\u1ED1ng ch\u1EBF linh l\u1EA1i"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 6
+    keyValue: 
+  HungAskWhereIsLinh:
+    sentances:
+    - "Th\xF4i d\u1EDF r\u1ED3i, Linh ch\u1EA1y \u0111\xE2u r\u1ED3i"
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 7
+    keyValue: 
+  killerDialogue:
+    sentances:
+    - "Anh H\u01B0ng ch\u1ED1ng tr\u1EA3 quy\u1EBFt li\u1EC7t qu\xE1"
+    - "Ahh, b\u1ECB m\u1ED9t ph\xE1t v\xE0o \u0111\u1EA7u t\u1EEB anh H\u01B0ng khi\u1EBFn
+      m\xECnh nh\u1EE9c \u0111\u1EA7u qu\xE1"
+    - "M\xECnh c\u1EA7n x\u1EED l\xFD n\u1ED1t m\u1ECDi ng\u01B0\u1EDDi tr\xEAn t\u1EA7n
+      n\u1EEFa"
+    Name: KillerNoMask
+    DisplayName: "K\u1EBB l\u1EA1 m\u1EB7t"
+    emotion: 0
+    keyValue: 
