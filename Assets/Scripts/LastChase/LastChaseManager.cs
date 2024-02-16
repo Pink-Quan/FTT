@@ -108,7 +108,7 @@ public class LastChaseManager : MonoBehaviour
         {
             NamLight.intensity = lightIdensity;
         });
-        DOVirtual.DelayedCall(1, ToTheTruthScene);
+        DOVirtual.DelayedCall(2, ToTheTruthScene);
     }
 
     private void ToTheTruthScene()

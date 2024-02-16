@@ -3,15 +3,15 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Map/LinhDead.tmx",
+    "activeFile": "Map/HungRoom.tmx",
     "expandedProjectPaths": [
-        "Tileset/Singles",
         "Map",
-        "Tileset",
-        "Plugins/Demigiant",
         ".",
+        "Tileset/Singles",
         "Tileset/Singles/Villas",
-        "Map/Hospital Hall"
+        "Map/Hospital Hall",
+        "Plugins/Demigiant",
+        "Tileset"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -184,8 +184,8 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 578.6666666666667,
-                "y": 284.99999999999994
+                "x": 320,
+                "y": 160.33333333333334
             }
         },
         "Map/Floors.tsx": {
@@ -244,6 +244,14 @@
         "Map/Hospital.tsx": {
             "scaleInDock": 1
         },
+        "Map/HungRoom.tmx": {
+            "scale": 5.5,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 169.63636363636363,
+                "y": 30.81818181818182
+            }
+        },
         "Map/Inside camping trailer.tmx": {
             "scale": 4,
             "selectedLayer": 3,
@@ -281,8 +289,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 223.5,
-                "y": 140.75
+                "x": 160,
+                "y": 160.25
             }
         },
         "Map/Linh_House.tmx": {
@@ -303,8 +311,8 @@
             "scale": 5.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1224.5454545454545,
-                "y": 2013.1818181818182
+                "x": 1196,
+                "y": 1197
             }
         },
         "Map/Room_Builder_3d_walls.tsx": {
@@ -424,7 +432,7 @@
             "scaleInEditor": 1
         },
         "Tileset/Bedroom.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 1.5,
             "scaleInEditor": 1
         },
         "Tileset/Buses_3.tsx": {
@@ -444,7 +452,7 @@
             "scaleInEditor": 1
         },
         "Tileset/Classroom_and_library.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "Tileset/Floors.tsx": {
@@ -630,7 +638,8 @@
         "Map/Hospital Hall/Vertical_Hall.tmx",
         "Map/Hospital Hall/Entrance.tmx",
         "Map/Comback_street.tmx",
-        "Map/LinhDead.tmx"
+        "Map/LinhDead.tmx",
+        "Map/HungRoom.tmx"
     ],
     "project": "Tiled.tiled-project",
     "recentFiles": [
