@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1305991043863529185}
+  canvasGroup: {fileID: 0}
 --- !u!1 &383026210038983794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3447,6 +3448,7 @@ MonoBehaviour:
   soundManager: {fileID: 3029156859951784871}
   missionsManager: {fileID: 8109339640014323132}
   showImage: {fileID: 4669624402791256412}
+  pauseButton: {fileID: 7209583512650145658}
 --- !u!114 &2774800061788448524
 MonoBehaviour:
   m_ObjectHideFlags: 0
