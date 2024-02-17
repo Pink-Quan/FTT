@@ -68,7 +68,7 @@ MonoBehaviour:
     emotion: 0
     keyValue: 
   - sentances:
-    - "Chuy\u1EC7n g\xEC m\xE0 g\u1EA5p th\u1EBF, n\xF3 lu\xF4n \u0111\u01B0\u1EE3c
+    - "Chuy\u1EC7n g\xEC m\xE0 g\u1EA5p th\u1EBF, n\xF3i lu\xF4n \u0111\u01B0\u1EE3c
       kh\xF4ng"
     Name: Linh
     DisplayName: Linh
@@ -157,16 +157,6 @@ MonoBehaviour:
     emotion: 0
     keyValue: 
   - sentances:
-    - "N\u1EBFu v\u1EADy h\u1EAFn c\xF3 th\u1EC3 gi\u1EBFt ng\u01B0\u1EDDi b\u1ECBt
-      \u0111\u1EA7u m\u1ED1i m\xE0"
-    - "H\u1EAFn c\xF3 th\u1EC3 ph\xE1 ho\u1EA1i nh\u01B0 th\u1EBF n\xE0y ch\u1EE9ng
-      t\u1ECF h\u1EAFn t\u1EEBng \u0111\u1EBFn \u0111\xE2y v\xE0 kh\xE1 thu\u1ED9c
-      \u0111\u1ECBa h\xECnh \u1EDF \u0111\xE2y"
-    Name: Hung
-    DisplayName: "H\u01B0ng"
-    emotion: 0
-    keyValue: 
-  - sentances:
     - "C\xF3 th\u1EC3 h\u1EAFn kh\xF4ng d\xE1m l\xE0m v\u1EADy ho\u1EB7c c\xF3 th\u1EC3
       h\u1EAFn ch\u01B0a t\xECm th\u1EDDi \u0111i\u1EC3m th\xEDch h\u1EE3p"
     Name: Hung
@@ -195,8 +185,6 @@ MonoBehaviour:
       \u1EDF \u0111\u1EB1ng sau"
     - "Sau khi x\u1EA3y ra tai n\u1EA1n, ch\u1ECB c\u0169ng tham gia d\u1ECDn d\u1EB9p
       v\xE0 t\xECm ki\u1EBFm c\u1EE9u h\u1ED9"
-    - "Sau khi x\u1EA3y ra tai n\u1EA1n, ch\u1ECB c\u0169ng tham gia d\u1ECDn d\u1EB9p
-      v\xE0 t\xECm ki\u1EBFm c\u1EE9u h\u1ED9"
     - "Ch\u1ECB \u0111\xE3 t\xECm \u0111\u01B0\u1EE3c 1 con dao d\xEDnh m\xE1u"
     - "C\u1EA3nh s\xE1t \u0111\xE3 \u0111em \u0111i gi\xE1m \u0111\u1ECBnh con dao
       xem m\xE1u g\xEC, h\u1ECD n\xF3i n\xF3 ch\u1EC9 l\xE0 m\xE1u \u0111\u1ED9ng
@@ -206,7 +194,7 @@ MonoBehaviour:
       ch\u1EAFn \u0111\u1EA5y kh\xF4ng ph\u1EA3i m\xE1u \u0111\xF4ng v\u1EADt"
     - "Ch\u1ECB ch\u1EAFc ch\u1EAFn con dao \u0111\xF3 c\xF3 li\xEAn quan t\u1EDBi
       thanh ni\xEAn b\xED \u1EA9n xu\u1EA5t hi\u1EC7n c\xF9ng gia \u0111\xECnh em"
-    - "C\u1EA3nh s\xE1t bi\u1EBFt v\u1EADy n\xEAn \u0111\xE3 x\u1EAFp s\u1EBFp v\xE0
+    - "C\u1EA3nh s\xE1t bi\u1EBFt v\u1EADy n\xEAn \u0111\xE3 s\u1EAFp x\u1EBFp v\xE0
       th\u1ECFa thu\u1EADn v\u1EDBi ch\u1ECB nh\u1EB1m gi\u1EEF k\xEDn th\xF4ng tin
       n\xE0y"
     - "Th\xF4ng tin n\xE0y th\u1EF1c s\u1EF1 m\xE0 l\u1ED9 th\xEC s\u1EBD g\xE2y
@@ -330,16 +318,9 @@ MonoBehaviour:
     emotion: 0
     keyValue: 
   - sentances:
-    - "V\u1EADy c\xF2n nh\u1EEFng g\xEC m\xECnh v\u1EEBa thu th\u1EADp \u0111\u01B0\u1EE3c
-      th\xEC sao \u1EA1"
-    Name: Linh
-    DisplayName: Linh
-    emotion: 0
-    keyValue: 
-  - sentances:
     - "Nh\u1EEFng g\xEC m\xECnh thu th\u1EADp \u0111\u01B0\u1EE3c v\xE0 bi\u1EBFt
       \u0111\u01B0\u1EE3c ch\xFAng ta b\xE1o c\xE1o cho c\u1EA3nh s\xE1t sau"
-    - "Quan trong l\xE0 ph\u1EA3i r\u1EDDi kh\u1ECFi \u0111\xE2y \u0111\u01B0\u1EE3c
+    - "Quan tr\u1ECDng l\xE0 ph\u1EA3i r\u1EDDi kh\u1ECFi \u0111\xE2y \u0111\u01B0\u1EE3c
       \u0111\xE3"
     - "Gi\u1EDD m\u1ECDi ng\u01B0\u1EDDi \u0111i ng\u1EE7 \u0111i nh\xE9"
     - "Ng\u01B0\u1EDDi canh g\xE1c tr\u01B0\u1EDBc s\u1EBD \u0111\xE1nh th\u1EE9c

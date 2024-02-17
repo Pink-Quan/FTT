@@ -291,6 +291,7 @@ public class CampingDay3 : MonoBehaviour
         player.anim.onDoneDie.RemoveListener(WakeUpAfterFainting);
         player.stress.StopBeingStress();
         player.stress.AddStress(-10);
+        player.onOpenPhone -= PlayChess;
 
         GameManager.instance.transitions.Transition(1, 1, OnComplete: () =>
         {

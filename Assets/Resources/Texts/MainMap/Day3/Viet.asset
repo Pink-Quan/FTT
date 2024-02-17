@@ -195,7 +195,6 @@ MonoBehaviour:
   seeEveryoneDead:
     sentances:
     - "Chuy\u1EC7n g\xEC \u0111\xE3 x\u1EA3y ra nh\u01B0 th\u1EBF n\xE0y"
-    - "M\xECnh \u0111\xE3 l\xE0m g\xEC v\u1EADy"
     - Hic
     - "Gi\u1EDD m\xECnh n\xEAn l\xE0m g\xEC \u0111\xE2y"
     Name: Linh
@@ -313,9 +312,8 @@ MonoBehaviour:
       th\xF4ng minh n\xE0y kh\xF4ng"
     - "N\xF3 y\xEAu c\u1EA7u nh\u1EADp m\u1EADt kh\u1EA9u m\u1EDBi xem \u0111\u01B0\u1EE3c
       b\xEAn trong \u0111\xE3 \u0111i\u1EC1u ch\u1EC9nh nh\u01B0 th\u1EBF n\xE0o"
-    - "Nh\xE0 anh ch\u1ECB \u1EDF \u0111\xE2u d\xF9ng \u0111i\u1EC7n th\xF4ng minh,
-      anh \u0111o\xE1n n\xF3 b\u1ECB nh\u1EA5p nh\xE1y do c\xE0i \u0111\u1EB7t b\xEAn
-      trong "
+    - "Nh\xE0 anh ch\u1ECB \u1EDF d\xF9ng \u0111i\u1EC7n th\xF4ng minh, anh \u0111o\xE1n
+      n\xF3 b\u1ECB nh\u1EA5p nh\xE1y do c\xE0i \u0111\u1EB7t b\xEAn trong "
     - "Em xem c\xF3 c\xE1ch n\xE0o kh\xF4ng"
     Name: Hung
     DisplayName: "H\u01B0ng"

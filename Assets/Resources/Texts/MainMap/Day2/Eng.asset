@@ -1,0 +1,284 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1793ca3d08eafa4ab7caaf3cb6af006, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  MinhFirstConversation:
+    sentances:
+    - Just ask me if you have anything
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  HungFirstConversation:
+    sentances:
+    - When everyone's finished, we'll prepare to go home
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  NganFirstConversation:
+    sentances:
+    - Please try to finish your work
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  NamFirstConversation:
+    sentances:
+    - Come on, don't come any closer
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  firstMission: Pick up the remaining iron scraps on the lawn
+  playerMonologueAboutFirstMisson:
+    sentances:
+    - There's a lot of scrap metal here
+    - Besides, it's on the grass
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  callPlayerBackToCar:
+  - sentances:
+    - What happened that made you run all the way here?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Hey, go to the parking lot
+    - Something happened
+    - Go there immediately
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - What's so urgent? Can you tell me?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - No, go there
+    - Hurry up
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - ok oik
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  backToCarParkMisson: "Ra ch\u1ED7 \u0111\u1ED7 xe g\u1EB7p m\u1ECDi ng\u01B0\u1EDDi
+    \u0111ang t\u1EADp trung \u1EDF \u0111\u1EA5y"
+  confessTheTruth:
+  - sentances:
+    - What's going on?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - We have been sabotaged
+    - Our cars were all damaged because someone intentionally destroyed them, and
+      now we're all stuck here
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - So there must still be a way to get out of here
+    - Like calling relatives or rescuers up here
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Everyone has also thought of that solution, but it is impossible
+    - The phone signal here is very weak, normally there will be a mobile base station
+      to maintain contact
+    - But it was also vandalized beyond repair
+    - The only solution now is to try to fix the car, then leave here and notify
+      the authorities
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - I don't know what everyone thinks, but I think this will be complicated
+    - The saboteur wants us to be isolated here, which means he's afraid we might
+      bring something out.
+    - Or afraid we might know some information and let it out
+    - If so, then it will really have a lot to do with Linh, because she is suffering
+      from memory loss, so being here might make her remember something.
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - "N\u1EBFu v\u1EADy h\u1EAFn c\xF3 th\u1EC3 gi\u1EBFt ng\u01B0\u1EDDi b\u1ECBt
+      \u0111\u1EA7u m\u1ED1i m\xE0"
+    - "H\u1EAFn c\xF3 th\u1EC3 ph\xE1 ho\u1EA1i nh\u01B0 th\u1EBF n\xE0y ch\u1EE9ng
+      t\u1ECF h\u1EAFn t\u1EEBng \u0111\u1EBFn \u0111\xE2y v\xE0 kh\xE1 thu\u1ED9c
+      \u0111\u1ECBa h\xECnh \u1EDF \u0111\xE2y"
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Maybe he didn't dare to do that or maybe he just hadn't found the right time
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - ....................................................................
+    - I think you should know the truth now
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - The Truth
+    - Is it true that what I knew before was almost always wrong?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5
+    keyValue: 
+  - sentances:
+    - Not really
+    - What you know is only a part that has been published, there is actually a secret
+      behind it
+    - After the accident, I also participated in cleanup and search and rescue
+    - I found a bloody knife
+    - The police had the knife examined to see what blood it contained. They said
+      it was just animal blood and explained that it was someone's knife recently
+      butchering animals.
+    - But according to my observation and experience, it is definitely not animal
+      blood clots
+    - I'm sure that knife is related to the mysterious young man who appeared with
+      your family
+    - The police knew that, so they arranged and agreed with me to keep this information
+      confidential
+    - If this information is actually revealed, it will cause great confusion among
+      public opinion
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Not only that
+    - Since the landslide, I noticed that the trees above were very strangely nailed
+    - Oh, I also found a file in the rubble
+    - In it was a piece of paper that had just been written on, it even had blood
+      stains and knife cuts, but because of a landslide, some of its content was
+      lost.
+    - The document was confiscated by the police for investigation, but I still remembers
+      what was written in it
+    - Later, I will show everyone that paper in the house
+    - Now I need to go to the garden to check how the previous nails were nailed
+      on the tree. I just noticed it but didn't write anything down.
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Let me go, please try to fix the car
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Let me go with you, maybe I can remember something
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  NganGuidePlayerToDoMission3:
+    sentances:
+    - What was written on the paper is missing, and part of it has been lost due
+      to leaving it too long
+    - Please go check these trees, I'll check the rest
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  mission3Description: Check to see how many nails the trees have
+  talkToNganAboutNailInTree:
+  - sentances:
+    - It's not okay
+    - I noticed that there were a few trees and nails that were indented, and it
+      would be difficult to detect when checking
+    - So there may be trees that I count that are missing nails
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - ........
+    - Try to think if there is any solution
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  playerMonodialogueCantTakeNail:
+    sentances:
+    - I'm not sure how many nails this tree has
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  anouchNganDoneMission3:
+  - sentances:
+    - I'm done, have you finished checking the remaining trees yet?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - I'm done, let's go back
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  endDay2Dialogue:
+  - sentances:
+    - The current situation is very dangerous, saboteurs can attack and approach
+      us at any time
+    - I think we'll sleep in the same place at night, and there will be a guard
+    - We will take turns guarding, each person will watch for 1 hour, the first and
+      last 2 people will watch for 1 and a half hours
+    - If something happens, make a loud noise to wake everyone up
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - So what about what we just collected?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - What we collect and know we report to the police later
+    - The important thing is to get out of here first
+    - Now everyone go to sleep
+    - The previous watchman will wake up the next watchman
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 

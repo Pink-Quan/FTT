@@ -1,0 +1,300 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062a2c378a76def498baa9fd806fabfa, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  theFirstConversationsWithManagers:
+  - sentances:
+    - Hello
+    - How can I help you?
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Hi
+    - Like last time, I called and said I wanted to come here to visit, even though
+      it's still under construction
+    - It seems like this week is the week off for the workers here, right?
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - That's right
+    - So you will be quite busy
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - But
+    - If you stay here, you can visit and help us with a few things
+    - I will pay you all your wages and accommodation for today and tomorrow. In
+      the evening I will tell you everything I know about the accident.
+    - I was here before and after the accident, so I remember a few things
+    - What do you think, or do you want me to tell you?
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Okay, we are willing to help you
+    - We don't need any money either
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - So great, let's get started
+    - "Xong s\u1EDBm ch\xFAng ta s\u1EBD ngh\u1EC9 s\u1EDBm, ch\u1ECB s\u1EBD k\u1EC3
+      \u0111\u01B0\u1EE3c nhi\u1EC1u th\u1EE9 h\u01A1n \u0111\u1EA5y"
+    - Once we're done, we'll rest early. I'll tell you more things
+    - Now let's get started
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  firstMission: Remove all nails and metal debris from the parking area
+  NamCamping1:
+    sentances:
+    - Hey, don't come near here, it's dangerous
+    - This place is very deep, the wind is very strong and the fence is broken
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  MinhCamping1:
+    sentances:
+    - If you need any help, just let me know
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  NganCamping1:
+    sentances:
+    - Just work comfortably, if you're too tired, just rest
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  HungCamping1:
+    sentances:
+    - If you have anything, ask Mai, I'm concentrating on work
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  MaiCamping1:
+    sentances:
+    - When you're done, come here and help me cook
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  cantDoFirstMission:
+    sentances:
+    - There are so many pieces of iron that I can't pick them up by hand
+    - Maybe Minh can help me
+    - Luckily, he's just right down here
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  needMagnet:
+    sentances:
+    - I need to use tools to clean up all this iron scrap
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  MinhGuideToTakeMagnet:
+  - sentances:
+    - I can't pick up all the scrap metal in the parking lot
+    - It's too small and too much
+    - Do you have any solution?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Oh, I remember there seems to be something to clean up those things
+    - It seems to be stored inside some iron cabinets at the construction site right
+      next to here
+    - I don't remember which one, go out there and check each cabinet
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Hey, why didn't you tell me sooner that I had the tools to do it?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+    keyValue: 
+  - sentances:
+    - My bad, I forgot
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  doneFirstMissons:
+    sentances:
+    - Yeah it's done, now let's tell Ms. Ngan I'm done
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+    keyValue: 
+  getMagnet: Get the magnet
+  callNganStartCampingMission: Notify Ms. Ngan at the campsite, the campsite is on
+    the left
+  annouchToNganDoneFirstMission:
+  - sentances:
+    - I'm pretty much done with my work
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Very good
+    - It's getting late now, please tell everyone to stop and go to my house to rest
+    - Tomorrow morning we will continue our work
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  scecondStartMission: Call everyone to rest and prepare for the evening
+  callNamSecondMission:
+  - sentances:
+    - Nam, take a break and go to Ngan's house to rest
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - OK, wait a minute, I'll come right in
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  callNganSecondMission:
+  - sentances:
+    - Call everyone to go home and rest
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  callMinhSecondMission:
+  - sentances:
+    - Ok, I'll come right in
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  callHungSecondMission:
+  - sentances:
+    - I'm almost done, I'll be there in 2 minutes
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  callMaiSecondMission:
+  - sentances:
+    - Have you finished cooking yet?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - It's almost done, everyone can come in and it can be done
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  getMagnetHint: Look at the cars in the parking lot
+  insideHouseConversations:
+  - sentances:
+    - Thank you everyone for working hard to help us
+    - If there's something tomorrow, we'll finish it. If it's too heavy and can't
+      be finished, leave it alone and workers will come next week to finish it
+    - 'Rest and make yourself at home '
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Can you tell me what you know about the accident?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Oh yeah, if you don't tell me, I'll forget it too
+    - Do you remember how many people went on your previous outing?
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - According to everyone, it was my family outing
+    - So it's possible that there are three people including me and my parents
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - As I remember correctly, and some people present around here said
+    - That trip included four people
+    - The fourth person is a rather tall young man who often wears a mask
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Really, do you have any information about that young man?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5
+    keyValue: 
+  - sentances:
+    - That young man appeared mysteriously, and also mysteriously disappeared
+    - After the accident, the police could not find information about that young
+      man
+    - So it was listed as missing
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - So why don't I see this information written in the news
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5
+    keyValue: 
+  - sentances:
+    - Because after the accident, the police investigated and could not find any
+      information related to that fourth person and your family.
+    - They couldn't even find any information about that young man
+    - So they concluded that maybe this tourist was a traveler with the same travel
+      schedule as your family
+    - Not only that, it's also due to the press
+    - Your survival and loss are so well known that articles and readers focus only
+      on you
+    - Although the official state newspaper published all the information, the media
+      effect was so strong that the anonymous missing person was not noticed at all.
+    - You know, news sites only care about the money they make, so they forget about
+      that young man.
+    - That's all we know
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 

@@ -19,6 +19,7 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   - sentances:
     - "Ch\xE0o anh ch\u1ECB"
     - "Nh\u01B0 l\u1EA7n tr\u01B0\u1EDBc em c\xF3 g\u1ECDi r\u1EB1ng l\xE0 mu\u1ED1n
@@ -29,16 +30,18 @@ MonoBehaviour:
     Name: Hung
     DisplayName: "H\u01B0ng"
     emotion: 0
+    keyValue: 
   - sentances:
     - "\u0110\xFAng r\u1ED3i em"
     - "V\xEC th\u1EBF anh ch\u1ECB s\u1EBD kh\xE1 b\u1EADn"
     Name: Minh
     DisplayName: Minh
     emotion: 0
+    keyValue: 
   - sentances:
     - "Nh\u01B0ng "
-    - "N\u1EBFu c\xE1c em \u1EDF l\u1EA1i \u0111\xE2y gi\xFAp v\u1EEBa tham quan
-      v\u1EEBa gi\xFAp anh ch\u1ECB m\u1ED9t \xEDt vi\u1EC7c"
+    - "N\u1EBFu c\xE1c em \u1EDF l\u1EA1i \u0111\xE2y v\u1EEBa tham quan v\u1EEBa
+      gi\xFAp anh ch\u1ECB m\u1ED9t \xEDt vi\u1EC7c"
     - "Ch\u1ECB s\u1EBD tr\u1EA3 c\xF4ng cho c\xE1c em v\xE0 bao c\xE1c em \u0103n
       \u1EDF lu\xF4n h\xF4m nay v\xE0 ng\xE0y mai, bu\u1ED5i t\u1ED1i ch\u1ECB s\u1EBD
       k\u1EC3 cho em t\u1EA5t c\u1EA3 nh\u1EEFng g\xEC ch\u1ECB bi\u1EBFt v\u1EC1
@@ -49,12 +52,14 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   - sentances:
     - "\u0110\u01B0\u1EE3c \u1EA1, b\u1ECDn em s\u1EB5n l\xF2ng gi\xFAp ch\u1ECB"
     - "B\u1ECDn em c\u0169ng kh\xF4ng c\u1EA7n ti\xEAn c\xF4ng \u0111\xE2u"
     Name: Mai
     DisplayName: Mai
     emotion: 0
+    keyValue: 
   - sentances:
     - "V\u1EADy t\u1ED1t qu\xE1, ch\xFAng ta b\u1EAFt \u0111\u1EA7u lu\xF4n nh\xE1"
     - "Xong s\u1EDBm ch\xFAng ta s\u1EBD ngh\u1EC9 s\u1EDBm, ch\u1ECB s\u1EBD k\u1EC3
@@ -64,6 +69,7 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   firstMission: "D\u1ECDn d\u1EB9p t\u1EA5t c\u1EA3 \u0111inh v\xE0 c\xE1c m\u1EA3nh
     v\u1EE5n kim lo\u1EA1i \u1EDF khu v\u1EF1c \u0111\u1ED7 xe"
   NamCamping1:
@@ -74,12 +80,14 @@ MonoBehaviour:
     Name: Nam
     DisplayName: Nam
     emotion: 0
+    keyValue: 
   MinhCamping1:
     sentances:
     - "N\u1EBFu c\xF3 g\xEC c\u1EA7n gi\xFAp th\xEC c\u1EE9 n\xF3i anh nh\xE9"
     Name: Minh
     DisplayName: Minh
     emotion: 0
+    keyValue: 
   NganCamping1:
     sentances:
     - "Em c\u1EE9 tho\u1EA3i m\xE1i l\xE0m vi\u1EC7c nh\xE1, n\u1EBFu m\u1EC7t qu\xE1
@@ -87,12 +95,14 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   HungCamping1:
     sentances:
     - "C\xF3 g\xEC h\u1ECFi Mai nh\xE9, anh \u0111ang t\u1EADp trung l\xE0m vi\u1EC7c"
     Name: Hung
     DisplayName: "H\u01B0ng"
     emotion: 0
+    keyValue: 
   MaiCamping1:
     sentances:
     - "L\xFAc n\xE0o xong vi\u1EC7c c\u1EADu v\xE0o \u0111\xE2y gi\xFAp t\u1EDB n\u1EA5u
@@ -100,6 +110,7 @@ MonoBehaviour:
     Name: Mai
     DisplayName: Mai
     emotion: 0
+    keyValue: 
   cantDoFirstMission:
     sentances:
     - "Nhi\u1EC1u m\u1EA3nh v\u1EE5n s\u1EAFt qu\xE1, m\xECnh kh\xF4ng th\u1EC3 nh\u1EB7t
@@ -109,6 +120,7 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
+    keyValue: 
   needMagnet:
     sentances:
     - "M\xECnh c\u1EA7n d\xF9ng d\u1EE5ng c\u1EE5 \u0111\u1EC3 d\u1ECDn h\u1EBFt
@@ -116,42 +128,48 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
+    keyValue: 
   MinhGuideToTakeMagnet:
   - sentances:
     - "Em kh\xF4ng th\u1EC3 nh\u1EB7t h\u1EBFt m\u1EA5y v\u1EE5n s\u1EAFt \u1EDF
-      ch\u1ED7 \u0111\u01B0\u1EE3c xe \u0111\xE2u anh \u01A1i"
+      ch\u1ED7 \u0111\xF5 xe \u0111\xE2u anh \u01A1i"
     - "N\xF3 qu\xE1 nh\u1ECF v\xE0 nhi\u1EC1u"
     - "Anh c\xF3 c\xE1ch n\xE0o kh\xF4ng anh"
     Name: Linh
     DisplayName: Linh
     emotion: 0
+    keyValue: 
   - sentances:
     - "\xC0, anh nh\u1EDB h\xECnh nh\u01B0 c\xF3 \u0111\u1ED3 \u0111\u1EC3 thu d\u1ECDn
       m\u1EA5y c\xE1i \u0111\u1EA5y \u0111\u1EA5y"
     - "H\xECnh nh\u01B0 \u0111\u1EC3 trong m\u1EA5y t\u1EE7 \u0111i\u1EC7n s\u1EAFt
       \u1EDF khu c\xF4ng tr\u01B0\u1EDDng ngay b\xEAn c\u1EA1nh \u1EA5y"
-    - "Anh kh\xF4ng nh\u1EDB l\xE0 t\u1EED n\xE0o, em ra \u0111\u1EA5y ki\u1EC3m
+    - "Anh kh\xF4ng nh\u1EDB l\xE0 t\u1EE7 n\xE0o, em ra \u0111\u1EA5y ki\u1EC3m
       tra t\u1EEBng t\u1EE7 xem"
     Name: Minh
     DisplayName: Minh
     emotion: 0
+    keyValue: 
   - sentances:
     - "\u01A0, sao anh kh\xF4ng n\xF3i em s\u1EDBm l\xE0 c\xF3 d\u1EE5ng c\u1EE5
       \u0111\u1EC3 l\xE0m"
     Name: Linh
     DisplayName: Linh
     emotion: 7
+    keyValue: 
   - sentances:
     - "Sorry, anh qu\xEAn m\u1EA5t"
     Name: Minh
     DisplayName: Minh
     emotion: 0
+    keyValue: 
   doneFirstMissons:
     sentances:
     - "Yeah xong r\u1ED3i, gi\u1EDD b\xE1o ch\u1ECB Ng\xE2n th\xF4i"
     Name: Linh
     DisplayName: Linh
     emotion: 1
+    keyValue: 
   getMagnet: "Nh\u1EADn \u0111\u01B0\u1EE3c nam ch\xE2m"
   callNganStartCampingMission: "Th\xF4ng b\xE1o cho ch\u1ECB Ng\xE2n \u1EDF khu c\u1EAFm
     tr\u1EA1i, khu c\u1EAFm tr\u1EA1i \u1EDF b\xEAn tr\xE1i "
@@ -162,6 +180,7 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
+    keyValue: 
   - sentances:
     - "T\u1ED1t l\u1EAFm em"
     - "Gi\u1EDD c\u0169ng mu\u1ED9n r\u1ED3i, em g\u1ECDi m\u1ECDi ng\u01B0\u1EDDi
@@ -170,6 +189,7 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   scecondStartMission: "G\u1ECDi m\u1ECDi ng\u01B0\u1EDDi h\xE3y ngh\u1EC9 ng\u01A1i,
     chu\u1EA9n b\u1ECB cho bu\u1ED5i t\u1ED1i"
   callNamSecondMission:
@@ -178,11 +198,13 @@ MonoBehaviour:
     Name: Linh
     DisplayName: Linh
     emotion: 0
+    keyValue: 
   - sentances:
     - "OK, \u0111\u1EE3i t\u1EDB t\xFD, t\u1EDB v\xE0o lu\xF4n \u0111\xE2y"
     Name: Nam
     DisplayName: Nam
     emotion: 0
+    keyValue: 
   callNganSecondMission:
   - sentances:
     - "Em h\xE3y g\u1ECDi m\u1ECDi ng\u01B0\u1EDDi v\xE0o nh\xE0 ngh\u1EC9 ng\u01A1i
@@ -190,30 +212,35 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   callMinhSecondMission:
   - sentances:
     - "Oke anh v\xE0o lu\xF4n \u0111\xE2y"
     Name: Minh
     DisplayName: Minh
     emotion: 0
+    keyValue: 
   callHungSecondMission:
   - sentances:
     - "Anh s\u1EAFp xong r\u1ED3i, 2 ph\xFAt n\u1EEFa anh v\xE0o nh\xE0 nh\xE9"
     Name: Hung
     DisplayName: "H\u01B0ng"
     emotion: 0
+    keyValue: 
   callMaiSecondMission:
   - sentances:
     - "C\u1EADu chu\u1EA9n b\u1ECB c\u01A1m xong ch\u01B0a"
     Name: Linh
     DisplayName: Linh
     emotion: 0
+    keyValue: 
   - sentances:
     - "S\u1EAFp xong r\u1ED3i, m\u1ECDi ng\u01B0\u1EDDi v\xE0o l\xE0 c\xF3 th\u1EC3
       xong lu\xF4n"
     Name: Mai
     DisplayName: Mai
     emotion: 0
+    keyValue: 
   getMagnetHint: "H\xE3y quan s\xE1t nh\u1EEFng chi\u1EBFc xe \u1EDF b\xE3i \u0111\u1EADu
     xe"
   insideHouseConversations:
@@ -228,12 +255,14 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   - sentances:
     - "Ch\u1ECB c\xF3 th\u1EC3 k\u1EC3 nh\u1EEFng g\xEC ch\u1ECB bi\u1EBFt v\u1EC1
       v\u1EE5 tai n\u1EA1n \u0111\u01B0\u1EE3c kh\xF4ng \u1EA1"
     Name: Linh
     DisplayName: Linh
     emotion: 0
+    keyValue: 
   - sentances:
     - "\u1EDC \u0111\u1EA5y, em kh\xF4ng n\xF3i th\xEC ch\u1ECB c\u0169ng qu\xEAn
       lu\xF4n \u0111\u1EA5y"
@@ -242,14 +271,16 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   - sentances:
     - "Theo nh\u01B0 m\u1ECDi ng\u01B0\u1EDDi k\u1EC3 th\xEC \u0111\xF3 l\xE0 chuy\u1EBFn
       \u0111i ch\u01A1i gia \u0111\xECnh"
-    - "N\xEAn kh\u1EA3 n\u0103ng c\xF3 b\xE0 ng\u01B0\u1EDDi \u0111i g\u1ED3m em
-      v\xE0 b\u1ED1 m\u1EB9"
+    - "N\xEAn kh\u1EA3 n\u0103ng c\xF3 ba ng\u01B0\u1EDDi \u0111i g\u1ED3m em v\xE0
+      b\u1ED1 m\u1EB9"
     Name: Linh
     DisplayName: Linh
     emotion: 0
+    keyValue: 
   - sentances:
     - "Theo nh\u01B0 ch\u1ECB nh\u1EDB kh\xF4ng nh\u1EA7m, v\xE0 m\u1ED9t s\u1ED1
       ng\u01B0\u1EDDi c\xF3 m\u1EB7t xung quanh \u0111\xE2y n\xF3i r\u1EB1ng"
@@ -259,12 +290,14 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   - sentances:
     - "Th\u1EADt sao, v\u1EADy ch\u1ECB c\xF3 th\xF4ng tin g\xEC v\u1EC1 thanh ni\xEAn
       \u0111\u1EA5y kh\xF4ng"
     Name: Linh
     DisplayName: Linh
     emotion: 5
+    keyValue: 
   - sentances:
     - "Thanh ni\xEAn \u0111\u1EA5y xu\u1EA5t hi\u1EC7n m\u1ED9t c\xE1ch b\xED \u1EA9n,
       v\xE0 bi\u1EBFn m\u1EA5t m\u1ED9t c\xE1ch b\xED \u1EA9n kh\xF4ng k\xE9m"
@@ -274,12 +307,14 @@ MonoBehaviour:
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 
   - sentances:
     - "V\u1EADy sao th\xF4ng tin n\xE0y em kh\xF4ng th\u1EA5y \u0111\u01B0\u1EE3c
       vi\u1EBFt g\xEC tr\xEAn b\xE1o"
     Name: Linh
     DisplayName: Linh
     emotion: 5
+    keyValue: 
   - sentances:
     - "Do sau v\u1EE5 tai n\u1EA1n, c\u1EA3nh s\xE1t \u0111i\u1EC1u tra th\xEC kh\xF4ng
       t\xECm \u0111\u01B0\u1EE3c m\u1ED9t th\xF4ng tin n\xE0o li\xEAn quan t\u1EDBi
@@ -302,6 +337,8 @@ MonoBehaviour:
     - "Em bi\u1EBFt \u0111\u1EA5y, c\xE1c trang \u0111\u01B0a tin ch\u1EC9 quan t\xE2m
       t\u1EDBi s\u1ED1 ti\u1EC1n ki\u1EBFm \u0111\u01B0\u1EE3c th\xF4i, n\xEAn h\u1ECD
       l\xE3ng qu\xEAn \u0111i thanh ni\xEAn kia c\u0169ng ph\u1EA3i"
+    - "\u0110\xF3 l\xE0 t\u1EA5t c\u1EA3 nh\u1EEFng g\xEC anh ch\u1ECB bi\u1EBFt"
     Name: Ngan
     DisplayName: "Ng\xE2n"
     emotion: 0
+    keyValue: 

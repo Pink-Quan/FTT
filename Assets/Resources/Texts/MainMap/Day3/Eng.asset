@@ -1,0 +1,356 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfe2d7f2908fc24ea4e646e3ae176a2, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  wakePlayerUp:
+  - sentances:
+    - Linh
+    - Linh
+    - Wake up, Linh
+    - LINHHHH!
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - awwww
+    - Just give me five more minutes
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Come on, wake up
+    - Something happened
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - Awww, what's going on?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: Yawn
+  - sentances:
+    - (Strangling Linh)
+    - The thing is, I've killed everyone
+    - It's just only you
+    - Now you understand why this happened
+    - I've lived here for too long, hehe
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 4
+    keyValue: Strangle Linh
+  - sentances:
+    - "uww, uwww... Help, uwww, \u01B0 \u01B0...."
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - Haha, just kidding
+    - Wake up, it's time for you to go on guard
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 1
+    keyValue: 
+  - sentances:
+    - Hic
+    - You scared me so much
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+    keyValue: 
+  playerFirstDialgue:
+  - sentances:
+    - You just need to guard down here, no need to go up, let everyone sleep
+    - Everyone was quite tired from having to watch the night
+    - Besides, there are only iron door frames up there, so it's impossible to get
+      in
+    - It's easier to break in down here, so please check carefully to see if the
+      doors are locked
+    - I've already locked it securely, so there's no need to worry
+    - It's 5:00 a.m., you can keep watch until 6:30 a.m., if you're too tired, you
+      can continue to sleep
+    - Also wash the dishes, you promised to wash them last night but you still haven't
+      done them
+    - If it's convenient, let's cook breakfast for everyone
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Ok
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  firstMissionText: 'Washing dishes
+
+    Cooking breakfast
+
+    Checking door types'
+  monodialogueAboutDiryDisks:
+    sentances:
+    - There are so many dishes and chopsticks, I should have washed them last night
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  doneWashingDisksNotify: Washing dishes is complete
+  prepareFoodNotify: Prepared food
+  cookingFoodNotify: Cooking completed
+  needPrepareFoodInFridgeFirst: You need to prepare food in the refrigerator in advance
+  forgotCheckDoor:
+    sentances:
+    - The windows must be locked, but there are doors that I haven't checked yet
+    - Surely no one forgets to lock the main door :)
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  lockDoor: Door locked
+  checkWindow:
+    sentances:
+    - "Just like Ms. Ng\xE2n said, the window was locked tightly in advance"
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  monoDialogueAboutUnlockDoor:
+    sentances:
+    - Why isn't the main door locked?
+    - I remember Ms. Ngan said it was all locked up
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5
+    keyValue: 
+  monoDialogueAboutPhone:
+    sentances:
+    - Who is calling me right now?
+    - Ah, just a chess app notification
+    - Just a chess announcement I ordered more than a year ago
+    - Now I need to carefully check the window again
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  monoDialogueAboutChess:
+    sentances:
+    - Wait a minute, the chess position in this announcement looks very familiar
+    - ohhhhh
+    - It is very similar to the arrangement of the nails on the tree when I collected
+      it yesterday
+    - I have to check it out
+    Name: Linh
+    DisplayName: Linh
+    emotion: 5
+    keyValue: 
+  fellDizzyAfterLookingAtChess:
+    sentances:
+    - Why do I have such a headache now?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+    keyValue: 
+  wakeUpAfterFainting:
+    sentances:
+    - Did I just fall asleep here?
+    - That's strange, my chess app has disappeared
+    - It's 8 o'clock now, why hasn't anyone had breakfast yet?
+    - I need to go upstairs and wake everyone up first
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  seeEveryoneDead:
+    sentances:
+    - What happened like this
+    - Hic
+    - What should I do now?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  badEnding: You are dead <br>Bad ending
+  playerWinChess:
+    sentances:
+    - I solved it
+    - The result of the move is recorded as Qf6 f6 Bf6, I don't know if it has any
+      meaning
+    - I don't know why looking at this makes me dizzy
+    - I have to brush my teeth and wash my face first
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  washFaceAndBrushTeeth:
+    sentances:
+    - I look so tired
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+    keyValue: 
+  wrongWC:
+    sentances:
+    - I left my toothbrush and towel on the other side
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  killerTalkWithPlayer:
+  - sentances:
+    - You better be quiet, you scream and you die
+    Name: Trans
+    DisplayName: Stranger
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Okay, I won't do anything
+    - What do you want
+    Name: Trans
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - It's best for you guys to go home and stop looking for things
+    - What has happened cannot be undone
+    Name: Trans
+    DisplayName: Stranger
+    emotion: 0
+    keyValue: 
+  firstAllCharConversation:
+  - sentances:
+    - It's really too dangerous to let that stranger break in here
+    - Luckily he didn't hurt anyone
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - He knew that if he harmed Linh, he would wake everyone up, so he probably didn't
+      dare to take action
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - It's too dangerous here now
+    - I will try to fix the car today, tomorrow we will immediately leave here
+    - You stay here to cook and clean to help us
+    - I and Ms. Ngan will try to fix the car
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  HungAskPlayer:
+    sentances:
+    - Linh, come out here and help me a bit
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  communicateWithMinh2:
+    sentances:
+    - We're fixing a car, let's see if other people need anything and help them
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  communicateWithNgan2:
+    sentances:
+    - We're fixing a car, let's see if other people need anything and help them
+    Name: Ngan
+    DisplayName: "Ng\xE2n"
+    emotion: 0
+    keyValue: 
+  communicateWithHung2:
+  - sentances:
+    - Do you know anything about these smart electronics?
+    - It requires entering a password to see how the inside has been adjusted
+    - This house has smart electricity, I guess it flickers due to the installation
+      inside
+    - See if there is any solution
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Usually the default password is 0000
+    - Can you try it?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - That's not right
+    - Try asking Minh to see if he knows
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  communicateWithMai2:
+    sentances:
+    - This morning I had to wake up early to guard the house and I'm so tired, can
+      you help me with the housework?
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  askMinhAboutPassword:
+  - sentances:
+    - What is the password for the smart electrical controller at your house?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Someone installed it for me before and told me to set the default to 0000,
+      so try it
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
+  HungFindOutMorseCode:
+    sentances:
+    - I just saw this very cool
+    - I saw that the flashing lights had a regular pattern. As soon as I tried to
+      record it, it looked like Morse code
+    - That is ----- ----- ----- ..---
+    - But I don't remember translating the Morse code, please try translating it
+      and entering the password to see if it works
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  findMorseCodeString: Find Morse code for ----- ----- ----- ..---
+  HungThanksLinhForOpenningLock:
+    sentances:
+    - "Anh c\u1EA3m \u01A1n nh\xE9, gi\u1EDD anh c\xF3 th\u1EC3 s\u1EEDa n\u1ED1t
+      r\u1ED3i"
+    - Please help Mai with some things
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  endDayDialouge:
+  - sentances:
+    - The whole day seemed peaceful, nothing major happened
+    - We can leave here tomorrow
+    - Just to be sure, tonight there will be 2 people who will be on guard for a
+      while
+    Name: Minh
+    DisplayName: Minh
+    emotion: 0
+    keyValue: 
