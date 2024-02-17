@@ -179,6 +179,7 @@ public class CampingDay2 : MonoBehaviour
             Hung.transform.SetParent(null, true);
             Ngan.transform.SetParent(null, true);
             Minh.transform.SetParent(null, true);
+            Nam.transform.SetParent(null, true);
 
             Nam.transform.position = playerPos + Vector3.right;
             Hung.transform.position = playerPos + Vector3.down + Vector3.left;
