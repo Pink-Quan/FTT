@@ -3190,7 +3190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &479154835
 Transform:
   m_ObjectHideFlags: 0
@@ -7306,6 +7306,8 @@ MonoBehaviour:
   vCam: {fileID: 911668979}
   toHouseDoor: {fileID: 2124904093}
   playerInsideHousePos: {x: 108.85, y: -60, z: 0}
+  mainMap: {fileID: 609828070}
+  firstFloor: {fileID: 1861767345}
 --- !u!114 &1048348879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7362,7 +7364,7 @@ MonoBehaviour:
   toCamp: {fileID: 580634121}
   wakeupAfterFaintingPos: {x: 116.14, y: -58.63, z: 0}
   doc: {fileID: 1893880983}
-  dirtyDisks: {fileID: 841057091}
+  dirtyDisks: {fileID: 769915090}
   foodInFridge: {fileID: 841057091}
   cookingFood: {fileID: 334164515}
   foodsOnTable: {fileID: 1229390787}

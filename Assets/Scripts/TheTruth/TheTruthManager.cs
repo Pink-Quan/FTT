@@ -151,6 +151,8 @@ public class TheTruthManager : MonoBehaviour
     private void ChangeToEndGameScene()
     {
         PlayerPrefs.SetInt("Found the truth", 1);
+        PlayerPrefs.SetInt("Progress", (int)GameProgress.EndGame);
+        GameManager.instance.dbManager.UpdateDB();
         GameManager.instance.transitions.Transition(1, 1, null, () => SceneManager.LoadScene("EndGame"));
     }
 }

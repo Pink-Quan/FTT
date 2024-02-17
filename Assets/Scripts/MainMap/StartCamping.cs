@@ -32,6 +32,8 @@ public class StartCamping : MonoBehaviour
     [SerializeField] private InteractableEntity toHouseDoor;
 
     [SerializeField] private Vector3 playerInsideHousePos;
+    [SerializeField] private GameObject mainMap;
+    [SerializeField] private GameObject firstFloor;
 
     private CharacterController Ngan;
     private CharacterController Minh;
@@ -72,6 +74,9 @@ public class StartCamping : MonoBehaviour
         //Mai.anim.SetDirection(Vector3.up);
         //Hung.anim.SetDirection(Vector3.up);
         //Nam.anim.SetDirection(Vector3.up);
+
+        firstFloor.SetActive(false);
+        mainMap.SetActive(true);
 
         InitCharacterStartCamping(player, playerStartCampingPos, Vector2.up);
         InitCharacterStartCamping(Ngan, playerStartCampingPos + Vector3.up * 2 + Vector3.left * 1.5f, Vector2.down);

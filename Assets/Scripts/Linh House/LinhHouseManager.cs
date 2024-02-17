@@ -246,6 +246,7 @@ public class LinhHouseManager : MonoBehaviour
         player.transform.position = playerMeetFriendsPos;
         player.anim.ResetAnim();
         player.anim.SetDirection(Vector2.left);
+        player.TurnFlashLight(false);
     }
 
     private void ComunicateWithFriends()

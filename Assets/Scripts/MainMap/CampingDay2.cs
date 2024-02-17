@@ -168,11 +168,17 @@ public class CampingDay2 : MonoBehaviour
 
             Vector3 playerPos = player.transform.position;
 
+
             Nam.gameObject.SetActive(true);
             Hung.gameObject.SetActive(true);
             Mai.gameObject.SetActive(true);
             Ngan.gameObject.SetActive(true);
             Minh.gameObject.SetActive(true);
+
+            Mai.transform.SetParent(null, true);
+            Hung.transform.SetParent(null, true);
+            Ngan.transform.SetParent(null, true);
+            Minh.transform.SetParent(null, true);
 
             Nam.transform.position = playerPos + Vector3.right;
             Hung.transform.position = playerPos + Vector3.down + Vector3.left;

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject loading;
+    [SerializeField] private Button inforButton;
 
     [HideInInspector] public MainMenuTexts texts;
 
@@ -65,6 +67,7 @@ public class MainMenu : MonoBehaviour
     {
         texts = Resources.Load<MainMenuTexts>("Texts/MainMenu/" + PlayerPrefs.GetString("Language", "Eng"));
         PlayBGMucis();
+        inforButton.onClick.Invoke();
     }
 
     public void Exit()

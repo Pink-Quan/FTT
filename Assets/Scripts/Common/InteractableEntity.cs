@@ -136,7 +136,7 @@ public class InteractableEntity : MonoBehaviour
 
     public void MoveAndShowAllUI()
     {
-        player.ShowUI(); 
+        player.ShowUI();
         EnableMoveAndUI();
     }
 
@@ -163,7 +163,7 @@ public class InteractableEntity : MonoBehaviour
 }
 
 #if UNITY_EDITOR
-[CustomEditor(typeof(InteractableEntity), true),CanEditMultipleObjects]
+[CustomEditor(typeof(InteractableEntity), true), CanEditMultipleObjects]
 public class InteractableEntityEditor : Editor
 {
     private InteractableEntity obj;

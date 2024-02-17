@@ -108,7 +108,6 @@ public class CampingDay4 : MonoBehaviour
 
     public void SeeEveryoneElse(Collision2D col, Collider2D calller)
     {
-        calller.gameObject.SetActive(false);
         if (player == null) player = GameManager.instance.player;
         player.DisableMoveAndUI();
         player.anim.SetDirection(Vector2.left);
@@ -119,6 +118,7 @@ public class CampingDay4 : MonoBehaviour
         Nam.anim.SetDirection(Vector2.left);
         Nam.transform.SetParent(firstFloor.transform, true);
         HungBlood.SetActive(false);
+        calller.gameObject.SetActive(false);
     }
 
     public void SeeNam(Collision2D col, Collider2D calller)

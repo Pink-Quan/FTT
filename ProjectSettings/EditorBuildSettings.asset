@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cave.unity
     guid: af6b65d05b50dca48b8c529eb1fd26c6
   - enabled: 1
+    path: Assets/Scenes/MainMapCatchLinh.unity
+    guid: 3caed95eebdd1fb448402f812a2ed34d
+  - enabled: 1
     path: Assets/Scenes/HospitalAfterCamping.unity
     guid: 28e21621d38045747b4541f29668176a
   - enabled: 1

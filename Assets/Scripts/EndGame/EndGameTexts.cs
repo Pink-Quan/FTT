@@ -9,4 +9,5 @@ public class EndGameTexts : ScriptableObject
     public string butOnlyOneKnow;
     public string thanks;
     public string comment;
+    public string takeCare;
 }
