@@ -44,7 +44,7 @@ MonoBehaviour:
     emotion: 0
     keyValue: 
   - sentances:
-    - "Kh\xF4ng sao \u0111\xE2u, em ch\u1EC9 h\u01A1i \u0111\xE2u \u0111\u1EA7u ch\xFAt
+    - "Kh\xF4ng sao \u0111\xE2u, em ch\u1EC9 h\u01A1i \u0111au \u0111\u1EA7u ch\xFAt
       th\xF4i"
     Name: Linh
     DisplayName: Nam

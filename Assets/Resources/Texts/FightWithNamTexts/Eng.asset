@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38949c2cfabdbe342aee9b1b4f39c475, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  linhFirstDialogue:
+  - sentances:
+    - Haha, I've already gotten revenge on a few people
+    - Anyone else?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 4
+    keyValue: 
+  - sentances:
+    - Me
+    Name: Nam
+    DisplayName: Nam
+    emotion: 3
+    keyValue: 
+  namFirsetDialogoe: []
+  LinNamCoversation:
+  - sentances:
+    - Things have gone too far, the consequences have been very severe
+    - Everything must be stopped
+    - Otherwise, nothing can save you
+    Name: Nam
+    DisplayName: Nam
+    emotion: 3
+    keyValue: 
+  - sentances:
+    - Haha
+    - Are you sure
+    - How about not
+    Name: Linh
+    DisplayName: Linh
+    emotion: 4
+    keyValue: 
+  - sentances:
+    - Then it will have to stop
+    Name: Nam
+    DisplayName: Nam
+    emotion: 3
+    keyValue: 
+  fightingNote: There was supposed to be a fight between Nam and Linh, but since
+    Dev and Art are both lazy, let's pretend they fought, and Linh lost.
+  endFightDialogue:
+  - sentances:
+    - What now
+    - Everything has to stop, right?
+    Name: Nam
+    DisplayName: Nam
+    emotion: 4
+    keyValue: 
+  - sentances:
+    - ...............................
+    - Not sure
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Haha, there's no point in running away
+    Name: Nam
+    DisplayName: Nam
+    emotion: 4
+    keyValue: 
+  namToldLinhToStop:
+  - sentances:
+    - Hey, why is there an unlocked car there?
+    - Linh, stop now
+    Name: Nam
+    DisplayName: Nam
+    emotion: 2
+    keyValue: 
+  NamOnCarTellLinhStop:
+  - sentances:
+    - Stop it, Linh
+    - You could cause an accident for yourself and those around you
+    Name: Nam
+    DisplayName: Nam
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - No
+    Name: Linh
+    DisplayName: Linh
+    emotion: 3
+    keyValue: 
+  - sentances:
+    - I don't want to force you to stop
+    - It could be dangerous for you
+    - Please
+    - It's not comfortable on the roof of the car
+    Name: Nam
+    DisplayName: Nam
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - No
+    - Do whatever you want
+    Name: Linh
+    DisplayName: Linh
+    emotion: 3
+    keyValue: 

@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3926f1f3a3538d4abb3952b2842540e, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  playerWakeUpDialogue:
+    sentances:
+    - Why am I sleeping here?
+    - I remember sleeping on the 2nd floor
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  playerSeeHung:
+    sentances:
+    - "H\u01B0ng"
+    - Why, why are you like this?
+    - What about everyone upstairs?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  playerSeeEveryoneElse:
+    sentances:
+    - Why is everyone down?
+    - The killer has killed everyone
+    - There was a noise on the first floor
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  playerFirstTalkWithNam:
+  - sentances:
+    - Why are you here, what are you doing, Nam?
+    - You're the one who caused everything, right?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - No
+    - I have to give first aid to Hung, he is seriously injured
+    - You should also give first aid to everyone, otherwise things will become serious
+    - The first aid kit is on the right
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  getFirstAidKit: Get a first aid kit
+  talkWithNamAfterFirstAid:
+  - sentances:
+    - So how did it happen, explain
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - At that time, Hung and I were talking about the clues left behind
+    - Then the stranger appeared right after and stabbed me and Hung
+    - I was able to dodge in time so I only suffered minor injuries
+    - Then it seemed he went upstairs and stabbed everyone else
+    - I don't know why he didn't do anything to you
+    Name: Nam
+    DisplayName: Nam
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - ...........................
+    - So what should we do now?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - There's one more
+    - Hung was able to solve the information left in the document
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - How to solve it, what is the result?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Qf6 f6 Bf6 has 10 characters, 0002 has 4 characters, print will return the
+      number of characters in there
+    - Using it as a calculation, we will get 0.7 and 0.02
+    - Project onto the map here, with the origin being the bottom left corner
+    - Will get the location
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Is there anything wrong with the location? Have you gone out to see?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - No, I think we'll just go take a look now
+    - Here's the map
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  talkWithLinhInCliff:
+  - sentances:
+    - This is where the fence you were repairing yesterday was
+    - Is there something there?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Yes, look down and see
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  LinhShouldKnowTheTruth:
+  - sentances:
+    - I can't see clearly, what's down there?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Sorry Linh, you should know the truth down there
+    Name: Nam
+    DisplayName: Nam
+    emotion: 4
+    keyValue: 
+  - sentances:
+    - What truth?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 

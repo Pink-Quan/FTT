@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc242bf9e21ce6c43893be472d1c5a54, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  firstDialogue:
+    sentances:
+    - Ah, such a headache
+    - I can't believe Nam is behind everything
+    - There is a cave here
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  inCaveDialogue:
+    sentances:
+    - It's too dark in here
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  seeNamDeadBody:
+    sentances:
+    - Sao Nam was seriously injured and lying here
+    - No, it's not
+    - "\u0110\xE2y l\xE0 1 x\xE1c ch\u1EBFt"
+    - This is a dead body
+    - How could that be?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  seeKiller:
+  - sentances:
+    - What the hell?
+    - Who are you, why are you here?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - Come here and listen to me tell everything, then you will know the truth
+    Name: Killer
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - NOOO!!!!
+    - How do I know what you will do to me?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - With the state of having just fallen from a cliff, there's nothing you can
+      do
+    - It's no coincidence that you're the only one who didn't get stabbed
+    - Then you will know my face too
+    Name: Killer
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Fine
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  talkWithKiller:
+  - sentances:
+    - You are a girl, you are not Nam
+    - So how does it all go?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  lazyArtist: This scene should have been illustrated with some images, but the illustrator
+    is not only poor but also lazy, so please be patient and read the conversations
+    between the characters.
+  killerTalkAboutTheTruth:
+  - sentances:
+    - It all starts with your family outing
+    - Including Nam accompanying you
+    - During the trip, you forgot to take his medicine
+    - And you hallucinated and stabbed Nam
+    - Nam is very smart, he left clues and ran down to this cave
+    - But with that wound, he died in the cave
+    - As for you, you chased after him, making your parents worry and go looking
+      for you
+    - Unfortunately, there was a flash flood that caused your parents to not survive,
+      you were seriously injured and your mental condition became more serious.
+    Name: KillerNoMask
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - How could that be possible? How could Nam have enough time to leave those clues?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - Of course there was not enough time
+    - The clues left behind were actually done by you and Nam before just for fun,
+      but the intention was to get here.
+    - Nam discovered this place first
+    Name: KillerNoMask
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - So can you have mercy on me now?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - You still don't understand
+    - We are one
+    - What I'm doing is protecting you
+    - Once everyone knows the truth, you will never be able to raise your head in
+      this society
+    - In the past, Mai was also a big part of why you ended up in this situation
+    - Things have come to this, let's deal with everyone and then run away
+    Name: KillerNoMask
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Okay, I'll follow you
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - Hmmm....
+    Name: KillerNoMask
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - What's wrong?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  namJoinConversation:
+  - sentances:
+    - Stop it, everything should stop
+    - Things cannot get any worse, everyone should know the truth
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  - sentances:
+    - You think you can stop me
+    Name: KillerNoMask
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - It wasn't before, but now it's different
+    - you no longer have complete control
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  - sentances:
+    - Fine
+    Name: KillerNoMask
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
+  killerPushLinhDown:
+  - sentances:
+    - Sorry Linh, it's all for your good
+    Name: KillerNoMask
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Again?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - Noo
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 

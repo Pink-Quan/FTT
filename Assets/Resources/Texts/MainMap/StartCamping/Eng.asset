@@ -56,9 +56,8 @@ MonoBehaviour:
     keyValue: 
   - sentances:
     - So great, let's get started
-    - "Xong s\u1EDBm ch\xFAng ta s\u1EBD ngh\u1EC9 s\u1EDBm, ch\u1ECB s\u1EBD k\u1EC3
-      \u0111\u01B0\u1EE3c nhi\u1EC1u th\u1EE9 h\u01A1n \u0111\u1EA5y"
     - Once we're done, we'll rest early. I'll tell you more things
+    - I will give you work
     - Now let's get started
     Name: Ngan
     DisplayName: "Ng\xE2n"

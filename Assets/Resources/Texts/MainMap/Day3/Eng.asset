@@ -337,9 +337,8 @@ MonoBehaviour:
   findMorseCodeString: Find Morse code for ----- ----- ----- ..---
   HungThanksLinhForOpenningLock:
     sentances:
-    - "Anh c\u1EA3m \u01A1n nh\xE9, gi\u1EDD anh c\xF3 th\u1EC3 s\u1EEDa n\u1ED1t
-      r\u1ED3i"
-    - Please help Mai with some things
+    - Thank you, now I can fix it
+    - You can help Mai if she needs it
     Name: Hung
     DisplayName: "H\u01B0ng"
     emotion: 0

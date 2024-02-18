@@ -64,7 +64,7 @@ MonoBehaviour:
     emotion: 2
     keyValue: 
   - sentances:
-    - "V\u1EDBi c\xE1i t\xECnh tr\u1EA1ng v\u1EEBa ng\xE3 t\u1EEB v\xE1ch n\xFAt
+    - "V\u1EDBi c\xE1i t\xECnh tr\u1EA1ng v\u1EEBa ng\xE3 t\u1EEB v\xE1ch n\xFAi
       xu\u1ED1ng th\xEC c\u1EADu kh\xF4ng l\xE0m g\xEC \u0111\u01B0\u1EE3c \u0111\xE2u"
     - "Kh\xF4ng ph\u1EA3i ng\u1EABu nhi\xEAn c\u1EADu l\xE0 ng\u01B0\u1EDDi duy nh\u1EA5t
       kh\xF4ng b\u1ECB \u0111\xE2m \u0111\xE2u"
@@ -154,7 +154,7 @@ MonoBehaviour:
     emotion: 0
     keyValue: 
   - sentances:
-    - "\u0110\u01B0\u1EE3c r\u1ED3i, t\u1EDB s\u1EBD theo c\xE2u"
+    - "\u0110\u01B0\u1EE3c r\u1ED3i, t\u1EDB s\u1EBD theo c\u1EADu"
     Name: Linh
     DisplayName: Linh
     emotion: 2

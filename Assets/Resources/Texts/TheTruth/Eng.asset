@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da89d1e2dd24cb4696e34ecfc47c71a, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  news: 'News: Many people were identified as victims of a patient with mental signs'
+  HungFirstDialogue:
+    sentances:
+    - Hazzzzzzzz
+    - It's certainly not unexpected
+    - I need to take a shower first
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  HungSecondDialogue:
+    sentances:
+    - The old style is much more comfortable
+    - This wound
+    - How was it created a few months ago?
+    Name: HungBlack
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  fewMonthsAgo: A few months ago
+  HungResolveTheQuestWithLinh:
+  - sentances:
+    - If you're too tired, just rest and let me guard
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - It's okay, I just have a little headache
+    Name: Linh
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Ah
+    - I just figured out how to solve the clues left behind
+    - Qf6 f6 Bf6 has 10 characters, 0002 has 4 characters, printf will return the
+      number of characters in there
+    - Project onto the map here, with the origin being the bottom left corner
+    - Will get the location
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - That's great, how did you come up with that solution?
+    Name: Linh
+    DisplayName: Nam
+    emotion: 1
+    keyValue: 
+  - sentances:
+    - I suddenly found it familiar so I could solve it
+    - Wait a minute, I'll go get a drink
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  HungRememberThePast:
+  - sentances:
+    - How could I solve the clue that way?
+    - It's like I created it myself
+    - ....................................................................
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    - I remember, I remember everything
+    - It was created by me
+    - I actually survived and escaped Linh's attack
+    - No wonder when I come here, I feel the same headache as Linh
+    - Everything is so coincidental that it's hard to believe, I can't believe I
+      met Linh again in this situation
+    - Linh is suffering from DID, it's best to be careful, she's the one behind everything
+    - I need to immobilize Linh
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 6
+    keyValue: 
+  HungAskWhereIsLinh:
+    sentances:
+    - That's bad, where did Linh go?
+    Name: Hung
+    DisplayName: "H\u01B0ng"
+    emotion: 7
+    keyValue: 
+  killerDialogue:
+    sentances:
+    - "H\u01B0ng fought back so fiercely"
+    - "Ahh, getting hit in the head from H\u01B0ng gave me a headache"
+    - I need to deal with everyone upstairs as well
+    Name: KillerNoMask
+    DisplayName: Killer
+    emotion: 0
+    keyValue: 
