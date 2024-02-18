@@ -183,6 +183,7 @@ public class CampingDay3 : MonoBehaviour
             return;
         }
         foodsOnTable.SetActive(true);
+        foodsOnTable.transform.SetParent(mainHouse.transform, true);
         entity.gameObject.SetActive(false);
         isDonePrepareFoods = true;
         GameManager.instance.fastNotification.Show(player.transform.position + Vector3.up, texts.cookingFoodNotify);
@@ -292,6 +293,8 @@ public class CampingDay3 : MonoBehaviour
         player.stress.StopBeingStress();
         player.stress.AddStress(-10);
         player.onOpenPhone -= PlayChess;
+
+        foodsOnTable.transform.SetParent(mainHouse.transform, true);
 
         GameManager.instance.transitions.Transition(1, 1, OnComplete: () =>
         {
