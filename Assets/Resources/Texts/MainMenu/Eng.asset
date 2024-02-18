@@ -12,30 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7721ae5f96f54a94f9cbfe9eacbd788c, type: 3}
   m_Name: Eng
   m_EditorClassIdentifier: 
-  information: 'Currently the Game is only in beta and has not been completed due
-    to financial and human reasons, it is expected that the game will be completed
-    and released by the end of 2023, so if you find bugs or have comments on the
-    game, you can contact us by email. or the social media channels below. Thank
-    you for trying the game.
-
-
-
-    The game is developed by QuickTeam including
-    members Ly Lily, RedQ,...
-
-
-
-    Credits:
-
-    https://limezu.itch.io
-
-    https://rmocci.itch.io
-
-    https://refpixels.itch.io
-
-    https://alan-dalcastagne.itch.io
-
-    https://mayragandra.itch.io'
+  information: "In this game, you will face a series of difficult puzzles. If you
+    feel a puzzle is too difficult, don't worry! Just click the \"Keyhole\" button
+    below, and you will be taken to a web page with instructions and solutions for
+    that puzzle.\r\n\r\nSince we are operating with limited resources, as well as
+    time and finances, there may be some unexpected errors or imperfections in this
+    game. Therefore, if you have any comments or suggestions, please do not hesitate
+    to contact us via email, Discord or other channels. We are happy to listen and
+    accept all comments from you\r\n\r\nThe game was developed by QuickTeam including
+    members Ph\u01B0\u01A1ng Ly and H\u1ED3ng Qu\xE2n\n\nResources:\nhttps://limezu.itch.io\r\nhttps://rmocci.itch.io\r\nhttps://refpixels.itch.io\r\nhttps://alan-dalcastagne.itch.io\r\nhttps://mayragandra.itch.io\n\nThe
+    game will collect some data about your playing progress, if you don't want it,
+    turn off the game's network access"
   howToPlay: 'Use WASD or arrow buttons to move
 
     The interactive button will

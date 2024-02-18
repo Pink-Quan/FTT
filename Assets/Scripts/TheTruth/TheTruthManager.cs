@@ -141,6 +141,7 @@ public class TheTruthManager : MonoBehaviour
         Hung.transform.position = hungInjuryPos;
         Hung.transform.rotation = Quaternion.Euler(0, 0, 90);
         HungBlood.SetActive(true);
+        killer.anim.SetDirection(Vector2.down);
         mainCam.transform.rotation = Quaternion.identity;
         black.DOFade(0, 3).OnComplete(() =>
         {

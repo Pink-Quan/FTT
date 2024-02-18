@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173046da813d5d4428221a7d66dd135e, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  dialoguesWithNurse:
+  - sentances:
+    - Great, you're awake
+    - How do you feel
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - I just had a very strange dream
+    - It happened at the campsite, I fell down a cliff
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+    keyValue: 
+  - sentances:
+    - Then it's not a dream, you can still remember everything that happened
+    - Everyone injured at the campsite has been discharged from the hospital
+    - You and Mai had to stay in the hospital for a while, you were in a coma, but
+      not too seriously injured
+    - Mai was injured quite seriously so she was still lying down there
+    - 'While you were in a coma, your body recovered quite well. If anything, just
+      try walking around and go down there to ask how is Mai '
+    - In about 15 minutes the police will be here to ask you a few questions
+    Name: Nurse
+    DisplayName: Nurse
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - '!!!!!!!!!!!!'
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  - sentances:
+    - Ok
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  dialoguesWithMai:
+  - sentances:
+    - Are you okay?
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Not so good
+    - I lost a lot of blood and was in a coma for a long time
+    Name: Mai
+    DisplayName: Mai
+    emotion: 7
+    keyValue: 
+  - sentances:
+    - That's so worth it
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+    keyValue: 
+  - sentances:
+    - What do you mean?
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Especially with what you did in the past to me
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - It was a long time ago
+    - I'm trying to help you now
+    - It's not entirely my fault
+    Name: Mai
+    DisplayName: Mai
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - That's right, it's even just my fault
+    - Now you should also take some responsibility
+    Name: Linh
+    DisplayName: Linh
+    emotion: 4
+    keyValue: 
+  - sentances:
+    - What do you mean?
+    Name: Mai
+    DisplayName: Mai
+    emotion: 7
+    keyValue: 
+  needToEscape:
+    sentances:
+    - I need to get out of here as soon as possible
+    - That is not okay, I only have 2 minutes left
+    Name: Linh
+    DisplayName: Linh
+    emotion: 6
+    keyValue: 
+  stopPlayer:
+  - sentances:
+    - STOP IMMEDIATELY, DON'T MOVE
+    Name: Cop
+    DisplayName: Police
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - oh no
+    Name: Linh
+    DisplayName: Linh
+    emotion: 2
+    keyValue: 
+  playerFailedToEscape: Failure <br>You are captured
+  escapeSuccessfully:
+    sentances:
+    - Finally escaped
+    - What kind of hospital is it? It's like a maze
+    - Let's deal with the past
+    Name: Linh
+    DisplayName: Linh
+    emotion: 4
+    keyValue: 

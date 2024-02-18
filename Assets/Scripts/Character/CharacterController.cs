@@ -19,6 +19,7 @@ public class CharacterController : MonoBehaviour
 
 
     Vector3 lastPos;
+    Vector2 lastDir = Vector2.right;
     public IEnumerator StartUpdateMoveAnimation()
     {
         while (true)
@@ -34,8 +35,13 @@ public class CharacterController : MonoBehaviour
                 dir.x = 0;
                 if (dir.y != 0) dir.y /= Mathf.Abs(dir.y);
             }
+            else
+            {
+                dir = lastDir;
+            }
             anim.SetDirection(dir);
             lastPos = transform.position;
+            lastDir = dir;
             anim.SetMove(true);
 
             yield return new WaitForSeconds(Time.fixedDeltaTime);

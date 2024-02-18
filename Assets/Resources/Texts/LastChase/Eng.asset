@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34853d547794c95499e7ec9b116a4f1b, type: 3}
+  m_Name: Eng
+  m_EditorClassIdentifier: 
+  firstDialogue:
+  - sentances:
+    - Come on Linh
+    - Stop it
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  - sentances:
+    - No
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  namToldLinhToStop:
+  - sentances:
+    - Stop, Linh
+    - You have nowhere to run anymore
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  - sentances:
+    - That's it, there's no more chance
+    - Now there's only one way left
+    Name: Linh
+    DisplayName: Linh
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Come on, we can still do it again
+    Name: Nam
+    DisplayName: Nam
+    emotion: 6
+    keyValue: 
+  lastDialougueWithNam:
+  - sentances:
+    - Sorry, Nam
+    - I have committed many sins and disappointed many people
+    Name: Linh
+    DisplayName: Linh
+    emotion: 7
+    keyValue: 
+  - sentances:
+    - It's okay, after all, this is the path I have chosen
+    Name: Nam
+    DisplayName: Nam
+    emotion: 0
+    keyValue: 
+  - sentances:
+    - Thank you for accompanying me in my past
+    - Thanks to you, I have happy times
+    Name: Linh
+    DisplayName: Linh
+    emotion: 1
+    keyValue: 
+  mission: Follow Linh

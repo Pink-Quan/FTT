@@ -8963,6 +8963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vision Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 3884359751554166923, guid: 8de005318f6fed244a66076418a013a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4317122468065319363, guid: 8de005318f6fed244a66076418a013a9, type: 3}
       propertyPath: zones.Array.size
       value: 7

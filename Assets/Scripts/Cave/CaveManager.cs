@@ -133,6 +133,8 @@ public class CaveManager : MonoBehaviour
     private void ToHosiptalScene()
     {
         //print("To Hosiptal scene");
+        PlayerPrefs.SetInt("Progress", (int)GameProgress.HosptalAfterCamping);
+        GameManager.instance.dbManager.UpdateDB();
         GameManager.instance.transitions.Transition(1, 1, null, () => SceneManager.LoadScene("HospitalAfterCamping"));
     }
 }

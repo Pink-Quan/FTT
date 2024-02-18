@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 #if UNITY_EDITOR
@@ -23,15 +24,13 @@ public class VectorPaths : MonoBehaviour
 
     public Vector3[] Reverse()
     {
-        var array = paths;
-        int length = array.Length;
-        for (int i = 0; i < length / 2; i++)
+        int length = paths.Length;
+        Vector3[] reversedArray = new Vector3[length];
+        for (int i = 0; i < length; i++)
         {
-            Vector3 temp = array[i];
-            array[i] = array[length - 1 - i];
-            array[length - 1 - i] = temp;
+            reversedArray[i] = paths[length - 1 - i];
         }
-        return array;
+        return reversedArray;
     }
 }
 

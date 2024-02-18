@@ -1655,7 +1655,7 @@ GameObject:
   - component: {fileID: 181236129}
   - component: {fileID: 181236128}
   m_Layer: 5
-  m_Name: RestartGameButton
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1748,16 +1748,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 769974674}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: OpenUri
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: https://drive.google.com/drive/folders/1b8wXGiKIQHxNP3cDvH2mHunDXeqkztgr?usp=sharing
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &181236130
@@ -7145,8 +7145,8 @@ MonoBehaviour:
   diedAtCampsite: {fileID: 396266237}
   arrested: {fileID: 953550860}
   foundTheTruth: {fileID: 2082591963}
-  lockColor: {r: 1, g: 0, b: 0, a: 0}
-  unlockColor: {r: 1, g: 1, b: 1, a: 0}
+  lockColor: {r: 1, g: 0, b: 0, a: 1}
+  unlockColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1322993832
 MonoBehaviour:
   m_ObjectHideFlags: 0

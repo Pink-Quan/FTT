@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguesWithNurse:
   - sentances:
-    - "Hay qu\xE1, em t\xECnh r\u1ED3i"
+    - "Hay qu\xE1, em t\u1EC9nh r\u1ED3i"
     - "Em c\u1EA3m th\u1EA5y th\u1EBF n\xE0o"
     Name: Nurse
     DisplayName: "Y t\xE1"

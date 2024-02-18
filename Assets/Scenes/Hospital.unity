@@ -3747,7 +3747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394562402793141417, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -50.999954
+      value: -50.99994
       objectReference: {fileID: 0}
     - target: {fileID: 2413417521549873124, guid: c3fe75788609c6942a37583564a40cec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12972,6 +12972,7 @@ MonoBehaviour:
   animator: {fileID: 1328489440}
   col: {fileID: 1328489445}
   sound: {fileID: 1328489446}
+  interact: {fileID: 0}
 --- !u!114 &1328489439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13531,6 +13532,9 @@ MonoBehaviour:
   isMoving: 0
   isPriorityX: 0
   morbundTime: 2
+  onDoneDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &1328489440
 Animator:
   serializedVersion: 5
@@ -13654,7 +13658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
-  appearDuration: 3
+  appearDuration: 2
   leaveDuration: 2
   appearPaths: {fileID: 1982354492}
   leaveRoomPaths: {fileID: 984245401}
@@ -16363,9 +16367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - {x: -2.316564, y: 4.7114425, z: 0}
-  - {x: -1.4458909, y: 2.2452724, z: 0}
+  - {x: -1.9004654, y: 1.9422227, z: 0}
   - {x: -0.08687091, y: 0.1505189, z: 0}
-  isDraw: 0
+  isDraw: 1
   isClosed: 0
   lineThickness: 1
   color: {r: 1, g: 0, b: 0, a: 1}

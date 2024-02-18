@@ -12,15 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7721ae5f96f54a94f9cbfe9eacbd788c, type: 3}
   m_Name: Viet
   m_EditorClassIdentifier: 
-  information: "V\xEC thi\u1EBFu nh\xE2n l\u1EF1c, th\u1EDDi gian v\xE0 t\xE0i ch\xEDnh,
-    tr\xF2 ch\u01A1i s\u1EBD g\u1EB7p m\u1ED9t s\u1ED1 l\u1ED7i kh\xF4ng mong mu\u1ED1n
-    v\xE0 m\u1ED9t v\xE0i \u0111i\u1EC3m kh\xF4ng hay, v\xEC th\u1EBF n\u1EBFu b\u1EA1n
-    c\xF3 \xFD ki\u1EBFn \u0111\xF3ng g\xF3p, b\u1EA1n c\xF3 th\u1EC3 li\xEAn h\u1EC7
-    qua c\xE1c k\xEAnh nh\u01B0 email, Discord,... ch\xFAng t\xF4i s\u1EB5n s\xE0ng
-    l\u1EAFng nghe nh\u1EEFng \xFD ki\u1EBFn \u0111\xF3ng g\xF3p c\u1EE7a c\xE1c
+  information: "Trong tr\xF2 ch\u01A1i n\xE0y, b\u1EA1n s\u1EBD \u0111\u1ED1i m\u1EB7t
+    v\u1EDBi m\u1ED9t lo\u1EA1t c\xE1c c\xE2u \u0111\u1ED1 kh\xF3. N\u1EBFu b\u1EA1n
+    c\u1EA3m th\u1EA5y m\u1ED9t c\xE2u \u0111\u1ED1 qu\xE1 kh\xF3, \u0111\u1EEBng
+    lo l\u1EAFng! Ch\u1EC9 c\u1EA7n nh\u1EA5p v\xE0o n\xFAt \"L\u1ED7 Kh\xF3a\" d\u01B0\u1EDBi
+    \u0111\xE2y, v\xE0 b\u1EA1n s\u1EBD \u0111\u01B0\u1EE3c d\u1EABn \u0111\u1EBFn
+    m\u1ED9t trang web v\u1EDBi c\xE1c h\u01B0\u1EDBng d\u1EABn v\xE0 gi\u1EA3i ph\xE1p
+    cho c\xE2u \u0111\u1ED1 \u0111\xF3.\r\n\r\nV\xEC ch\xFAng t\xF4i \u0111ang ho\u1EA1t
+    \u0111\u1ED9ng v\u1EDBi ngu\u1ED3n l\u1EF1c h\u1EA1n ch\u1EBF, c\u0169ng nh\u01B0
+    th\u1EDDi gian v\xE0 t\xE0i ch\xEDnh, c\xF3 th\u1EC3 s\u1EBD c\xF3 m\u1ED9t s\u1ED1
+    l\u1ED7i kh\xF4ng mong mu\u1ED1n ho\u1EB7c \u0111i\u1EC3m kh\xF4ng ho\xE0n h\u1EA3o
+    trong tr\xF2 ch\u01A1i n\xE0y. Do \u0111\xF3, n\u1EBFu b\u1EA1n c\xF3 b\u1EA5t
+    k\u1EF3 \xFD ki\u1EBFn \u0111\xF3ng g\xF3p n\xE0o, xin \u0111\u1EEBng ng\u1EA7n
+    ng\u1EA1i li\xEAn h\u1EC7 v\u1EDBi ch\xFAng t\xF4i th\xF4ng qua email, Discord
+    ho\u1EB7c c\xE1c k\xEAnh kh\xE1c. Ch\xFAng t\xF4i r\u1EA5t s\u1EB5n l\xF2ng l\u1EAFng
+    nghe v\xE0 ch\u1EA5p nh\u1EADn m\u1ECDi \xFD ki\u1EBFn \u0111\xF3ng g\xF3p t\u1EEB
     b\u1EA1n\r\n\r\nGame \u0111\u01B0\u1EE3c ph\xE1t tri\u1EC3n b\u1EDFi QuickTeam
-    bao g\u1ED3m c\xE1c th\xE0nh vi\xEAn Ph\u01B0\u01A1ng,H\u1ED3ng Qu\xE2n\r\n\r\nM\u1ED9t
-    s\u1ED1 ngu\u1ED3n t\xE0i nguy\xEAn \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng:\r\nhttps://limezu.itch.io\r\nhttps://rmocci.itch.io\r\nhttps://refpixels.itch.io\r\nhttps://alan-dalcastagne.itch.io\r\nhttps://mayragandra.itch.io"
+    bao g\u1ED3m c\xE1c th\xE0nh vi\xEAn Ph\u01B0\u01A1ng Ly,H\u1ED3ng Qu\xE2n\r\n\r\nM\u1ED9t
+    s\u1ED1 ngu\u1ED3n t\xE0i nguy\xEAn \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng:\r\nhttps://limezu.itch.io\r\nhttps://rmocci.itch.io\r\nhttps://refpixels.itch.io\r\nhttps://alan-dalcastagne.itch.io\r\nhttps://mayragandra.itch.io\n\nGame
+    s\u1EBD thu th\u1EADp m\u1ED9t s\u1ED1 d\u1EEF li\u1EC7u v\u1EC1 ti\u1EBFn tr\xECnh
+    ch\u01A1i c\u1EE7a b\u1EA1n, n\u1EBFu b\u1EA1n kh\xF4ng mu\u1ED1n, h\xE3y t\u1EAFt
+    quy\u1EC1n truy c\u1EADp m\u1EA1ng c\u1EE7a game"
   howToPlay: "S\u1EED d\u1EE5ng c\xE1c n\xFAt WASD ho\u1EB7c m\u0169i t\xEAn \u0111\u1EC3
     di chuy\u1EC3n\r\nN\xFAt t\u01B0\u01A1ng t\xE1c s\u1EBD ch\u1EC9 xu\u1EA5t hi\u1EC7n
     khi b\u1EA1n \u0111\u1EE9ng g\u1EA7n v\u1ECB tr\xED n\xE0o \u0111\xF3, n\xF3

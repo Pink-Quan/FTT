@@ -20,7 +20,7 @@ public class Nurse : MonoBehaviour
     public void ReachPlayer(Action OnReached)
     {
         controller.UpdateMoveAnimation();
-        transform.DOPath(appearPaths.paths, appearDuration).OnComplete(()=>
+        transform.DOPath(appearPaths.paths, appearDuration).SetEase(Ease.Linear).OnComplete(()=>
         {
             OnReached?.Invoke();
             controller.StopMove();
@@ -32,8 +32,8 @@ public class Nurse : MonoBehaviour
     public void Disappeare(Action OnDisappear)
     {
         controller.UpdateMoveAnimation();
-        Array.Reverse(appearPaths.paths);
-        transform.DOPath(appearPaths.paths, appearDuration).OnComplete(() =>
+        var path = appearPaths.Reverse();
+        transform.DOPath(path, appearDuration).SetEase(Ease.Linear).OnComplete(() =>
         {
             OnDisappear?.Invoke();
             controller.StopMove();
