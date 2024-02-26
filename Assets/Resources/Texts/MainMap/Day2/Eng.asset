@@ -83,8 +83,7 @@ MonoBehaviour:
     DisplayName: Linh
     emotion: 0
     keyValue: 
-  backToCarParkMisson: "Ra ch\u1ED7 \u0111\u1ED7 xe g\u1EB7p m\u1ECDi ng\u01B0\u1EDDi
-    \u0111ang t\u1EADp trung \u1EDF \u0111\u1EA5y"
+  backToCarParkMisson: Go to the parking lot and see everyone gathered there
   confessTheTruth:
   - sentances:
     - What's going on?

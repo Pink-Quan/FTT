@@ -11,6 +11,7 @@ namespace Chess.UI
         public BoardTheme boardTheme;
         public bool showLegalMoves;
         public bool whiteIsBottom = true;
+        public Material squareMat;
 
         MeshRenderer[,] squareRenderers;
         SpriteRenderer[,] squarePieceRenderers;
@@ -151,8 +152,6 @@ namespace Chess.UI
 
         void CreateBoardUI()
         {
-
-            Shader squareShader = Shader.Find("Unlit/Color");
             squareRenderers = new MeshRenderer[8, 8];
             squarePieceRenderers = new SpriteRenderer[8, 8];
 
@@ -166,7 +165,7 @@ namespace Chess.UI
                     square.name = BoardHelper.SquareNameFromCoordinate(file, rank);
                     square.position = PositionFromCoord(file, rank, 0);
                     //square.gameObject.AddComponent<SortingGroup>();
-                    Material squareMaterial = new Material(squareShader);
+                    Material squareMaterial = squareMat;
 
                     squareRenderers[file, rank] = square.gameObject.GetComponent<MeshRenderer>();
                     squareRenderers[file, rank].material = squareMaterial;

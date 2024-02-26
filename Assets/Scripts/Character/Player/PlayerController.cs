@@ -42,7 +42,9 @@ public class PlayerController : CharacterController
     {
         playerMovement.enabled = true;
         buttons.SetActive(true);
-        if(SystemInfo.deviceType==DeviceType.Handheld) joystick.SetActive(true);
+#if Mobile
+        joystick.SetActive(true);
+#endif
     }
 
     public void DisableMove()
@@ -61,7 +63,9 @@ public class PlayerController : CharacterController
     public void ShowButtons()
     {
         buttons.SetActive(true);
-        if (SystemInfo.deviceType == DeviceType.Handheld) joystick.SetActive(true);
+#if Mobile
+        joystick.SetActive(true);
+#endif
     }
 
     public void SetArrowPointer(Transform target)

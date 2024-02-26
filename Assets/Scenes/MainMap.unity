@@ -2939,6 +2939,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6973515739703530926, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
+      propertyPath: squareMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 35728b94a0ef504459a9495e1e76c2f1, type: 2}
     - target: {fileID: 6973515740810716374, guid: 61cce3ab7946af9409730ffee6559662, type: 3}
       propertyPath: m_Name
       value: Chess

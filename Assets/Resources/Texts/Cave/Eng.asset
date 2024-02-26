@@ -30,10 +30,10 @@ MonoBehaviour:
     keyValue: 
   seeNamDeadBody:
     sentances:
-    - Sao Nam was seriously injured and lying here
+    - Why Nam was seriously injured and lying here
     - No, it's not
-    - "\u0110\xE2y l\xE0 1 x\xE1c ch\u1EBFt"
     - This is a dead body
+    - A corpse was seriously decomposed
     - How could that be?
     Name: Linh
     DisplayName: Linh
